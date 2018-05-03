@@ -28,9 +28,6 @@ ActiveRecord::Schema.define(version: 20180410033851) do
     t.datetime "updated_at", null: false
   end
 
-def show
-  @products = Products.all
-end
   create_table "styles", force: :cascade do |t|
     t.string "name", null: false
     t.string "tagline", null: false
