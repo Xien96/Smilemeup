@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="lt-ie10" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap.css">
+  <title>animation</title>
+       <style>
+.animation{
+width:150px;
+height:150px
+}
+</style>
+  
+</head>
+  <body>
+      <div class="our text-center">
+          <div class="container">
+          <div class="col-lg-3">
+            <div class="animation" id="anim1"></div>
+          </div>
+           <div class="col-lg-3">
+            <div class="animation" id="anim2"></div>
+          </div>
+           <div class="col-lg-3">
+            <div class="animation" id="anim3"></div>
+          </div>
+           <div class="col-lg-3">
+            <div  class="animation" id="anim4"></div>
+          </div>
+       </div> 
+            
+      </div>
+    
+      
+      <script src="jquery-3.2.1.min.js"></script>
+      <script src="bootstrap.min.js"></script>
+    <script src="lottie.js"></script>
+    <script>
+        var animation = bodymovin.loadAnimation({
+            
+            container:document.getElementById('anim1'),
+            renderer: 'svg',
+            loop:true,
+            autoplay:true,
+            path:'doctor.json'
+        })
+                var animation = bodymovin.loadAnimation({
+            
+            container:document.getElementById('anim2'),
+            renderer: 'svg',
+            loop:true,
+            autoplay:true,
+            path:'girlfashion.json'
+        })
+                        var animation = bodymovin.loadAnimation({
+            
+            container:document.getElementById('anim3'),
+            renderer: 'svg',
+            loop:true,
+            autoplay:true,
+            path:'money.json'
+        })
+                                var animation = bodymovin.loadAnimation({
+            
+            container:document.getElementById('anim4'),
+            renderer: 'svg',
+            loop:true,
+            autoplay:true,
+            path:'rating.json'
+        })
+      </script>
+  </body>
+</html>

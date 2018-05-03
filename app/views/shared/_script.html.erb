@@ -1,0 +1,305 @@
+<script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" type="text/javascript" charset="utf-8" async defer></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
+
+<script>
+$(document).ready(function() {
+  $("[data-toggle=popover]").popover({html:true})
+  $('.add-to-cart .number .quantity').text(1);
+  $('#scroll-up').click(function() {
+    $('html, body').animate({ scrollTop: 0 }, 'slow');
+  })
+
+  $('.faq-item').click(function(e) {
+    console.log(e);
+    var target = e["currentTarget"]["id"]
+    
+    var obj = $("#".concat(target))
+    if (obj.hasClass('active')) {
+      obj.removeClass('active')
+    } else {
+      obj.addClass('active')
+    }
+  })
+
+  $('.add-to-cart .number .plus').click(function(e) {
+    var el = e.currentTarget.id.split('-')[0] + '-quantity';
+    var obj = $("#".concat(el))[0]
+    var q = Number(obj.textContent) + 1;
+    $("#".concat(el)).text(q)
+    $('.snap-form .quantity').val(q)
+  })
+  $('.add-to-cart .number .minus').click(function(e) {
+    var el = e.currentTarget.id.split('-')[0] + '-quantity';
+    var obj = $("#".concat(el))[0]
+    var q = Number(obj.textContent) - 1;
+    if (q < 0) {
+      q = 0;
+    }
+    $("#".concat(el)).text(q)
+    $('.snap-form .quantity').val(q)
+  })
+  $('.teeth_selectionupper_upper').hide()
+  $('.teeth_selectionupper_lower').hide()
+  $('.selection-border button').click(function(e) {
+    $('.selection-border button').addClass('btn-default')
+    $('.selection-border button').removeClass('active btn-green')
+    var el = e.currentTarget.id
+    var obj = $("#".concat(el))
+    obj.addClass('active btn-green')
+    obj.removeClass('btn-default')
+    if (el=="upper") {
+      $('.teeth_selectionupper_upper').show()
+      $('.teeth_selectionupper_lower').hide()
+      $('.teeth_selectionupper_both').hide()
+      $('.snap-form .product').val('snap_up')
+    }
+    if (el=="lower") {
+      $('.teeth_selectionupper_upper').hide()
+      $('.teeth_selectionupper_lower').show()
+      $('.teeth_selectionupper_both').hide()
+      $('.snap-form .product').val('snap_down')
+    }
+    if (el=="both") {
+      $('.teeth_selectionupper_upper').hide()
+      $('.teeth_selectionupper_lower').hide()
+      $('.teeth_selectionupper_both').show()
+      $('.snap-form .product').val('snap_both')
+    }
+  })
+
+  $('#products-overview-snapup').click(function(e) {
+    e.preventDefault();
+    $('.products').removeClass('product-snapup product-clearup').addClass('product-snapup product-snapup');
+    return false
+  })
+  $('#products-overview-clearup').click(function(e) {
+    e.preventDefault();
+    $('.products').removeClass('product-snapup product-clearup').addClass('product-snapup product-clearup');
+    return false
+  })
+  $('#footer-chat').click(function(e) {
+    if ($('#footer-chat').hasClass('active')) {
+      window.location.href='javascript:$zopim.livechat.window.show();'
+    } else {
+      $('#footer-call').css({ bottom: '160px' });
+      $('#footer-whatsapp').css({ bottom: '115px' });
+      $('#footer-chat').css({ bottom: '70px' });
+      $('#footer-chat').addClass('active')
+    }
+  })
+  $('#footer-close').click(function(e) {
+    $('#footer-call').css({ bottom: '25px' });
+    $('#footer-whatsapp').css({ bottom: '25px' });
+    $('#footer-chat').css({ bottom: '25px' });
+    $('#footer-chat').removeClass('active')
+  })
+  $('#home-mouse').click(function() {
+    $('html, body').animate({ scrollTop: 750 }, 'slow');
+  })
+
+  function checkFormReadyness() {
+    if ($('#file1_trigger').hasClass('done') && 
+      $('#file2_trigger').hasClass('done') &&
+      $('#file3_trigger').hasClass('done') &&
+      $('#file4_trigger').hasClass('done')) {
+      $('#candidateSubmit').removeAttr("disabled");
+    }
+  }
+
+  $("input[type=file]").hide();
+  $('#candidateSubmit').attr("disabled", "disabled");
+  $('#file1_trigger').click(function(e) {
+    e.preventDefault()
+    $("#file1").trigger("click");
+  })
+  $('#file2_trigger').click(function(e) {
+    e.preventDefault()
+    $("#file2").trigger("click");
+  })
+  $('#file3_trigger').click(function(e) {
+    e.preventDefault()
+    $("#file3").trigger("click");
+  })
+  $('#file4_trigger').click(function(e) {
+    e.preventDefault()
+    $("#file4").trigger("click");
+  })
+  $('#file1').change(function(e) {
+    e.preventDefault()
+    $('#uploader-form-1').ajaxSubmit({
+      success: function() {
+        $('#file1_trigger').text('Done!')
+        $('#file1_trigger').addClass('done')
+        checkFormReadyness()
+      },
+      uploadProgress: function(event, position, total, percentComplete) {
+        $('#file1_trigger').text(percentComplete + '% uploaded')
+      }
+    })
+  })
+  $('#file2').change(function(e) {
+    e.preventDefault()
+    $('#uploader-form-2').ajaxSubmit({
+      success: function() {
+        $('#file2_trigger').text('Done!')
+        $('#file2_trigger').addClass('done')
+        checkFormReadyness()
+      },
+      uploadProgress: function(event, position, total, percentComplete) {
+        $('#file2_trigger').text(percentComplete + '% uploaded')
+      }
+    })
+  })
+  $('#file3').change(function(e) {
+    e.preventDefault()
+    $('#uploader-form-3').ajaxSubmit({
+      success: function() {
+        $('#file3_trigger').text('Done!')
+        $('#file3_trigger').addClass('done')
+        checkFormReadyness()
+      },
+      uploadProgress: function(event, position, total, percentComplete) {
+        $('#file3_trigger').text(percentComplete + '% uploaded')
+      }
+    })
+  })
+  $('#file4').change(function(e) {
+    e.preventDefault()
+    $('#uploader-form-4').ajaxSubmit({
+      success: function() {
+        $('#file4_trigger').text('Done!')
+        $('#file4_trigger').addClass('done')
+        checkFormReadyness()
+      },
+      uploadProgress: function(event, position, total, percentComplete) {
+        $('#file4_trigger').text(percentComplete + '% uploaded')
+      }
+    })
+  })
+
+
+  $('.modal .snap-submit').click(function(e){
+    e.preventDefault()
+    el = e.currentTarget.id.split('-')[0] + '-form';
+    var obj = $("#".concat(el))
+    obj.ajaxSubmit({
+      success: function() {
+        $('.modal').modal('hide');
+        location.reload();
+      }
+    })
+  })
+
+
+  var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      freeMode: true,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  })
+/*
+load more
+*/
+
+$('.load-more').click(function(){
+  $('.hide-box').toggle();
+});
+
+$('.load-more-videos').click(function(){
+  $('.hide-box').toggle();
+});
+
+$(".navbar-toggle").click(function() {
+  $(this).children().toggleClass('open');
+});
+
+/*
+load more
+*/
+/* cart-2*/
+
+  $('.cart-item').click(function(e) {
+    console.log(e);
+    var target = e["currentTarget"]["id"]
+    
+    var obj = $("#".concat(target))
+    if (obj.hasClass('active')) {
+      obj.removeClass('active')
+    } else {
+      obj.addClass('active')
+    }
+  })
+/* end cart-2*/
+
+/*before and after */
+
+// I hope this over-commenting helps. Let's do this!
+// Let's use the 'active' variable to let us know when we're using it
+let active = false;
+
+// First we'll have to set up our event listeners
+// We want to watch for clicks on our scroller
+document.querySelector('.scroller').addEventListener('mousedown',function(){
+  active = true;
+  // Add our scrolling class so the scroller has full opacity while active
+  document.querySelector('.scroller').classList.add('scrolling');
+});
+// We also want to watch the body for changes to the state,
+// like moving around and releasing the click
+// so let's set up our event listeners
+document.body.addEventListener('mouseup',function(){
+  active = false;
+  document.querySelector('.scroller').classList.remove('scrolling');
+});
+document.body.addEventListener('mouseleave',function(){
+  active = false;
+  document.querySelector('.scroller').classList.remove('scrolling');
+});
+
+// Let's figure out where their mouse is at
+document.body.addEventListener('mousemove',function(e){
+  if (!active) return;
+  // Their mouse is here...
+  let x = e.pageX;
+  // but we want it relative to our wrapper
+  x -= document.querySelector('.wrapper').getBoundingClientRect().left;
+  // Okay let's change our state
+  scrollIt(x);
+});
+
+// Let's use this function
+function scrollIt(x){
+    let transform = Math.max(0,(Math.min(x,document.querySelector('.wrapper').offsetWidth)));
+    document.querySelector('.after').style.width = transform+"px";
+    document.querySelector('.scroller').style.left = transform-25+"px";
+}
+
+// Let's set our opening state based off the width, 
+// we want to show a bit of both images so the user can see what's going on
+scrollIt(234);
+
+// And finally let's repeat the process for touch events
+// first our middle scroller...
+document.querySelector('.scroller').addEventListener('touchstart',function(){
+  active = true;
+  document.querySelector('.scroller').classList.add('scrolling');
+});
+document.body.addEventListener('touchend',function(){
+  active = false;
+  document.querySelector('.scroller').classList.remove('scrolling');
+});
+document.body.addEventListener('touchcancel',function(){
+  active = false;
+  document.querySelector('.scroller').classList.remove('scrolling');
+});
+
+
+</script>

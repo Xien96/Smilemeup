@@ -1,0 +1,81 @@
+<div class="nav-cover">
+</div>
+
+<div class="account container">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#">Profile</a></li>
+    <li><a href="#">Orders</a></li>
+    <li><a href="#">Messages</a></li>
+  </ul>
+  <div class="row profile">
+    <div class="col-sm-4">
+      <%= image_tag('default-avatar.png') %>
+    </div>
+    <div class="col-sm-8">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= devise_error_messages! %>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <%= f.label :name %><br />
+              <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "form-control", placeholder: "John Doe" %>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autocomplete: "email", class: "form-control", placeholder: "ilove@smilemeup.com" %>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <%= f.label :country %><br />
+              <%= f.text_field :country, class: "form-control", placeholder: "Germany" %>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <%= f.label :city %><br />
+              <%= f.text_field :city, class: "form-control", placeholder: "Berlin" %>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <%= f.label :phone %><br />
+              <%= f.text_field :phone, autofocus: true, autocomplete: "phone", class: "form-control", placeholder: "+9662620302303" %>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <%= f.label :current_password %> <i>(required for any changes)</i><br />
+              <%= f.password_field :current_password, class: "form-control", placeholder: "********" %>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <%= f.label :password %> <i>(leave blank if you won't change it)</i><br />
+              <%= f.password_field :password, class: "form-control", placeholder: "********" %>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <%= f.label :password_confirmation %><br />
+              <%= f.password_field :password_confirmation, class: "form-control", placeholder: "********" %>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 col-sm-push-8">
+            <div class="actions">
+            <%= f.submit "Update your profile", class: "btn btn-green form-control" %>
+          </div> 
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>  
+</div>
+
+
+<!-- <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p> -->
+

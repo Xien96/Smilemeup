@@ -1,0 +1,175 @@
+
+      
+ 
+    
+            
+
+    <div class="smile text-center">
+        <div class="container grid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="aligns">
+                        <div class="radius">
+                            <%= image_tag("dashboard/usersregis.svg") %>
+                            <span>Registered Users</span><br>
+                           <p style="">1500</p>
+                        </div>
+
+                       
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="aligns">
+                           <div class="radius">
+                            <%= image_tag("dashboard/torders.svg") %>
+                            <span>Total Orders</span><br>
+                           <p style="">600</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                   <div class="aligns">
+                          <div class="radius">
+                            <%= image_tag("dashboard/usersregis.svg") %>
+                            <span>Delivered Orders</span><br>
+                           <p style=""></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="aligns">
+                       <div class="radius">
+                            <%= image_tag("dashboard/usersregis.svg") %>
+                            <span>Total Money</span><br>
+                           <p style="">400K $</p>
+                        </div>
+                </div>
+            </div>
+                       
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="our-chart">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+               <div class="col-md-6" style="margin-bottom: 60px;">
+                  <div class="our-chart">
+                    <canvas id="myChart2"></canvas>
+                    </div>
+                </div>
+         <br>
+        
+                    <h2 class="text-left">Top Users</h2>
+                    <p style="color: #BDBDBD; text-align: left; padding-left: 25px">we can add description here.</p>
+            <table>
+                <tr>
+                  <th><h5>User Name</h5></th>
+                  <th><h5>Activety Type</h5></th>
+                  <th><h5>User Status </h5></th>
+                  <th><h5>Orders</h5></th>
+                  <th><h5>Location</h5></th>
+                </tr>
+                <tr>
+                  <td><%= image_tag("dashboard/userpic.svg") %> <p>Amr Elazab</p></td>
+                  <td><h6>Chating</h6></td>
+                  <td><h6>Active</h6></td>
+                  <td><h6>2</h6></td>
+                  <td><h6>UK</h6></td>
+                </tr>
+                <tr>
+                  <td><%= image_tag("dashboard/userpic.svg") %> <p>Muhammed elsayyad</p></td>
+                  <td><h6>Order</h6></td>
+                  <td><h6>Offline</h6></td>
+                  <td><h6>3</h6></td>
+                  <td><h6>DE</h6></td>
+                </tr>
+            </table>
+            </div>
+        </div>    
+    </div>
+    </div>
+
+       
+    
+        <!-- End Section Ultimate Fotter -->
+        
+        <!-- start section loading --> 
+        <!--
+            <section class="loading-screen">
+                <div class="sk-cube-grid">
+                      <div class="sk-cube sk-cube1"></div>
+                      <div class="sk-cube sk-cube2"></div>
+                      <div class="sk-cube sk-cube3"></div>
+                      <div class="sk-cube sk-cube4"></div>
+                      <div class="sk-cube sk-cube5"></div>
+                      <div class="sk-cube sk-cube6"></div>
+                      <div class="sk-cube sk-cube7"></div>
+                      <div class="sk-cube sk-cube8"></div>
+                      <div class="sk-cube sk-cube9"></div>
+                </div>
+            </section>
+        -->
+        <!-- End section of loading -->
+        
+        <!-- Start scrool to top -->
+            <div id="scroll-top" title="Scroll to the top of screen">
+                <i class="fa fa-chevron-up fa-4x"></i>
+            </div>
+        <!-- End scrool to top -->
+
+        
+       
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.nicescroll.min.js"></script>
+         <script src="js/role.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script>new WOW().init();</script>
+        
+         
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+        
+<script>var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+    
+
+    // The data for our dataset
+    data: {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [{
+            label: "My First dataset",
+            backgroundColor: 'rgba(0, 0, 0, 0)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 10, 5, 2, 20, 30, 45],
+        }]
+    },
+    
+
+    // Configuration options go here
+    options: {}
+});</script>
+        <script>var ctx = document.getElementById('myChart2').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+    
+
+    // The data for our dataset
+    data: {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [{
+            label: "My First dataset",
+            backgroundColor: 'rgba(0, 0, 0, 0)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 10, 5, 2, 20, 30, 45],
+        }]
+    },
+    
+
+    // Configuration options go here
+    options: {}
+});</script>
+        
+   

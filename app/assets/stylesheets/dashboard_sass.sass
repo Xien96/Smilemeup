@@ -1,0 +1,8046 @@
+//colors
+$color_fuscous_gray_approx: #545454
+$color_gallery_approx: #eee
+$white: #ffffff
+$color_smalt_blue_approx: #607d8b
+$color_blue_ribbon_approx: #1d62f0
+$color_scooter_approx: #23ccef
+$color_emerald_approx: #59d05d
+$color_yellow_orange_approx: #fbad4c
+$color_wild_watermelon_approx: #ff646d
+$color_scarpa_flow_approx: #575962
+$color_mine_shaft_approx: #333333
+$color_cape_cod_approx: #3f4047
+$black_50: rgba(0, 0, 0, 0.5)
+$black_20: rgba(0, 0, 0, 0.2)
+$color_medium_purple_approx: #9368e9
+$color_lima_approx: #87cb16
+$color_vida_loca_approx: #59922b
+$color_persian_blue_approx: #0544d3
+$color_purple_approx: #6b0392
+$color_carnation_approx: #f05b4f
+$color_di_serria_approx: #dda458
+$color_rob_roy_approx: #eacf7d
+$color_hurricane_approx: #86797d
+$color_key_lime_pie_approx: #b2c326
+$color_havelock_blue_approx: #6188e2
+$color_fuchsia_pink_approx: #a748ca
+$black_77: rgba(0, 0, 0, 0.77)
+$black: #000
+$color_alto_approx: #ddd
+$color_black_haze_approx: #f7f7f7
+$color_manatee_approx: #9191ab
+$color_celeste_approx: #ccc
+$color_mountain_mist_approx: #999
+$color_bon_jour_approx: #e0e0e0
+$color_silver_sand_approx: #c2c2c2
+$color_dove_gray_approx: #6c6e71
+$alto: #dbdbdb
+$color_gray_nurse_approx: #e8e8e8
+$color_romance_approx: #fefefe
+$color_wild_sand_approx: #f5f5f5
+$black_30: rgba(0, 0, 0, 0.3)
+$color_storm_dust_approx: #666
+$color_vanilla_approx: #d0b9a0
+$black_60: rgba(0, 0, 0, 0.6)
+$seashell: #f1f1f1
+$color_silver_approx: #bdbdbd
+$color_shady_lady_approx: #a9a9a9
+$color_gray_approx: #7e7e7e
+$color_gravel_10_approx: rgba(69, 65, 78, 0.1)
+$color_tapa_approx: #777
+$color_atlantis_approx: #96bf3d
+$color_gunsmoke_approx: #83848a
+$color_alabaster_approx: #fbfbfb
+$color_gray_suit_approx: #c3c5ca
+$color_mandy_approx: #eb5757
+$color_ronchi_approx: #f2c94c
+$color_cloud_approx: #c4c4c4
+$color_gravel_8_approx: rgba(69, 65, 78, 0.08)
+$color_athens_gray_approx: #ebedf2
+$color_star_dust_approx: #9a9a9a
+$wild_sand: #f4f4f4
+$alabaster: #fafafa
+$color_royal_blue_approx: #4d7cfe
+$color_pink_swan_approx: #bbb
+$color_silver_chalice_approx: #aaa
+$color_mischka_approx: #ced4da
+$color_slate_gray_13_approx: rgba(120, 130, 140, 0.13)
+$black_5: rgba(0, 0, 0, 0.05)
+$black_10: rgba(0, 0, 0, 0.1)
+$color_outer_space_approx: #263238
+$color_trout_approx: #4d585f
+$color_oslo_gray_approx: #7d8c95
+$white_80: rgba(255, 255, 255, 0.8)
+$color_pale_sky_approx: #6c757d
+$color_shark_approx: #292929
+$color_gravel_approx: #474c4b
+$concrete: #f2f2f2
+
+//fonts
+$font_0: LineAwesome
+$font_1: nunito
+$font_2: sans-serif
+$font_3: Open Sans
+$font_4: sans-serif !important
+
+//urls
+$url_0: url(https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i)
+$url_1: url(../img/menu2.png)
+$url_2: url(../fonts/line-awesome.eot?v=1.1.)
+$url_3: url(../fonts/line-awesome.eot??v=1.1.#iefix)
+$url_4: url(../fonts/line-awesome.woff2?v=1.1.)
+$url_5: url(../fonts/line-awesome.woff?v=1.1.)
+$url_6: url(../fonts/line-awesome.ttf?v=1.1.)
+$url_7: url(../fonts/line-awesome.svg?v=1.1.#fa)
+
+//@extend-elements
+//original selectors
+//.ct-chart-pie .ct-label, .ct-chart-donut .ct-label
+.extend_1 
+  dominant-baseline: central
+  fill: $white !important
+  color: $white !important
+
+
+//original selectors
+//.ui-helper-clearfix:after, .ui-helper-clearfix:before
+.extend_2 
+  content: ""
+  display: table
+  border-collapse: collapse
+
+
+//original selectors
+//.scrollbar-dynamic >.scroll-element.scroll-draggable .scroll-element_outer, .scrollbar-dynamic >.scroll-element:hover .scroll-element_outer
+.extend_3 
+  overflow: hidden
+  filter: alpha(opacity=70)
+  opacity: .7
+
+
+//original selectors
+//.scrollbar-dynamic >.scroll-element.scroll-draggable .scroll-element_outer .scroll-bar, .scrollbar-dynamic >.scroll-element:hover .scroll-element_outer .scroll-bar
+.extend_4 
+  height: 100%
+  width: 100%
+  //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+  border-radius: 12px
+
+
+//original selectors
+//.toggle-group, .toggle-off, .toggle-on
+.extend_5 
+  position: absolute
+  top: 0
+  bottom: 0
+
+
+
+@import $url_0
+@import "http://propeller.in/components/range-slider/css/nouislider.min.css"
+@import "http://propeller.in/components/textfield/css/textfield.css"
+@import "http://propeller.in/components/checkbox/css/checkbox.css"
+@import "http://propeller.in/components/range-slider/css/range-slider.css"
+.bg-default 
+  background: $color_smalt_blue_approx !important
+
+.bg-primary 
+  background: $color_blue_ribbon_approx !important
+
+.bg-info 
+  background: $color_scooter_approx !important
+
+.bg-success 
+  background: $color_emerald_approx !important
+
+.bg-warning 
+  background: $color_yellow_orange_approx !important
+
+.bg-danger 
+  background: $color_wild_watermelon_approx !important
+
+body 
+  font-family: $font_1, $font_2
+  font-size: 14px
+  color: $color_scarpa_flow_approx
+  min-height: 100vh
+  position: relative
+
+h1 
+  font-family: $font_1, $font_2
+  font-size: 59px
+
+.h1 
+  font-family: $font_1, $font_2
+  font-size: 59px
+
+h2 
+  font-family: $font_1, $font_2
+  font-size: 43px
+
+.h2 
+  font-family: $font_1, $font_2
+  font-size: 43px
+
+h3 
+  font-family: $font_1, $font_2
+  font-size: 35px
+  margin: 20px 0 10px
+
+.h3 
+  font-family: $font_1, $font_2
+  font-size: 35px
+  margin: 20px 0 10px
+
+h4 
+  font-family: $font_1, $font_2
+  font-size: 28px
+  line-height: 30px
+  &.page-title 
+    font-size: 22px
+    font-weight: 600
+    color: $color_mine_shaft_approx
+    line-height: 30px
+    margin-bottom: 20px
+
+
+.h4 
+  font-family: $font_1, $font_2
+  font-size: 28px
+  line-height: 30px
+
+h5 
+  font-family: $font_1, $font_2
+  font-size: 25px
+  margin-bottom: 15px
+
+.h5 
+  font-family: $font_1, $font_2
+  font-size: 25px
+  margin-bottom: 15px
+
+h6 
+  font-family: $font_1, $font_2
+  font-size: 18px
+  font-weight: 600
+
+.h6 
+  font-family: $font_1, $font_2
+  font-size: 18px
+  font-weight: 600
+
+p 
+  font-family: $font_1, $font_2
+  font-size: 15px
+  line-height: 1.5
+  margin-bottom: .7rem
+
+.navbar 
+  font-family: $font_1, $font_2
+  .navbar-nav 
+    .notification 
+      position: absolute
+      background-color: $color_atlantis_approx
+      text-align: center
+      //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+      border-radius: 10px
+      min-width: 11px
+      height: 11px
+      font-size: 11px
+      color: $white
+      font-weight: bold
+      line-height: 17px
+      top: 15px
+      right: 22px
+
+    .nav-item .nav-link 
+      display: inline-block
+      vertical-align: middle
+      color: $color_storm_dust_approx
+      line-height: 55px
+      letter-spacing: 0.04em
+      padding: 0 20px 0 0
+      position: relative
+      font-size: 14px
+      font-weight: 500
+      text-align: center
+      i 
+        font-size: 22px
+        width: 30px
+        vertical-align: middle
+
+
+
+
+.brand 
+  font-family: $font_1, $font_2
+
+.btn-simple 
+  font-family: $font_1, $font_2
+
+.alert 
+  font-family: $font_1, $font_2
+  border: 0
+  color: $white
+  position: relative
+  padding-left: 65px
+  [data-notify="icon"] 
+    font-size: 30px
+    display: block
+    left: 15px
+    position: absolute
+    top: 50%
+    margin-top: -15px
+
+  [data-notify="title"] 
+    display: block
+    font-weight: bold
+
+  [data-notify="message"] 
+    font-size: 14px
+
+  .close 
+    background: $white_80
+    width: 25px
+    height: 25px
+    line-height: 25px
+    top: auto !important
+    //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+    border-radius: 50%
+
+
+a 
+  font-family: $font_1, $font_2
+
+.td-name 
+  font-family: $font_1, $font_2
+
+td 
+  font-family: $font_1, $font_2
+
+.text-primary 
+  color: $color_blue_ribbon_approx !important
+  &:hover 
+    color: $color_blue_ribbon_approx !important
+
+
+.text-info 
+  color: $color_scooter_approx !important
+  &:hover 
+    color: $color_scooter_approx !important
+
+
+.text-success 
+  color: $color_emerald_approx !important
+  &:hover 
+    color: $color_emerald_approx !important
+
+
+.text-warning 
+  color: $color_yellow_orange_approx !important
+  &:hover 
+    color: $color_yellow_orange_approx !important
+
+
+.text-danger 
+  color: $color_wild_watermelon_approx !important
+  &:hover 
+    color: $color_wild_watermelon_approx !important
+
+
+label 
+  color: $color_cape_cod_approx !important
+  font-size: 14px !important
+
+.fw-light 
+  font-weight: lighter !important
+
+.fw-normal 
+  font-weight: 400 !important
+
+.fw-mediumbold 
+  font-weight: 500 !important
+
+.fw-bold 
+  font-weight: 600 !important
+
+.fw-extrabold 
+  font-weight: 800 !important
+
+.ct-label 
+  fill: $black_50
+  color: $black_50
+  font-size: 0.8rem
+  line-height: 1
+  &.ct-horizontal 
+    &.ct-start 
+      align-items: flex-end
+      justify-content: flex-start
+      text-align: left
+      text-anchor: start
+
+    &.ct-end 
+      align-items: flex-start
+      justify-content: flex-start
+      text-align: left
+      text-anchor: start
+
+
+  &.ct-vertical 
+    &.ct-start 
+      align-items: flex-end
+      justify-content: flex-end
+      text-align: right
+      text-anchor: end
+
+    &.ct-end 
+      align-items: flex-end
+      justify-content: flex-start
+      text-align: left
+      text-anchor: start
+
+
+
+.ct-chart-bar 
+  .ct-label 
+    display: block
+    display: flex
+    &.ct-horizontal 
+      &.ct-start 
+        align-items: flex-end
+        justify-content: center
+        text-align: center
+        text-anchor: start
+
+      &.ct-end 
+        align-items: flex-start
+        justify-content: center
+        text-align: center
+        text-anchor: start
+
+
+
+  &.ct-horizontal-bars .ct-label 
+    &.ct-horizontal 
+      &.ct-start 
+        align-items: flex-end
+        justify-content: flex-start
+        text-align: left
+        text-anchor: start
+
+      &.ct-end 
+        align-items: flex-start
+        justify-content: flex-start
+        text-align: left
+        text-anchor: start
+
+
+    &.ct-vertical 
+      &.ct-start 
+        align-items: center
+        justify-content: flex-end
+        text-align: right
+        text-anchor: end
+
+      &.ct-end 
+        align-items: center
+        justify-content: flex-start
+        text-align: left
+        text-anchor: end
+
+
+
+
+.ct-grid 
+  stroke: $black_20
+  stroke-width: 1px
+  stroke-dasharray: 2px
+
+.ct-grid-background 
+  fill: none
+
+.ct-point 
+  stroke-width: 7px
+  stroke-linecap: round
+
+.ct-line 
+  fill: none
+  stroke-width: 3px
+  pointer-events: none
+
+.ct-area 
+  stroke: none
+  fill-opacity: 0.1
+  pointer-events: none
+
+.ct-bar 
+  fill: none
+  stroke-width: 10px
+
+.ct-slice-donut 
+  fill: none
+  stroke-width: 60px
+
+.ct-series-a 
+  .ct-point 
+    stroke: $color_blue_ribbon_approx
+
+  .ct-line 
+    stroke: $color_blue_ribbon_approx
+
+  .ct-bar 
+    stroke: $color_blue_ribbon_approx
+
+  .ct-slice-donut 
+    stroke: $color_blue_ribbon_approx
+
+  .ct-slice-pie 
+    fill: $color_blue_ribbon_approx
+
+  .ct-slice-donut-solid 
+    fill: $color_blue_ribbon_approx
+
+  .ct-area 
+    fill: $color_blue_ribbon_approx
+
+
+.ct-series-b 
+  .ct-point 
+    stroke: $color_wild_watermelon_approx
+
+  .ct-line 
+    stroke: $color_wild_watermelon_approx
+
+  .ct-bar 
+    stroke: $color_wild_watermelon_approx
+
+  .ct-slice-donut 
+    stroke: $color_wild_watermelon_approx
+
+  .ct-slice-pie 
+    fill: $color_wild_watermelon_approx
+
+  .ct-slice-donut-solid 
+    fill: $color_wild_watermelon_approx
+
+  .ct-area 
+    fill: $color_wild_watermelon_approx
+
+
+.ct-series-c 
+  .ct-point 
+    stroke: $color_yellow_orange_approx
+
+  .ct-line 
+    stroke: $color_yellow_orange_approx
+
+  .ct-bar 
+    stroke: $color_yellow_orange_approx
+
+  .ct-slice-donut 
+    stroke: $color_yellow_orange_approx
+
+  .ct-slice-pie 
+    fill: $color_yellow_orange_approx
+
+  .ct-slice-donut-solid 
+    fill: $color_yellow_orange_approx
+
+  .ct-area 
+    fill: $color_yellow_orange_approx
+
+
+.ct-series-d 
+  .ct-point 
+    stroke: $color_medium_purple_approx
+
+  .ct-line 
+    stroke: $color_medium_purple_approx
+
+  .ct-bar 
+    stroke: $color_medium_purple_approx
+
+  .ct-slice-donut 
+    stroke: $color_medium_purple_approx
+
+  .ct-slice-pie 
+    fill: $color_medium_purple_approx
+
+  .ct-slice-donut-solid 
+    fill: $color_medium_purple_approx
+
+  .ct-area 
+    fill: $color_medium_purple_approx
+
+
+.ct-series-e 
+  .ct-point 
+    stroke: $color_lima_approx
+
+  .ct-line 
+    stroke: $color_lima_approx
+
+  .ct-bar 
+    stroke: $color_lima_approx
+
+  .ct-slice-donut 
+    stroke: $color_lima_approx
+
+  .ct-slice-pie 
+    fill: $color_lima_approx
+
+  .ct-slice-donut-solid 
+    fill: $color_lima_approx
+
+  .ct-area 
+    fill: $color_lima_approx
+
+
+.ct-series-f 
+  .ct-point 
+    stroke: $color_vida_loca_approx
+
+  .ct-line 
+    stroke: $color_vida_loca_approx
+
+  .ct-bar 
+    stroke: $color_vida_loca_approx
+
+  .ct-slice-donut 
+    stroke: $color_vida_loca_approx
+
+  .ct-slice-pie 
+    fill: $color_vida_loca_approx
+
+  .ct-slice-donut-solid 
+    fill: $color_vida_loca_approx
+
+  .ct-area 
+    fill: $color_vida_loca_approx
+
+
+.ct-series-g 
+  .ct-point 
+    stroke: $color_persian_blue_approx
+
+  .ct-line 
+    stroke: $color_persian_blue_approx
+
+  .ct-bar 
+    stroke: $color_persian_blue_approx
+
+  .ct-slice-donut 
+    stroke: $color_persian_blue_approx
+
+  .ct-slice-pie 
+    fill: $color_persian_blue_approx
+
+  .ct-slice-donut-solid 
+    fill: $color_persian_blue_approx
+
+  .ct-area 
+    fill: $color_persian_blue_approx
+
+
+.ct-series-h 
+  .ct-point 
+    stroke: $color_purple_approx
+
+  .ct-line 
+    stroke: $color_purple_approx
+
+  .ct-bar 
+    stroke: $color_purple_approx
+
+  .ct-slice-donut 
+    stroke: $color_purple_approx
+
+  .ct-slice-pie 
+    fill: $color_purple_approx
+
+  .ct-slice-donut-solid 
+    fill: $color_purple_approx
+
+  .ct-area 
+    fill: $color_purple_approx
+
+
+.ct-series-i 
+  .ct-point 
+    stroke: $color_carnation_approx
+
+  .ct-line 
+    stroke: $color_carnation_approx
+
+  .ct-bar 
+    stroke: $color_carnation_approx
+
+  .ct-slice-donut 
+    stroke: $color_carnation_approx
+
+  .ct-slice-pie 
+    fill: $color_carnation_approx
+
+  .ct-slice-donut-solid 
+    fill: $color_carnation_approx
+
+  .ct-area 
+    fill: $color_carnation_approx
+
+
+.ct-series-j 
+  .ct-point 
+    stroke: $color_di_serria_approx
+
+  .ct-line 
+    stroke: $color_di_serria_approx
+
+  .ct-bar 
+    stroke: $color_di_serria_approx
+
+  .ct-slice-donut 
+    stroke: $color_di_serria_approx
+
+  .ct-slice-pie 
+    fill: $color_di_serria_approx
+
+  .ct-slice-donut-solid 
+    fill: $color_di_serria_approx
+
+  .ct-area 
+    fill: $color_di_serria_approx
+
+
+.ct-series-k 
+  .ct-point 
+    stroke: $color_rob_roy_approx
+
+  .ct-line 
+    stroke: $color_rob_roy_approx
+
+  .ct-bar 
+    stroke: $color_rob_roy_approx
+
+  .ct-slice-donut 
+    stroke: $color_rob_roy_approx
+
+  .ct-slice-pie 
+    fill: $color_rob_roy_approx
+
+  .ct-slice-donut-solid 
+    fill: $color_rob_roy_approx
+
+  .ct-area 
+    fill: $color_rob_roy_approx
+
+
+.ct-series-l 
+  .ct-point 
+    stroke: $color_hurricane_approx
+
+  .ct-line 
+    stroke: $color_hurricane_approx
+
+  .ct-bar 
+    stroke: $color_hurricane_approx
+
+  .ct-slice-donut 
+    stroke: $color_hurricane_approx
+
+  .ct-slice-pie 
+    fill: $color_hurricane_approx
+
+  .ct-slice-donut-solid 
+    fill: $color_hurricane_approx
+
+  .ct-area 
+    fill: $color_hurricane_approx
+
+
+.ct-series-m 
+  .ct-point 
+    stroke: $color_key_lime_pie_approx
+
+  .ct-line 
+    stroke: $color_key_lime_pie_approx
+
+  .ct-bar 
+    stroke: $color_key_lime_pie_approx
+
+  .ct-slice-donut 
+    stroke: $color_key_lime_pie_approx
+
+  .ct-slice-pie 
+    fill: $color_key_lime_pie_approx
+
+  .ct-slice-donut-solid 
+    fill: $color_key_lime_pie_approx
+
+  .ct-area 
+    fill: $color_key_lime_pie_approx
+
+
+.ct-series-n 
+  .ct-point 
+    stroke: $color_havelock_blue_approx
+
+  .ct-line 
+    stroke: $color_havelock_blue_approx
+
+  .ct-bar 
+    stroke: $color_havelock_blue_approx
+
+  .ct-slice-donut 
+    stroke: $color_havelock_blue_approx
+
+  .ct-slice-pie 
+    fill: $color_havelock_blue_approx
+
+  .ct-slice-donut-solid 
+    fill: $color_havelock_blue_approx
+
+  .ct-area 
+    fill: $color_havelock_blue_approx
+
+
+.ct-series-o 
+  .ct-point 
+    stroke: $color_fuchsia_pink_approx
+
+  .ct-line 
+    stroke: $color_fuchsia_pink_approx
+
+  .ct-bar 
+    stroke: $color_fuchsia_pink_approx
+
+  .ct-slice-donut 
+    stroke: $color_fuchsia_pink_approx
+
+  .ct-slice-pie 
+    fill: $color_fuchsia_pink_approx
+
+  .ct-slice-donut-solid 
+    fill: $color_fuchsia_pink_approx
+
+  .ct-area 
+    fill: $color_fuchsia_pink_approx
+
+
+.ct-square 
+  display: block
+  position: relative
+  width: 100%
+  &:before 
+    display: block
+    float: left
+    content: ""
+    width: 0
+    height: 0
+    padding-bottom: 100%
+
+  &:after 
+    content: ""
+    display: table
+    clear: both
+
+  > svg 
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+
+
+.ct-minor-second 
+  display: block
+  position: relative
+  width: 100%
+  &:before 
+    display: block
+    float: left
+    content: ""
+    width: 0
+    height: 0
+    padding-bottom: 93.75%
+
+  &:after 
+    content: ""
+    display: table
+    clear: both
+
+  > svg 
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+
+
+.ct-major-second 
+  display: block
+  position: relative
+  width: 100%
+  &:before 
+    display: block
+    float: left
+    content: ""
+    width: 0
+    height: 0
+    padding-bottom: 88.8888888889%
+
+  &:after 
+    content: ""
+    display: table
+    clear: both
+
+  > svg 
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+
+
+.ct-minor-third 
+  display: block
+  position: relative
+  width: 100%
+  &:before 
+    display: block
+    float: left
+    content: ""
+    width: 0
+    height: 0
+    padding-bottom: 83.3333333333%
+
+  &:after 
+    content: ""
+    display: table
+    clear: both
+
+  > svg 
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+
+
+.ct-major-third 
+  display: block
+  position: relative
+  width: 100%
+  &:before 
+    display: block
+    float: left
+    content: ""
+    width: 0
+    height: 0
+    padding-bottom: 80%
+
+  &:after 
+    content: ""
+    display: table
+    clear: both
+
+  > svg 
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+
+
+.ct-perfect-fourth 
+  display: block
+  position: relative
+  width: 100%
+  &:before 
+    display: block
+    float: left
+    content: ""
+    width: 0
+    height: 0
+    padding-bottom: 75%
+
+  &:after 
+    content: ""
+    display: table
+    clear: both
+
+  > svg 
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+
+
+.ct-perfect-fifth 
+  display: block
+  position: relative
+  width: 100%
+  &:before 
+    display: block
+    float: left
+    content: ""
+    width: 0
+    height: 0
+    padding-bottom: 66.6666666667%
+
+  &:after 
+    content: ""
+    display: table
+    clear: both
+
+  > svg 
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+
+
+.ct-minor-sixth 
+  display: block
+  position: relative
+  width: 100%
+  &:before 
+    display: block
+    float: left
+    content: ""
+    width: 0
+    height: 0
+    padding-bottom: 62.5%
+
+  &:after 
+    content: ""
+    display: table
+    clear: both
+
+  > svg 
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+
+
+.ct-golden-section 
+  display: block
+  position: relative
+  width: 100%
+  &:before 
+    display: block
+    float: left
+    content: ""
+    width: 0
+    height: 0
+    padding-bottom: 61.804697157%
+
+  &:after 
+    content: ""
+    display: table
+    clear: both
+
+  > svg 
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+
+
+.ct-major-sixth 
+  display: block
+  position: relative
+  width: 100%
+  &:before 
+    display: block
+    float: left
+    content: ""
+    width: 0
+    height: 0
+    padding-bottom: 60%
+
+  &:after 
+    content: ""
+    display: table
+    clear: both
+
+  > svg 
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+
+
+.ct-minor-seventh 
+  display: block
+  position: relative
+  width: 100%
+  &:before 
+    display: block
+    float: left
+    content: ""
+    width: 0
+    height: 0
+    padding-bottom: 56.25%
+
+  &:after 
+    content: ""
+    display: table
+    clear: both
+
+  > svg 
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+
+
+.ct-major-seventh 
+  display: block
+  position: relative
+  width: 100%
+  &:before 
+    display: block
+    float: left
+    content: ""
+    width: 0
+    height: 0
+    padding-bottom: 53.3333333333%
+
+  &:after 
+    content: ""
+    display: table
+    clear: both
+
+  > svg 
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+
+
+.ct-octave 
+  display: block
+  position: relative
+  width: 100%
+  &:before 
+    display: block
+    float: left
+    content: ""
+    width: 0
+    height: 0
+    padding-bottom: 50%
+
+  &:after 
+    content: ""
+    display: table
+    clear: both
+
+  > svg 
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+
+
+.ct-major-tenth 
+  display: block
+  position: relative
+  width: 100%
+  &:before 
+    display: block
+    float: left
+    content: ""
+    width: 0
+    height: 0
+    padding-bottom: 40%
+
+  &:after 
+    content: ""
+    display: table
+    clear: both
+
+  > svg 
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+
+
+.ct-major-eleventh 
+  display: block
+  position: relative
+  width: 100%
+  &:before 
+    display: block
+    float: left
+    content: ""
+    width: 0
+    height: 0
+    padding-bottom: 37.5%
+
+  &:after 
+    content: ""
+    display: table
+    clear: both
+
+  > svg 
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+
+
+.ct-major-twelfth 
+  display: block
+  position: relative
+  width: 100%
+  &:before 
+    display: block
+    float: left
+    content: ""
+    width: 0
+    height: 0
+    padding-bottom: 33.3333333333%
+
+  &:after 
+    content: ""
+    display: table
+    clear: both
+
+  > svg 
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+
+
+.ct-double-octave 
+  display: block
+  position: relative
+  width: 100%
+  &:before 
+    display: block
+    float: left
+    content: ""
+    width: 0
+    height: 0
+    padding-bottom: 25%
+
+  &:after 
+    content: ""
+    display: table
+    clear: both
+
+  > svg 
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+
+
+.chartist-tooltip 
+  position: absolute
+  display: inline-block
+  opacity: 0
+  min-width: 3em
+  padding: .25em
+  background: $black_77
+  color: $white
+  font-weight: 600
+  text-align: center
+  pointer-events: none
+  z-index: 1
+  //If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: opacity .2s linear
+  &:before 
+    content: ""
+    position: absolute
+    top: 100%
+    left: 50%
+    width: 0
+    height: 0
+    margin-left: -5px
+    border: 5px solid transparent
+    border-top-color: $black_77
+
+  &.tooltip-show 
+    opacity: 1
+
+
+.chartist-tooltip-value 
+  font-size: 14px
+
+.ui-draggable-handle 
+  touch-action: none
+
+.ui-helper-hidden 
+  display: none
+
+.ui-helper-hidden-accessible 
+  border: 0
+  clip: rect(0 0 0 0)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+  width: 1px
+
+.ui-helper-reset 
+  margin: 0
+  padding: 0
+  border: 0
+  outline: 0
+  line-height: 1.3
+  text-decoration: none
+  font-size: 100%
+  list-style: none
+
+.ui-helper-clearfix 
+  &:after 
+    @extend %extend_2
+    clear: both
+
+  &:before 
+    @extend %extend_2
+
+
+.ui-helper-zfix 
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  position: absolute
+  opacity: 0
+  filter: Alpha(Opacity=0)
+
+.ui-front 
+  z-index: 100
+
+.ui-state-disabled 
+  cursor: default !important
+  pointer-events: none
+
+.ui-icon 
+  display: inline-block
+  vertical-align: middle
+  margin-top: -.25em
+  position: relative
+  text-indent: -99999px
+  overflow: hidden
+  background-repeat: no-repeat
+
+.ui-widget-icon-block 
+  left: 50%
+  margin-left: -8px
+  display: block
+
+.ui-widget-overlay 
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+.ui-resizable 
+  position: relative
+
+.ui-resizable-handle 
+  position: absolute
+  font-size: .1px
+  display: block
+  touch-action: none
+
+.ui-resizable-n 
+  cursor: n-resize
+  height: 7px
+  width: 100%
+  top: -5px
+  left: 0
+
+.ui-resizable-s 
+  cursor: s-resize
+  height: 7px
+  width: 100%
+  bottom: -5px
+  left: 0
+
+.ui-resizable-e 
+  cursor: e-resize
+  width: 7px
+  right: -5px
+  top: 0
+  height: 100%
+
+.ui-resizable-w 
+  cursor: w-resize
+  width: 7px
+  left: -5px
+  top: 0
+  height: 100%
+
+.ui-resizable-se 
+  cursor: se-resize
+  width: 12px
+  height: 12px
+  right: 1px
+  bottom: 1px
+
+.ui-resizable-sw 
+  cursor: sw-resize
+  width: 9px
+  height: 9px
+  left: -5px
+  bottom: -5px
+
+.ui-resizable-nw 
+  cursor: nw-resize
+  width: 9px
+  height: 9px
+  left: -5px
+  top: -5px
+
+.ui-resizable-ne 
+  cursor: ne-resize
+  width: 9px
+  height: 9px
+  right: -5px
+  top: -5px
+
+.ui-selectable 
+  touch-action: none
+
+.ui-selectable-helper 
+  position: absolute
+  z-index: 100
+  border: 1px dotted $black
+
+.ui-sortable-handle 
+  touch-action: none
+
+.ui-slider 
+  position: relative
+  text-align: left
+  background: $color_alto_approx
+  .ui-slider-handle 
+    position: absolute
+    z-index: 2
+    width: 1em
+    height: 1em
+    cursor: default
+    touch-action: none
+
+  .ui-slider-range 
+    position: absolute
+    z-index: 1
+    font-size: .7em
+    display: block
+    border: 0
+    background-position: 0 0
+
+  &.ui-state-disabled 
+    .ui-slider-handle 
+      filter: inherit
+
+    .ui-slider-range 
+      filter: inherit
+
+
+
+.ui-slider-horizontal 
+  height: .4em
+  .ui-slider-handle 
+    top: -.4em
+    margin-left: -.6em
+
+  .ui-slider-range 
+    top: 0
+    height: 100%
+
+  .ui-slider-range-min 
+    left: 0
+
+  .ui-slider-range-max 
+    right: 0
+
+
+.ui-slider-vertical 
+  width: .8em
+  height: 100px
+  .ui-slider-handle 
+    left: -.3em
+    margin-left: 0
+    margin-bottom: -.6em
+
+  .ui-slider-range 
+    left: 0
+    width: 100%
+
+  .ui-slider-range-min 
+    bottom: 0
+
+  .ui-slider-range-max 
+    top: 0
+
+
+.ui-slider-handle 
+  background: $white
+  background: linear-gradient(to bottom, $white 0, $color_black_haze_approx 100%)
+  //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+  border-radius: 50px
+  //If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 0 1px 4px 0 $color_manatee_approx !important
+  &:focus 
+    background: $white
+    background: linear-gradient(to bottom, $white 0, $color_black_haze_approx 100%)
+    //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+    border-radius: 50px
+    //If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 1px 4px 0 $color_manatee_approx !important
+
+
+.scroll-wrapper 
+  overflow: hidden !important
+  padding: 0 !important
+  position: relative
+  > 
+    .scroll-content 
+      border: none !important
+      //If you use compass, instead of the line below you could use + box-sizing($bs)
+      box-sizing: content-box !important
+      height: auto
+      left: 0
+      margin: 0
+      max-height: none
+      max-width: none !important
+      overflow: scroll !important
+      padding: 0
+      position: relative !important
+      top: 0
+      width: auto !important
+
+    .scroll-content::-webkit-scrollbar 
+      height: 0
+      width: 0
+
+
+
+.scroll-element 
+  display: none
+  //If you use compass, instead of the line below you could use + box-sizing($bs)
+  box-sizing: content-box
+  div 
+    //If you use compass, instead of the line below you could use + box-sizing($bs)
+    box-sizing: content-box
+
+  .scroll-arrow 
+    cursor: default
+
+  .scroll-bar 
+    cursor: default
+
+  &.scroll-x.scroll-scrollx_visible 
+    display: block
+
+  &.scroll-y.scroll-scrolly_visible 
+    display: block
+
+
+.scroll-textarea 
+  border: 1px solid $color_celeste_approx
+  border-top-color: $color_mountain_mist_approx
+  > .scroll-content 
+    overflow: hidden !important
+    > textarea 
+      border: none !important
+      //If you use compass, instead of the line below you could use + box-sizing($bs)
+      box-sizing: border-box
+      height: 100% !important
+      margin: 0
+      max-height: none !important
+      max-width: none !important
+      overflow: scroll !important
+      outline: 0
+      padding: 2px
+      position: relative !important
+      top: 0
+      width: 100% !important
+
+    > textarea::-webkit-scrollbar 
+      height: 0
+      width: 0
+
+
+
+.scrollbar-macosx 
+  > .scroll-element 
+    background: 0 0
+    border: none
+    margin: 0
+    padding: 0
+    position: absolute
+    z-index: 10
+    div 
+      background: 0 0
+      border: none
+      margin: 0
+      padding: 0
+      position: absolute
+      z-index: 10
+      display: block
+      height: 100%
+      left: 0
+      top: 0
+      width: 100%
+
+    .scroll-element_track 
+      display: none
+
+    .scroll-bar 
+      background-color: $color_dove_gray_approx
+      display: block
+      filter: alpha(opacity=0)
+      opacity: 0
+      //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+      border-radius: 7px
+      //If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: opacity .2s linear
+
+    &.scroll-x 
+      bottom: 0
+      height: 0
+      left: 0
+      min-width: 100%
+      overflow: visible
+      width: 100%
+      .scroll-bar 
+        height: 7px
+        min-width: 10px
+        top: -9px
+
+      .scroll-element_outer 
+        left: 2px
+
+      .scroll-element_size 
+        left: -4px
+
+      &.scroll-scrolly_visible .scroll-element_size 
+        left: -11px
+
+
+    &.scroll-y 
+      height: 100%
+      min-height: 100%
+      right: 0
+      top: 0
+      width: 0
+      .scroll-bar 
+        left: -9px
+        min-height: 10px
+        width: 7px
+
+      .scroll-element_outer 
+        top: 2px
+
+      .scroll-element_size 
+        top: -4px
+
+      &.scroll-scrollx_visible .scroll-element_size 
+        top: -11px
+
+
+    &.scroll-draggable .scroll-bar 
+      filter: alpha(opacity=70)
+      opacity: .7
+
+
+  &:hover > .scroll-element .scroll-bar 
+    filter: alpha(opacity=70)
+    opacity: .7
+
+
+.toggle 
+  position: relative
+  overflow: hidden
+  input[type=checkbox] 
+    display: none
+
+  &.btn 
+    min-width: 59px
+    min-height: 34px
+
+  &.btn-lg 
+    min-width: 79px
+    min-height: 45px
+
+  &.btn-sm 
+    min-width: 50px
+    min-height: 30px
+
+  &.btn-xs 
+    min-width: 35px
+    min-height: 22px
+
+  &.off .toggle-group 
+    left: -100%
+
+
+.toggle-group 
+  @extend %extend_5
+  width: 200%
+  left: 0
+  //If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: left .35s
+
+.toggle-off 
+  @extend %extend_5
+  left: 50%
+  right: 0
+  margin: 0
+  border: 0
+  //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+  border-radius: 0
+  &.btn 
+    padding-left: 24px
+
+  &.btn-lg 
+    padding-left: 31px
+
+  &.btn-sm 
+    padding-left: 20px
+
+  &.btn-xs 
+    padding-left: 12px
+
+
+.toggle-on 
+  @extend %extend_5
+  left: 0
+  right: 50%
+  margin: 0
+  border: 0
+  //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+  border-radius: 0
+  &.btn 
+    padding-right: 24px
+    color: $white !important
+
+  &.btn-lg 
+    padding-right: 31px
+
+  &.btn-sm 
+    padding-right: 20px
+
+  &.btn-xs 
+    padding-right: 12px
+
+
+.toggle-handle 
+  position: relative
+  margin: 0 auto
+  padding-top: 0
+  padding-bottom: 0
+  height: 100%
+  width: 0
+  border-width: 0 1px
+  background: $white !important
+  &.btn-lg 
+    width: 40px
+
+  &:hover 
+    background: $white !important
+
+
+.wrapper 
+  min-height: 100vh
+  position: relative
+  top: 0
+  height: 100vh
+
+.main-header 
+  min-height: 55px
+  width: 100%
+  background: $white
+  position: fixed
+  z-index: 1001
+  border-bottom: 1px solid $color_gallery_approx
+  .logo-header 
+    float: left
+    width: 260px
+    height: 55px
+    line-height: 55px
+    border-right: 1px solid $color_gallery_approx
+    color: $color_mine_shaft_approx
+    font-size: 18px
+    font-weight: 600
+    padding-left: 25px
+    padding-right: 25px
+    z-index: 1001
+    display: inline-block
+    .navbar-toggler 
+      padding-left: 0
+      padding-right: 0
+      opacity: 0
+      .navbar-toggler-icon 
+        background: $url_1
+        background-size: cover
+        height: 1em
+        width: 1em
+        opacity: .8
+
+
+    .more 
+      background: transparent
+      border: 0
+      font-size: 26px
+      padding: 0
+      opacity: 0
+
+    a.logo 
+      color: $color_scarpa_flow_approx
+
+
+
+.sidebar 
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  width: 260px
+  display: block
+  z-index: 1
+  color: $white
+  font-weight: 200
+  background: $white
+  background-size: cover
+  background-position: center center
+  border-right: 1px solid $color_gallery_approx
+  //If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 6px 1px 20px $color_gravel_10_approx
+  .user 
+    margin-top: 12.5px
+    padding-left: 25px
+    padding-right: 25px
+    padding-bottom: 12.5px
+    border-bottom: 1px solid $color_gallery_approx
+    display: block
+    .photo 
+      width: 40px
+      height: 40px
+      overflow: hidden
+      float: left
+      margin-right: 11px
+      z-index: 5
+      //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+      border-radius: 50%
+      img 
+        width: 100%
+        height: 100%
+
+
+    .info 
+      a 
+        white-space: nowrap
+        display: block
+        position: relative
+        &:hover 
+          text-decoration: none
+
+        &:focus 
+          text-decoration: none
+
+        > span 
+          font-size: 14px
+          font-weight: 600
+          color: $color_tapa_approx
+          letter-spacing: 0.04em
+          display: flex
+          flex-direction: column
+          .user-level 
+            color: $color_fuscous_gray_approx
+            font-weight: 700
+            font-size: 13px
+            letter-spacing: 0.05em
+            margin-top: 5px
+
+
+        .link-collapse 
+          padding: 7px 0
+
+
+      .caret 
+        position: absolute
+        top: 17px
+        right: 0
+        border-top-color: $color_tapa_approx
+
+
+
+  .sidebar-wrapper 
+    position: relative
+    max-height: calc(100vh - 75px)
+    min-height: 100%
+    overflow: auto
+    width: 260px
+    z-index: 4
+    padding-top: 55px
+    padding-bottom: 100px
+
+  .nav 
+    display: block
+    float: none
+    margin-top: 20px
+    .nav-item 
+      display: list-item
+      &.active 
+        a 
+          color: $color_scarpa_flow_approx
+          font-weight: 700
+          &:before 
+            background: $color_atlantis_approx
+            opacity: 1 !important
+            position: absolute
+            z-index: 1
+            width: 3px
+            height: 100%
+            content: ''
+            left: 0
+            top: 0
+
+          i 
+            color: $color_atlantis_approx
+
+
+        &:hover a:before 
+          background: $color_atlantis_approx !important
+          opacity: 1 !important
+          position: absolute
+          z-index: 1
+          width: 3px
+          height: 100%
+          content: ''
+          left: 0
+          top: 0
+
+
+      a 
+        display: flex
+        align-items: center
+        color: $color_gunsmoke_approx
+        padding: 13px 25px
+        width: 100%
+        font-size: 14px
+        font-weight: 600
+        position: relative
+        margin-bottom: 5px
+        &:hover 
+          text-decoration: none
+          background: $color_alabaster_approx
+
+        &:focus 
+          text-decoration: none
+          background: $color_alabaster_approx
+
+        i 
+          font-size: 23px
+          color: $color_gray_suit_approx
+          margin-right: 15px
+          width: 25px
+          text-align: center
+          vertical-align: middle
+          float: left
+
+        p 
+          font-size: 14px
+          margin-bottom: 0
+          letter-spacing: .04em
+          margin-right: 5px
+
+
+      &:hover a:before 
+        background: $color_atlantis_approx
+        opacity: 0.7
+        position: absolute
+        z-index: 1
+        width: 3px
+        height: 100%
+        content: ''
+        left: 0
+        top: 0
+
+
+
+
+.main-panel 
+  position: relative
+  width: calc(100% - 260px)
+  min-height: 100%
+  float: right
+  background: $color_wild_sand_approx
+  .content 
+    padding: 30px 15px
+    min-height: calc(100% - 123px)
+    margin-top: 55px
+
+
+.footer 
+  border-top: 1px solid $color_gallery_approx
+  padding: 15px
+  background: $white
+  .container-fluid 
+    display: flex
+    align-items: center
+
+
+.la 
+  display: inline-block
+  font: normal normal normal 16px/1 LineAwesome
+  font-size: inherit
+  text-decoration: inherit
+  text-rendering: optimizeLegibility
+  text-transform: none
+  font-smoothing: antialiased
+
+.la-stack 
+  display: inline-block
+  position: relative
+  width: 2em
+  height: 2em
+  line-height: 2em
+  vertical-align: middle
+
+.la-fw 
+  text-align: center
+  width: 1.28571429em
+
+.la-li 
+  text-align: center
+  position: absolute
+  left: -2.14285714em
+  width: 2.14285714em
+  top: .14285714em
+  &.la-lg 
+    left: -1.85714286em
+
+
+@font-face 
+  font-family: $font_0
+  src: $url_2
+  src: $url_3 format("embedded-opentype"), $url_4 format("woff2"), $url_5 format("woff"), $url_6 format("truetype"), $url_7 format("svg")
+  font-weight: 400
+  font-style: normal
+
+.la-lg 
+  font-size: 1.33333333em
+  line-height: .75em
+  vertical-align: -15%
+
+.la-2x 
+  font-size: 2em
+
+.la-3x 
+  font-size: 3em
+
+.la-4x 
+  font-size: 4em
+
+.la-5x 
+  font-size: 5em
+
+.la-ul 
+  padding-left: 0
+  margin-left: 2.14285714em
+  list-style-type: none
+  > li 
+    position: relative
+
+
+.la-border 
+  padding: .2em .25em .15em
+  border: .08em solid $color_gallery_approx
+  //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+  border-radius: .1em
+
+.pull-right 
+  float: right
+
+.pull-left 
+  float: left
+
+.li 
+  &.pull-left 
+    margin-right: .3em
+
+  &.pull-right 
+    margin-left: .3em
+
+
+.la-spin 
+  animation: fa-spin 2s infinite linear
+
+@-webkit-keyframes fa-spin 
+  0% 
+    //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(0)
+
+  100% 
+    //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(359deg)
+
+
+@keyframes fa-spin 
+  0% 
+    //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(0)
+
+  100% 
+    //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(359deg)
+
+
+.la-rotate-90 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1)
+  //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+  transform: rotate(90deg)
+
+.la-rotate-180 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2)
+  //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+  transform: rotate(180deg)
+
+.la-rotate-270 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3)
+  //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+  transform: rotate(270deg)
+
+.la-flip-horizontal 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)
+  //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+  transform: scale(-1, 1)
+
+.la-flip-vertical 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)
+  //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+  transform: scale(1, -1)
+
+:root 
+  .la-flip-horizontal 
+    filter: none
+
+  .la-flip-vertical 
+    filter: none
+
+  .la-rotate-180 
+    filter: none
+
+  .la-rotate-270 
+    filter: none
+
+  .la-rotate-90 
+    filter: none
+
+
+.la-stack-1x 
+  position: absolute
+  left: 0
+  width: 100%
+  text-align: center
+  line-height: inherit
+
+.la-stack-2x 
+  position: absolute
+  left: 0
+  width: 100%
+  text-align: center
+  font-size: 2em
+
+.la-inverse 
+  color: $white
+
+.heading 
+  font-family: $font_3, $font_2
+  font-style: normal
+  font-weight: bold
+  line-height: normal
+  font-size: 20px
+  display: inline-block
+  color: $color_gray_approx
+  margin: 0
+
+.dtable 
+  //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+  border-radius: 0 !important
+  background-color: transparent !important
+  margin-bottom: 30px
+  //If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: none !important
+  border: none !important
+  tr 
+    border: none !important
+
+  h5 
+    background: $color_bon_jour_approx !important
+    //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+    border-radius: 10px !important
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: bold
+    line-height: normal
+    font-size: 15px
+    text-align: center
+    padding: 15px 25px
+    color: $color_gray_approx
+
+  h6 
+    background: $color_bon_jour_approx !important
+    //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+    border-radius: 50px !important
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: bold
+    line-height: normal
+    font-size: 15px
+    width: 80%
+    margin: auto
+    padding: 10px 5px
+    color: $color_gray_approx
+
+  h7 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: 600
+    line-height: normal
+    font-size: 18px
+    color: $color_gray_approx
+
+  .card-header 
+    padding: 15px
+    background-color: transparent
+    border-bottom: none !important
+
+  td img 
+    //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+    border-radius: 50%
+    width: 50%
+
+
+thead 
+  border: none !important
+  border: none !important
+  border: none !important
+
+.table 
+  color: $color_fuscous_gray_approx !important
+  td 
+    font-size: 12px
+    border: none !important
+    padding: 0.75rem !important
+    font-size: 12px
+    border: none !important
+    padding: 0 !important
+
+  th 
+    font-size: 12px
+    border: none !important
+    padding: 0.75rem !important
+
+  thead th 
+    border: none !important
+    color: $color_fuscous_gray_approx
+    border-bottom-width: 2px
+
+  > thead > tr 
+    > th 
+      vertical-align: middle
+      text-align: center
+
+    > td 
+      vertical-align: middle
+      text-align: center
+
+
+  > tbody > tr 
+    > th 
+      vertical-align: middle
+      text-align: center
+      padding: 8px
+
+    > td 
+      vertical-align: middle
+      text-align: center
+      padding: 8px
+
+
+  > tfoot > tr 
+    > th 
+      vertical-align: middle
+      text-align: center
+      padding: 8px
+
+    > td 
+      vertical-align: middle
+      text-align: center
+      padding: 8px
+
+
+
+.otable 
+  //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+  border-radius: 0 !important
+  background-color: transparent !important
+  margin-bottom: 30px
+  //If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: none !important
+  border: none !important
+  tr 
+    border: none !important
+
+  h5 
+    background: $color_bon_jour_approx !important
+    //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+    border-radius: 10px !important
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: bold
+    line-height: normal
+    font-size: 15px
+    text-align: center
+    padding: 15px 25px
+    color: $color_gray_approx
+
+  a 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: 600
+    line-height: normal
+    font-size: 15px
+    text-align: center
+    text-decoration-line: underline
+    color: $color_silver_approx
+    &:hover 
+      color: $color_gray_approx
+
+
+  h6 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: 600
+    line-height: normal
+    font-size: 15px
+    text-align: center
+    margin: auto
+    padding: 10px 5px
+    color: $color_gray_approx
+
+  h7 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: 600
+    line-height: normal
+    font-size: 18px
+    color: $color_gray_approx
+
+  .card-header 
+    padding: 15px
+    background-color: transparent
+    border-bottom: none !important
+
+  td img 
+    //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+    border-radius: 50%
+
+
+.utable 
+  //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+  border-radius: 0 !important
+  background-color: transparent !important
+  margin-bottom: 30px
+  //If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: none !important
+  border: none !important
+  td 
+    padding: 10px !impotant
+
+  tr 
+    border: none !important
+
+  h5 
+    background: $color_bon_jour_approx !important
+    //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+    border-radius: 10px !important
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: bold
+    line-height: normal
+    font-size: 15px
+    text-align: center
+    padding: 15px 10px
+    color: $color_gray_approx
+
+  h6 
+    font-family: $font_3
+    font-style: normal
+    font-weight: 600
+    line-height: normal
+    font-size: 12px
+    text-align: center
+    color: $color_silver_approx
+
+  a 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: 600
+    line-height: normal
+    font-size: 15px
+    text-align: center
+    text-decoration-line: underline
+    color: $color_silver_approx
+    &:hover 
+      color: $color_gray_approx
+
+
+  h7 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: 600
+    line-height: normal
+    font-size: 12px important
+    padding: 0 15px
+    color: $color_fuscous_gray_approx important
+
+
+.profilepic 
+  //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+  border-radius: 50%
+  width: 20%
+  margin: auto
+  img 
+    //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+    border-radius: 50%
+    margin-top: 38px
+
+
+.odetails 
+  background: $color_bon_jour_approx
+  //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+  border-radius: 10px
+  padding: 5px 10px 0 10px!important
+  color: $color_gray_approx
+  float: left
+  p 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: 600
+    line-height: normal
+    font-size: 12px !important
+    text-align: center !important
+    color: $color_gray_approx
+    float: left
+    display: inline-block
+
+
+.reddot 
+  height: 20px
+  width: 20px
+  background-color: $color_mandy_approx
+  //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+  border-radius: 50%
+  display: inline-block
+  text-decoration: none
+  margin-right: 15px
+
+.yellowdot 
+  height: 20px
+  width: 20px
+  background-color: $color_ronchi_approx
+  //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+  border-radius: 50%
+  display: inline
+  margin-right: 15px
+  height: 15px !important
+  width: 15px !important
+
+.greendot 
+  height: 20px
+  width: 20px
+  background-color: $color_atlantis_approx
+  //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+  border-radius: 50%
+  display: inline-block
+  margin-right: 15px
+  margin-left: 15px
+  height: 15px !important
+  width: 15px !important
+
+.greycircle 
+  height: 40px
+  width: 40px
+  background: $color_cloud_approx
+  //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+  border-radius: 50%
+  display: inline-block
+  margin-left: 10px
+  float: left
+
+.right 
+  float: right
+  .reddot 
+    height: 15px !important
+    width: 15px !important
+
+  p 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: normal
+    line-height: 20px
+    font-size: 13px
+    color: $color_silver_approx
+    float: left
+
+  h5 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: bold
+    line-height: 20px
+    font-size: 13px
+    background: none !important
+    color: $color_gray_approx
+    padding: none !important
+
+  span 
+    float: left
+
+
+.prodquantity 
+  p 
+    float: right
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: bold
+    line-height: 20px
+    font-size: 13px
+    color: $color_gray_approx
+
+  span 
+    float: right
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: normal
+    line-height: 20px
+    font-size: 13px
+
+
+.client 
+  p 
+    font-family: $font_3, $font_2
+    font-style: normal!important
+    font-weight: bold !important
+    line-height: normal !important
+    font-size: 10px !important
+    color: $color_gray_approx
+    padding-top: 15px
+
+  img 
+    width: 40%
+    float: left
+
+  span 
+    font-family: $font_3, $font_2
+    font-style: italic
+    font-weight: normal
+    line-height: normal
+    font-size: 9px
+    float: none
+    color: $color_silver_approx
+
+
+#myChart 
+  width: 100%
+
+.updatepic 
+  margin: 38px auto
+  button 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: bold
+    line-height: normal !important
+    font-size: 13px !important
+    text-align: center !important
+    text-transform: uppercase !important
+    color: $color_gray_approx !important
+    background-color: $white !important
+    border: 1px solid
+    &:hover 
+      background-color: $color_atlantis_approx !important
+
+
+
+.save 
+  margin: 38px auto
+  button 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: bold
+    line-height: normal
+    font-size: 15px
+    text-align: center
+    text-transform: uppercase
+    color: $color_atlantis_approx !important
+    border: 1px solid $color_atlantis_approx
+    //If you use compass, instead of the line below you could use + box-sizing($bs)
+    box-sizing: border-box
+    //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+    border-radius: 40px !important
+    background-color: $white !important
+    width: 100% !important
+    height: 50px
+    &:hover 
+      background-color: $color_atlantis_approx !important
+
+
+
+.col-centered 
+  float: none
+  margin-right: auto
+  margin-left: auto
+
+.card 
+  //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+  border-radius: 30px
+  background-color: $white
+  margin-bottom: 30px
+  //If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 0 1px 15px 1px $color_gravel_8_approx
+  border: 1px solid $color_gallery_approx
+  .card-header 
+    padding: 15px
+    background-color: transparent
+    border-bottom: 1px solid $color_athens_gray_approx
+
+  .card-title 
+    margin: 0
+    color: $color_scarpa_flow_approx
+    font-size: 18px
+    font-weight: 600
+    line-height: 1.6
+
+  .card-sub 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: normal
+    line-height: normal
+    font-size: 14px
+    color: $color_silver_approx
+
+  .card-category 
+    margin-top: 5px
+    font-size: 14px
+    font-weight: 400
+    color: $color_star_dust_approx
+    margin-bottom: 0
+
+  label 
+    font-size: 14px
+    font-weight: 400
+    color: $color_star_dust_approx
+    margin-bottom: 0
+
+  .card-body 
+    padding: 15px 15px 10px 15px
+
+  .card-footer 
+    background-color: transparent
+    line-height: 30px
+    border-top: 1px solid $color_athens_gray_approx !important
+    font-size: 14px
+    hr 
+      margin-top: 5px
+      margin-bottom: 5px
+
+    .legend 
+      display: inline-block
+
+
+  .card-action 
+    padding: 30px
+    background-color: transparent
+    line-height: 30px
+    border-top: 1px solid $color_athens_gray_approx !important
+    font-size: 14px
+
+
+.card-stats 
+  .card-category 
+    margin-top: 0
+
+  .icon-big 
+    font-size: 3em
+    min-height: 64px
+
+
+.card-tasks 
+  .table 
+    .form-check 
+      padding: 0 0 0 0.75rem !important
+      label 
+        margin-bottom: 0 !important
+
+
+    thead th 
+      border-top: 1px solid $wild_sand
+      background: $alabaster !important
+      &:first-child 
+        padding-left: 15px
+        padding-right: 15px
+
+      &:last-child 
+        padding-right: 15px
+
+
+    tbody td 
+      &:first-child 
+        padding-left: 15px
+        padding-right: 15px
+
+      &:last-child 
+        padding-right: 15px
+
+
+
+  .card-body .table td 
+    font-size: 14px
+    line-height: 1.8
+    .btn 
+      font-size: 17px
+      opacity: 0.7
+      //If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all .3s
+
+    &:hover .btn 
+      opacity: 1
+
+
+
+.card-default 
+  color: $white
+  border: 0
+  width: 100%
+  height: 150px
+  padding-top: 25px
+  background: $white
+  .card-header 
+    border-bottom: transparent !important
+
+  .card-category 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: bold
+    line-height: normal
+    font-size: 16px
+    text-align: center
+    color: $color_silver_approx
+
+  .card-title 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: bold
+    line-height: normal
+    font-size: 16px
+    text-align: center
+    color: $color_silver_approx
+
+  label 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: bold
+    line-height: normal
+    font-size: 16px
+    text-align: center
+    color: $color_silver_approx
+
+  .card-footer 
+    border-top: transparent !important
+
+  .icon-big > i 
+    color: $white !important
+
+
+.card-primary 
+  color: $white
+  border: 0
+  width: 100%
+  height: 150px
+  padding-top: 25px
+  background: $white
+  .card-header 
+    border-bottom: transparent !important
+
+  .card-category 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: bold
+    line-height: normal
+    font-size: 16px
+    text-align: center
+    color: $color_silver_approx
+
+  .card-title 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: bold
+    line-height: normal
+    font-size: 16px
+    text-align: center
+    color: $color_silver_approx
+
+  label 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: bold
+    line-height: normal
+    font-size: 16px
+    text-align: center
+    color: $color_silver_approx
+
+  .card-footer 
+    border-top: transparent !important
+
+  .icon-big > i 
+    color: $white !important
+
+
+.card-info 
+  color: $white
+  border: 0
+  width: 100%
+  height: 150px
+  padding-top: 25px
+  background: $white
+  .card-header 
+    border-bottom: transparent !important
+
+  .card-category 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: bold
+    line-height: normal
+    font-size: 16px
+    text-align: center
+    color: $color_silver_approx
+
+  .card-title 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: bold
+    line-height: normal
+    font-size: 16px
+    text-align: center
+    color: $color_silver_approx
+
+  label 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: bold
+    line-height: normal
+    font-size: 16px
+    text-align: center
+    color: $color_silver_approx
+
+  .card-footer 
+    border-top: transparent !important
+
+  .icon-big > i 
+    color: $white !important
+
+
+.card-success 
+  color: $white
+  border: 0
+  width: 100%
+  height: 150px
+  padding-top: 25px
+  background: $white
+  .card-header 
+    border-bottom: transparent !important
+
+  .card-category 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: bold
+    line-height: normal
+    font-size: 16px
+    text-align: center
+    color: $color_silver_approx
+
+  .card-title 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: bold
+    line-height: normal
+    font-size: 16px
+    text-align: center
+    color: $color_silver_approx
+
+  label 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: bold
+    line-height: normal
+    font-size: 16px
+    text-align: center
+    color: $color_silver_approx
+
+  .card-footer 
+    border-top: transparent !important
+
+  .icon-big > i 
+    color: $white !important
+
+
+.card-warning 
+  color: $white
+  border: 0
+  width: 100%
+  height: 150px
+  padding-top: 25px
+  background: $white
+  .card-header 
+    border-bottom: transparent !important
+
+  .card-category 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: bold
+    line-height: normal
+    font-size: 16px
+    text-align: center
+    color: $color_silver_approx
+
+  .card-title 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: bold
+    line-height: normal
+    font-size: 16px
+    text-align: center
+    color: $color_silver_approx
+
+  label 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: bold
+    line-height: normal
+    font-size: 16px
+    text-align: center
+    color: $color_silver_approx
+
+  .card-footer 
+    border-top: transparent !important
+
+  .icon-big > i 
+    color: $white !important
+
+
+.card-danger 
+  color: $white
+  border: 0
+  width: 100%
+  height: 150px
+  padding-top: 25px
+  background: $white
+  .card-header 
+    border-bottom: transparent !important
+
+  .card-category 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: bold
+    line-height: normal
+    font-size: 16px
+    text-align: center
+    color: $color_silver_approx
+
+  .card-title 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: bold
+    line-height: normal
+    font-size: 16px
+    text-align: center
+    color: $color_silver_approx
+
+  label 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: bold
+    line-height: normal
+    font-size: 16px
+    text-align: center
+    color: $color_silver_approx
+
+  .card-footer 
+    border-top: transparent !important
+
+  .icon-big > i 
+    color: $white !important
+
+
+.card-title 
+  font-family: $font_3, $font_4
+  font-style: normal !important
+  font-weight: bold !important
+  line-height: normal !important
+  font-size: 29px !important
+  color: $color_atlantis_approx !important
+
+.progress-card 
+  margin-bottom: 25px
+
+.row-card-no-pd 
+  margin-left: 0
+  margin-right: 0
+  background: $white
+  margin-bottom: 30px
+  padding-top: 30px
+  padding-bottom: 30px
+  position: relative
+  .card 
+    margin-bottom: 0
+    border-width: 0
+    //If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none
+    position: unset
+
+  [class*=col-] .card:after 
+    position: absolute
+    height: calc(100%)
+    width: 1px
+    background: $color_gallery_approx
+    content: ''
+    right: 0
+    &:last-child 
+      width: 0
+
+
+
+.form-button-action 
+  display: inline-flex
+
+[type="checkbox"] 
+  &:checked 
+    position: absolute
+    left: -9999px
+    + .form-check-sign 
+      position: relative
+      padding-left: 1.65em
+      color: $color_tapa_approx
+      cursor: pointer
+      font-weight: 700
+      &:before 
+        content: ''
+        position: absolute
+        left: 0
+        top: 1px
+        width: 16px
+        height: 16px
+        border: 1px solid $color_celeste_approx
+        background: transparent
+        //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+        border-radius: 4px
+
+      &:after 
+        content: "\f17b"
+        display: inline-block
+        position: absolute
+        top: -1px
+        left: 2px
+        width: 18px
+        height: 18px
+        text-align: center
+        font-size: 1.5em
+        line-height: 0.8
+        color: $color_royal_blue_approx
+        //If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+        transition: all .2s
+        font-family: $font_0
+        opacity: 1
+        //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: scale(1)
+
+
+    &:focus + .form-check-sign:before 
+      border: 1px solid $color_celeste_approx
+
+
+  &:disabled 
+    &:not(:checked) + .form-check-sign:before 
+      //If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: none
+      border-color: $color_pink_swan_approx
+      background-color: $color_alto_approx
+
+    &:checked + .form-check-sign 
+      &:before 
+        //If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none
+        border-color: $color_pink_swan_approx
+        background-color: $color_alto_approx
+
+      &:after 
+        color: $color_mountain_mist_approx
+
+
+    + .form-check-sign 
+      color: $color_silver_chalice_approx
+
+
+  &:not(:checked) 
+    position: absolute
+    left: -9999px
+    + .form-check-sign 
+      position: relative
+      padding-left: 1.65em
+      color: $color_tapa_approx
+      cursor: pointer
+      &:before 
+        content: ''
+        position: absolute
+        left: 0
+        top: 1px
+        width: 16px
+        height: 16px
+        border: 1px solid $color_celeste_approx
+        background: transparent
+        //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+        border-radius: 4px
+
+      &:after 
+        content: "\f17b"
+        display: inline-block
+        position: absolute
+        top: -1px
+        left: 2px
+        width: 18px
+        height: 18px
+        text-align: center
+        font-size: 1.5em
+        line-height: 0.8
+        color: $color_royal_blue_approx
+        //If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+        transition: all .2s
+        font-family: $font_0
+        opacity: 0
+        //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: scale(0)
+
+
+    &:focus + .form-check-sign:before 
+      border: 1px solid $color_celeste_approx
+
+
+
+.form-check 
+  padding-left: 0.75rem
+  margin-bottom: 0
+  padding: 15px 0
+  label 
+    margin-bottom: .5rem !important
+    color: $color_cape_cod_approx !important
+    font-weight: 400
+    font-size: 1rem
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: 600
+    line-height: normal
+    font-size: 20px !important
+    text-transform: capitalize
+    color: $color_gray_approx !important
+
+
+.form-check-input 
+  position: relative
+  margin-top: .3rem
+
+[type="radio"] 
+  &:checked 
+    position: absolute
+    left: -9999px
+    + .form-radio-sign 
+      position: relative
+      padding-left: 1.65em
+      color: $color_tapa_approx
+      cursor: pointer
+      font-weight: 700
+      &:before 
+        content: "\f18a"
+        font-size: 22px
+        font-family: $font_0
+        position: absolute
+        left: 0
+        top: auto
+        background: transparent
+        line-height: 1
+        display: none
+
+      &:after 
+        content: "\f1bc"
+        position: absolute
+        left: 0
+        top: auto
+        text-align: center
+        font-size: 22px
+        color: $color_royal_blue_approx
+        //If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+        transition: all .2s
+        line-height: 1
+        font-family: $font_0
+        opacity: 1
+        //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: scale(1)
+
+
+    &:focus + .form-radio-sign:before 
+      border: 1px solid $color_celeste_approx
+
+
+  &:disabled 
+    &:not(:checked) + .form-radio-sign:before 
+      //If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: none
+      opacity: 0.65
+
+    &:checked + .form-radio-sign 
+      &:before 
+        //If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none
+        opacity: 0.65
+
+      &:after 
+        opacity: 0.65
+
+
+    + .form-radio-sign 
+      color: $color_silver_chalice_approx
+      opacity: 0.65
+
+
+  &:not(:checked) 
+    position: absolute
+    left: -9999px
+    + .form-radio-sign 
+      position: relative
+      padding-left: 1.65em
+      color: $color_tapa_approx
+      cursor: pointer
+      &:before 
+        content: "\f18a"
+        font-size: 22px
+        font-family: $font_0
+        position: absolute
+        left: 0
+        top: auto
+        background: transparent
+        line-height: 1
+
+      &:after 
+        content: "\f1bc"
+        position: absolute
+        left: 0
+        top: auto
+        text-align: center
+        font-size: 22px
+        color: $color_royal_blue_approx
+        //If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+        transition: all .2s
+        line-height: 1
+        font-family: $font_0
+        opacity: 0
+        //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: scale(0)
+
+
+    &:focus + .form-radio-sign:before 
+      border: 1px solid $color_celeste_approx
+
+
+
+.form-radio 
+  padding-left: 0.75rem
+
+.form-radio-input 
+  position: relative
+  margin-top: .3rem
+
+.form-group 
+  margin-bottom: 0
+  padding: 15px 0
+  label 
+    margin-bottom: .5rem !important
+    color: $color_cape_cod_approx !important
+    font-weight: 400
+    font-size: 1rem
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: 600
+    line-height: normal
+    font-size: 20px !important
+    text-transform: capitalize
+    color: $color_gray_approx !important
+
+
+.input-fixed 
+  width: 200px
+
+.form-control 
+  &.input-full 
+    width: 100% !important
+
+  &:disabled 
+    background: $color_gray_nurse_approx !important
+    border-color: $color_gray_nurse_approx !important
+    opacity: 0.6 !important
+
+
+.has-success 
+  .form-control 
+    border-color: $color_emerald_approx
+    color: $color_emerald_approx
+
+  .form-control-feedback 
+    color: $color_emerald_approx
+
+
+.has-error 
+  .form-control 
+    border-color: $color_wild_watermelon_approx
+    color: $color_wild_watermelon_approx
+
+  .form-control-feedback 
+    color: $color_wild_watermelon_approx
+
+
+.has-feedback 
+  position: relative
+
+.form-control-feedback 
+  position: absolute
+  top: 50%
+  //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+  transform: translateY(-50%)
+  right: 20px
+
+.input-group 
+  &.has-icon 
+    //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+    border-radius: .25rem
+    border: 1px solid $color_mischka_approx
+    &.has-success 
+      border-color: 1px solid $color_emerald_approx !important
+      color: $color_emerald_approx
+
+    &.has-error 
+      border: 1px solid $color_wild_watermelon_approx !important
+      color: $color_wild_watermelon_approx
+
+    .form-control 
+      //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+      border-radius: .25rem
+      border: 0
+      position: relative
+
+    .input-group-icon 
+      background: transparent
+      border: 0
+
+
+  &.has-success 
+    border-color: 1px solid $color_emerald_approx !important
+    color: $color_emerald_approx
+
+  &.has-error 
+    border: 1px solid $color_wild_watermelon_approx !important
+    color: $color_wild_watermelon_approx
+
+
+.input-square 
+  //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+  border-radius: 0 !important
+
+.input-pill 
+  //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+  border-radius: 1.3rem !important
+  width: 100%
+  height: 50px
+  left: 218px
+  top: 628px
+  background: $concrete
+  border: 1px solid $color_silver_approx
+  //If you use compass, instead of the line below you could use + box-sizing($bs)
+  box-sizing: border-box
+  //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+  border-radius: 40px !important
+
+.input-solid 
+  background: $color_gray_nurse_approx !important
+  border-color: $color_gray_nurse_approx !important
+
+.form-control[readonly] 
+  background: $color_gray_nurse_approx !important
+  border-color: $color_gray_nurse_approx !important
+  opacity: 0.6 !important
+
+.table-full-width 
+  margin-left: -15px
+  margin-right: -15px
+
+.table-bordered-bd-default 
+  td 
+    border: 1px solid $color_smalt_blue_approx !important
+
+  th 
+    border: 1px solid $color_smalt_blue_approx !important
+
+
+.table-bordered-bd-primary 
+  td 
+    border: 1px solid $color_blue_ribbon_approx !important
+
+  th 
+    border: 1px solid $color_blue_ribbon_approx !important
+
+
+.table-bordered-bd-info 
+  td 
+    border: 1px solid $color_scooter_approx !important
+
+  th 
+    border: 1px solid $color_scooter_approx !important
+
+
+.table-bordered-bd-success 
+  td 
+    border: 1px solid $color_emerald_approx !important
+
+  th 
+    border: 1px solid $color_emerald_approx !important
+
+
+.table-bordered-bd-warning 
+  td 
+    border: 1px solid $color_yellow_orange_approx !important
+
+  th 
+    border: 1px solid $color_yellow_orange_approx !important
+
+
+.table-bordered-bd-danger 
+  td 
+    border: 1px solid $color_wild_watermelon_approx !important
+
+  th 
+    border: 1px solid $color_wild_watermelon_approx !important
+
+
+.table-striped 
+  td 
+    border-top: 0 !important
+    border-bottom: 0 !important
+
+  th 
+    border-top: 0 !important
+    border-bottom: 0 !important
+
+
+.table-head-bg-default 
+  border: 1px solid $color_smalt_blue_approx !important
+  thead th 
+    background: $color_smalt_blue_approx !important
+    color: $white !important
+    border: 0 !important
+
+
+.table-head-bg-primary 
+  border: 1px solid $color_blue_ribbon_approx !important
+  thead th 
+    background: $color_blue_ribbon_approx !important
+    color: $white !important
+    border: 0 !important
+
+
+.table-head-bg-info 
+  border: 1px solid $color_scooter_approx !important
+  thead th 
+    background: $color_scooter_approx !important
+    color: $white !important
+    border: 0 !important
+
+
+.table-head-bg-success 
+  border: 1px solid $color_emerald_approx !important
+  thead th 
+    background: $color_emerald_approx !important
+    color: $white !important
+    border: 0 !important
+
+
+.table-head-bg-warning 
+  border: 1px solid $color_yellow_orange_approx !important
+  thead th 
+    background: $color_yellow_orange_approx !important
+    color: $white !important
+    border: 0 !important
+
+
+.table-head-bg-danger 
+  border: 1px solid $color_wild_watermelon_approx !important
+  thead th 
+    background: $color_wild_watermelon_approx !important
+    color: $white !important
+    border: 0 !important
+
+
+.table-responsive 
+  display: block
+  width: 100%
+  overflow-x: auto
+
+.dropdown-item 
+  font-size: 14px
+
+.navbar-header 
+  padding: 0 15px
+  .dropdown-toggle 
+    line-height: 55px
+
+  .dropdown-toggle::after 
+    margin-left: 0
+    vertical-align: middle
+    color: $color_fuscous_gray_approx
+
+
+.profile-pic 
+  &:hover 
+    text-decoration: none
+
+  &:focus 
+    text-decoration: none
+
+  .img-circle 
+    //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+    border-radius: 50%
+
+  span 
+    font-size: 14px
+    font-weight: 600
+    padding: 0 10px
+    color: $color_fuscous_gray_approx
+
+
+.nav-search 
+  .input-group 
+    border: 1px solid $color_gallery_approx
+    background: $color_gallery_approx
+    //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+    border-radius: 50px
+    &:hover 
+      border: 1px solid $color_alto_approx
+
+    &:focus 
+      border: 1px solid $color_alto_approx
+
+
+  .form-control 
+    border: 0
+    background: transparent
+    font-size: 14px
+
+  .input-group-text 
+    border: 0
+    background: transparent
+
+  .search-icon 
+    font-size: 21px
+    color: $color_storm_dust_approx
+
+
+.badge 
+  //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+  border-radius: 50px
+  margin-left: auto
+  line-height: 1
+  padding: 6px 10px
+  vertical-align: middle
+  font-weight: 700
+  font-size: 11px
+
+.badge-count 
+  border: 1px solid $color_alto_approx
+
+.badge-default 
+  background: $color_smalt_blue_approx
+  color: $white !important
+
+.badge-primary 
+  background: $color_blue_ribbon_approx
+
+.badge-info 
+  background: $color_scooter_approx
+
+.badge-success 
+  background-color: $color_emerald_approx
+
+.badge-warning 
+  background: $color_yellow_orange_approx
+  color: $white !important
+
+.badge-danger 
+  background-color: $color_wild_watermelon_approx
+
+.dropdown-menu 
+  border: 1px solid $color_slate_gray_13_approx
+  //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+  border-radius: 0
+  //If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 0 3px 12px $black_5 !important
+  padding-bottom: 8px
+  margin-top: 0
+
+.dropdown-title 
+  border-bottom: 1px solid $black_10
+  color: $color_outer_space_approx
+  font-size: 15px
+  font-weight: 800
+  padding: 5px 20px 10px
+  text-align: center
+
+.notif-box 
+  width: 280px
+  padding-bottom: 0
+  .see-all 
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 10px 20px
+    color: $color_fuscous_gray_approx
+    font-size: 15px
+    font-weight: 400
+    text-decoration: none
+    &:hover 
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: 10px 20px
+      color: $color_fuscous_gray_approx
+      font-size: 15px
+      font-weight: 400
+      text-decoration: none
+
+    i 
+      float: right
+
+
+  .notif-center a 
+    display: flex
+    border-bottom: 1px solid $color_gray_nurse_approx
+    color: $color_trout_approx
+    &:hover 
+      text-decoration: none
+      background: $alabaster
+      //If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all .2s
+
+    .notif-icon 
+      display: inline-flex
+      width: 40px
+      height: 40px
+      margin: 10px
+      align-items: center
+      justify-content: center
+      background: $color_gallery_approx
+      //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+      border-radius: 50%
+      &.notif-default 
+        color: $white !important
+        background: $color_smalt_blue_approx !important
+
+      &.notif-primary 
+        color: $white !important
+        background: $color_blue_ribbon_approx !important
+
+      &.notif-info 
+        color: $white !important
+        background: $color_scooter_approx !important
+
+      &.notif-success 
+        color: $white !important
+        background: $color_emerald_approx !important
+
+      &.notif-warning 
+        color: $white !important
+        background: $color_yellow_orange_approx !important
+
+      &.notif-danger 
+        color: $white !important
+        background: $color_wild_watermelon_approx !important
+
+      i 
+        font-size: 21px
+
+
+    .notif-img 
+      display: inline-flex
+      width: 40px
+      height: 40px
+      margin: 10px
+      align-items: center
+      justify-content: center
+      background: $color_gallery_approx
+      //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+      border-radius: 50%
+      img 
+        width: 100%
+        height: 100%
+        //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+        border-radius: 50%
+
+
+    .notif-content 
+      padding: 10px 15px 10px 0
+      .block 
+        font-size: 14px
+        line-height: 20px
+        display: block
+
+      .time 
+        color: $color_oslo_gray_approx
+        font-size: 12px
+
+
+
+
+.dropdown-user 
+  width: 280px
+
+.user-box 
+  display: flex
+  padding: .25rem 1rem
+  .u-img 
+    width: 80px
+    img 
+      width: 100%
+      //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+      border-radius: 5px
+
+
+  .u-text 
+    padding: 0 10px
+    h4 
+      margin-bottom: 0
+      font-size: 18px
+
+    .text-muted 
+      font-size: 13px
+      margin-bottom: 5px
+
+    .btn 
+      font-size: 12px
+
+
+
+.caret 
+  display: inline-block
+  width: 0
+  height: 0
+  margin-left: .255em
+  vertical-align: .255em
+  content: ""
+  border-top: .3em solid
+  border-right: 0.3em solid transparent
+  border-bottom: 0
+  border-left: 0.3em solid transparent
+
+.chart 
+  margin: 30px 0
+  position: relative
+
+.chart-circle 
+  display: flex
+  justify-content: center
+  .circles-text 
+    font-size: 28px !important
+
+
+.color-box 
+  width: 15px
+  height: 15px
+  //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+  border-radius: 2px
+  display: inline-block
+  float: left
+  padding-top: 3px
+  margin: 2px 5px 0 0
+
+.chart-pie 
+  display: block
+  position: relative
+  width: 100%
+  &:before 
+    display: block
+    float: left
+    content: ""
+    width: 0
+    height: 0
+    padding-bottom: 75%
+
+  &:after 
+    content: ""
+    display: table
+    clear: both
+
+  svg 
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+
+.alert-primary 
+  background-color: $color_blue_ribbon_approx
+
+.alert-info 
+  background-color: $color_scooter_approx
+
+.alert-success 
+  background-color: $color_emerald_approx
+
+.alert-warning 
+  background-color: $color_yellow_orange_approx
+
+.alert-danger 
+  background-color: $color_wild_watermelon_approx
+
+.btn 
+  padding: 8px 16px
+  font-size: 14px
+  opacity: 0.9
+  //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+  border-radius: 3px
+  &:hover 
+    opacity: 1
+    &:disabled 
+      opacity: 0.65
+
+
+  &:focus 
+    opacity: 1
+
+  &.disabled:hover 
+    opacity: 0.65
+
+
+.btn-lg 
+  font-size: 18px
+  //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+  border-radius: 6px
+  padding: 10px 30px
+  font-weight: 400
+
+.btn-sm 
+  font-size: 12px
+  padding: 7px 13px
+
+.btn-xs 
+  font-size: 11px
+  padding: 5px 9px
+
+.btn-default 
+  background: $color_smalt_blue_approx !important
+  color: $white !important
+  &:hover 
+    background: $color_smalt_blue_approx !important
+    color: $white !important
+
+  &:focus 
+    background: $color_smalt_blue_approx !important
+    color: $white !important
+
+  &:disabled 
+    background: $color_smalt_blue_approx !important
+    color: $white !important
+
+  &.btn-border 
+    color: $color_smalt_blue_approx !important
+    border: 2px solid $color_smalt_blue_approx !important
+
+  &.btn-link 
+    color: $color_smalt_blue_approx !important
+    &:hover 
+      color: $color_smalt_blue_approx !important
+
+
+
+.btn-primary 
+  background: $color_blue_ribbon_approx !important
+  border-color: $color_blue_ribbon_approx !important
+  &:hover 
+    background: $color_blue_ribbon_approx !important
+    border-color: $color_blue_ribbon_approx !important
+
+  &:focus 
+    background: $color_blue_ribbon_approx !important
+    border-color: $color_blue_ribbon_approx !important
+
+  &:disabled 
+    background: $color_blue_ribbon_approx !important
+    border-color: $color_blue_ribbon_approx !important
+
+  &.btn-border 
+    color: $color_blue_ribbon_approx !important
+    border: 2px solid $color_blue_ribbon_approx !important
+
+  &.btn-link 
+    color: $color_blue_ribbon_approx !important
+    &:hover 
+      color: $color_blue_ribbon_approx !important
+
+
+
+.btn-info 
+  background: $color_scooter_approx !important
+  border-color: $color_scooter_approx !important
+  &:hover 
+    background: $color_scooter_approx !important
+    border-color: $color_scooter_approx !important
+
+  &:focus 
+    background: $color_scooter_approx !important
+    border-color: $color_scooter_approx !important
+
+  &:disabled 
+    background: $color_scooter_approx !important
+    border-color: $color_scooter_approx !important
+
+  &.btn-border 
+    color: $color_scooter_approx !important
+    border: 2px solid $color_scooter_approx !important
+
+  &.btn-link 
+    color: $color_scooter_approx !important
+    &:hover 
+      color: $color_scooter_approx !important
+
+
+
+.btn-success 
+  background: $color_emerald_approx !important
+  border-color: $color_emerald_approx !important
+  &:hover 
+    background: $color_emerald_approx !important
+    border-color: $color_emerald_approx !important
+
+  &:focus 
+    background: $color_emerald_approx !important
+    border-color: $color_emerald_approx !important
+
+  &:disabled 
+    background: $color_emerald_approx !important
+    border-color: $color_emerald_approx !important
+
+  &.btn-border 
+    color: $color_emerald_approx !important
+    border: 2px solid $color_emerald_approx !important
+
+  &.btn-link 
+    color: $color_emerald_approx !important
+    &:hover 
+      color: $color_emerald_approx !important
+
+
+
+.btn-warning 
+  background: $color_yellow_orange_approx !important
+  border-color: $color_yellow_orange_approx !important
+  color: $white !important
+  &:hover 
+    background: $color_yellow_orange_approx !important
+    border-color: $color_yellow_orange_approx !important
+    color: $white !important
+
+  &:focus 
+    background: $color_yellow_orange_approx !important
+    border-color: $color_yellow_orange_approx !important
+    color: $white !important
+
+  &:disabled 
+    background: $color_yellow_orange_approx !important
+    border-color: $color_yellow_orange_approx !important
+    color: $white !important
+
+  &.btn-border 
+    color: $color_yellow_orange_approx !important
+    border: 2px solid $color_yellow_orange_approx !important
+
+  &.btn-link 
+    color: $color_yellow_orange_approx !important
+    &:hover 
+      color: $color_yellow_orange_approx !important
+
+
+
+.btn-danger 
+  background: $color_wild_watermelon_approx !important
+  border-color: $color_wild_watermelon_approx !important
+  &:hover 
+    background: $color_wild_watermelon_approx !important
+    border-color: $color_wild_watermelon_approx !important
+
+  &:focus 
+    background: $color_wild_watermelon_approx !important
+    border-color: $color_wild_watermelon_approx !important
+
+  &:disabled 
+    background: $color_wild_watermelon_approx !important
+    border-color: $color_wild_watermelon_approx !important
+
+  &.btn-border 
+    color: $color_wild_watermelon_approx !important
+    border: 2px solid $color_wild_watermelon_approx !important
+
+  &.btn-link 
+    color: $color_wild_watermelon_approx !important
+    &:hover 
+      color: $color_wild_watermelon_approx !important
+
+
+
+.btn-border 
+  background: transparent !important
+  font-weight: 600 !important
+  &:hover 
+    background: transparent !important
+    font-weight: 600 !important
+
+  &:focus 
+    background: transparent !important
+    font-weight: 600 !important
+
+
+.btn-round 
+  //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+  border-radius: 100px !important
+  .toggle-handle 
+    //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+    border-radius: 50px
+
+
+.btn-link 
+  border: 0 !important
+  background: transparent !important
+  &:hover 
+    text-decoration: underline !important
+    background: transparent !important
+    border: 0 !important
+
+  &:focus 
+    text-decoration: underline !important
+    background: transparent !important
+    border: 0 !important
+
+
+.btn-rounded 
+  //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+  border-radius: 60px !important
+
+.btn-simple-default 
+  color: $color_smalt_blue_approx
+  text-decoration: none
+  &:hover 
+    color: $color_smalt_blue_approx
+    text-decoration: none
+
+
+.btn-simple-primary 
+  color: $color_blue_ribbon_approx
+  text-decoration: none
+  &:hover 
+    color: $color_blue_ribbon_approx
+    text-decoration: none
+
+
+.btn-simple-info 
+  color: $color_scooter_approx
+  text-decoration: none
+  &:hover 
+    color: $color_scooter_approx
+    text-decoration: none
+
+
+.btn-simple-danger 
+  color: $color_wild_watermelon_approx
+  text-decoration: none
+  &:hover 
+    color: $color_wild_watermelon_approx
+    text-decoration: none
+
+
+.btn-simple-warning 
+  color: $color_yellow_orange_approx
+  text-decoration: none
+  &:hover 
+    color: $color_yellow_orange_approx
+    text-decoration: none
+
+
+.btn-simple-success 
+  color: $color_emerald_approx
+  text-decoration: none
+  &:hover 
+    color: $color_emerald_approx
+    text-decoration: none
+
+
+.btn-full 
+  width: 100%
+
+.btn-no-radius 
+  //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+  border-radius: 0
+
+.nav-pills 
+  > li 
+    > a 
+      margin-left: -1px
+      //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+      border-radius: 0 !important
+      border: 1px solid $color_blue_ribbon_approx
+      color: $color_blue_ribbon_approx
+      &.active 
+        background: $color_blue_ribbon_approx
+
+      &:hover 
+        background: $alabaster
+
+
+    &:first-child > a 
+      //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+      border-radius: 4px 0 0 4px !important
+
+    &:last-child > a 
+      //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+      border-radius: 0 4px 4px 0 !important
+
+
+  &.nav-default > li > a 
+    border: 1px solid $color_smalt_blue_approx
+    color: $color_smalt_blue_approx
+    &.active 
+      background: $color_smalt_blue_approx
+
+
+  &.nav-primary > li > a 
+    border: 1px solid $color_blue_ribbon_approx
+    color: $color_blue_ribbon_approx
+    &.active 
+      background: $color_blue_ribbon_approx
+
+
+  &.nav-info > li > a 
+    border: 1px solid $color_scooter_approx
+    color: $color_scooter_approx
+    &.active 
+      background: $color_scooter_approx
+
+
+  &.nav-success > li > a 
+    border: 1px solid $color_emerald_approx
+    color: $color_emerald_approx
+    &.active 
+      background: $color_emerald_approx
+
+
+  &.nav-warning > li > a 
+    border: 1px solid $color_yellow_orange_approx
+    color: $color_yellow_orange_approx
+    &.active 
+      background: $color_yellow_orange_approx
+
+
+  &.nav-danger > li > a 
+    border: 1px solid $color_wild_watermelon_approx
+    color: $color_wild_watermelon_approx
+    &.active 
+      background: $color_wild_watermelon_approx
+
+
+
+.pagination 
+  > li 
+    > a 
+      //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+      border-radius: 100px !important
+      margin: 0 2px
+      color: $color_tapa_approx
+      border-color: $color_alto_approx
+
+    &:first-child 
+      > a 
+        //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+        border-radius: 100px !important
+        margin: 0 2px
+        color: $color_tapa_approx
+        border-color: $color_alto_approx
+
+      > span 
+        //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+        border-radius: 100px !important
+        margin: 0 2px
+        color: $color_tapa_approx
+        border-color: $color_alto_approx
+
+
+    &:last-child 
+      > a 
+        //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+        border-radius: 100px !important
+        margin: 0 2px
+        color: $color_tapa_approx
+        border-color: $color_alto_approx
+
+      > span 
+        //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+        border-radius: 100px !important
+        margin: 0 2px
+        color: $color_tapa_approx
+        border-color: $color_alto_approx
+
+
+    > span 
+      //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+      border-radius: 100px !important
+      margin: 0 2px
+      color: $color_tapa_approx
+      border-color: $color_alto_approx
+
+
+  &.pg-primary > li.active 
+    > a 
+      background: $color_blue_ribbon_approx
+      border-color: $color_blue_ribbon_approx
+      color: $white
+
+    &:first-child 
+      > a 
+        background: $color_blue_ribbon_approx
+        border-color: $color_blue_ribbon_approx
+        color: $white
+
+      > span 
+        background: $color_blue_ribbon_approx
+        border-color: $color_blue_ribbon_approx
+        color: $white
+
+
+    &:last-child 
+      > a 
+        background: $color_blue_ribbon_approx
+        border-color: $color_blue_ribbon_approx
+        color: $white
+
+      > span 
+        background: $color_blue_ribbon_approx
+        border-color: $color_blue_ribbon_approx
+        color: $white
+
+
+    > span 
+      background: $color_blue_ribbon_approx
+      border-color: $color_blue_ribbon_approx
+      color: $white
+
+
+  &.pg-info > li.active 
+    > a 
+      background: $color_scooter_approx
+      border-color: $color_scooter_approx
+      color: $white
+
+    &:first-child 
+      > a 
+        background: $color_scooter_approx
+        border-color: $color_scooter_approx
+        color: $white
+
+      > span 
+        background: $color_scooter_approx
+        border-color: $color_scooter_approx
+        color: $white
+
+
+    &:last-child 
+      > a 
+        background: $color_scooter_approx
+        border-color: $color_scooter_approx
+        color: $white
+
+      > span 
+        background: $color_scooter_approx
+        border-color: $color_scooter_approx
+        color: $white
+
+
+    > span 
+      background: $color_scooter_approx
+      border-color: $color_scooter_approx
+      color: $white
+
+
+  &.pg-success > li.active 
+    > a 
+      background: $color_emerald_approx
+      border-color: $color_emerald_approx
+      color: $white
+
+    &:first-child 
+      > a 
+        background: $color_emerald_approx
+        border-color: $color_emerald_approx
+        color: $white
+
+      > span 
+        background: $color_emerald_approx
+        border-color: $color_emerald_approx
+        color: $white
+
+
+    &:last-child 
+      > a 
+        background: $color_emerald_approx
+        border-color: $color_emerald_approx
+        color: $white
+
+      > span 
+        background: $color_emerald_approx
+        border-color: $color_emerald_approx
+        color: $white
+
+
+    > span 
+      background: $color_emerald_approx
+      border-color: $color_emerald_approx
+      color: $white
+
+
+  &.pg-warning > li.active 
+    > a 
+      background: $color_yellow_orange_approx
+      border-color: $color_yellow_orange_approx
+      color: $white
+
+    &:first-child 
+      > a 
+        background: $color_yellow_orange_approx
+        border-color: $color_yellow_orange_approx
+        color: $white
+
+      > span 
+        background: $color_yellow_orange_approx
+        border-color: $color_yellow_orange_approx
+        color: $white
+
+
+    &:last-child 
+      > a 
+        background: $color_yellow_orange_approx
+        border-color: $color_yellow_orange_approx
+        color: $white
+
+      > span 
+        background: $color_yellow_orange_approx
+        border-color: $color_yellow_orange_approx
+        color: $white
+
+
+    > span 
+      background: $color_yellow_orange_approx
+      border-color: $color_yellow_orange_approx
+      color: $white
+
+
+  &.pg-danger > li.active 
+    > a 
+      background: $color_wild_watermelon_approx
+      border-color: $color_wild_watermelon_approx
+      color: $white
+
+    &:first-child 
+      > a 
+        background: $color_wild_watermelon_approx
+        border-color: $color_wild_watermelon_approx
+        color: $white
+
+      > span 
+        background: $color_wild_watermelon_approx
+        border-color: $color_wild_watermelon_approx
+        color: $white
+
+
+    &:last-child 
+      > a 
+        background: $color_wild_watermelon_approx
+        border-color: $color_wild_watermelon_approx
+        color: $white
+
+      > span 
+        background: $color_wild_watermelon_approx
+        border-color: $color_wild_watermelon_approx
+        color: $white
+
+
+    > span 
+      background: $color_wild_watermelon_approx
+      border-color: $color_wild_watermelon_approx
+      color: $white
+
+
+  &.pg-default > li.active 
+    > a 
+      background: $color_smalt_blue_approx
+      border-color: $color_smalt_blue_approx
+      color: $white
+
+    &:first-child 
+      > a 
+        background: $color_smalt_blue_approx
+        border-color: $color_smalt_blue_approx
+        color: $white
+
+      > span 
+        background: $color_smalt_blue_approx
+        border-color: $color_smalt_blue_approx
+        color: $white
+
+
+    &:last-child 
+      > a 
+        background: $color_smalt_blue_approx
+        border-color: $color_smalt_blue_approx
+        color: $white
+
+      > span 
+        background: $color_smalt_blue_approx
+        border-color: $color_smalt_blue_approx
+        color: $white
+
+
+    > span 
+      background: $color_smalt_blue_approx
+      border-color: $color_smalt_blue_approx
+      color: $white
+
+
+
+.modal 
+  .bg-default .modal-title 
+    color: $white !important
+
+  .bg-primary .modal-title 
+    color: $white !important
+
+  .bg-info .modal-title 
+    color: $white !important
+
+  .bg-success .modal-title 
+    color: $white !important
+
+  .bg-warning .modal-title 
+    color: $white !important
+
+  .bg-danger .modal-title 
+    color: $white !important
+
+
+.modal-content 
+  //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+  border-radius: .4rem !important
+  border: 0 !important
+
+.mapael 
+  .map 
+    position: relative
+
+  .zoomButton 
+    background-color: $color_shark_approx
+    border: 1px solid $color_shark_approx
+    color: $white
+    width: 15px
+    height: 15px
+    line-height: 12px
+    text-align: center
+    //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+    border-radius: 3px
+    cursor: pointer
+    position: absolute
+    top: 0
+    font-weight: bold
+    left: 10px
+    //If you use compass, instead of the line below you could use + user-select($select)
+    user-select: none
+
+  .zoomReset 
+    top: 10px
+
+  .zoomIn 
+    top: 30px
+
+  .zoomOut 
+    top: 50px
+
+  .mapTooltip 
+    position: absolute
+    background-color: $color_gravel_approx
+    moz-opacity: 0.70
+    opacity: 0.70
+    filter: alpha(opacity=70)
+    //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+    border-radius: 10px
+    padding: 10px
+    z-index: 1000
+    max-width: 200px
+    display: none
+    color: $white
+
+
+@media screen and(max-width: 700px) 
+  .row-card-no-pd 
+    .card 
+      border-bottom-width: 1px
+      &:last-child 
+        border-bottom-width: 0
+
+
+    [class*=col-] .card:after 
+      width: 0 !important
+
+
+
+@media screen and(min-width: 992px) 
+  .sidebar 
+    .scroll-element 
+      opacity: 0
+      //If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all .2s
+
+    &:hover .scroll-element 
+      opacity: 1
+
+
+  .main-header .logo-header 
+    line-height: 52px
+
+
+@media screen and(max-width: 991px) 
+  .sidebar 
+    position: fixed
+    left: 0 !important
+    right: 0
+    //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: translate3d(-270px, 0, 0) !important
+    //If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all .5s
+    .sidebar-wrapper 
+      padding-top: 0
+
+
+  .nav_open 
+    overflow: hidden !important
+    .sidebar 
+      //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: translate3d(0px, 0, 0) !important
+
+    .main-panel 
+      //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: translate3d(260px, 0, 0) !important
+
+    .main-header 
+      //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: translate3d(260px, 0, 0) !important
+
+    &.topbar_open .main-panel 
+      //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: translate3d(260px, 125px, 0) !important
+
+
+  .main-header 
+    //If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all .5s
+    .logo-header 
+      display: flex
+      width: 100% !important
+      text-align: left
+      position: relative
+      justify-content: center
+      .navbar-toggler 
+        position: absolute
+        top: auto
+        height: 100%
+        left: 15px
+        opacity: 1
+
+      .more 
+        opacity: 1
+        position: absolute
+        right: 15px
+        color: $color_fuscous_gray_approx
+        cursor: pointer
+
+
+
+  .main-panel 
+    width: 100%
+    //If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all .5s
+    .content 
+      padding: 30px 10px
+
+
+  .nav-search 
+    width: 100%
+    margin-right: 0 !important
+    margin-top: 12px
+
+  .navbar-header 
+    border-top: 1px solid $color_gallery_approx
+    position: absolute
+    width: 100%
+    background: $white
+    //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: translate3d(0, -200px, 0) !important
+    //If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all .5s
+    .navbar-nav 
+      width: 100%
+      flex-direction: row
+      justify-content: center
+      margin-left: 0 !important
+      margin-top: 10px
+      margin-bottom: 10px
+      position: relative
+      .dropdown 
+        position: unset
+
+      .dropdown-menu 
+        position: absolute
+        left: 0
+        right: 0
+        margin: 0 auto
+        max-width: 280px
+
+
+
+  .topbar_open 
+    .navbar-header 
+      //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: translate3d(0, 54px, 0) !important
+      border-bottom: 1px solid $color_gallery_approx
+
+    .main-panel 
+      //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: translate3d(0, 125px, 0) !important
+
+
+  .profile-pic span 
+    display: none
+
+
+.col 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-1 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-10 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-11 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-12 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-2 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-3 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-4 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-5 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-6 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-7 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-8 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-9 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-auto 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-lg 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-lg-1 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-lg-10 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-lg-11 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-lg-12 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-lg-2 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-lg-3 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-lg-4 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-lg-5 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-lg-6 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-lg-7 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-lg-8 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-lg-9 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-lg-auto 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-md 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-md-1 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-md-10 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-md-11 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-md-12 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-md-2 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-md-4 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-md-5 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-md-6 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-md-7 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-md-8 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-md-9 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-md-auto 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-sm 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-sm-1 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-sm-10 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-sm-11 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-sm-12 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-sm-2 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-sm-3 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-sm-4 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-sm-5 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-sm-6 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-sm-7 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-sm-8 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-sm-9 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-sm-auto 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-xl 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-xl-1 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-xl-10 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-xl-11 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-xl-12 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-xl-2 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-xl-3 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-xl-4 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-xl-5 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-xl-6 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-xl-7 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-xl-8 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-xl-9 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-xl-auto 
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-md-3 
+  padding: 15px 10px
+
+@media(min-width: 768px).col-md-2 
+  0 
+    f: f
+    0: 0
+
+  1 
+    m: m
+    1: 1
+
+  2 
+    p: p
+    0: 0
+
+  3 
+    m: m
+    0: 0
+
+
+.allusers 
+  .input-pill 
+    width: 105px
+    height: 50px
+    background: transparent
+    border: 1px solid $color_silver_approx
+    //If you use compass, instead of the line below you could use + box-sizing($bs)
+    box-sizing: border-box
+    //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+    border-radius: 40px !important
+    float: left
+    font-family: $font_3
+    font-style: normal
+    font-weight: bold
+    line-height: normal
+    font-size: 15px
+    text-align: center
+    padding-left: 20px
+    color: $color_silver_approx
+    option 
+      margin: auto
+      padding: 0 0 0 !important
+      white-space: nowrap
+      font-family: $font_3
+      font-style: normal
+      font-weight: bold
+      line-height: normal
+      font-size: 15px
+      text-align: center
+      color: $color_silver_approx
+
+
+  label 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: bold
+    line-height: normal
+    font-size: 15px !important
+    color: $color_gray_approx
+    float: left
+    padding-right: 15px
+    padding-top: 5px
+
+
+.product 
+  .input-pill 
+    width: 190px
+    height: 50px
+    background: transparent
+    border: 1px solid $color_silver_approx
+    //If you use compass, instead of the line below you could use + box-sizing($bs)
+    box-sizing: border-box
+    //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+    border-radius: 40px !important
+    float: left
+    font-family: $font_3
+    font-style: normal
+    font-weight: bold
+    line-height: normal
+    font-size: 15px
+    text-align: center
+    padding-left: 60px
+    color: $color_silver_approx
+
+  label 
+    font-family: $font_3, $font_2
+    font-style: normal
+    font-weight: bold
+    line-height: normal
+    font-size: 15px !important
+    color: $color_gray_approx
+    float: left
+    padding-right: 15px
+    padding-top: 5px
+
+
+.pmd-range-slider 
+  .noUi-tooltip 
+    left: 50%
+    padding: 0
+    width: 28px
+    height: 28px
+    margin-left: -14px
+    border: none
+    background: $color_atlantis_approx
+    color: $white
+    line-height: 28px
+    //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+    border-radius: 0 !important
+    font-size: 11px
+
+  &.noUi-horizontal 
+    .noUi-handle-upper .noUi-tooltip:before 
+      background: $color_atlantis_approx
+
+    .noUi-handle-lower .noUi-tooltip:before 
+      background: $color_atlantis_approx
+
+
+  .noUi-connect 
+    background: $color_atlantis_approx
+
+
+#pmd-slider-range-tooltip 
+  width: 165px
+  float: left
+  margin-top: 23px
+
+.noUi-target 
+  height: 5px !important
+
+.noUi-base 
+  height: 5px !important
+
+*:focus 
+  outline: 0 !important
+  //If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: none !important
+
+button.close 
+  font-family: $font_1, $font_2
+
+.ct-chart-line .ct-label 
+  display: block
+  display: flex
+
+.ct-chart-pie .ct-label 
+  @extend %extend_1
+
+.ct-chart-donut .ct-label 
+  @extend %extend_1
+
+.ui-resizable-autohide .ui-resizable-handle 
+  display: none
+
+.ui-resizable-disabled .ui-resizable-handle 
+  display: none
+
+.scrollbar-inner > .scroll-element 
+  border: none
+  margin: 0
+  padding: 0
+  position: absolute
+  z-index: 10
+  .scroll-element_outer 
+    overflow: hidden
+    //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+    border-radius: 8px
+
+  div 
+    border: none
+    margin: 0
+    padding: 0
+    position: absolute
+    z-index: 10
+    display: block
+    height: 100%
+    left: 0
+    top: 0
+    width: 100%
+
+  &.scroll-x 
+    bottom: 2px
+    height: 8px
+    left: 0
+    width: 100%
+    &.scroll-scrolly_visible 
+      .scroll-element_size 
+        left: -12px
+
+      .scroll-element_track 
+        left: -12px
+
+
+
+  &.scroll-y 
+    height: 100%
+    right: 2px
+    top: 0
+    width: 8px
+    &.scroll-scrollx_visible 
+      .scroll-element_size 
+        top: -12px
+
+      .scroll-element_track 
+        top: -12px
+
+
+
+  .scroll-bar 
+    //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+    border-radius: 8px
+    filter: alpha(opacity=40)
+    opacity: .4
+    background-color: $color_silver_sand_approx
+
+  .scroll-element_track 
+    //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+    border-radius: 8px
+    filter: alpha(opacity=40)
+    opacity: .4
+    background-color: $color_bon_jour_approx
+
+  &.scroll-draggable .scroll-bar 
+    background-color: $color_mountain_mist_approx
+
+  &:hover .scroll-bar 
+    background-color: $color_mountain_mist_approx
+
+
+.scrollbar-outer > 
+  .scroll-element 
+    border: none
+    margin: 0
+    padding: 0
+    position: absolute
+    z-index: 10
+    background-color: $white
+    .scroll-element_outer 
+      overflow: hidden
+      //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+      border-radius: 8px
+
+    div 
+      border: none
+      margin: 0
+      padding: 0
+      position: absolute
+      z-index: 10
+      display: block
+      height: 100%
+      left: 0
+      top: 0
+      width: 100%
+
+    &.scroll-x 
+      bottom: 0
+      height: 12px
+      left: 0
+      width: 100%
+      .scroll-element_outer 
+        height: 8px
+        top: 2px
+
+      &.scroll-scrolly_visible 
+        .scroll-element_size 
+          left: -14px
+
+        .scroll-element_track 
+          left: -14px
+
+
+      .scroll-bar 
+        min-width: 10px
+
+
+    &.scroll-y 
+      height: 100%
+      right: 0
+      top: 0
+      width: 12px
+      .scroll-element_outer 
+        left: 2px
+        width: 8px
+
+      &.scroll-scrollx_visible 
+        .scroll-element_size 
+          top: -14px
+
+        .scroll-element_track 
+          top: -14px
+
+
+      .scroll-bar 
+        min-height: 10px
+
+
+    .scroll-element_track 
+      background-color: $color_gallery_approx
+      //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+      border-radius: 8px
+
+    .scroll-bar 
+      //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+      border-radius: 8px
+      background-color: $color_alto_approx
+      &:hover 
+        background-color: $color_silver_sand_approx
+
+
+    &.scroll-draggable .scroll-bar 
+      background-color: $color_mountain_mist_approx
+
+
+  .scroll-content 
+    &.scroll-scrolly_visible 
+      left: -12px
+      margin-left: 12px
+
+    &.scroll-scrollx_visible 
+      top: -12px
+      margin-top: 12px
+
+
+
+.scrollbar-light > 
+  .scroll-element 
+    border: none
+    margin: 0
+    overflow: hidden
+    padding: 0
+    position: absolute
+    z-index: 10
+    background-color: $white
+    div 
+      border: none
+      margin: 0
+      overflow: hidden
+      padding: 0
+      position: absolute
+      z-index: 10
+      display: block
+      height: 100%
+      left: 0
+      top: 0
+      width: 100%
+
+    .scroll-element_outer 
+      //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+      border-radius: 10px
+
+    .scroll-element_size 
+      background: linear-gradient(to right, $alto 0, $color_gray_nurse_approx 100%)
+      //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+      border-radius: 10px
+
+    &.scroll-x 
+      bottom: 0
+      height: 17px
+      left: 0
+      min-width: 100%
+      width: 100%
+      .scroll-bar 
+        height: 10px
+        min-width: 10px
+        top: 0
+
+      .scroll-element_outer 
+        height: 12px
+        left: 2px
+        top: 2px
+
+      .scroll-element_size 
+        left: -4px
+
+      &.scroll-scrolly_visible 
+        .scroll-element_size 
+          left: -19px
+
+        .scroll-element_track 
+          left: -19px
+
+
+
+    &.scroll-y 
+      height: 100%
+      min-height: 100%
+      right: 0
+      top: 0
+      width: 17px
+      .scroll-bar 
+        left: 0
+        min-height: 10px
+        width: 10px
+
+      .scroll-element_outer 
+        left: 2px
+        top: 2px
+        width: 12px
+
+      .scroll-element_size 
+        top: -4px
+
+      &.scroll-scrollx_visible 
+        .scroll-element_size 
+          top: -19px
+
+        .scroll-element_track 
+          top: -19px
+
+
+
+    .scroll-bar 
+      background: linear-gradient(to right, $color_romance_approx 0, $color_wild_sand_approx 100%)
+      border: 1px solid $alto
+      //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+      border-radius: 10px
+
+
+  .scroll-content 
+    &.scroll-scrolly_visible 
+      left: -17px
+      margin-left: 17px
+
+    &.scroll-scrollx_visible 
+      top: -17px
+      margin-top: 17px
+
+
+
+.scrollbar-rail > 
+  .scroll-element 
+    border: none
+    margin: 0
+    overflow: hidden
+    padding: 0
+    position: absolute
+    z-index: 10
+    background-color: $white
+    div 
+      border: none
+      margin: 0
+      overflow: hidden
+      padding: 0
+      position: absolute
+      z-index: 10
+      display: block
+      height: 100%
+      left: 0
+      top: 0
+      width: 100%
+
+    .scroll-element_size 
+      background-color: $color_mountain_mist_approx
+      background-color: $black_30
+
+    &.scroll-x 
+      bottom: 0
+      height: 12px
+      left: 0
+      min-width: 100%
+      padding: 3px 0 2px
+      width: 100%
+      .scroll-bar 
+        height: 10px
+        min-width: 10px
+        top: 1px
+
+      .scroll-element_outer 
+        height: 15px
+        left: 5px
+
+      .scroll-element_size 
+        height: 2px
+        left: -10px
+        top: 5px
+
+      &.scroll-scrolly_visible 
+        .scroll-element_size 
+          left: -25px
+
+        .scroll-element_track 
+          left: -25px
+
+
+
+    &.scroll-y 
+      height: 100%
+      min-height: 100%
+      padding: 0 2px 0 3px
+      right: 0
+      top: 0
+      width: 12px
+      .scroll-bar 
+        left: 1px
+        min-height: 10px
+        width: 10px
+
+      .scroll-element_outer 
+        top: 5px
+        width: 15px
+
+      .scroll-element_size 
+        left: 5px
+        top: -10px
+        width: 2px
+
+      &.scroll-scrollx_visible 
+        .scroll-element_size 
+          top: -25px
+
+        .scroll-element_track 
+          top: -25px
+
+
+
+    .scroll-bar 
+      background-color: $color_vanilla_approx
+      //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+      border-radius: 2px
+      //If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: 1px 1px 3px $black_50
+
+    .scroll-element_outer:hover 
+      .scroll-element_size 
+        background-color: $color_storm_dust_approx
+        background-color: $black_50
+
+      .scroll-bar 
+        //If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 1px 1px 3px $black_60
+
+
+
+  .scroll-content 
+    &.scroll-scrolly_visible 
+      left: -17px
+      margin-left: 17px
+
+    &.scroll-scrollx_visible 
+      margin-top: 17px
+      top: -17px
+
+
+
+.scrollbar-dynamic > .scroll-element 
+  background: 0 0
+  border: none
+  margin: 0
+  padding: 0
+  position: absolute
+  z-index: 10
+  div 
+    background: 0 0
+    border: none
+    margin: 0
+    padding: 0
+    position: absolute
+    z-index: 10
+    display: block
+    height: 100%
+    left: 0
+    top: 0
+    width: 100%
+
+  &.scroll-x 
+    bottom: 2px
+    height: 7px
+    left: 0
+    min-width: 100%
+    width: 100%
+    .scroll-bar 
+      bottom: 0
+      height: 7px
+      min-width: 24px
+      top: auto
+
+    .scroll-element_outer 
+      bottom: 0
+      top: auto
+      left: 2px
+      //If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: height .2s
+
+    .scroll-element_size 
+      left: -4px
+
+    &.scroll-scrolly_visible .scroll-element_size 
+      left: -11px
+
+    &.scroll-draggable .scroll-element_outer 
+      height: 20px
+      min-height: 7px
+
+    &:hover .scroll-element_outer 
+      height: 20px
+      min-height: 7px
+
+
+  &.scroll-y 
+    height: 100%
+    min-height: 100%
+    right: 2px
+    top: 0
+    width: 7px
+    .scroll-bar 
+      left: auto
+      min-height: 24px
+      right: 0
+      width: 7px
+
+    .scroll-element_outer 
+      left: auto
+      right: 0
+      top: 2px
+      //If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: width .2s
+
+    .scroll-element_size 
+      top: -4px
+
+    &.scroll-scrollx_visible .scroll-element_size 
+      top: -11px
+
+    &.scroll-draggable .scroll-element_outer 
+      min-width: 7px
+      width: 20px
+
+    &:hover .scroll-element_outer 
+      min-width: 7px
+      width: 20px
+
+
+  .scroll-element_outer 
+    opacity: .3
+    //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+    border-radius: 12px
+
+  .scroll-element_size 
+    background-color: $color_celeste_approx
+    opacity: 0
+    //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+    border-radius: 12px
+    //If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: opacity .2s
+
+  .scroll-bar 
+    background-color: $color_dove_gray_approx
+    //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+    border-radius: 7px
+
+  &.scroll-draggable .scroll-element_outer 
+    @extend %extend_3
+    .scroll-element_size 
+      opacity: 1
+
+    .scroll-bar 
+      @extend %extend_4
+
+
+  &:hover .scroll-element_outer 
+    @extend %extend_3
+    .scroll-element_size 
+      opacity: 1
+
+    .scroll-bar 
+      @extend %extend_4
+
+
+
+.scrollbar-chrome > 
+  .scroll-element 
+    border: none
+    margin: 0
+    overflow: hidden
+    padding: 0
+    position: absolute
+    z-index: 10
+    background-color: $white
+    div 
+      border: none
+      margin: 0
+      overflow: hidden
+      padding: 0
+      position: absolute
+      z-index: 10
+      display: block
+      height: 100%
+      left: 0
+      top: 0
+      width: 100%
+
+    .scroll-element_track 
+      background: $seashell
+      border: 1px solid $alto
+
+    &.scroll-x 
+      bottom: 0
+      height: 16px
+      left: 0
+      min-width: 100%
+      width: 100%
+      .scroll-bar 
+        height: 8px
+        min-width: 10px
+        top: 3px
+
+      .scroll-element_outer 
+        border-left: 1px solid $alto
+
+      .scroll-element_track 
+        height: 14px
+        left: -3px
+
+      .scroll-element_size 
+        height: 14px
+        left: -4px
+
+      &.scroll-scrolly_visible 
+        .scroll-element_size 
+          left: -19px
+
+        .scroll-element_track 
+          left: -19px
+
+
+
+    &.scroll-y 
+      height: 100%
+      min-height: 100%
+      right: 0
+      top: 0
+      width: 16px
+      .scroll-bar 
+        left: 3px
+        min-height: 10px
+        width: 8px
+
+      .scroll-element_outer 
+        border-top: 1px solid $alto
+
+      .scroll-element_track 
+        top: -3px
+        width: 14px
+
+      .scroll-element_size 
+        top: -4px
+        width: 14px
+
+      &.scroll-scrollx_visible 
+        .scroll-element_size 
+          top: -19px
+
+        .scroll-element_track 
+          top: -19px
+
+
+
+    .scroll-bar 
+      background-color: $color_alto_approx
+      border: 1px solid $color_silver_approx
+      cursor: default
+      //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+      border-radius: 2px
+      &:hover 
+        background-color: $color_silver_sand_approx
+        border-color: $color_shady_lady_approx
+
+
+    &.scroll-draggable .scroll-bar 
+      background-color: $color_mountain_mist_approx
+      border-color: $color_gray_approx
+
+
+  .scroll-content 
+    &.scroll-scrolly_visible 
+      left: -16px
+      margin-left: 16px
+
+    &.scroll-scrollx_visible 
+      top: -16px
+      margin-top: 16px
+
+
+
+.checkbox label .toggle 
+  margin-left: -20px
+  margin-right: 5px
+
+.checkbox-inline .toggle 
+  margin-left: -20px
+  margin-right: 5px
+
+.la-500px:before 
+  content: "\f100"
+
+.la-adjust:before 
+  content: "\f101"
+
+.la-adn:before 
+  content: "\f102"
+
+.la-align-center:before 
+  content: "\f103"
+
+.la-align-justify:before 
+  content: "\f104"
+
+.la-align-left:before 
+  content: "\f105"
+
+.la-align-right:before 
+  content: "\f106"
+
+.la-amazon:before 
+  content: "\f107"
+
+.la-ambulance:before 
+  content: "\f108"
+
+.la-anchor:before 
+  content: "\f109"
+
+.la-android:before 
+  content: "\f10a"
+
+.la-angellist:before 
+  content: "\f10b"
+
+.la-angle-double-down:before 
+  content: "\f10c"
+
+.la-angle-double-left:before 
+  content: "\f10d"
+
+.la-angle-double-right:before 
+  content: "\f10e"
+
+.la-angle-double-up:before 
+  content: "\f10f"
+
+.la-angle-down:before 
+  content: "\f110"
+
+.la-angle-left:before 
+  content: "\f111"
+
+.la-angle-right:before 
+  content: "\f112"
+
+.la-angle-up:before 
+  content: "\f113"
+
+.la-apple:before 
+  content: "\f114"
+
+.la-archive:before 
+  content: "\f115"
+
+.la-area-chart:before 
+  content: "\f116"
+
+.la-arrow-circle-down:before 
+  content: "\f117"
+
+.la-arrow-circle-left:before 
+  content: "\f118"
+
+.la-arrow-circle-o-down:before 
+  content: "\f119"
+
+.la-arrow-circle-o-left:before 
+  content: "\f11a"
+
+.la-arrow-circle-o-right:before 
+  content: "\f11b"
+
+.la-arrow-circle-o-up:before 
+  content: "\f11c"
+
+.la-arrow-circle-right:before 
+  content: "\f11d"
+
+.la-arrow-circle-up:before 
+  content: "\f11e"
+
+.la-arrow-down:before 
+  content: "\f11f"
+
+.la-arrow-left:before 
+  content: "\f120"
+
+.la-arrow-right:before 
+  content: "\f121"
+
+.la-arrow-up:before 
+  content: "\f122"
+
+.la-arrows:before 
+  content: "\f123"
+
+.la-arrows-alt:before 
+  content: "\f124"
+
+.la-arrows-h:before 
+  content: "\f125"
+
+.la-arrows-v:before 
+  content: "\f126"
+
+.la-asterisk:before 
+  content: "\f127"
+
+.la-at:before 
+  content: "\f128"
+
+.la-automobile:before 
+  content: "\f129"
+
+.la-backward:before 
+  content: "\f12a"
+
+.la-balance-scale:before 
+  content: "\f12b"
+
+.la-ban:before 
+  content: "\f12c"
+
+.la-bank:before 
+  content: "\f12d"
+
+.la-bar-chart:before 
+  content: "\f12e"
+
+.la-bar-chart-o:before 
+  content: "\f12f"
+
+.la-barcode:before 
+  content: "\f130"
+
+.la-bars:before 
+  content: "\f131"
+
+.la-battery-0:before 
+  content: "\f132"
+
+.la-battery-1:before 
+  content: "\f133"
+
+.la-battery-2:before 
+  content: "\f134"
+
+.la-battery-3:before 
+  content: "\f135"
+
+.la-battery-4:before 
+  content: "\f136"
+
+.la-battery-empty:before 
+  content: "\f137"
+
+.la-battery-full:before 
+  content: "\f138"
+
+.la-battery-half:before 
+  content: "\f139"
+
+.la-battery-quarter:before 
+  content: "\f13a"
+
+.la-battery-three-quarters:before 
+  content: "\f13b"
+
+.la-bed:before 
+  content: "\f13c"
+
+.la-beer:before 
+  content: "\f13d"
+
+.la-behance:before 
+  content: "\f13e"
+
+.la-behance-square:before 
+  content: "\f13f"
+
+.la-bell:before 
+  content: "\f140"
+
+.la-bell-o:before 
+  content: "\f141"
+
+.la-bell-slash:before 
+  content: "\f142"
+
+.la-bell-slash-o:before 
+  content: "\f143"
+
+.la-bicycle:before 
+  content: "\f144"
+
+.la-binoculars:before 
+  content: "\f145"
+
+.la-birthday-cake:before 
+  content: "\f146"
+
+.la-bitbucket:before 
+  content: "\f147"
+
+.la-bitbucket-square:before 
+  content: "\f148"
+
+.la-bitcoin:before 
+  content: "\f149"
+
+.la-black-tie:before 
+  content: "\f14a"
+
+.la-bold:before 
+  content: "\f14b"
+
+.la-bolt:before 
+  content: "\f14c"
+
+.la-bomb:before 
+  content: "\f14d"
+
+.la-book:before 
+  content: "\f14e"
+
+.la-bookmark:before 
+  content: "\f14f"
+
+.la-bookmark-o:before 
+  content: "\f150"
+
+.la-briefcase:before 
+  content: "\f151"
+
+.la-btc:before 
+  content: "\f152"
+
+.la-bug:before 
+  content: "\f153"
+
+.la-building:before 
+  content: "\f154"
+
+.la-building-o:before 
+  content: "\f155"
+
+.la-bullhorn:before 
+  content: "\f156"
+
+.la-bullseye:before 
+  content: "\f157"
+
+.la-bus:before 
+  content: "\f158"
+
+.la-buysellads:before 
+  content: "\f159"
+
+.la-cab:before 
+  content: "\f15a"
+
+.la-calculator:before 
+  content: "\f15b"
+
+.la-calendar:before 
+  content: "\f15c"
+
+.la-calendar-check-o:before 
+  content: "\f15d"
+
+.la-calendar-minus-o:before 
+  content: "\f15e"
+
+.la-calendar-o:before 
+  content: "\f15f"
+
+.la-calendar-plus-o:before 
+  content: "\f160"
+
+.la-calendar-times-o:before 
+  content: "\f161"
+
+.la-camera:before 
+  content: "\f162"
+
+.la-camera-retro:before 
+  content: "\f163"
+
+.la-car:before 
+  content: "\f164"
+
+.la-caret-down:before 
+  content: "\f165"
+
+.la-caret-left:before 
+  content: "\f166"
+
+.la-caret-right:before 
+  content: "\f167"
+
+.la-caret-square-o-down:before 
+  content: "\f168"
+
+.la-toggle-down:before 
+  content: "\f168"
+
+.la-caret-square-o-left:before 
+  content: "\f169"
+
+.la-toggle-left:before 
+  content: "\f169"
+
+.la-caret-square-o-right:before 
+  content: "\f16a"
+
+.la-toggle-right:before 
+  content: "\f16a"
+
+.la-caret-square-o-up:before 
+  content: "\f16b"
+
+.la-toggle-up:before 
+  content: "\f16b"
+
+.la-caret-up:before 
+  content: "\f16c"
+
+.la-cart-arrow-down:before 
+  content: "\f16d"
+
+.la-cart-plus:before 
+  content: "\f16e"
+
+.la-cc:before 
+  content: "\f16f"
+
+.la-cc-amex:before 
+  content: "\f170"
+
+.la-cc-diners-club:before 
+  content: "\f171"
+
+.la-cc-discover:before 
+  content: "\f172"
+
+.la-cc-jcb:before 
+  content: "\f173"
+
+.la-cc-mastercard:before 
+  content: "\f174"
+
+.la-cc-paypal:before 
+  content: "\f175"
+
+.la-cc-stripe:before 
+  content: "\f176"
+
+.la-cc-visa:before 
+  content: "\f177"
+
+.la-certificate:before 
+  content: "\f178"
+
+.la-chain:before 
+  content: "\f179"
+
+.la-chain-broken:before 
+  content: "\f17a"
+
+.la-check:before 
+  content: "\f17b"
+
+.la-check-circle:before 
+  content: "\f17c"
+
+.la-check-circle-o:before 
+  content: "\f17d"
+
+.la-check-square:before 
+  content: "\f17e"
+
+.la-check-square-o:before 
+  content: "\f17f"
+
+.la-chevron-circle-down:before 
+  content: "\f180"
+
+.la-chevron-circle-left:before 
+  content: "\f181"
+
+.la-chevron-circle-right:before 
+  content: "\f182"
+
+.la-chevron-circle-up:before 
+  content: "\f183"
+
+.la-chevron-down:before 
+  content: "\f184"
+
+.la-chevron-left:before 
+  content: "\f185"
+
+.la-chevron-right:before 
+  content: "\f186"
+
+.la-chevron-up:before 
+  content: "\f187"
+
+.la-child:before 
+  content: "\f188"
+
+.la-chrome:before 
+  content: "\f189"
+
+.la-circle:before 
+  content: "\f18a"
+
+.la-circle-o:before 
+  content: "\f18b"
+
+.la-circle-o-notch:before 
+  content: "\f18c"
+
+.la-circle-thin:before 
+  content: "\f18d"
+
+.la-clipboard:before 
+  content: "\f18e"
+
+.la-clock-o:before 
+  content: "\f18f"
+
+.la-clone:before 
+  content: "\f190"
+
+.la-close:before 
+  content: "\f191"
+
+.la-cloud:before 
+  content: "\f192"
+
+.la-cloud-download:before 
+  content: "\f193"
+
+.la-cloud-upload:before 
+  content: "\f194"
+
+.la-cny:before 
+  content: "\f195"
+
+.la-code:before 
+  content: "\f196"
+
+.la-code-fork:before 
+  content: "\f197"
+
+.la-codepen:before 
+  content: "\f198"
+
+.la-coffee:before 
+  content: "\f199"
+
+.la-cog:before 
+  content: "\f19a"
+
+.la-cogs:before 
+  content: "\f19b"
+
+.la-columns:before 
+  content: "\f19c"
+
+.la-comment:before 
+  content: "\f19d"
+
+.la-comment-o:before 
+  content: "\f19e"
+
+.la-commenting:before 
+  content: "\f19f"
+
+.la-commenting-o:before 
+  content: "\f1a0"
+
+.la-comments:before 
+  content: "\f1a1"
+
+.la-comments-o:before 
+  content: "\f1a2"
+
+.la-compass:before 
+  content: "\f1a3"
+
+.la-compress:before 
+  content: "\f1a4"
+
+.la-connectdevelop:before 
+  content: "\f1a5"
+
+.la-contao:before 
+  content: "\f1a6"
+
+.la-copy:before 
+  content: "\f1a7"
+
+.la-copyright:before 
+  content: "\f1a8"
+
+.la-creative-commons:before 
+  content: "\f1a9"
+
+.la-credit-card:before 
+  content: "\f1aa"
+
+.la-crop:before 
+  content: "\f1ab"
+
+.la-crosshairs:before 
+  content: "\f1ac"
+
+.la-css3:before 
+  content: "\f1ad"
+
+.la-cube:before 
+  content: "\f1ae"
+
+.la-cubes:before 
+  content: "\f1af"
+
+.la-cut:before 
+  content: "\f1b0"
+
+.la-cutlery:before 
+  content: "\f1b1"
+
+.la-dashboard:before 
+  content: "\f1b2"
+
+.la-dashcube:before 
+  content: "\f1b3"
+
+.la-database:before 
+  content: "\f1b4"
+
+.la-dedent:before 
+  content: "\f1b5"
+
+.la-delicious:before 
+  content: "\f1b6"
+
+.la-desktop:before 
+  content: "\f1b7"
+
+.la-deviantart:before 
+  content: "\f1b8"
+
+.la-diamond:before 
+  content: "\f1b9"
+
+.la-digg:before 
+  content: "\f1ba"
+
+.la-dollar:before 
+  content: "\f1bb"
+
+.la-dot-circle-o:before 
+  content: "\f1bc"
+
+.la-download:before 
+  content: "\f1bd"
+
+.la-dribbble:before 
+  content: "\f1be"
+
+.la-dropbox:before 
+  content: "\f1bf"
+
+.la-drupal:before 
+  content: "\f1c0"
+
+.la-edit:before 
+  content: "\f1c1"
+
+.la-eject:before 
+  content: "\f1c2"
+
+.la-ellipsis-h:before 
+  content: "\f1c3"
+
+.la-ellipsis-v:before 
+  content: "\f1c4"
+
+.la-empire:before 
+  content: "\f1c5"
+
+.la-ge:before 
+  content: "\f1c5"
+
+.la-envelope:before 
+  content: "\f1c6"
+
+.la-envelope-o:before 
+  content: "\f1c7"
+
+.la-envelope-square:before 
+  content: "\f1c8"
+
+.la-eraser:before 
+  content: "\f1c9"
+
+.la-eur:before 
+  content: "\f1ca"
+
+.la-euro:before 
+  content: "\f1cb"
+
+.la-exchange:before 
+  content: "\f1cc"
+
+.la-exclamation:before 
+  content: "\f1cd"
+
+.la-exclamation-circle:before 
+  content: "\f1ce"
+
+.la-exclamation-triangle:before 
+  content: "\f1cf"
+
+.la-expand:before 
+  content: "\f1d0"
+
+.la-expeditedssl:before 
+  content: "\f1d1"
+
+.la-external-link:before 
+  content: "\f1d2"
+
+.la-external-link-square:before 
+  content: "\f1d3"
+
+.la-eye:before 
+  content: "\f1d4"
+
+.la-eye-slash:before 
+  content: "\f1d5"
+
+.la-eyedropper:before 
+  content: "\f1d6"
+
+.la-facebook-f:before 
+  content: "\f1d7"
+
+.la-facebook:before 
+  content: "\f1d7"
+
+.la-facebook-official:before 
+  content: "\f1d8"
+
+.la-facebook-square:before 
+  content: "\f1d9"
+
+.la-fast-backward:before 
+  content: "\f1da"
+
+.la-fast-forward:before 
+  content: "\f1db"
+
+.la-fax:before 
+  content: "\f1dc"
+
+.la-female:before 
+  content: "\f1dd"
+
+.la-fighter-jet:before 
+  content: "\f1de"
+
+.la-file:before 
+  content: "\f1df"
+
+.la-file-archive-o:before 
+  content: "\f1e0"
+
+.la-file-audio-o:before 
+  content: "\f1e1"
+
+.la-file-code-o:before 
+  content: "\f1e2"
+
+.la-file-excel-o:before 
+  content: "\f1e3"
+
+.la-file-image-o:before 
+  content: "\f1e4"
+
+.la-file-movie-o:before 
+  content: "\f1e5"
+
+.la-file-o:before 
+  content: "\f1e6"
+
+.la-file-pdf-o:before 
+  content: "\f1e7"
+
+.la-file-photo-o:before 
+  content: "\f1e8"
+
+.la-file-picture-o:before 
+  content: "\f1e9"
+
+.la-file-powerpoint-o:before 
+  content: "\f1ea"
+
+.la-file-sound-o:before 
+  content: "\f1eb"
+
+.la-file-text:before 
+  content: "\f1ec"
+
+.la-file-text-o:before 
+  content: "\f1ed"
+
+.la-file-video-o:before 
+  content: "\f1ee"
+
+.la-file-word-o:before 
+  content: "\f1ef"
+
+.la-file-zip-o:before 
+  content: "\f1f0"
+
+.la-files-o:before 
+  content: "\f1f1"
+
+.la-film:before 
+  content: "\f1f2"
+
+.la-filter:before 
+  content: "\f1f3"
+
+.la-fire:before 
+  content: "\f1f4"
+
+.la-fire-extinguisher:before 
+  content: "\f1f5"
+
+.la-firefox:before 
+  content: "\f1f6"
+
+.la-flag:before 
+  content: "\f1f7"
+
+.la-flag-checkered:before 
+  content: "\f1f8"
+
+.la-flag-o:before 
+  content: "\f1f9"
+
+.la-flash:before 
+  content: "\f1fa"
+
+.la-flask:before 
+  content: "\f1fb"
+
+.la-flickr:before 
+  content: "\f1fc"
+
+.la-floppy-o:before 
+  content: "\f1fd"
+
+.la-folder:before 
+  content: "\f1fe"
+
+.la-folder-o:before 
+  content: "\f1ff"
+
+.la-folder-open:before 
+  content: "\f200"
+
+.la-folder-open-o:before 
+  content: "\f201"
+
+.la-font:before 
+  content: "\f202"
+
+.la-fonticons:before 
+  content: "\f203"
+
+.la-forumbee:before 
+  content: "\f204"
+
+.la-forward:before 
+  content: "\f205"
+
+.la-foursquare:before 
+  content: "\f206"
+
+.la-frown-o:before 
+  content: "\f207"
+
+.la-futbol-o:before 
+  content: "\f208"
+
+.la-soccer-ball-o:before 
+  content: "\f208"
+
+.la-gamepad:before 
+  content: "\f209"
+
+.la-gavel:before 
+  content: "\f20a"
+
+.la-gbp:before 
+  content: "\f20b"
+
+.la-gear:before 
+  content: "\f20c"
+
+.la-gears:before 
+  content: "\f20d"
+
+.la-genderless:before 
+  content: "\f20e"
+
+.la-get-pocket:before 
+  content: "\f20f"
+
+.la-gg:before 
+  content: "\f210"
+
+.la-gg-circle:before 
+  content: "\f211"
+
+.la-gift:before 
+  content: "\f212"
+
+.la-git:before 
+  content: "\f213"
+
+.la-git-square:before 
+  content: "\f214"
+
+.la-github:before 
+  content: "\f215"
+
+.la-github-alt:before 
+  content: "\f216"
+
+.la-github-square:before 
+  content: "\f217"
+
+.la-glass:before 
+  content: "\f218"
+
+.la-globe:before 
+  content: "\f219"
+
+.la-google:before 
+  content: "\f21a"
+
+.la-google-plus:before 
+  content: "\f21b"
+
+.la-google-plus-square:before 
+  content: "\f21c"
+
+.la-google-wallet:before 
+  content: "\f21d"
+
+.la-graduation-cap:before 
+  content: "\f21e"
+
+.la-gittip:before 
+  content: "\f21f"
+
+.la-gratipay:before 
+  content: "\f21f"
+
+.la-group:before 
+  content: "\f220"
+
+.la-h-square:before 
+  content: "\f221"
+
+.la-hacker-news:before 
+  content: "\f222"
+
+.la-hand-grab-o:before 
+  content: "\f223"
+
+.la-hand-lizard-o:before 
+  content: "\f224"
+
+.la-hand-o-down:before 
+  content: "\f225"
+
+.la-hand-o-left:before 
+  content: "\f226"
+
+.la-hand-o-right:before 
+  content: "\f227"
+
+.la-hand-o-up:before 
+  content: "\f228"
+
+.la-hand-paper-o:before 
+  content: "\f229"
+
+.la-hand-peace-o:before 
+  content: "\f22a"
+
+.la-hand-pointer-o:before 
+  content: "\f22b"
+
+.la-hand-rock-o:before 
+  content: "\f22c"
+
+.la-hand-scissors-o:before 
+  content: "\f22d"
+
+.la-hand-spock-o:before 
+  content: "\f22e"
+
+.la-hand-stop-o:before 
+  content: "\f22f"
+
+.la-hdd-o:before 
+  content: "\f230"
+
+.la-header:before 
+  content: "\f231"
+
+.la-headphones:before 
+  content: "\f232"
+
+.la-heart:before 
+  content: "\f233"
+
+.la-heart-o:before 
+  content: "\f234"
+
+.la-heartbeat:before 
+  content: "\f235"
+
+.la-history:before 
+  content: "\f236"
+
+.la-home:before 
+  content: "\f237"
+
+.la-hospital-o:before 
+  content: "\f238"
+
+.la-hotel:before 
+  content: "\f239"
+
+.la-hourglass:before 
+  content: "\f23a"
+
+.la-hourglass-1:before 
+  content: "\f23b"
+
+.la-hourglass-2:before 
+  content: "\f23c"
+
+.la-hourglass-3:before 
+  content: "\f23d"
+
+.la-hourglass-end:before 
+  content: "\f23e"
+
+.la-hourglass-half:before 
+  content: "\f23f"
+
+.la-hourglass-o:before 
+  content: "\f240"
+
+.la-hourglass-start:before 
+  content: "\f241"
+
+.la-houzz:before 
+  content: "\f242"
+
+.la-html5:before 
+  content: "\f243"
+
+.la-i-cursor:before 
+  content: "\f244"
+
+.la-ils:before 
+  content: "\f245"
+
+.la-image:before 
+  content: "\f246"
+
+.la-inbox:before 
+  content: "\f247"
+
+.la-indent:before 
+  content: "\f248"
+
+.la-industry:before 
+  content: "\f249"
+
+.la-info:before 
+  content: "\f24a"
+
+.la-info-circle:before 
+  content: "\f24b"
+
+.la-inr:before 
+  content: "\f24c"
+
+.la-instagram:before 
+  content: "\f24d"
+
+.la-institution:before 
+  content: "\f24e"
+
+.la-internet-explorer:before 
+  content: "\f24f"
+
+.la-ioxhost:before 
+  content: "\f250"
+
+.la-italic:before 
+  content: "\f251"
+
+.la-joomla:before 
+  content: "\f252"
+
+.la-jpy:before 
+  content: "\f253"
+
+.la-jsfiddle:before 
+  content: "\f254"
+
+.la-key:before 
+  content: "\f255"
+
+.la-keyboard-o:before 
+  content: "\f256"
+
+.la-krw:before 
+  content: "\f257"
+
+.la-language:before 
+  content: "\f258"
+
+.la-laptop:before 
+  content: "\f259"
+
+.la-lastfm:before 
+  content: "\f25a"
+
+.la-lastfm-square:before 
+  content: "\f25b"
+
+.la-leaf:before 
+  content: "\f25c"
+
+.la-leanpub:before 
+  content: "\f25d"
+
+.la-legal:before 
+  content: "\f25e"
+
+.la-lemon-o:before 
+  content: "\f25f"
+
+.la-level-down:before 
+  content: "\f260"
+
+.la-level-up:before 
+  content: "\f261"
+
+.la-life-bouy:before 
+  content: "\f262"
+
+.la-life-buoy:before 
+  content: "\f263"
+
+.la-life-ring:before 
+  content: "\f264"
+
+.la-support:before 
+  content: "\f264"
+
+.la-life-saver:before 
+  content: "\f265"
+
+.la-lightbulb-o:before 
+  content: "\f266"
+
+.la-line-chart:before 
+  content: "\f267"
+
+.la-link:before 
+  content: "\f268"
+
+.la-linkedin:before 
+  content: "\f269"
+
+.la-linkedin-square:before 
+  content: "\f26a"
+
+.la-linux:before 
+  content: "\f26b"
+
+.la-list:before 
+  content: "\f26c"
+
+.la-list-alt:before 
+  content: "\f26d"
+
+.la-list-ol:before 
+  content: "\f26e"
+
+.la-list-ul:before 
+  content: "\f26f"
+
+.la-location-arrow:before 
+  content: "\f270"
+
+.la-lock:before 
+  content: "\f271"
+
+.la-long-arrow-down:before 
+  content: "\f272"
+
+.la-long-arrow-left:before 
+  content: "\f273"
+
+.la-long-arrow-right:before 
+  content: "\f274"
+
+.la-long-arrow-up:before 
+  content: "\f275"
+
+.la-magic:before 
+  content: "\f276"
+
+.la-magnet:before 
+  content: "\f277"
+
+.la-mail-forward:before 
+  content: "\f278"
+
+.la-mail-reply:before 
+  content: "\f279"
+
+.la-mail-reply-all:before 
+  content: "\f27a"
+
+.la-male:before 
+  content: "\f27b"
+
+.la-map:before 
+  content: "\f27c"
+
+.la-map-marker:before 
+  content: "\f27d"
+
+.la-map-o:before 
+  content: "\f27e"
+
+.la-map-pin:before 
+  content: "\f27f"
+
+.la-map-signs:before 
+  content: "\f280"
+
+.la-mars:before 
+  content: "\f281"
+
+.la-mars-double:before 
+  content: "\f282"
+
+.la-mars-stroke:before 
+  content: "\f283"
+
+.la-mars-stroke-h:before 
+  content: "\f284"
+
+.la-mars-stroke-v:before 
+  content: "\f285"
+
+.la-maxcdn:before 
+  content: "\f286"
+
+.la-meanpath:before 
+  content: "\f287"
+
+.la-medium:before 
+  content: "\f288"
+
+.la-medkit:before 
+  content: "\f289"
+
+.la-meh-o:before 
+  content: "\f28a"
+
+.la-mercury:before 
+  content: "\f28b"
+
+.la-microphone:before 
+  content: "\f28c"
+
+.la-microphone-slash:before 
+  content: "\f28d"
+
+.la-minus:before 
+  content: "\f28e"
+
+.la-minus-circle:before 
+  content: "\f28f"
+
+.la-minus-square:before 
+  content: "\f290"
+
+.la-minus-square-o:before 
+  content: "\f291"
+
+.la-mobile:before 
+  content: "\f292"
+
+.la-mobile-phone:before 
+  content: "\f293"
+
+.la-money:before 
+  content: "\f294"
+
+.la-moon-o:before 
+  content: "\f295"
+
+.la-mortar-board:before 
+  content: "\f296"
+
+.la-motorcycle:before 
+  content: "\f297"
+
+.la-mouse-pointer:before 
+  content: "\f298"
+
+.la-music:before 
+  content: "\f299"
+
+.la-navicon:before 
+  content: "\f29a"
+
+.la-neuter:before 
+  content: "\f29b"
+
+.la-newspaper-o:before 
+  content: "\f29c"
+
+.la-object-group:before 
+  content: "\f29d"
+
+.la-object-ungroup:before 
+  content: "\f29e"
+
+.la-odnoklassniki:before 
+  content: "\f29f"
+
+.la-odnoklassniki-square:before 
+  content: "\f2a0"
+
+.la-opencart:before 
+  content: "\f2a1"
+
+.la-openid:before 
+  content: "\f2a2"
+
+.la-opera:before 
+  content: "\f2a3"
+
+.la-optin-monster:before 
+  content: "\f2a4"
+
+.la-outdent:before 
+  content: "\f2a5"
+
+.la-pagelines:before 
+  content: "\f2a6"
+
+.la-paint-brush:before 
+  content: "\f2a7"
+
+.la-paper-plane:before 
+  content: "\f2a8"
+
+.la-send:before 
+  content: "\f2a8"
+
+.la-paper-plane-o:before 
+  content: "\f2a9"
+
+.la-send-o:before 
+  content: "\f2a9"
+
+.la-paperclip:before 
+  content: "\f2aa"
+
+.la-paragraph:before 
+  content: "\f2ab"
+
+.la-paste:before 
+  content: "\f2ac"
+
+.la-pause:before 
+  content: "\f2ad"
+
+.la-paw:before 
+  content: "\f2ae"
+
+.la-paypal:before 
+  content: "\f2af"
+
+.la-pencil:before 
+  content: "\f2b0"
+
+.la-pencil-square:before 
+  content: "\f2b1"
+
+.la-pencil-square-o:before 
+  content: "\f2b2"
+
+.la-phone:before 
+  content: "\f2b3"
+
+.la-phone-square:before 
+  content: "\f2b4"
+
+.la-photo:before 
+  content: "\f2b5"
+
+.la-picture-o:before 
+  content: "\f2b6"
+
+.la-pie-chart:before 
+  content: "\f2b7"
+
+.la-pied-piper:before 
+  content: "\f2b8"
+
+.la-pied-piper-alt:before 
+  content: "\f2b9"
+
+.la-pinterest:before 
+  content: "\f2ba"
+
+.la-pinterest-p:before 
+  content: "\f2bb"
+
+.la-pinterest-square:before 
+  content: "\f2bc"
+
+.la-plane:before 
+  content: "\f2bd"
+
+.la-play:before 
+  content: "\f2be"
+
+.la-play-circle:before 
+  content: "\f2bf"
+
+.la-play-circle-o:before 
+  content: "\f2c0"
+
+.la-plug:before 
+  content: "\f2c1"
+
+.la-plus:before 
+  content: "\f2c2"
+
+.la-plus-circle:before 
+  content: "\f2c3"
+
+.la-plus-square:before 
+  content: "\f2c4"
+
+.la-plus-square-o:before 
+  content: "\f2c5"
+
+.la-power-off:before 
+  content: "\f2c6"
+
+.la-print:before 
+  content: "\f2c7"
+
+.la-puzzle-piece:before 
+  content: "\f2c8"
+
+.la-qq:before 
+  content: "\f2c9"
+
+.la-qrcode:before 
+  content: "\f2ca"
+
+.la-question:before 
+  content: "\f2cb"
+
+.la-question-circle:before 
+  content: "\f2cc"
+
+.la-quote-left:before 
+  content: "\f2cd"
+
+.la-quote-right:before 
+  content: "\f2ce"
+
+.la-ra:before 
+  content: "\f2cf"
+
+.la-random:before 
+  content: "\f2d0"
+
+.la-rebel:before 
+  content: "\f2d1"
+
+.la-recycle:before 
+  content: "\f2d2"
+
+.la-reddit:before 
+  content: "\f2d3"
+
+.la-reddit-square:before 
+  content: "\f2d4"
+
+.la-refresh:before 
+  content: "\f2d5"
+
+.la-registered:before 
+  content: "\f2d6"
+
+.la-renren:before 
+  content: "\f2d7"
+
+.la-reorder:before 
+  content: "\f2d8"
+
+.la-repeat:before 
+  content: "\f2d9"
+
+.la-reply:before 
+  content: "\f2da"
+
+.la-reply-all:before 
+  content: "\f2db"
+
+.la-retweet:before 
+  content: "\f2dc"
+
+.la-rmb:before 
+  content: "\f2dd"
+
+.la-road:before 
+  content: "\f2de"
+
+.la-rocket:before 
+  content: "\f2df"
+
+.la-rotate-left:before 
+  content: "\f2e0"
+
+.la-rotate-right:before 
+  content: "\f2e1"
+
+.la-rouble:before 
+  content: "\f2e2"
+
+.la-feed:before 
+  content: "\f2e3"
+
+.la-rss:before 
+  content: "\f2e3"
+
+.la-rss-square:before 
+  content: "\f2e4"
+
+.la-rub:before 
+  content: "\f2e5"
+
+.la-ruble:before 
+  content: "\f2e6"
+
+.la-rupee:before 
+  content: "\f2e7"
+
+.la-safari:before 
+  content: "\f2e8"
+
+.la-save:before 
+  content: "\f2e9"
+
+.la-scissors:before 
+  content: "\f2ea"
+
+.la-search:before 
+  content: "\f2eb"
+
+.la-search-minus:before 
+  content: "\f2ec"
+
+.la-search-plus:before 
+  content: "\f2ed"
+
+.la-sellsy:before 
+  content: "\f2ee"
+
+.la-server:before 
+  content: "\f2ef"
+
+.la-share:before 
+  content: "\f2f0"
+
+.la-share-alt:before 
+  content: "\f2f1"
+
+.la-share-alt-square:before 
+  content: "\f2f2"
+
+.la-share-square:before 
+  content: "\f2f3"
+
+.la-share-square-o:before 
+  content: "\f2f4"
+
+.la-shekel:before 
+  content: "\f2f5"
+
+.la-sheqel:before 
+  content: "\f2f6"
+
+.la-shield:before 
+  content: "\f2f7"
+
+.la-ship:before 
+  content: "\f2f8"
+
+.la-shirtsinbulk:before 
+  content: "\f2f9"
+
+.la-shopping-cart:before 
+  content: "\f2fa"
+
+.la-sign-in:before 
+  content: "\f2fb"
+
+.la-sign-out:before 
+  content: "\f2fc"
+
+.la-signal:before 
+  content: "\f2fd"
+
+.la-simplybuilt:before 
+  content: "\f2fe"
+
+.la-sitemap:before 
+  content: "\f2ff"
+
+.la-skyatlas:before 
+  content: "\f300"
+
+.la-skype:before 
+  content: "\f301"
+
+.la-slack:before 
+  content: "\f302"
+
+.la-sliders:before 
+  content: "\f303"
+
+.la-slideshare:before 
+  content: "\f304"
+
+.la-smile-o:before 
+  content: "\f305"
+
+.la-sort:before 
+  content: "\f306"
+
+.la-unsorted:before 
+  content: "\f306"
+
+.la-sort-alpha-asc:before 
+  content: "\f307"
+
+.la-sort-alpha-desc:before 
+  content: "\f308"
+
+.la-sort-amount-asc:before 
+  content: "\f309"
+
+.la-sort-amount-desc:before 
+  content: "\f30a"
+
+.la-sort-asc:before 
+  content: "\f30b"
+
+.la-sort-up:before 
+  content: "\f30b"
+
+.la-sort-desc:before 
+  content: "\f30c"
+
+.la-sort-down:before 
+  content: "\f30c"
+
+.la-sort-numeric-asc:before 
+  content: "\f30d"
+
+.la-sort-numeric-desc:before 
+  content: "\f30e"
+
+.la-soundcloud:before 
+  content: "\f30f"
+
+.la-space-shuttle:before 
+  content: "\f310"
+
+.la-spinner:before 
+  content: "\f311"
+
+.la-spoon:before 
+  content: "\f312"
+
+.la-spotify:before 
+  content: "\f313"
+
+.la-square:before 
+  content: "\f314"
+
+.la-square-o:before 
+  content: "\f315"
+
+.la-stack-exchange:before 
+  content: "\f316"
+
+.la-stack-overflow:before 
+  content: "\f317"
+
+.la-star:before 
+  content: "\f318"
+
+.la-star-half:before 
+  content: "\f319"
+
+.la-star-half-empty:before 
+  content: "\f31a"
+
+.la-star-half-full:before 
+  content: "\f31a"
+
+.la-star-half-o:before 
+  content: "\f31a"
+
+.la-star-o:before 
+  content: "\f31b"
+
+.la-steam:before 
+  content: "\f31c"
+
+.la-steam-square:before 
+  content: "\f31d"
+
+.la-step-backward:before 
+  content: "\f31e"
+
+.la-step-forward:before 
+  content: "\f31f"
+
+.la-stethoscope:before 
+  content: "\f320"
+
+.la-sticky-note:before 
+  content: "\f321"
+
+.la-sticky-note-o:before 
+  content: "\f322"
+
+.la-stop:before 
+  content: "\f323"
+
+.la-street-view:before 
+  content: "\f324"
+
+.la-strikethrough:before 
+  content: "\f325"
+
+.la-stumbleupon:before 
+  content: "\f326"
+
+.la-stumbleupon-circle:before 
+  content: "\f327"
+
+.la-subscript:before 
+  content: "\f328"
+
+.la-subway:before 
+  content: "\f329"
+
+.la-suitcase:before 
+  content: "\f32a"
+
+.la-sun-o:before 
+  content: "\f32b"
+
+.la-superscript:before 
+  content: "\f32c"
+
+.la-table:before 
+  content: "\f32d"
+
+.la-tablet:before 
+  content: "\f32e"
+
+.la-tachometer:before 
+  content: "\f32f"
+
+.la-tag:before 
+  content: "\f330"
+
+.la-tags:before 
+  content: "\f331"
+
+.la-tasks:before 
+  content: "\f332"
+
+.la-taxi:before 
+  content: "\f333"
+
+.la-television:before 
+  content: "\f334"
+
+.la-tv:before 
+  content: "\f334"
+
+.la-tencent-weibo:before 
+  content: "\f335"
+
+.la-terminal:before 
+  content: "\f336"
+
+.la-text-height:before 
+  content: "\f337"
+
+.la-text-width:before 
+  content: "\f338"
+
+.la-th:before 
+  content: "\f339"
+
+.la-th-large:before 
+  content: "\f33a"
+
+.la-th-list:before 
+  content: "\f33b"
+
+.la-thumb-tack:before 
+  content: "\f33c"
+
+.la-thumbs-down:before 
+  content: "\f33d"
+
+.la-thumbs-o-down:before 
+  content: "\f33e"
+
+.la-thumbs-o-up:before 
+  content: "\f33f"
+
+.la-thumbs-up:before 
+  content: "\f340"
+
+.la-ticket:before 
+  content: "\f341"
+
+.la-remove:before 
+  content: "\f342"
+
+.la-times:before 
+  content: "\f342"
+
+.la-times-circle:before 
+  content: "\f343"
+
+.la-times-circle-o:before 
+  content: "\f344"
+
+.la-tint:before 
+  content: "\f345"
+
+.la-toggle-off:before 
+  content: "\f346"
+
+.la-toggle-on:before 
+  content: "\f347"
+
+.la-trademark:before 
+  content: "\f348"
+
+.la-train:before 
+  content: "\f349"
+
+.la-intersex:before 
+  content: "\f34a"
+
+.la-transgender:before 
+  content: "\f34a"
+
+.la-transgender-alt:before 
+  content: "\f34b"
+
+.la-trash:before 
+  content: "\f34c"
+
+.la-trash-o:before 
+  content: "\f34d"
+
+.la-tree:before 
+  content: "\f34e"
+
+.la-trello:before 
+  content: "\f34f"
+
+.la-tripadvisor:before 
+  content: "\f350"
+
+.la-trophy:before 
+  content: "\f351"
+
+.la-truck:before 
+  content: "\f352"
+
+.la-try:before 
+  content: "\f353"
+
+.la-tty:before 
+  content: "\f354"
+
+.la-tumblr:before 
+  content: "\f355"
+
+.la-tumblr-square:before 
+  content: "\f356"
+
+.la-turkish-lira:before 
+  content: "\f357"
+
+.la-twitch:before 
+  content: "\f358"
+
+.la-twitter:before 
+  content: "\f359"
+
+.la-twitter-square:before 
+  content: "\f35a"
+
+.la-umbrella:before 
+  content: "\f35b"
+
+.la-underline:before 
+  content: "\f35c"
+
+.la-undo:before 
+  content: "\f35d"
+
+.la-university:before 
+  content: "\f35e"
+
+.la-unlink:before 
+  content: "\f35f"
+
+.la-unlock:before 
+  content: "\f360"
+
+.la-unlock-alt:before 
+  content: "\f361"
+
+.la-upload:before 
+  content: "\f362"
+
+.la-usd:before 
+  content: "\f363"
+
+.la-user:before 
+  content: "\f364"
+
+.la-user-md:before 
+  content: "\f365"
+
+.la-user-plus:before 
+  content: "\f366"
+
+.la-user-secret:before 
+  content: "\f367"
+
+.la-user-times:before 
+  content: "\f368"
+
+.la-users:before 
+  content: "\f369"
+
+.la-venus:before 
+  content: "\f36a"
+
+.la-venus-double:before 
+  content: "\f36b"
+
+.la-venus-mars:before 
+  content: "\f36c"
+
+.la-viacoin:before 
+  content: "\f36d"
+
+.la-video-camera:before 
+  content: "\f36e"
+
+.la-vimeo:before 
+  content: "\f36f"
+
+.la-vimeo-square:before 
+  content: "\f370"
+
+.la-vine:before 
+  content: "\f371"
+
+.la-vk:before 
+  content: "\f372"
+
+.la-volume-down:before 
+  content: "\f373"
+
+.la-volume-off:before 
+  content: "\f374"
+
+.la-volume-up:before 
+  content: "\f375"
+
+.la-warning:before 
+  content: "\f376"
+
+.la-wechat:before 
+  content: "\f377"
+
+.la-weibo:before 
+  content: "\f378"
+
+.la-weixin:before 
+  content: "\f379"
+
+.la-whatsapp:before 
+  content: "\f37a"
+
+.la-wheelchair:before 
+  content: "\f37b"
+
+.la-wifi:before 
+  content: "\f37c"
+
+.la-wikipedia-w:before 
+  content: "\f37d"
+
+.la-windows:before 
+  content: "\f37e"
+
+.la-won:before 
+  content: "\f37f"
+
+.la-wordpress:before 
+  content: "\f380"
+
+.la-wrench:before 
+  content: "\f381"
+
+.la-xing:before 
+  content: "\f382"
+
+.la-xing-square:before 
+  content: "\f383"
+
+.la-y-combinator:before 
+  content: "\f384"
+
+.la-y-combinator-square:before 
+  content: "\f385"
+
+.la-yahoo:before 
+  content: "\f386"
+
+.la-yc:before 
+  content: "\f387"
+
+.la-yc-square:before 
+  content: "\f388"
+
+.la-yelp:before 
+  content: "\f389"
+
+.la-yen:before 
+  content: "\f38a"
+
+.la-youtube:before 
+  content: "\f38b"
+
+.la-youtube-play:before 
+  content: "\f38c"
+
+.la-youtube-square:before 
+  content: "\f38d"
+
+.filter button 
+  font-family: $font_3, $font_2
+  font-style: normal
+  font-weight: bold
+  line-height: normal
+  font-size: 14px
+  text-align: center
+  text-transform: uppercase
+  color: $color_atlantis_approx !important
+  border: 1px solid $color_atlantis_approx
+  //If you use compass, instead of the line below you could use + box-sizing($bs)
+  box-sizing: border-box
+  //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+  border-radius: 60px !important
+  background-color: transparent!important
+  width: 68px !important
+  height: 50px
+  &:hover 
+    background-color: $color_atlantis_approx !important
+
+
+.cfilter img 
+  padding-top: 10px
+
+.card-header .col-xs-2 
+  text-align: center
+
+.select-all-checkbox + .form-check-sign:before 
+  background: $color_celeste_approx !important
+  border-color: $color_celeste_approx !important
+
+.form-check-sign:hover:before 
+  border: 1px solid $color_celeste_approx !important
+
+.form-inline label 
+  margin-bottom: 0 !important
+
+.table-striped-bg-default tbody tr:nth-of-type(odd) 
+  background: $color_smalt_blue_approx !important
+  color: $white !important
+  border: 0 !important
+
+.table-striped-bg-primary tbody tr:nth-of-type(odd) 
+  background: $color_blue_ribbon_approx !important
+  color: $white !important
+  border: 0 !important
+
+.table-striped-bg-info tbody tr:nth-of-type(odd) 
+  background: $color_scooter_approx !important
+  color: $white !important
+  border: 0 !important
+
+.table-striped-bg-success tbody tr:nth-of-type(odd) 
+  background: $color_emerald_approx !important
+  color: $white !important
+  border: 0 !important
+
+.table-striped-bg-warning tbody tr:nth-of-type(odd) 
+  background: $color_yellow_orange_approx !important
+  color: $white !important
+  border: 0 !important
+
+.table-striped-bg-danger tbody tr:nth-of-type(odd) 
+  background: $color_wild_watermelon_approx !important
+  color: $white !important
+  border: 0 !important
+
+.navbar-expand-lg .navbar-nav .dropdown-menu 
+  left: auto
+  right: 0
+
+.hidden-caret .dropdown-toggle::after 
+  display: none !important
+
+.nav-link.disabled 
+  color: $color_pale_sky_approx !important
+
+.slider-default .ui-slider-range 
+  background: $color_smalt_blue_approx
+
+.slider-primary .ui-slider-range 
+  background: $color_blue_ribbon_approx
+
+.slider-info .ui-slider-range 
+  background: $color_scooter_approx
+
+.slider-success .ui-slider-range 
+  background: $color_emerald_approx
+
+.slider-warning .ui-slider-range 
+  background: $color_yellow_orange_approx
+
+.slider-danger .ui-slider-range 
+  background: $color_wild_watermelon_approx

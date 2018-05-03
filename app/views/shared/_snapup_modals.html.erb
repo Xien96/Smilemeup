@@ -1,0 +1,59 @@
+<% ['hollywood', 'natural', 'sharp', 'soft'].each do |model| %>
+
+<!-- Hollywood Modal -->
+<div class="modal fade product" id="<%= model %>Modal" tabindex="-1" role="dialog" aria-labelledby="hollywoodModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-7 product-image">
+            <%= image_tag("products/#{model}.png") %>
+          </div>
+          <div class="col-sm-5 product-detail text-center">
+            <h4><strong><%= model.titleize %> Smile</strong></h4>
+            <p class="rate">
+              <% 4.times do |i| %>
+                <%= image_tag('products/green-star') %>
+              <% end %>
+              <%= image_tag('products/grey-star') %>
+              (10)
+            </p>
+            <p>(The typical Hollywood smile)</p>
+            <p class="teeth_selection teeth_selectionupper_upper">
+              <strong>Upper teeth</strong><br>
+              <span class="price"><%= number_to_currency(@up.price / 100) %></span>
+            </p>
+            <p class="teeth_selection teeth_selectionupper_lower">
+              <strong>Lower teeth</strong><br>
+              <span class="price"><%=  number_to_currency(@down.price / 100) %></span>
+            </p>
+            <p class="teeth_selection teeth_selectionupper_both">
+              <strong>Both upper & lower teeth</strong><br>
+              <span class="price"><%=  number_to_currency(@both.price / 100) %></span>
+            </p>
+            <div class="add-to-cart">
+              <span class="number">
+                <span id="<%= model %>-minus" class="minus">-</span>
+                <span id="<%= model %>-quantity" class="quantity"> 1 </span>
+                <span id="<%= model %>-plus" class="plus">+</span>
+              </span>
+              <button type="button" class="btn btn-green snap-submit" id="<%= model %>-submit">Add to cart</button>
+              <%= form_tag("/cart/add", method: :post, remote: true, authenticity_token: true, id: "#{model}-form", class: "snap-form") do %>
+              <%= hidden_field_tag('style', model, class: "style") %>
+              <%= hidden_field_tag('quantity', 1, class: "quantity") %>
+              <%= hidden_field_tag('product', "snap_both", class: "product") %>
+              <% end %>
+            </div>
+            <div class="modal-footer-line">
+              <%= image_tag('products/modal-footer.svg') %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% end %>
+
+

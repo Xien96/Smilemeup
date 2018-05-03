@@ -1,0 +1,63 @@
+<div class="navigation">
+  <div class="container">
+    <nav class="navbar navbar-default navbar-absolute">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed"  data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <div class="">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar one"></span>
+              <span class="icon-bar second"></span>
+              <span class="icon-bar third"></span>
+          </div>
+          </button>
+          <a class="navbar-brand" href="/">
+            <% if @active =="account" %>
+              <%= image_tag('logo-color.png', id: "logo") %>
+            <% else %>
+              <%= image_tag('logo-white.png', id: "logo") %>
+            <% end %>
+            <% if @active != "home" %>
+              <%= image_tag('back-to-home.svg', id: "back-to-home") %>
+            <% end %>
+          </a>
+          
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="<%= @active == 'products' ? 'nav-active' : '' %>"><a href="/products" title="">Products</a></li>
+            <li class="<%= @active == 'about' ? 'nav-active' : '' %>"><a href="/about" title="">About Us</a></li>
+            <li class="<%= @active == 'blog' ? 'nav-active' : '' %>"><a href="/blog" title="">Blog</a></li>
+            <li class="<%= @active == 'contact' ? 'nav-active' : '' %>"><a href="/contact" title="">Contact Us</a></li>
+            <li class="nav-icons seperator"><a href="#" title="" class="settingsen settings"><div>EN</div></a></li>
+            <li class="nav-icons"><a href="#" title="" class="settingsusd settings"><div class="usd-auto">USD</div></a></li>
+            <!-- <li><a href="" title=""><%= image_tag('search.svg') %></a></li> -->
+            <% if session[:cart].count > 0 %>
+              <li class="nav-icons <%= @active == 'cart' ? 'nav-active' : '' %>"><a href="/cart" title="" class="car-shop"><%= image_tag('cart-full.svg') %></a></li>
+            <% else %>
+              <li class=" nav-icons <%= @active == 'cart' ? 'nav-active' : '' %>"><a href="/cart" title=""><%= image_tag('cart-empty.svg') %></a></li>
+            <% end %>
+            <li class="devider">&nbsp;</li>
+            <% if warden.authenticated? %>
+            <li class="dropdown <%= @active == 'account' ? 'nav-active' : '' %>">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><strong><%= warden.user.name %></strong> <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><%= link_to('My account', edit_user_registration_path) %></li>
+                <li><a href="#">My Orders</a></li>
+                <li><a href="#">My Messages</a></li>
+                <li role="separator" class="divider"></li>
+                <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+              </ul>
+            </li>
+            
+            <% else %>
+            <li><a class="btn btn-default aligns-sign" href="<%= new_user_session_path %>" role="button">SIGN IN</a></li>
+            <% end %>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </div>
+</div>

@@ -1,0 +1,84 @@
+<div class="contact-jumbotron jumbotron">
+  <div class="container">
+    <div class="contact-us contact-heading">
+      <h1 class="contact-title">WE ARE HAPPY TO<br><strong>HELP !</strong></h1>
+      <p>
+        Do you have questions regarding Smile <br>Me Up in general or one of our products? <br>Do you have any specific wishes?
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="contact container contact-items-wrapper">
+  <div class="row text-center">
+    <div class="col-sm-4">
+      <div class="contact-item shadow contact-margin">
+        <p><%= image_tag('contact-call.svg') %></p>
+        <h3>Call <strong>Us</strong></h3>
+        <p>+49(0) 1525 8197 119</p>
+        <p>+49 (0) 211 436 32 174 / -173</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="contact-item shadow contact-margin">
+        <p><%= image_tag('contact-whatsapp.svg') %></p>
+        <h3>whatspp <strong>Number</strong></h3>
+        <p>+49(0) 1525 8197 119</p>
+        <p>+49 (0) 211 436 32 174 / -173</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="contact-item shadow contact-margin">
+        <p><%= image_tag('contact-email.svg') %></p>
+        <h3>Say <strong>Hello</strong></h3>
+        <p>info@smilemeup.com</p>
+        <p>&nbsp;</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="contact container">
+  <div class="row">
+    <div class="col-sm-3 our-contacts-forms">
+      <h3>Have a</h3>
+      <h2><strong>Question?</strong></h2>
+      <p>
+        Do you have questions regarding Smile Me Up in general or one of our products?
+      </p>
+    </div>
+    <div class="col-sm-6 col-sm-push-2">
+      <form id="contact-form">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="name">Full name</label>
+              <input name="name" type="text" class="form-control" id="name" placeholder="John Doe" value="">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="email">Your email</label>
+              <input name="email" type="text" class="form-control" id="email" placeholder="ilove@smilemeup.com">
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input name="subject" type="text" class="form-control" id="subject" placeholder="I have a question">
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label for="body">Message</label>
+              <textarea name="body" class="form-control" rows="8" id="body"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="submit">
+          <button type="submit" class="btn btn-green btn-large">Send Now</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

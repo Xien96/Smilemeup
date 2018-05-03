@@ -1,0 +1,77 @@
+
+<div class="product-snapup jumbotron">
+  <div class="container text-center">
+    <div class="">
+      <h1 class="slogan-title snap-overview-head">
+        Snap Up <strong>Veneers</strong><br>
+        Tailor your perfect smile.
+      </h1>
+
+      <div class="row">
+        <div class="col-sm-6 col-sm-push-3">
+          <p class="snap-overview-des">
+            The Snap Up is custom produced to your teeth upon the teeth impression you will make at home.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container product">
+  
+    <div class="text-center">
+      <h3>Choose one only of <strong class="green">the<br> awesome options below</strong></h3>
+      <p class="text-midium snap-order-padding">Please note that the SNAP UP is always provided for both upper and lower teeth<br> together for a fixed price of 890€ to guarantee the best smile delivered from <br>Smile Me Up.</p>
+
+   
+  </div>
+ <!--
+  <div class="row">
+    <div class="col-sm-6 col-sm-push-3 text-center">
+      <div class="selection-border row">
+        <div class="col-xs-4">
+          <button type="button" id="upper" class="btn btn-default btn-lg">Upper teeth</button>
+        </div>
+        <div class="col-xs-4">
+          <button type="button" id="lower" class="btn btn-default btn-lg ">Lower teeth</button>
+        </div>
+        <div class="col-xs-4">
+          <button type="button" id="both" class="btn btn-green btn-lg active">Both teeth</button>
+        </div>
+      </div>
+    </div>
+  </div>
+-->
+  <div class="row text-center">
+    <div class="col-sm-3 product-item">
+      <%= image_tag('products/hollywood.png') %>
+      <h3 class="pro-item-heading">Hollywood smile</h3>
+      <p class="pro-item-des">(The typical Hollywood smile)</p>
+      <button type="button" class="btn btn-lg btn-green btn-hover" data-toggle="modal" data-target="#hollywoodModal">ADD TO CART</button>
+    </div>
+    <div class="col-sm-3 product-item">
+      <%= image_tag('products/natural.png') %>
+      <h3 class="pro-item-heading">Natural Shape</h3>
+      <p class="pro-item-des">(The current shape of your teeth)</p>
+      <button type="button" class="btn btn-lg btn-green btn-hover" data-toggle="modal" data-target="#naturalModal">ADD TO CART</button>
+    </div>
+    <div class="col-sm-3 product-item">
+      <%= image_tag('products/sharp.png') %>
+      <h3 class="pro-item-heading">Sharp edges</h3>
+      <p class="pro-item-des">(recommended for male customers)</p>
+      <button type="button" class="btn btn-lg btn-green btn-hover" data-toggle="modal" data-target="#sharpModal">ADD TO CART</button>
+    </div>
+    <div class="col-sm-3 product-item">
+      <%= image_tag('products/soft.png') %>
+      <h3 class="pro-item-heading">Soft edges</h3>
+      <p class="pro-item-des">(recommended for women)</p>
+      <button type="button" class="btn btn-lg btn-green btn-hover" data-toggle="modal" data-target="#softModal">ADD TO CART</button>
+    </div>
+  </div>
+
+</div>
+
+<%= render 'shared/share' %>
+
+<%= render 'shared/snapup_modals' %>

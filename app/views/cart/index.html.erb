@@ -1,0 +1,49 @@
+<div class="nav-cover">
+</div>
+
+<div class="cart container">
+  <div class="row">
+    <div class="col-sm-10 col-sm-push-1">
+      <h1>CART</h1>
+      <div class="panel panel-default shadow">
+        <div class="panel-heading">&nbsp;</div>
+          <div class="panel-body">
+            <% if @cart.count == 0 %>
+              <strong>No items in cart yet!</strong>
+            <% else %>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>&nbsp;</th>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                    <th>Subtotal</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% @cart.each do |ci| %>
+                  <tr class="cart-item">
+                    <td class="img"><%= image_tag("products/#{ci['style']}.png")%></td>
+                    <td>
+                      <strong>The <%= ci['style'].titleize %> Smile</strong><br>
+                      <%= Style.find_by(name: ci['style']).tagline %>
+                    </td>
+                    <td><%= ci['quantity'].to_i %></td>
+                    <td><%= number_to_currency(Product.find_by(name: ci['product']).price / 100) %> </td>
+                    <td><%= number_to_currency(Product.find_by(name: ci['product']).price / 100 * ci['quantity'].to_i) %></td>
+                  </tr>
+                  <% end %>
+                </tbody>
+              </table>
+              <div class="subtotal clearfix">
+                <h2 class="pull-left">TOTAL: <%= number_to_currency(@total) %></h2>
+                <a class="btn btn-green btn-lg pull-right" href="/products/checkout" role="button">CONTINUE TO CHECKOUT</a>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,121 @@
+ <div class="smile text-center">
+        <div class="container grid">
+          <h2 style="text-align: left; padding-left: 25px">Analytics</h2>
+          <p style="color: #BDBDBD;text-align: left; padding-left: 25px">we can add description here.</p>
+                       
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="our-chart">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+               <div class="col-md-6" style="margin-bottom: 60px;">
+                  <div class="our-chart">
+                    <canvas id="myChart2"></canvas>
+                    </div>
+                </div>
+
+                    <div class="col-md-6">
+                    <div class="our-chart">
+                        <canvas id="myChart3"></canvas>
+                    </div>
+                </div>
+               <div class="col-md-6" style="margin-bottom: 60px;">
+                  <div class="our-chart">
+                    <canvas id="myChart4"></canvas>
+                    </div>
+                </div>
+          </div>
+
+
+</div>
+       
+   
+        
+         
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+        
+<script>var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+    
+
+    // The data for our dataset
+    data: {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [{
+            label: "My First dataset",
+            backgroundColor: 'rgba(0, 0, 0, 0)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 10, 5, 2, 20, 30, 45],
+        }]
+    },
+    
+
+    // Configuration options go here
+    options: {}
+});</script>
+        <script>var ctx = document.getElementById('myChart2').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+    
+
+    // The data for our dataset
+    data: {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [{
+            label: "My First dataset",
+            backgroundColor: 'rgba(0, 0, 0, 0)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 10, 5, 2, 20, 30, 45],
+        }]
+    },
+    
+
+    // Configuration options go here
+    options: {}
+});</script>
+<script>var ctx = document.getElementById('myChart3').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+    
+
+    // The data for our dataset
+    data: {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [{
+            label: "My First dataset",
+            backgroundColor: 'rgba(0, 0, 0, 0)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 10, 5, 2, 20, 30, 45],
+        }]
+    },
+    
+
+    // Configuration options go here
+    options: {}
+});</script>
+<script>var ctx = document.getElementById('myChart4').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+    
+
+    // The data for our dataset
+    data: {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [{
+            label: "My First dataset",
+            backgroundColor: 'rgba(0, 0, 0, 0)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 10, 5, 2, 20, 30, 45],
+        }]
+    },
+    
+
+    // Configuration options go here
+    options: {}
+});</script>

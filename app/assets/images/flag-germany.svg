@@ -1,0 +1,28 @@
+<svg width="25" height="19" viewBox="0 0 25 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>germany</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-7632 -8770)">
+<g id="germany">
+<g id="Group">
+<g id="Group">
+<g id="Group">
+<g id="Vector">
+<use xlink:href="#path0_fill" transform="matrix(1.25 0 0 -1.25 7632 8789)" fill="#FFCD05"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path1_fill" transform="matrix(1.25 0 0 -1.25 7632 8782)" fill="#ED1F24"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path2_fill" transform="matrix(1.25 0 0 -1.25 7632 8776.58)" fill="#141414"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 0 2.33846C 0 1.04702 0.99502 7.5267e-08 2.22222 7.5267e-08L 17.7778 7.5267e-08C 19.005 7.5267e-08 20 1.04707 20 2.33846L 20 4.67692L 0 4.67692L 0 2.33846Z"/>
+<path id="path1_fill" d="M 0 2.38345e-07L 20 2.38345e-07L 20 5.26154L 0 5.26154L 0 2.38345e-07Z"/>
+<path id="path2_fill" d="M 17.7778 5.26154L 2.22222 5.26154C 0.99502 5.26154 0 4.21453 0 2.92309L 0 -7.5267e-08L 20 -7.5267e-08L 20 2.92309C 20 4.21453 19.005 5.26154 17.7778 5.26154Z"/>
+</defs>
+</svg>
