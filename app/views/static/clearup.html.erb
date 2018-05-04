@@ -114,72 +114,90 @@
 
 <!--End  Our Video style-->
 
-<!--<div class="home container text-center">
+<!--start after and before-->
+
+
+<div class="home container text-center">
   <h3 class="green"><strong>Inspiration</strong></h3>
   <p>Get inspired by some of our before and after pictures.</p>
 </div>
 
+
+<div class="container">
+  <div class="container-a-b text-center">
+
+    <div class="comparison01 shadow">
+      <figure>
+            <%= image_tag('Clearup01.jpg') %>
+        <div id="divisor">
+            <%= image_tag('Clearup02.jpg') %>
+        </div>
+      </figure>
+      <input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor1()">
+    </div>
+
+    <div class="comparison01">
+      <figure>
+            <%= image_tag('Clearup03.jpg') %>
+        <div id="divisor1">
+            <%= image_tag('Clearup04.jpg') %>
+        </div>
+      </figure>
+      <input type="range" min="0" max="100" value="50" id="slider1" oninput="moveDivisor2()">
+    </div>
+
+
+    <div class="comparison01">
+      <figure>
+            <%= image_tag('Clearup06.jpg') %>
+        <div id="divisor2">
+            <%= image_tag('Clearup05.jpg') %>
+        </div>
+      </figure>
+      <input type="range" min="0" max="100" value="50" id="slider2" oninput="moveDivisor3()">
+    </div>
+
+    <div class="comparison01 shadow">
+      <figure>
+            <%= image_tag('Clearup07.jpg') %>
+        <div id="divisor3">
+            <%= image_tag('Clearup08.jpg') %>
+        </div>
+      </figure>
+      <input type="range" min="0" max="100" value="50" id="slider3" oninput="moveDivisor4()">
+    </div>
+
+    <div class="comparison01">
+      <figure>
+            <%= image_tag('Clearup09.jpg') %>
+        <div id="divisor4">
+            <%= image_tag('Clearup10.jpg') %>
+        </div>
+      </figure>
+      <input type="range" min="0" max="100" value="50" id="slider4" oninput="moveDivisor5()">
+    </div>
+
+
+    <div class="comparison01">
+      <figure>
+            <%= image_tag('Clearup11.jpg') %>
+        <div id="divisor5">
+            <%= image_tag('Clearup12.jpg') %>
+        </div>
+      </figure>
+      <input type="range" min="0" max="100" value="50" id="slider5" oninput="moveDivisor6()">
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+<!--
 <div class="home product product-ba">
-  <div class="row">
-
-    <div class="">
-      <div class="splitview skewed"> 
-        <div class="mover"></div>
-          <div id="page">
-            <div class="wrapper">
-              <div class="before">
-                <%= image_tag('person-6a-1.jpg') %>   
-              </div>
-              <div class="after">
-                <%= image_tag('person-6b.jpg') %>
-              </div>
-              <div class="scroller">
-                    <svg class="scroller_pointer" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.18 45"><defs><style>.cls-1{fill:#96bf3d;}.cls-2{fill:#b4d850;}.cls-3,.cls-5{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;}.cls-3{stroke-width:0.5px;}.cls-4{fill:#fff;}.cls-5{stroke-width:0.25px;}</style></defs><title>Untitled-2</title><path class="cls-1" d="M15.5,8.42V36.58A6.33,6.33,0,0,1,9.18,42.9H9a6.32,6.32,0,0,1-6.32-6.32V8.42a6.12,6.12,0,0,1,.63-2.73A6.29,6.29,0,0,1,9,2.1h.18A6.32,6.32,0,0,1,15.5,8.42Z"/><path class="cls-2" d="M13.87,40.81A6.28,6.28,0,0,1,9.18,42.9H9a6.32,6.32,0,0,1-6.32-6.32V8.42a6.12,6.12,0,0,1,.63-2.73Z"/><path class="cls-3" d="M12.3,21.8a.65.65,0,0,0-.56.32V21.9a.67.67,0,0,0-.66-.66.68.68,0,0,0-.57.32v-.15a.65.65,0,0,0-.66-.66.66.66,0,0,0-.56.31v-2a.66.66,0,0,0-1.32,0v5l-.74-1A.64.64,0,0,0,6.31,23a.66.66,0,0,0-.12.92l2.08,2.66a1.72,1.72,0,0,0,1.44.78H11a2,2,0,0,0,2-2V22.46a.67.67,0,0,0-.66-.66Zm0,0"/><rect class="cls-4" x="5.03" y="18.3" width="1.56" height="0.22"/><rect class="cls-4" x="11.07" y="18.3" width="1.56" height="0.22"/><polyline class="cls-5" points="5.49 19 4.89 18.4 5.49 17.81"/><polyline class="cls-5" points="12.19 17.81 12.78 18.4 12.19 19"/></svg>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>  
-
-
-    <div class="after-befor01">
-      <div class="splitview skewed"> 
-        <div class="mover"></div>
-          <div id="page">
-            <div class="wrapper">
-              <div class="before">
-                <%= image_tag('person-6a-1.jpg') %>   
-              </div>
-              <div class="after">
-                <%= image_tag('person-6b.jpg') %>
-              </div>
-              <div class="scroller">
-                    <svg class="scroller_pointer" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.18 45"><defs><style>.cls-1{fill:#96bf3d;}.cls-2{fill:#b4d850;}.cls-3,.cls-5{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;}.cls-3{stroke-width:0.5px;}.cls-4{fill:#fff;}.cls-5{stroke-width:0.25px;}</style></defs><title>Untitled-2</title><path class="cls-1" d="M15.5,8.42V36.58A6.33,6.33,0,0,1,9.18,42.9H9a6.32,6.32,0,0,1-6.32-6.32V8.42a6.12,6.12,0,0,1,.63-2.73A6.29,6.29,0,0,1,9,2.1h.18A6.32,6.32,0,0,1,15.5,8.42Z"/><path class="cls-2" d="M13.87,40.81A6.28,6.28,0,0,1,9.18,42.9H9a6.32,6.32,0,0,1-6.32-6.32V8.42a6.12,6.12,0,0,1,.63-2.73Z"/><path class="cls-3" d="M12.3,21.8a.65.65,0,0,0-.56.32V21.9a.67.67,0,0,0-.66-.66.68.68,0,0,0-.57.32v-.15a.65.65,0,0,0-.66-.66.66.66,0,0,0-.56.31v-2a.66.66,0,0,0-1.32,0v5l-.74-1A.64.64,0,0,0,6.31,23a.66.66,0,0,0-.12.92l2.08,2.66a1.72,1.72,0,0,0,1.44.78H11a2,2,0,0,0,2-2V22.46a.67.67,0,0,0-.66-.66Zm0,0"/><rect class="cls-4" x="5.03" y="18.3" width="1.56" height="0.22"/><rect class="cls-4" x="11.07" y="18.3" width="1.56" height="0.22"/><polyline class="cls-5" points="5.49 19 4.89 18.4 5.49 17.81"/><polyline class="cls-5" points="12.19 17.81 12.78 18.4 12.19 19"/></svg>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>  
-
-
-    <div class="after-befor02">
-      <div class="splitview skewed"> 
-        <div class="mover"></div>
-          <div id="page">
-            <div class="wrapper">
-              <div class="before">
-                <%= image_tag('person-6a-1.jpg') %>   
-              </div>
-              <div class="after">
-                <%= image_tag('person-6b.jpg') %>
-              </div>
-              <div class="scroller">
-                    <svg class="scroller_pointer" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.18 45"><defs><style>.cls-1{fill:#96bf3d;}.cls-2{fill:#b4d850;}.cls-3,.cls-5{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;}.cls-3{stroke-width:0.5px;}.cls-4{fill:#fff;}.cls-5{stroke-width:0.25px;}</style></defs><title>Untitled-2</title><path class="cls-1" d="M15.5,8.42V36.58A6.33,6.33,0,0,1,9.18,42.9H9a6.32,6.32,0,0,1-6.32-6.32V8.42a6.12,6.12,0,0,1,.63-2.73A6.29,6.29,0,0,1,9,2.1h.18A6.32,6.32,0,0,1,15.5,8.42Z"/><path class="cls-2" d="M13.87,40.81A6.28,6.28,0,0,1,9.18,42.9H9a6.32,6.32,0,0,1-6.32-6.32V8.42a6.12,6.12,0,0,1,.63-2.73Z"/><path class="cls-3" d="M12.3,21.8a.65.65,0,0,0-.56.32V21.9a.67.67,0,0,0-.66-.66.68.68,0,0,0-.57.32v-.15a.65.65,0,0,0-.66-.66.66.66,0,0,0-.56.31v-2a.66.66,0,0,0-1.32,0v5l-.74-1A.64.64,0,0,0,6.31,23a.66.66,0,0,0-.12.92l2.08,2.66a1.72,1.72,0,0,0,1.44.78H11a2,2,0,0,0,2-2V22.46a.67.67,0,0,0-.66-.66Zm0,0"/><rect class="cls-4" x="5.03" y="18.3" width="1.56" height="0.22"/><rect class="cls-4" x="11.07" y="18.3" width="1.56" height="0.22"/><polyline class="cls-5" points="5.49 19 4.89 18.4 5.49 17.81"/><polyline class="cls-5" points="12.19 17.81 12.78 18.4 12.19 19"/></svg>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div> 
+  <div class="row">-->
 
 <!-- <div class="row hide-box">
     <div class="col-sm-4 col-sm-push-2">

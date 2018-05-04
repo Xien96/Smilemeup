@@ -2,7 +2,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" type="text/javascript" charset="utf-8" async defer></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
+
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 
 
@@ -207,6 +207,52 @@ $(document).ready(function() {
       },
     });
   })
+
+
+/*From Zain*/ 
+
+
+  var divisor5 = document.getElementById("divisor5"),
+      slider5 = document.getElementById("slider5");
+      function moveDivisor6() { 
+      divisor5.style.width = slider5.value+"%";
+       }
+
+  var divisor4 = document.getElementById("divisor4"),
+      slider4 = document.getElementById("slider4");
+      function moveDivisor5() { 
+        divisor4.style.width = slider4.value+"%";
+      }
+
+  var divisor3 = document.getElementById("divisor3"),
+      slider3 = document.getElementById("slider3");
+      function moveDivisor4() { 
+      divisor3.style.width = slider3.value+"%";
+      }
+    
+  var divisor2 = document.getElementById("divisor2"),
+      slider2 = document.getElementById("slider2");
+      function moveDivisor3() { 
+      divisor2.style.width = slider2.value+"%";
+       }
+
+  var divisor1 = document.getElementById("divisor1"),
+      slider1 = document.getElementById("slider1");
+      function moveDivisor2() { 
+        divisor1.style.width = slider1.value+"%";
+      }
+
+  var divisor = document.getElementById("divisor"),
+      slider = document.getElementById("slider");
+      function moveDivisor1() { 
+      divisor.style.width = slider.value+"%";
+      }
+    
+
+
+
+
+
 /*
 load more
 */
@@ -366,6 +412,7 @@ var readyInterval = setInterval(function() {
         clearInterval(readyInterval);
     }
 }, 250);
+
 
 
 /*

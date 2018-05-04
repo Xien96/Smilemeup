@@ -1442,36 +1442,36 @@ hr
 h3
   font-size: 24px !important
 
-/*Blog */ 
-.width-blog-ar
-  margin: 50px auto
-  max-width: 1100px
-  height: 360px
-.Blog-artical_img
-  height: 360px
-  width: 500px
-  float: right
-  display: block
-  overflow: hidden
+// /*Blog */ 
+// .width-blog-ar
+//   margin: 50px auto
+//   max-width: 1100px
+//   height: 360px
+// .Blog-artical_img
+//   height: 360px
+//   width: 500px
+//   float: right
+//   display: block
+//   overflow: hidden
 
-.P-Blog01
-  width: 500px
+// .P-Blog01
+//   width: 500px
 
-.contact-blog01
-  margin-left: 50px
-  float: left
-  display: block
-  width: 500px
-  height: 300px
+// .contact-blog01
+//   margin-left: 50px
+//   float: left
+//   display: block
+//   width: 500px
+//   height: 300px
 
-.head-blog
-  text-align: center
-  padding-top: 20px 
+// .head-blog
+//   text-align: center
+//   padding-top: 20px 
 
 
-.Paragraph-blog
-  text-align: center
-  padding-top: 20px
+// .Paragraph-blog
+//   text-align: center
+//   padding-top: 20px
 
 
 /* cart-2*/
@@ -1573,8 +1573,173 @@ h3
 
 /* The old "center div vertically" hack
 
-/* Just looks nicer
+/* Just looks nicer*/
 
+// From Zain
+
+.width-blog-ar
+  margin: 50px auto
+  max-width: 1100px
+  height: 360px
+.Blog-artical_img
+  height: 360px
+  width: 500px
+  float: right
+  display: block
+  overflow: hidden
+
+.P-Blog01
+  width: 500px
+
+.contact-blog01
+  margin-left: 50px
+  float: left
+  display: block
+  width: 500px
+  height: 300px
+  a
+    text-decoration: none !important 
+
+.head-blog
+  text-align: center
+  padding-top: 20px 
+
+
+.Paragraph-blog
+  text-align: center
+  padding-top: 20px
+  color: #bbbbbb
+
+
+.bold
+  font-weight: Bold
+
+.without-line
+  text-decoration: none !important 
+
+.color-b
+  color: #bbbbbb
+
+/*--Dropdown--*/ 
+/*blog*/
+.dropbtn
+  background-color: transparent
+  padding: 16px
+  border: none
+  a
+    &:hover
+      text-decoration: none
+
+.dropdown
+  position: relative
+  display: inline-block
+
+
+
+.dropdown-content
+  margin-left: -25%
+  opacity: 1
+  display: none
+  position: absolute
+  background-color: white
+  min-width: 160px
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3)
+  z-index: 1
+  border-radius: 20px
+  transition: display 1s ease-out
+  a
+    padding: 12px 16px
+    text-decoration: none
+    display: block
+    &:hover
+      color: white !important
+
+.dropdown:hover
+  .dropdown-content
+    display: block
+
+  .dropbtn
+    background-color: transparent
+
+
+
+/* after & before */ 
+
+.container-a-b
+  margin: 0 auto
+
+.comparison01
+  border-radius: 5px
+  position: center
+  display: inline-block
+  margin: 2.5%
+  width: 300px
+  height: 150px
+  max-width: 600px
+  max-height: 600px
+  overflow: hidden
+  figure
+    background-size: cover
+    position: relative
+    font-size: 0
+    width: 300px
+    height: 100%
+    margin: 0
+  img
+    position: relative
+    width: 100%
+  div
+    background-size: cover
+    position: absolute
+    width: 50%
+    box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.3)
+    overflow: hidden
+    bottom: 0
+    height: 100%
+    img
+      background-size: cover
+      position: relative
+      font-size: 0
+      width: 300px
+      height: 100%
+      margin: 0
+
+input[type=range]
+  -webkit-appearance: none
+  -moz-appearance: none
+  position: relative
+  top: -100px
+  left: -7.5px
+  background-color: transparent
+  width: 105%
+  &:focus, &:active
+    outline: none
+  &::-moz-range-track
+    -moz-appearance: none
+    height: 55px
+    width: 98%
+    background-color: transparent
+    position: relative
+    outline: none
+  &::active
+    border: none
+    outline: none
+  &::-webkit-slider-thumb
+    -webkit-appearance: none
+    width: 25px
+    height: 55px
+    background: #96bf3d
+    /*background-image: url(Hand.png)*/
+    border-radius: 20px
+  &::-moz-range-thumb
+    -moz-appearance: none
+    width: 20px
+    height: 55px
+    background: #96bf3d
+    border-radius: 20px
+  &:focus
+    &::-webkit-slider-thumb, &::-moz-range-thumb
+      background: rgba(255, 255, 255, 0.5)
 
 
 
