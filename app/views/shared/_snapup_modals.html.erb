@@ -21,15 +21,30 @@
             <p>(The typical Hollywood smile)</p>
             <p class="teeth_selection teeth_selectionupper_upper">
               <strong>Upper teeth</strong><br>
-              <span class="price"><%= number_to_currency(@up.price / 100) %></span>
+              <span class="price">
+                <% if @up.nil?%>
+                  No upper product available
+                <%else%>
+                  <%= number_to_currency(@up.price / 100) %>
+                <%end%></span>
             </p>
             <p class="teeth_selection teeth_selectionupper_lower">
               <strong>Lower teeth</strong><br>
-              <span class="price"><%=  number_to_currency(@down.price / 100) %></span>
+              <span class="price">
+                <% if @down.nil?%>
+                  No down product available
+                <%else%>
+                  <%=  number_to_currency(@down.price / 100) %>
+                <%end%></span>
             </p>
             <p class="teeth_selection teeth_selectionupper_both">
               <strong>Both upper & lower teeth</strong><br>
-              <span class="price"><%=  number_to_currency(@both.price / 100) %></span>
+              <span class="price">
+                <% if @both.nil?%>
+                  No both product available
+                <%else%>
+                  <%=  number_to_currency(@both.price / 100) %>
+                <%end%></span>
             </p>
             <div class="add-to-cart">
               <span class="number">
