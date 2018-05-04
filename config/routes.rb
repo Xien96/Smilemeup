@@ -50,4 +50,5 @@ Rails.application.routes.draw do
 
   get 'products/clearup/clearup_shop'                   => "static#clearup_shop"  
 
+                             
 end

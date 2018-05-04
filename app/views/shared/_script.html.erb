@@ -3,6 +3,8 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+
 
 <script>
 $(document).ready(function() {
@@ -232,74 +234,142 @@ load more
     
     var obj = $("#".concat(target))
     if (obj.hasClass('active')) {
-      obj.removeClass('active')
+      obj.removeClass('')
     } else {
       obj.addClass('active')
     }
   })
 /* end cart-2*/
-
-/*before and after */
-
-// I hope this over-commenting helps. Let's do this!
-// Let's use the 'active' variable to let us know when we're using it
-let active = false;
-
-// First we'll have to set up our event listeners
-// We want to watch for clicks on our scroller
-document.querySelector('.scroller').addEventListener('mousedown',function(){
-  active = true;
-  // Add our scrolling class so the scroller has full opacity while active
-  document.querySelector('.scroller').classList.add('scrolling');
+/*show cridet card box*/
+$('.show-credit-box').click(function(){
+  $('.credit-card-box').toggle();
 });
-// We also want to watch the body for changes to the state,
-// like moving around and releasing the click
-// so let's set up our event listeners
-document.body.addEventListener('mouseup',function(){
-  active = false;
-  document.querySelector('.scroller').classList.remove('scrolling');
-});
-document.body.addEventListener('mouseleave',function(){
-  active = false;
-  document.querySelector('.scroller').classList.remove('scrolling');
+/*end show credit card box*/
+/*paymentform*/
+
+var $form = $('#payment-form');
+$form.on('submit', payWithStripe);
+
+/* If you're using Stripe for payments */
+function payWithStripe(e) {
+    e.preventDefault();
+
+    /* Visual feedback */
+    $form.find('[type=submit]').html('Validating <i class="fa fa-spinner fa-pulse"></i>');
+
+    var PublishableKey = 'pk_test_b1qXXwATmiaA1VDJ1mOVVO1p'; // Replace with your API publishable key
+    Stripe.setPublishableKey(PublishableKey);
+    
+    /* Create token */
+    var expiry = $form.find('[name=cardExpiry]').payment('cardExpiryVal');
+    var ccData = {
+        number: $form.find('[name=cardNumber]').val().replace(/\s/g,''),
+        cvc: $form.find('[name=cardCVC]').val(),
+        exp_month: expiry.month, 
+        exp_year: expiry.year
+    };
+    
+    Stripe.card.createToken(ccData, function stripeResponseHandler(status, response) {
+        if (response.error) {
+            /* Visual feedback */
+            $form.find('[type=submit]').html('Try again');
+            /* Show Stripe errors on the form */
+            $form.find('.payment-errors').text(response.error.message);
+            $form.find('.payment-errors').closest('.row').show();
+        } else {
+            /* Visual feedback */
+            $form.find('[type=submit]').html('Processing <i class="fa fa-spinner fa-pulse"></i>');
+            /* Hide Stripe errors on the form */
+            $form.find('.payment-errors').closest('.row').hide();
+            $form.find('.payment-errors').text("");
+            // response contains id and card, which contains additional card details            
+            console.log(response.id);
+            console.log(response.card);
+            var token = response.id;
+            // AJAX - you would send 'token' to your server here.
+            $.post('/account/stripe_card_token', {
+                    token: token
+                })
+                // Assign handlers immediately after making the request,
+                .done(function(data, textStatus, jqXHR) {
+                    $form.find('[type=submit]').html('Payment successful <i class="fa fa-check"></i>').prop('disabled', true);
+                })
+                .fail(function(jqXHR, textStatus, errorThrown) {
+                    $form.find('[type=submit]').html('There was a problem').removeClass('success').addClass('error');
+                    /* Show Stripe errors on the form */
+                    $form.find('.payment-errors').text('Try refreshing the page and trying again.');
+                    $form.find('.payment-errors').closest('.row').show();
+                });
+        }
+    });
+}
+/* Fancy restrictive input formatting via jQuery.payment library*/
+$('input[name=cardNumber]').payment('formatCardNumber');
+$('input[name=cardCVC]').payment('formatCardCVC');
+$('input[name=cardExpiry').payment('formatCardExpiry');
+
+/* Form validation using Stripe client-side validation helpers */
+jQuery.validator.addMethod("cardNumber", function(value, element) {
+    return this.optional(element) || Stripe.card.validateCardNumber(value);
+}, "Please specify a valid credit card number.");
+
+jQuery.validator.addMethod("cardExpiry", function(value, element) {    
+    /* Parsing month/year uses jQuery.payment library */
+    value = $.payment.cardExpiryVal(value);
+    return this.optional(element) || Stripe.card.validateExpiry(value.month, value.year);
+}, "Invalid expiration date.");
+
+jQuery.validator.addMethod("cardCVC", function(value, element) {
+    return this.optional(element) || Stripe.card.validateCVC(value);
+}, "Invalid CVC.");
+
+validator = $form.validate({
+    rules: {
+        cardNumber: {
+            required: true,
+            cardNumber: true            
+        },
+        cardExpiry: {
+            required: true,
+            cardExpiry: true
+        },
+        cardCVC: {
+            required: true,
+            cardCVC: true
+        }
+    },
+    highlight: function(element) {
+        $(element).closest('.form-control').removeClass('success').addClass('error');
+    },
+    unhighlight: function(element) {
+        $(element).closest('.form-control').removeClass('error').addClass('success');
+    },
+    errorPlacement: function(error, element) {
+        $(element).closest('.form-group').append(error);
+    }
 });
 
-// Let's figure out where their mouse is at
-document.body.addEventListener('mousemove',function(e){
-  if (!active) return;
-  // Their mouse is here...
-  let x = e.pageX;
-  // but we want it relative to our wrapper
-  x -= document.querySelector('.wrapper').getBoundingClientRect().left;
-  // Okay let's change our state
-  scrollIt(x);
-});
-
-// Let's use this function
-function scrollIt(x){
-    let transform = Math.max(0,(Math.min(x,document.querySelector('.wrapper').offsetWidth)));
-    document.querySelector('.after').style.width = transform+"px";
-    document.querySelector('.scroller').style.left = transform-25+"px";
+paymentFormReady = function() {
+    if ($form.find('[name=cardNumber]').hasClass("success") &&
+        $form.find('[name=cardExpiry]').hasClass("success") &&
+        $form.find('[name=cardCVC]').val().length > 1) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
-// Let's set our opening state based off the width, 
-// we want to show a bit of both images so the user can see what's going on
-scrollIt(234);
+$form.find('[type=submit]').prop('disabled', true);
+var readyInterval = setInterval(function() {
+    if (paymentFormReady()) {
+        $form.find('[type=submit]').prop('disabled', false);
+        clearInterval(readyInterval);
+    }
+}, 250);
 
-// And finally let's repeat the process for touch events
-// first our middle scroller...
-document.querySelector('.scroller').addEventListener('touchstart',function(){
-  active = true;
-  document.querySelector('.scroller').classList.add('scrolling');
-});
-document.body.addEventListener('touchend',function(){
-  active = false;
-  document.querySelector('.scroller').classList.remove('scrolling');
-});
-document.body.addEventListener('touchcancel',function(){
-  active = false;
-  document.querySelector('.scroller').classList.remove('scrolling');
-});
 
+/*
+https://goo.gl/PLbrBK
+*/
 
 </script>

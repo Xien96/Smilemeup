@@ -61,7 +61,7 @@
               <div class="cell choose-product" style="height: 100px">
               <div class="col-md-4 col-sm-4" style="margin: 0">
               <label class="container">Paypal
-              <input type="radio" checked="checked" name="radio">
+              <input type="radio" name="pay-method" value="paypal">
               <span class="checkmark"></span>
               </label>
               </div>
@@ -75,7 +75,7 @@
               <div class="cell choose-product" style="height: 100px">
               <div class="col-md-4 col-sm-4" style="margin: 0">
               <label class="container">Bank transfer
-              <input type="radio" checked="checked" name="radio">
+              <input type="radio" name="pay-method" value="bank-transfer">
               <span class="checkmark"></span>
               </label>
               </div>
@@ -85,12 +85,12 @@
               </div>
             </div>
 
-            <div class="col-md-12 col-sm-8 col-xs-12 shadow product-steps-item steps-slogan-left"style="margin-bottom: 1em">
+            <div class="col-md-12 col-sm-8 col-xs-12 shadow product-steps-item steps-slogan-left" style="margin-bottom: 1em">
               <div class="cell choose-product" style="height: 100px">
               <div class="col-md-4 col-sm-4" style="margin: 0">
               <label class="container">Credit card
-              <input type="radio" checked="checked" name="radio">
-              <span class="checkmark"></span>
+              <input class="show-credit-box" type="radio" name="pay-method" value="credit-cart">
+              <span class=""></span>
               </label>
               </div>
               <div class="col-md-8 col-sm-8 product-text">
@@ -99,6 +99,95 @@
               </div>
             </div>
 
+              <div class="cridet-card-item">
+                    <!-- You can make it whatever width you want. I'm making it full width
+                    on <= small devices and 4/12 page width on >= medium devices -->
+                    <div class="col-xs-12 col-md-12">
+
+
+                    <!-- CREDIT CARD FORM STARTS HERE -->
+                    <div class="panel panel-default credit-card-box">
+                    <div class="panel-heading display-table" >
+                    <div class="row display-tr" >
+                    <h3 class="panel-title display-td" >Payment Details</h3>
+                    <div class="display-td" >                            
+                    <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
+                    </div>
+                    </div>                    
+                    </div>
+                    <div class="panel-body">
+                    <form role="form" id="payment-form">
+                    <div class="row">
+                    <div class="col-xs-12">
+                    <div class="form-group">
+                    <label for="cardNumber">CARD NUMBER</label>
+                    <div class="input-group">
+                    <input 
+                    type="tel"
+                    class="form-control"
+                    name="cardNumber"
+                    placeholder="Valid Card Number"
+                    autocomplete="cc-number"
+                    required autofocus 
+                    />
+                    <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+                    </div>
+                    </div>                            
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-xs-7 col-md-7">
+                    <div class="form-group">
+                    <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
+                    <input 
+                    type="tel" 
+                    class="form-control" 
+                    name="cardExpiry"
+                    placeholder="MM / YY"
+                    autocomplete="cc-exp"
+                    required 
+                    />
+                    </div>
+                    </div>
+                    <div class="col-xs-5 col-md-5 pull-right">
+                    <div class="form-group">
+                    <label for="cardCVC">CV CODE</label>
+                    <input 
+                    type="tel" 
+                    class="form-control"
+                    name="cardCVC"
+                    placeholder="CVC"
+                    autocomplete="cc-csc"
+                    required
+                    />
+                    </div>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-xs-12">
+                    <div class="form-group">
+                    <label for="couponCode">COUPON CODE</label>
+                    <input type="text" class="form-control" name="couponCode" />
+                    </div>
+                    </div>                        
+                    </div>
+                    <div class="row">
+                    <div class="col-xs-12">
+                    <button class="btn btn-success btn-lg btn-block" type="submit">Start Subscription</button>
+                    </div>
+                    </div>
+                    <div class="row" style="display:none;">
+                    <div class="col-xs-12">
+                    <p class="payment-errors"></p>
+                    </div>
+                    </div>
+                    </form>
+                    </div>
+                    </div>            
+                    <!-- CREDIT CARD FORM ENDS HERE -->
+                    </div>            
+                    </div>
+
             </div>
 
             </div>
@@ -106,4 +195,15 @@
       </div>
     </div>
   </div>
+  <!-- payment form -->
+    
+
+
+
+
+  <!-- If you're using Stripe for payments -->
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+  
+
+
 </div>
