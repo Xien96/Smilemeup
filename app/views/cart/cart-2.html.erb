@@ -40,7 +40,21 @@
                     <th>Unit Price</th>
                     <th>Subtotal</th>
                   </tr>
-                </thead>
+                </thead> 
+                <tbody>
+                  <% session[:cart].each do |ci| %>
+                  <tr class="cart-item">
+                    <td class="img"><%= image_tag("products/#{ci['style']}.png")%></td>
+                    <td>
+                      <strong>The <%= ci['style'].titleize %> Smile</strong><br>
+                      <%= Style.find_by(name: ci['style']).tagline %>
+                    </td>
+                    <td><%= ci['quantity'].to_i %></td>
+                    <td><%= number_to_currency(Product.find_by(name: ci['product']).price / 100) %> </td>
+                    <td><%= number_to_currency(Product.find_by(name: ci['product']).price / 100 * ci['quantity'].to_i) %></td>
+                  </tr>
+                  <% end %>
+                </tbody>
               </table>
 
               </div>
