@@ -1,7 +1,6 @@
 class CartController < ApplicationController
     before_action :authenticate_user! , only: [:cart , :index]
   def index
-    byebug
     @cart = session[:cart]
     puts "=============================="
     puts @cart
@@ -31,22 +30,37 @@ class CartController < ApplicationController
     session[:cart] = cart + [item]
     render json: { message: "success", cart: session[:cart] }, :status => 200
   end
-
+  
+  def create_user_product
+    products = session[:cart].map{|x| x["product"]}
+    products_id = Product.find_by(:name => products).id
+    styles = session[:cart].map{|x| x["style"]}
+    styles_id = Style.where(:name => styles).collect { |p| "#{p[:id]}"}
+    styles_id.each do |y|
+          @transaction = UserProduct.create(:user_id => current_user.id , :product_id => products_id , :style_id => y)
+    end
+    session[:cart] = nil
+    redirect_to  products_path
+  end
+  
   def cart
     @total_cost = index
-
     customer = Stripe::Customer.retrieve(current_user.stripe_id)
     customer.sources.create(source: params[:stripeToken])
-    # customer.Stripe::Token.create(:source  => params[:stripeToken])
     charge = Stripe::Charge.create(
       :customer    => customer,
       :amount      => @total_cost*100,
       :currency    => 'usd'
     )
-
-    rescue Stripe::CardError => e
-      flash[:error] = e.message
+    if charge["paid"]
+      create_user_product 
+      # flash[:notice] = 'Card charged successfully.'
+    else
+      # rescue Stripe::CardError => e
+      #   flash[:error] = e
       redirect_to  products_checkout_path
+    end
+
   end
 
 end

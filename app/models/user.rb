@@ -34,6 +34,9 @@ class User < ApplicationRecord
     content_type: { content_type: /\Aimage\/.*\Z/ },
     size: { less_than: 5.megabyte }
 
+  has_many  :user_products, dependent: :destroy
+  has_many  :products , through: :user_products
+  
     after_create :create_stripe_user
 
     def create_stripe_user
