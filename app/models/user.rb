@@ -2,7 +2,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable     
 
   has_attached_file :candidate_1,
     :path => ":rails_root/public/uploads/:id_candidate_1.jpeg",
@@ -33,5 +33,17 @@ class User < ApplicationRecord
   validates_attachment  :candidate_1,
     content_type: { content_type: /\Aimage\/.*\Z/ },
     size: { less_than: 5.megabyte }
+
+    after_create :create_stripe_user
+
+    def create_stripe_user
+      customer = Stripe::Customer.create(
+        :email => self.email,
+        :description => 'Rails Stripe customer'
+
+      )
+      self.stripe_id = customer.id
+      save
+    end
 
 end

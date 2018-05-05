@@ -27,7 +27,7 @@ Rails.application.routes.draw do
   get '/cart'                                           =>  "cart#index"
   post 'cart/add'                                       =>  "cart#add"
   get '/products/checkout'                                    =>  "cart#cart-2"
-
+  post '/products/checkout'                             =>  "cart#cart"
   get '/blog'                                           =>  "blog#index"
   get '/blog/5-reasons-why-invest-your-money-in-invisible-teeth-straightening'                                        =>  "blog#5-reason-blog"
   get '/blog/veneers-vswhite-bleaching'                 =>  "blog#veners-vs-white"

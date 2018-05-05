@@ -1,5 +1,7 @@
 class CartController < ApplicationController
+    before_action :authenticate_user! , only: [:cart , :index]
   def index
+    byebug
     @cart = session[:cart]
     puts "=============================="
     puts @cart
@@ -11,6 +13,7 @@ class CartController < ApplicationController
     end
     @total /= 100
     @active = "cart"
+    @total
   end
 
   def add
@@ -28,4 +31,22 @@ class CartController < ApplicationController
     session[:cart] = cart + [item]
     render json: { message: "success", cart: session[:cart] }, :status => 200
   end
+
+  def cart
+    @total_cost = index
+
+    customer = Stripe::Customer.retrieve(current_user.stripe_id)
+    customer.sources.create(source: params[:stripeToken])
+    # customer.Stripe::Token.create(:source  => params[:stripeToken])
+    charge = Stripe::Charge.create(
+      :customer    => customer,
+      :amount      => @total_cost*100,
+      :currency    => 'usd'
+    )
+
+    rescue Stripe::CardError => e
+      flash[:error] = e.message
+      redirect_to  products_checkout_path
+  end
+
 end
