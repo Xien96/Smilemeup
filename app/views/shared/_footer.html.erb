@@ -3,17 +3,17 @@
     <div class="clearfix">
       <div class="pull-left">
         <ul class="footer-links">
-          <li role="presentation"><a href="/faq" title=""><%= t 'main_page.faq'%></a></li>
-          <li role="presentation"><a href="/terms-and-conditions" title=""><%= t 'main_page.terms'%></a></li>
-          <li role="presentation"><a href="/privacy" title=""><%= t 'main_page.privacy'%></a></li>
-          <li role="presentation"><a href="/legal-statement" title=""><%= t 'main_page.legal_notice'%></a></li>
-          <li role="presentation" class="green underline"><a href="/distributors" title=""><%= t 'main_page.join'%></a>
+          <li role="presentation"><a href="/faq" title=""><%= t 'main_page.faq' %></a></li>
+          <li role="presentation"><a href="/terms-and-conditions" title=""><%= t 'main_page.terms' %></a></li>
+          <li role="presentation"><a href="/privacy" title=""><%= t 'main_page.privacy' %></a></li>
+          <li role="presentation"><a href="/legal-statement" title=""><%= t 'main_page.legal_notice' %></a></li>
+          <li role="presentation" class="green underline"><a href="/distributors" title=""><%= t 'main_page.join' %></a>
           </li>
         </ul>
       </div>
       <div class="pull-right">
         <ul class="nav nav-pills">
-          <li role="presentation" style="padding-top: 10px"><%= t 'main_page.follow'%></li>
+          <li role="presentation" style="padding-top: 10px"><%= t 'main_page.follow' %></li>
           <li role="presentation"><%= image_tag('facebook.svg') %></li>
           <li role="presentation"><%= image_tag('youtube.svg') %></li>
           <li role="presentation"><%= image_tag('instagram.svg') %></li>
@@ -22,47 +22,45 @@
     </div>
     <hr>
     <div class="text-center">
-      <p>
-        <span class="settings"><%= t 'main_page.language_label'%>
+        <span class="settings"><%= t 'main_page.language_label' %>
           <!--<a class="btn btn-default" href="#" role="button">EN</a>-->
           <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= t 'main_page.language'%>
+              <%= t 'main_page.language' %>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <%= link_to t("lang.english"), params.to_unsafe_hash.merge(:lang => "en"), class: "dropdown-item" , style: 'display: block' %>
-              <%= link_to t("lang.germany"), params.to_unsafe_hash.merge(:lang => "de"), class: "dropdown-item" , style: 'display: block' %>
+              <%= link_to t("lang.english"), params.to_unsafe_hash.merge(:lang => "en"), class: "dropdown-item", style: 'display: block' %>
+              <%= link_to t("lang.germany"), params.to_unsafe_hash.merge(:lang => "de"), class: "dropdown-item", style: 'display: block' %>
             </div>
           </div>
         </span>
-        <span class="settings"><%= t 'main_page.currency_label'%>
-          <!--<a class="btn btn-default" href="#" role="button">USD</a>-->
+      <span class="settings"><%= t 'main_page.currency_label' %>
+        <!--<a class="btn btn-default" href="#" role="button">USD</a>-->
           <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= t 'main_page.currency'%>
+              <%= t 'main_page.currency' %>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <%= link_to t("currency.usd"), params.to_unsafe_hash.merge(:currency => "usd"), class: "dropdown-item" , style: 'display: block' %>
-              <%= link_to t("currency.sp"), params.to_unsafe_hash.merge(:currency => "sp"), class: "dropdown-item" , style: 'display: block' %>
-              <%= link_to t("currency.euro"), params.to_unsafe_hash.merge(:currency => "euro"), class: "dropdown-item", style: 'display: block'  %>
-              <%= link_to t("currency.aud"), params.to_unsafe_hash.merge(:currency => "aud"), class: "dropdown-item" , style: 'display: block' %>
+              <%= link_to t("currency.usd"), params.to_unsafe_hash.merge(:currency => "usd"), class: "dropdown-item", style: 'display: block' %>
+              <%= link_to t("currency.sp"), params.to_unsafe_hash.merge(:currency => "sp"), class: "dropdown-item", style: 'display: block' %>
+              <%= link_to t("currency.euro"), params.to_unsafe_hash.merge(:currency => "euro"), class: "dropdown-item", style: 'display: block' %>
+              <%= link_to t("currency.aud"), params.to_unsafe_hash.merge(:currency => "aud"), class: "dropdown-item", style: 'display: block' %>
             </div>
           </div>
         </span>
-        <span class="settings"><%= t 'main_page.country_label'%>
-          <!--<a class="btn btn-default" href="#" role="button">UK</a>-->
+      <span class="settings"><%= t 'main_page.country_label' %>
+        <!--<a class="btn btn-default" href="#" role="button">UK</a>-->
           <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= t 'main_page.country'%>
+              <%= t 'main_page.country' %>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <%= link_to t("contry.uk"), params.to_unsafe_hash.merge(:contry => "uk"), class: "dropdown-item", style: 'display: block' %>
-              <%= link_to t("contry.Germany"), params.to_unsafe_hash.merge(:contry => "Germany"), class: "dropdown-item" , style: 'display: block' %>
-              <%= link_to t("contry.Australia"), params.to_unsafe_hash.merge(:contry => "Australia"), class: "dropdown-item", style: 'display: block'  %>
+              <%= link_to t("contry.Germany"), params.to_unsafe_hash.merge(:contry => "Germany"), class: "dropdown-item", style: 'display: block' %>
+              <%= link_to t("contry.Australia"), params.to_unsafe_hash.merge(:contry => "Australia"), class: "dropdown-item", style: 'display: block' %>
             </div>
           </div>
         </span>
-      </p>
       <p>
         <%= image_tag('paypal.svg', class: "footer-money") %>
         <%= image_tag('sofort.svg', class: "footer-money") %>
