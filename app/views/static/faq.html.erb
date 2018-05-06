@@ -2,11 +2,13 @@
 <div class="faq-jumbotron jumbotron">
   <div class="container">
     <div class="slogan faq-slogan">
-      <h1 class="slogan-title aligns-faq"><span class="aligns-span">OUR</span><br><strong>FAQ</strong></h1>
+      <h1 class="slogan-title aligns-faq"><span class="aligns-span"><%= t 'faq.our'%> </span><br><strong><%= t 'faq.faq'%> </strong></h1>
       <div class="row">
         <div class="col-sm-4">
           <p class="faq-des-heading">
-            Please click on a question <br>to view the answer.
+            <%= t 'faq.title1'%>
+            <br>
+            <%= t 'faq.title2'%>
           </p>
         </div>
       </div>
@@ -19,8 +21,8 @@
     <div class="row">
       <div class="col-sm-6 col-sm-push-3">
         <h1 class="faq-find-answer">
-           Find the answers to <br>
-           <strong style="color: #96bf3d; font-size: 36px">the most common questions</strong>
+          <%= t 'faq.subtitles.title1'%> <br>
+           <strong style="color: #96bf3d; font-size: 36px"><%= t 'faq.subtitles.title2'%> </strong>
         </h1>
       </div>
     </div>
@@ -28,70 +30,69 @@
   <div class="faq-items">
     <div class="faq-item shadow" id="faq-1">
       <div class="clearfix">
-        <h3 class="green pull-left">WHAT IS SMILE ME UP?</h3>
+        <h3 class="green pull-left"> <%= t 'faq.question1'%> </h3>
         <span class="faq-arrow pull-right">
           <%= image_tag('faq-arrow.svg') %>
         </span>
       </div>
       <p>
-        We work with a technology principle that makes an easy connection between us and the customer in order to design and straighten your teeth to get a beautiful smile.
-        You are interested in our invisible aligners? Simply fill out our short form and upload pictures of your teeth on our website, then we will get back to you shortly after evaluation of your pictures.
-        Do you prefer our press on veneer? Please order it here.
+        <%= t 'faq.answer1'%>
       </p>
     </div>
     <div class="faq-item shadow" id="faq-2">
       <div class="clearfix">
-        <h3 class="green pull-left">WHAT IS CLEAR UP?</h3>
+        <h3 class="green pull-left"><%= t 'faq.question2' %>  </h3>
         <span class="faq-arrow pull-right">
           <%= image_tag('faq-arrow.svg') %>
         </span>
       </div>
       <p>
-        A set of invisible aligners that includes several pieces of clear trays that will gradually straighten your teeth by changing the aligner tray every 7-10 days to reach the desired position. Depending on your case we will send you one, two or even more aligners accordingly.
+        <%= t 'faq.answer2'%>
+
       </p>
     </div>
     <div class="faq-item shadow" id="faq-3">
       <div class="clearfix">
-        <h3 class="green pull-left">WHAT IS SNAP UP?</h3>
+        <h3 class="green pull-left"> <%= t 'faq.question3'%> </h3>
         <span class="faq-arrow pull-right">
           <%= image_tag('faq-arrow.svg') %>
         </span>
       </div>
       <p>
-        Removable cosmetic veneers that cover missing, crooked, chipped or discoloured teeth to guarantee beautiful teeth and a perfect smile. Snap Up clips on to your existing teeth without the need for any dental advesives. Your veneers to go!
+        <%= t 'faq.answer3'%>
       </p>
     </div>
     <div class="faq-item shadow" id="faq-4">
       <div class="clearfix">
-        <h3 class="green pull-left">DOES SMILE ME UP GUARANTEE PERFECT RESULTS?</h3>
+        <h3 class="green pull-left"> <%= t 'faq.question4'%>  </h3>
         <span class="faq-arrow pull-right">
           <%= image_tag('faq-arrow.svg') %>
         </span>
       </div>
       <p>
-        Your results may vary. However, most of our customers have already experienced significant improvements of their teeth, so that their smiles became beautiful.
+        <%= t 'faq.answer4'%>
       </p>
     </div>
     <div class="faq-item shadow" id="faq-5">
       <div class="clearfix">
-        <h3 class="green pull-left">DOES SMILE ME UP TAKE CARE OF THEIR CUSTOMERS DIRECTLY?</h3>
+        <h3 class="green pull-left"> <%= t 'faq.question5'%>  </h3>
         <span class="faq-arrow pull-right">
           <%= image_tag('faq-arrow.svg') %>
         </span>
       </div>
       <p>
-        Due to the busy life many people have nowadays, they have no time for regular orthodontic or dental visits. Therefore, our professional orthodontic will follow your makeover while you are at home. In case you are interested in Snap Up Veneers, you will get your white teeth at home directly.
+        <%= t 'faq.answer5'%>
       </p>
     </div>
     <div class="faq-item shadow" id="faq-6">
       <div class="clearfix">
-        <h3 class="green pull-left">IS IT A SAFE METHODTO FIX TEETH ISSUES AT HOME?</h3>
+        <h3 class="green pull-left"> <%= t 'faq.question6'%>  </h3>
         <span class="faq-arrow pull-right">
           <%= image_tag('faq-arrow.svg') %>
         </span>
       </div>
       <p>
-        Yes, it is very safe because our professional dental team will take care of you and your case.
+        <%= t 'faq.answer6'%>
       </p>
     </div>
     <div>
@@ -99,68 +100,69 @@
     </div>
     <div class="faq-item shadow" id="faq-7">
       <div class="clearfix">
-        <h3 class="green pull-left">CAN I VIEW BEFORE AND AFTER PICTURES?</h3>
+        <h3 class="green pull-left"><%= t 'faq.clear_up.question1'%> </h3>
         <span class="faq-arrow pull-right">
           <%= image_tag('faq-arrow.svg') %>
         </span>
       </div>
       <p>
-        Yes, upon receipt of your impressions, our professional orthodontic team creates a customized treatment plan and sends it to you via e-mail. It includes a before and after 3D visualization of your teeth so that you know how they will look like afterwards.
+        <%= t 'faq.clear_up.answer1' %>
+
       </p>
     </div>
     <div class="faq-item shadow" id="faq-8">
       <div class="clearfix">
-        <h3 class="green pull-left">HOW LONG DOES IT TAKE TO REACH THE DESIRED RESULTS?</h3>
+        <h3 class="green pull-left"> <%= t 'faq.clear_up.question2'%>  </h3>
         <span class="faq-arrow pull-right">
           <%= image_tag('faq-arrow.svg') %>
         </span>
       </div>
       <p>
-        Each case differs and depends on your individual goal and on the severity of your case, our invisible Clear Up aligner is designed for simple and moderate cases. The duration varies from 4 up to 6 months.
+        <%= t 'faq.clear_up.answer2' %>
       </p>
     </div>
     <div class="faq-item shadow" id="faq-9">
       <div class="clearfix">
-        <h3 class="green pull-left">WILL I SUFFER FROM PAIN IN A SIMILAR WAY LIKE WEARING BRACES?</h3>
+        <h3 class="green pull-left"> <%= t 'faq.clear_up.question3'%> </h3>
         <span class="faq-arrow pull-right">
           <%= image_tag('faq-arrow.svg') %>
         </span>
       </div>
       <p>
-        During the first couple of days while wearing the new aligners, it is normal to experience a teeth discomfort. However, it is actually a very good indication that your teeth are moving gently as intended according to the desired results.
+        <%= t 'faq.clear_up.answer3' %>
       </p>
     </div>
     <div class="faq-item shadow" id="faq-10">
       <div class="clearfix">
-        <h3 class="green pull-left">HOW MANY HOURS A DAY SHOULD I WEAR THE CLEAR UP ALIGNERS?</h3>
+        <h3 class="green pull-left"><%= t 'faq.clear_up.question4'%> </h3>
         <span class="faq-arrow pull-right">
           <%= image_tag('faq-arrow.svg') %>
         </span>
       </div>
       <p>
-        Normally you should wear the Clear Up the whole day and night or for at least 21 hours. You are allowed to remove the aligners while eating and for another 3 hours during the day or at night.The longer you wear them, the better the results.
+        <%= t 'faq.clear_up.answer4' %>
       </p>
     </div>
     <div class="faq-item shadow" id="faq-11">
       <div class="clearfix">
-        <h3 class="green pull-left">WHAT TO DO WHEN I LOSE AN ALIGNER?</h3>
+        <h3 class="green pull-left"> <%= t 'faq.clear_up.question5'%> </h3>
         <span class="faq-arrow pull-right">
           <%= image_tag('faq-arrow.svg') %>
         </span>
       </div>
       <p>
-        Contact us immediately so that we can provide you with new aligners. In the meantime you should wear the previous aligner (if existing). The new aligner would cost 70 EUR.
+        <%= t 'faq.clear_up.answer5' %>
       </p>
     </div>
     <div class="faq-item shadow" id="faq-12">
       <div class="clearfix">
-        <h3 class="green pull-left">DO I HAVE TO WEAR A RETAINER?</h3>
+        <h3 class="green pull-left"> <%= t 'faq.clear_up.question6'%> </h3>
         <span class="faq-arrow pull-right">
           <%= image_tag('faq-arrow.svg') %>
         </span>
       </div>
       <p>
-        Smile Me Up provides each customer with a clear retainer, which we recommend to wear for 6 months only at night toprevent any unwanted movements.
+        <%= t 'faq.clear_up.answer6' %>
       </p>
     </div>
 
@@ -170,57 +172,58 @@
 
     <div class="faq-item shadow" id="faq-13">
       <div class="clearfix">
-        <h3 class="green pull-left">WHY ARE WE MANUFACTURING REMOVABLE VENEERS?</h3>
+        <h3 class="green pull-left"> <%= t 'faq.snap_up.question1'%> </h3>
         <span class="faq-arrow pull-right">
           <%= image_tag('faq-arrow.svg') %>
         </span>
       </div>
       <p>
-        Due to the high cost of permanent veneers, Smile Me Up creates a cheaper and easier solution to have a Hollywood smile without even visiting the dentist. Snap Up are applied to cover dental problems such as missing, discolored or chipped teeth.
+        <%= t 'faq.snap_up.answer1'%>
       </p>
     </div>
     <div class="faq-item shadow" id="faq-14">
       <div class="clearfix">
-        <h3 class="green pull-left">WILL I SUFFER FROM PAIN WHILE WEARING SNAP UP VENEERS?</h3>
+        <h3 class="green pull-left"> <%= t 'faq.snap_up.question2'%></h3>
         <span class="faq-arrow pull-right">
           <%= image_tag('faq-arrow.svg') %>
         </span>
       </div>
       <p>
-        It is absolutely pain-free to wear Snap Up cosmetic veneers. They have simply to be placed on top of your existing teeth without causing any pain.
+        <%= t 'faq.snap_up.answer2'%>
       </p>
     </div>
     <div class="faq-item shadow" id="faq-15">
       <div class="clearfix">
-        <h3 class="green pull-left">WHICH MATERIAL IS USED FOR THE VENEERS?</h3>
+        <h3 class="green pull-left"> <%= t 'faq.snap_up.question3'%> </h3>
         <span class="faq-arrow pull-right">
           <%= image_tag('faq-arrow.svg') %>
         </span>
       </div>
       <p>
-        For Snap Up we use safe and certified dental materials which are perfect for cosmetic dental products and free from BPA and Monomer
+        <%= t 'faq.snap_up.answer3'%>
+
       </p>
     </div>
     <div class="faq-item shadow" id="faq-16">
       <div class="clearfix">
-        <h3 class="green pull-left">HOW LONG WILL SNAP UP VENEERS LAST?</h3>
+        <h3 class="green pull-left"> <%= t 'faq.snap_up.question4'%> </h3>
         <span class="faq-arrow pull-right">
           <%= image_tag('faq-arrow.svg') %>
         </span>
       </div>
       <p>
-        The durability of veneers depend on how often you use it and with what care it is used. Usually, veneers last for at least 3-4 years.
+        <%= t 'faq.snap_up.answer4'%>
       </p>
     </div>
     <div class="faq-item shadow" id="faq-17">
       <div class="clearfix">
-        <h3 class="green pull-left">CAN I EAT AND DRINK WHILE WEARING SNAP UP VENEERS?</h3>
+        <h3 class="green pull-left"> <%= t 'faq.snap_up.question5'%> </h3>
         <span class="faq-arrow pull-right">
           <%= image_tag('faq-arrow.svg') %>
         </span>
       </div>
       <p>
-        Yes. However, we have to point out that high consum of coffee can change the colour of your veneer. It is up to you whether you eat while you are wearing Snap Up. Some of our customers use to remove it when they are eating sticky or rigit food – it is an individual decision.
+        <%= t 'faq.snap_up.answer5'%>
       </p>
     </div>
   </div>
