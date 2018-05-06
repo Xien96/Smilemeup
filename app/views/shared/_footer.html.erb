@@ -7,12 +7,13 @@
           <li role="presentation"><a href="/terms-and-conditions" title="">Terms and Conditions</a></li>
           <li role="presentation"><a href="/privacy" title="">Privacy Statement</a></li>
           <li role="presentation"><a href="/legal-statement" title="">Legal Notice</a></li>
-          <li role="presentation" class="green underline"><a href="/distributors" title="">Join as a Distributor</a></li>
+          <li role="presentation" class="green underline"><a href="/distributors" title="">Join as a Distributor</a>
+          </li>
         </ul>
       </div>
       <div class="pull-right">
         <ul class="nav nav-pills">
-          <li role="presentation" style ="padding-top: 10px">Follow us</li>
+          <li role="presentation" style="padding-top: 10px">Follow us</li>
           <li role="presentation"><%= image_tag('facebook.svg') %></li>
           <li role="presentation"><%= image_tag('youtube.svg') %></li>
           <li role="presentation"><%= image_tag('instagram.svg') %></li>
@@ -22,9 +23,45 @@
     <hr>
     <div class="text-center">
       <p>
-        <span class="settings">Choose your language <a class="btn btn-default" href="#" role="button">EN</a></span>
-        <span class="settings">Choose your currency <a class="btn btn-default" href="#" role="button">USD</a></span>
-        <span class="settings">Choose Your Country<a class="btn btn-default" href="#" role="button">UK</a></span>
+        <span class="settings">Choose your language
+          <!--<a class="btn btn-default" href="#" role="button">EN</a>-->
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Language
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <%= link_to t("lang.english"), params.to_unsafe_hash.merge(:lang => "en"), class: "dropdown-item" %>
+              <%= link_to t("lang.germany"), params.to_unsafe_hash.merge(:lang => "de"), class: "dropdown-item" %>
+            </div>
+          </div>
+        </span>
+        <span class="settings">Choose your currency
+          <!--<a class="btn btn-default" href="#" role="button">USD</a>-->
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Currency
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <%= link_to t("currency.usd"), params.to_unsafe_hash.merge(:currency => "usd"), class: "dropdown-item" %>
+              <%= link_to t("currency.sp"), params.to_unsafe_hash.merge(:currency => "sp"), class: "dropdown-item" %>
+              <%= link_to t("currency.euro"), params.to_unsafe_hash.merge(:currency => "euro"), class: "dropdown-item" %>
+              <%= link_to t("currency.aud"), params.to_unsafe_hash.merge(:currency => "aud"), class: "dropdown-item" %>
+            </div>
+          </div>
+        </span>
+        <span class="settings">Choose Your Country
+          <!--<a class="btn btn-default" href="#" role="button">UK</a>-->
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Country
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <%= link_to t("contry.uk"), params.to_unsafe_hash.merge(:contry => "uk"), class: "dropdown-item" %>
+              <%= link_to t("contry.Germany"), params.to_unsafe_hash.merge(:contry => "Germany"), class: "dropdown-item" %>
+              <%= link_to t("contry.Australia"), params.to_unsafe_hash.merge(:contry => "Australia"), class: "dropdown-item" %>
+            </div>
+          </div>
+        </span>
       </p>
       <p>
         <%= image_tag('paypal.svg', class: "footer-money") %>
@@ -34,10 +71,10 @@
         <%= image_tag('visa.svg', class: "footer-money") %>
         <%= image_tag('stripe.svg', class: "footer-money") %>
       </p>
-      <p>&copy; All rights reserved to Smile Me Up 2018&trade;</span></p>
+      <p>&copy; All rights reserved to Smile Me Up 2018&trade;</p>
     </div>
   </div>
-  <div class="footer-close", id="footer-close">
+  <div class="footer-close" , id="footer-close">
     <%= image_tag('footer-close.svg') %>
   </div>
   <div class="footer-call" id="footer-call">

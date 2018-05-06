@@ -1,0 +1,10 @@
+de:
+  main_page:
+    products: "منتج"
+    about_us: 'عنا'
+    blog: 'البلوك'
+    contact_us: 'تواصل معانا'
+    my_account: 'de Account'
+    my_orders: 'de Orders'
+    my_messages: 'de Messages'
+    logout: 'Logout'
