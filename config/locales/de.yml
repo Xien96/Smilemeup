@@ -124,7 +124,7 @@ de:
     germany: 'Germany'
   currency:
     usd: 'USD'
-    sp: 'SP'
+    gbp: 'SP'
     euro: 'Euro'
     aud: 'AUD'
   why: 'Why'

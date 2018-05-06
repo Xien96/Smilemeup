@@ -57,7 +57,6 @@ en:
     satisfaction: 'Satisfaction'
     smiling_solutions: 'Smiling Solutions'
     select_idea: 'Select Your Ideal'
-
   about:
     title: 'Smile Me Up'
     about: 'About'
@@ -124,7 +123,31 @@ en:
     germany: 'Germany'
   currency:
     usd: 'USD'
-    sp: 'SP'
+    gbp: 'GBP'
     euro: 'Euro'
     aud: 'AUD'
+  terms:
+    page:
+      desc: 'We consider our distributors as partners rather than distribution channels through which we managed a very profitable win-win situation for Smile Me Up'
+      title1: 'TERMS AND'
+      title2: 'CONDITIONS'
+      subtitles:
+        title1: 'General terms'
+        title2: 'and conditions'
+    desc: 'General terms and conditions of business of Smile Me Up for use against private individuals (consumer business)'
+    title1: '1 Application of the Conditions'
+    title2: '2 Contracting parties'
+    title3: '3 Conclusion of contract and explanation of the order process of Smile Me Up and its products and services'
+    title4: '4 Data protection, data transmission and  data protection regulations'
+    title5: '5 General Risks'
+    title6: '6 Prices'
+    title7: '7 payment'
+    desc1: 'Smile Me Up GmbH, based in Düsseldorf, Lilienthalstr.74 (hereinafter referred to as ” Smile Me Up GmbH”), represented by Dr. Walid Fahmy, produces and distributes cosmetic aligners and veneers.'
+    desc2: 'Smile Me Up GmbH, based in Düsseldorf, Lilienthalstr.74 (hereinafter referred to as ” Smile Me Up GmbH”), represented by Dr. Walid Fahmy, produces and distributes cosmetic aligners and veneers.'
+    desc3: 'Smile Me Up GmbH, based in Düsseldorf, Lilienthalstr.74 (hereinafter referred to as ” Smile Me Up GmbH”), represented by Dr. Walid Fahmy, produces and distributes cosmetic aligners and veneers.'
+    desc4: 'Smile Me Up GmbH, based in Düsseldorf, Lilienthalstr.74 (hereinafter referred to as ” Smile Me Up GmbH”), represented by Dr. Walid Fahmy, produces and distributes cosmetic aligners and veneers.'
+    desc5: 'Smile Me Up GmbH, based in Düsseldorf, Lilienthalstr.74 (hereinafter referred to as ” Smile Me Up GmbH”), represented by Dr. Walid Fahmy, produces and distributes cosmetic aligners and veneers.'
+    desc6: 'Smile Me Up GmbH, based in Düsseldorf, Lilienthalstr.74 (hereinafter referred to as ” Smile Me Up GmbH”), represented by Dr. Walid Fahmy, produces and distributes cosmetic aligners and veneers.'
+    desc7: 'Smile Me Up GmbH, based in Düsseldorf, Lilienthalstr.74 (hereinafter referred to as ” Smile Me Up GmbH”), represented by Dr. Walid Fahmy, produces and distributes cosmetic aligners and veneers.'
   why: 'Why'
+
