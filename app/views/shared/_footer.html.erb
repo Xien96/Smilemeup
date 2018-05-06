@@ -30,8 +30,8 @@
               Language
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <%= link_to t("lang.english"), params.to_unsafe_hash.merge(:lang => "en"), class: "dropdown-item" %>
-              <%= link_to t("lang.germany"), params.to_unsafe_hash.merge(:lang => "de"), class: "dropdown-item" %>
+              <%= link_to t("lang.english"), params.to_unsafe_hash.merge(:lang => "en"), class: "dropdown-item" , style: 'display: block' %>
+              <%= link_to t("lang.germany"), params.to_unsafe_hash.merge(:lang => "de"), class: "dropdown-item" , style: 'display: block' %>
             </div>
           </div>
         </span>
@@ -42,10 +42,10 @@
               Currency
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <%= link_to t("currency.usd"), params.to_unsafe_hash.merge(:currency => "usd"), class: "dropdown-item" %>
-              <%= link_to t("currency.sp"), params.to_unsafe_hash.merge(:currency => "sp"), class: "dropdown-item" %>
-              <%= link_to t("currency.euro"), params.to_unsafe_hash.merge(:currency => "euro"), class: "dropdown-item" %>
-              <%= link_to t("currency.aud"), params.to_unsafe_hash.merge(:currency => "aud"), class: "dropdown-item" %>
+              <%= link_to t("currency.usd"), params.to_unsafe_hash.merge(:currency => "usd"), class: "dropdown-item" , style: 'display: block' %>
+              <%= link_to t("currency.sp"), params.to_unsafe_hash.merge(:currency => "sp"), class: "dropdown-item" , style: 'display: block' %>
+              <%= link_to t("currency.euro"), params.to_unsafe_hash.merge(:currency => "euro"), class: "dropdown-item", style: 'display: block'  %>
+              <%= link_to t("currency.aud"), params.to_unsafe_hash.merge(:currency => "aud"), class: "dropdown-item" , style: 'display: block' %>
             </div>
           </div>
         </span>
@@ -56,9 +56,9 @@
               Country
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <%= link_to t("contry.uk"), params.to_unsafe_hash.merge(:contry => "uk"), class: "dropdown-item" %>
-              <%= link_to t("contry.Germany"), params.to_unsafe_hash.merge(:contry => "Germany"), class: "dropdown-item" %>
-              <%= link_to t("contry.Australia"), params.to_unsafe_hash.merge(:contry => "Australia"), class: "dropdown-item" %>
+              <%= link_to t("contry.uk"), params.to_unsafe_hash.merge(:contry => "uk"), class: "dropdown-item", style: 'display: block' %>
+              <%= link_to t("contry.Germany"), params.to_unsafe_hash.merge(:contry => "Germany"), class: "dropdown-item" , style: 'display: block' %>
+              <%= link_to t("contry.Australia"), params.to_unsafe_hash.merge(:contry => "Australia"), class: "dropdown-item", style: 'display: block'  %>
             </div>
           </div>
         </span>
