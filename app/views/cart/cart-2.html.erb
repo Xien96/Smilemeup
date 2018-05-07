@@ -137,13 +137,13 @@
                           </div>
                         <% end %>
                         <label class="amount">
-                          <span>Amount: <% number_to_currency(@total_cost)%></span>
+                          <!-- <span>Amount: <% number_to_currency(@total_cost)%></span> -->
                         </label>
                       </article>
 
                       <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                               data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                              data-description="A month's subscription"
+                              data-description="SmileUp Payment"
                               data-amount= <% @total_cost %>
                               data-locale="auto"></script>
                     <% end %>                    
