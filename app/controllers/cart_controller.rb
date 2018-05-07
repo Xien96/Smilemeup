@@ -32,7 +32,6 @@ class CartController < ApplicationController
   end
   
   def create_user_product
-    byebug
     products = session[:cart].map{|x| x["product"]}
     products_id = Product.where(:name => products).collect { |p| "#{p[:id]}"}
     # products_id = Product.find_by(:name => products).id
