@@ -196,5 +196,46 @@ en:
       part1: 'Our offer includes links to external third party websites. We have no influence on the contents of those websites, therefore we cannot guarantee for those contents. Providers or administrators of linked websites are always responsible for their own contents.'
       part2: 'The linked websites had been checked for possible violations of law at the time of the establishment of the link. Illegal contents were not detected at the time of the linking. A permanent monitoring of the contents of linked websites cannot be imposed without reasonable indications that there has been a violation of law. Illegal links will be removed immediately at the time we get knowledge of them. Copyright Contents and compilations published on these websites by the providers are subject to German copyright laws. Reproduction, editing, distribution as well as the use of any kind outside the scope of the copyright law require a written permission of the author or originator. Downloads and copies of these websites are permitted for private use only.'
       part3: 'The commercial use of our contents without permission of the originator is prohibited. Copyright laws of third parties are respected as long as the contents on these websites do not originate from the provider. Contributions of third parties on this site are indicated as such. However, if you notice any violations of copyright law, please inform us. Such contents will be removed immediately.'
+  distributors:
+    title1: 'Distributors'
+    desc1: 'Smile Me Up aims to satisfy our customers as '
+    desc2: 'well as our worldwide distributors.'
+    desc3: ' Please complete the application below or contact us'
+    desc4: 'if you wish to distribute our products.'
+    page:
+      title1: "Want to become a Smile Me Up's"
+      title2: 'world wide distributor?'
+      title3: 'Want to join our fast growing team?'
+      desc1: "We consider our distributors as partners rather than distribution channels through which we managed a very profitable win-win situation for Smile Me Up and it's distributor worldwide, Smile Me Up has developed the
+                        best treat-yourself at home technique accompanied by the best 3D technology applied with cutting costs to
+                        compete with the overall market worldwide. "
+      desc2: "Furthermore, the variety of products and services offered by Smile Me Up has widened the market and
+                        possibilities for distributors to conquer markets in short span of time."
+      desc3: "Joining our Smile Me Up team is a few steps away, apply now and get in touch with us to know more details on
+                        how to become our Regional Distributor."
+      desc4: "Complete the Online Confidential Distribution Application"
+    form:
+      title1: 'Distribution'
+      title2: 'Application'
+      label1: 'Email* '
+      label2: 'Name * '
+      label3: 'Where are you living? *'
+      label4: 'In which country do you wish to distribute our products? * '
+      label5: 'Preferred method to present our products:* '
+      label6: 'Numbers of inhabitants in your geographic area? * '
+      label7: 'Who is the owner of the company/clinic? * '
+      label8: 'Where did you first learn about us? * '
+      label9: 'Your vision from applying our unique products in your market?* '
+      label10: 'Which Marketing channels will you be willing to work through?* '
+      label11: 'Which benefit would you bring Smile Me Up? *'
+      placeholder1: 'iLove@smilemeup.com'
+      placeholder2: 'John Doe'
+      placeholder3: 'Egypt'
+      placeholder4: ' Egypt, USA'
+      placeholder5: '3'
+      placeholder6: 'Jack Smith'
+      submit: 'Submit'
+
+
   why: 'Why'
 

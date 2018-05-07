@@ -1,11 +1,14 @@
 <div class="distributors-jumbotron jumbotron">
   <div class="container">
     <div class="slogan">
-      <h1 class="slogan-title"><strong>DISTRIPUTORS</strong></h1>
+      <h1 class="slogan-title"><strong> <%= t 'distributors.title1' %></strong></h1>
       <div class="row">
         <div class="col-sm-5">
           <p>
-            Smile Me Up aims to satisfy our customers as <br>well as our worldwide distributors. <br>Please complete the application below or contact us <br>if you wish to distribute our products.
+            <%= t 'distributors.desc1' %>
+            <br><%= t 'distributors.desc2' %>
+            <br> <%= t 'distributors.desc3' %>
+            <br><%= t 'distributors.desc4' %>
           </p>
         </div>
       </div>
@@ -18,71 +21,77 @@
     <div class="row">
       <div class="col-sm-10 col-sm-push-1">
         <h1>
-          Want to become a Smile Me Up's <br>
-          world wide distributor? <br>
-          <strong class="green">Want to join our fast growing team?</strong>
+          <%= t 'distributors.page.title1' %>
+          <br> <%= t 'distributors.page.title2' %>
+          <br>
+          <strong class="green"><%= t 'distributors.page.title3' %></strong>
         </h1>
         <p class="text-muted">
-          We consider our distributors as partners rather than distribution channels through which we managed a very profitable win-win situation for Smile Me Up and it's distributor worldwide, Smile Me Up has developed the best treat-yourself at home technique accompanied by the best 3D technology applied with cutting costs to compete with the overall market worldwide. <br>
-          Furthermore, the variety of products and services offered by Smile Me Up has widened the market and possibilities for distributors to conquer markets in short span of time. <br>
-          Joining our Smile Me Up team is a few steps away, apply now and get in touch with us to know more details on how to become our Regional Distributor. <br>Complete the Online Confidential Distribution Application
+          <%= t 'distributors.page.desc1' %>
+          <br>
+          <%= t 'distributors.page.desc2' %>
+          <br>
+          <%= t 'distributors.page.desc3' %>
+          <br>
+          <%= t 'distributors.page.desc4' %>
         </p>
-        <h3>Distribution <strong class="green">Application</strong></h3>
-         <form id="distributors-form">
+        <h3> <%= t 'distributors.form.title1' %>  <strong class="green"> <%= t 'distributors.form.title2' %> </strong></h3>
+        <form id="distributors-form">
           <div class="row">
             <div class="form-group col-sm-6">
-              <label for="name">Email*</label>
-              <input name="email" type="email" class="form-control" id="email" placeholder="iLove@smilemeup.com" value="">
+              <label for="name"><%= t 'distributors.form.label1' %></label>
+              <input name="email" type="email" class="form-control" id="email" placeholder="<%= t 'distributors.form.placeholder1' %>" value="">
             </div>
             <div class="form-group col-sm-6">
-              <label for="name">Name *</label>
-              <input name="name" type="text" class="form-control" id="name" placeholder="John Doe" value="">
+              <label for="name"><%= t 'distributors.form.label2' %></label>
+              <input name="name" type="text" class="form-control" id="name" placeholder="<%= t 'distributors.form.placeholder2' %> " value="">
             </div>
             <div class="form-group col-sm-6">
-              <label for="country">Where are you living? *</label>
-              <input name="country" type="text" class="form-control" id="name" placeholder="Egypt" value="">
+              <label for="country"> <%= t 'distributors.form.label3' %></label>
+              <input name="country" type="text" class="form-control" id="name" placeholder="<%= t 'distributors.form.placeholder3' %> " value="">
             </div>
             <div class="form-group col-sm-6">
-              <label for="interested_coutries">In which country do you wish to distribute our products? *</label>
-              <input name="name" type="text" class="form-control" id="interested_coutries" placeholder="Egypt, USA" value="">
+              <label for="interested_coutries"><%= t 'distributors.form.label4' %></label>
+              <input name="name" type="text" class="form-control" id="interested_coutries" placeholder="<%= t 'distributors.form.placeholder4' %>" value="">
             </div>
             <div class="form-group col-sm-6">
-              <label for="method">Preferred method to present our products:*</label>
+              <label for="method"><%= t 'distributors.form.label5' %></label>
               <input name="method" type="text" class="form-control" id="method" placeholder="..." value="">
             </div>
             <div class="form-group col-sm-6">
-              <label for="method">Numbers of inhabitants in your geographic area? *</label>
-              <input name="inhabitants" type="text" class="form-control" id="inhabitants" placeholder="3" value="">
+              <label for="method"><%= t 'distributors.form.label6' %></label>
+              <input name="inhabitants" type="text" class="form-control" id="inhabitants" placeholder="<%= t 'distributors.form.placeholder5' %>" value="">
             </div>
 
             <div class="form-group col-sm-6">
-              <label for="method">Who is the owner of the company/clinic? *</label>
-              <input name="owner" type="text" class="form-control" id="owner" placeholder="Jack Smith" value="">
+              <label for="method"><%= t 'distributors.form.label7' %></label>
+              <input name="owner" type="text" class="form-control" id="owner" placeholder="<%= t 'distributors.form.placeholder6' %>" value="">
             </div>
 
             <div class="form-group col-sm-6">
-              <label for="body">Where did you first learn about us? *</label>
-                <textarea name="learn" class="form-control" rows="8" id="learn"></textarea>
+              <label for="body"><%= t 'distributors.form.label8' %></label>
+              <textarea name="learn" class="form-control" rows="8" id="learn"></textarea>
             </div>
             <div class="form-group col-sm-6">
-              <label for="body">Your vision from applying our unique products in your market?*</label>
-                <textarea name="vision" class="form-control" rows="8" id="vision"></textarea>
+              <label for="body"><%= t 'distributors.form.label9' %></label>
+              <textarea name="vision" class="form-control" rows="8" id="vision"></textarea>
             </div>
             <div class="form-group col-sm-6">
-              <label for="body">Which Marketing channels will you be willing to work through?*</label>
-                <textarea name="marketing_channel" class="form-control" rows="8" id="marketing_channel"></textarea>
+              <label for="body"><%= t 'distributors.form.label10' %> </label>
+              <textarea name="marketing_channel" class="form-control" rows="8" id="marketing_channel"></textarea>
             </div>
             <div class="form-group col-sm-6">
-              <label for="body">Which benefit would you bring Smile Me Up? *</label>
-                <textarea name="add" class="form-control" rows="8" id="add"></textarea>
+              <label for="body"> <%= t 'distributors.form.label11' %></label>
+              <textarea name="add" class="form-control" rows="8" id="add"></textarea>
             </div>
           </div>
           <div class="row">
             <div class="col-sm-4 col-sm-push-4">
-              <button type="submit" class="btn btn-green btn-large">Submit</button>
+              <button type="submit" class="btn btn-green btn-large"><%= t 'distributors.form.submit' %></button>
             </div>
           </div>
         </form>
       </div>
     </div>
-    <div class="row">
+  </div>
+</div>
