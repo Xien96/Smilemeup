@@ -196,58 +196,20 @@ $(document).ready(function() {
   })
 
 
-  // var swiper = new Swiper('.swiper-container', {
-  //     slidesPerView: 3,
-  //     spaceBetween: 20,
-  //     freeMode: true,
-  //     loop: true,
-  //     pagination: {
-  //       el: '.swiper-pagination',
-  //       clickable: true,
-  //     },
-  //   });
-  // })
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    freeMode: true,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+})
 
 
 /*From Zain*/ 
-
-
-  var divisor5 = document.getElementById("divisor5"),
-      slider5 = document.getElementById("slider5");
-      function moveDivisor6() { 
-      divisor5.style.width = slider5.value+"%";
-       }
-
-  var divisor4 = document.getElementById("divisor4"),
-      slider4 = document.getElementById("slider4");
-      function moveDivisor5() { 
-        divisor4.style.width = slider4.value+"%";
-      }
-
-  var divisor3 = document.getElementById("divisor3"),
-      slider3 = document.getElementById("slider3");
-      function moveDivisor4() { 
-      divisor3.style.width = slider3.value+"%";
-      }
-    
-  var divisor2 = document.getElementById("divisor2"),
-      slider2 = document.getElementById("slider2");
-      function moveDivisor3() { 
-      divisor2.style.width = slider2.value+"%";
-       }
-
-  var divisor1 = document.getElementById("divisor1"),
-      slider1 = document.getElementById("slider1");
-      function moveDivisor2() { 
-        divisor1.style.width = slider1.value+"%";
-      }
-
-  var divisor = document.getElementById("divisor"),
-      slider = document.getElementById("slider");
-      function moveDivisor1() { 
-      divisor.style.width = slider.value+"%";
-      }
-    
 
 
 
@@ -350,6 +312,7 @@ function payWithStripe(e) {
     });
 }
 /* Fancy restrictive input formatting via jQuery.payment library*/
+
 $('input[name=cardNumber]').payment('formatCardNumber');
 $('input[name=cardCVC]').payment('formatCardCVC');
 $('input[name=cardExpiry').payment('formatCardExpiry');
@@ -361,6 +324,7 @@ jQuery.validator.addMethod("cardNumber", function(value, element) {
 
 jQuery.validator.addMethod("cardExpiry", function(value, element) {    
     /* Parsing month/year uses jQuery.payment library */
+
     value = $.payment.cardExpiryVal(value);
     return this.optional(element) || Stripe.card.validateExpiry(value.month, value.year);
 }, "Invalid expiration date.");
@@ -413,7 +377,42 @@ var readyInterval = setInterval(function() {
     }
 }, 250)});
 
+  var divisor5 = document.getElementById("divisor5"),
+      slider5 = document.getElementById("slider5");
+      function moveDivisor6() { 
+      divisor5.style.width = slider5.value+"%";
+       }
 
+  var divisor4 = document.getElementById("divisor4"),
+      slider4 = document.getElementById("slider4");
+      function moveDivisor5() { 
+        divisor4.style.width = slider4.value+"%";
+      }
+
+  var divisor3 = document.getElementById("divisor3"),
+      slider3 = document.getElementById("slider3");
+      function moveDivisor4() { 
+      divisor3.style.width = slider3.value+"%";
+      }
+    
+  var divisor2 = document.getElementById("divisor2"),
+      slider2 = document.getElementById("slider2");
+      function moveDivisor3() { 
+      divisor2.style.width = slider2.value+"%";
+       }
+
+  var divisor1 = document.getElementById("divisor1"),
+      slider1 = document.getElementById("slider1");
+      function moveDivisor2() { 
+        divisor1.style.width = slider1.value+"%";
+      }
+
+  var divisor = document.getElementById("divisor"),
+      slider = document.getElementById("slider");
+      function moveDivisor1() { 
+      divisor.style.width = slider.value+"%";
+      }
+    
 
 /*
 https://goo.gl/PLbrBK
