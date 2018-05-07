@@ -1,7 +1,7 @@
 <div class="contact-jumbotron jumbotron">
   <div class="container">
     <div class="contact-us contact-heading">
-      <h1 class="contact-title"><%= t 'contact_page.title' %> WE ARE HAPPY TO<br><strong><%= t 'contact_page.help' %> !</strong></h1>
+      <h1 class="contact-title"><%= t 'contact_page.title' %> <br><strong><%= t 'contact_page.help' %> !</strong></h1>
       <p>
         <%= t 'contact_page.desc1' %>
         <br><%= t 'contact_page.desc2' %>
@@ -16,7 +16,7 @@
     <div class="col-sm-4">
       <div class="contact-item shadow contact-margin">
         <p><%= image_tag('contact-call.svg') %></p>
-        <h3>Call <strong>Us</strong></h3>
+        <h3> <%= t 'contact_page.methods.method1.part1' %>   <strong><%= t 'contact_page.methods.method1.part2' %> </strong></h3>
         <p>+49(0) 1525 8197 119</p>
         <p>+49 (0) 211 436 32 174 / -173</p>
       </div>
@@ -24,7 +24,7 @@
     <div class="col-sm-4">
       <div class="contact-item shadow contact-margin">
         <p><%= image_tag('contact-whatsapp.svg') %></p>
-        <h3>whatspp <strong>Number</strong></h3>
+        <h3><%= t 'contact_page.methods.method2.part1' %> <strong><%= t 'contact_page.methods.method2.part2' %></strong></h3>
         <p>+49(0) 1525 8197 119</p>
         <p>+49 (0) 211 436 32 174 / -173</p>
       </div>
@@ -32,7 +32,7 @@
     <div class="col-sm-4">
       <div class="contact-item shadow contact-margin">
         <p><%= image_tag('contact-email.svg') %></p>
-        <h3>Say <strong>Hello</strong></h3>
+        <h3><%= t 'contact_page.methods.method3.part1' %>  <strong><%= t 'contact_page.methods.method3.part2' %> </strong></h3>
         <p>info@smilemeup.com</p>
         <p>&nbsp;</p>
       </div>
@@ -43,10 +43,10 @@
 <div class="contact container">
   <div class="row">
     <div class="col-sm-3 our-contacts-forms">
-      <h3>Have a</h3>
-      <h2><strong>Question?</strong></h2>
+      <h3> <%= t 'contact_page.form.label1' %>  </h3>
+      <h2><strong><%= t 'contact_page.form.label2' %>  </strong></h2>
       <p>
-        Do you have questions regarding Smile Me Up in general or one of our products?
+        <%= t 'contact_page.form.label3' %>
       </p>
     </div>
     <div class="col-sm-6 col-sm-push-2">
@@ -54,31 +54,31 @@
         <div class="row">
           <div class="col-sm-6">
             <div class="form-group">
-              <label for="name">Full name</label>
-              <input name="name" type="text" class="form-control" id="name" placeholder="John Doe" value="">
+              <label for="name"><%= t 'contact_page.form.label4' %> </label>
+              <input name="name" type="text" class="form-control" id="name" placeholder="<%= t 'contact_page.form.placeholder1' %> " value="">
             </div>
           </div>
           <div class="col-sm-6">
             <div class="form-group">
-              <label for="email">Your email</label>
-              <input name="email" type="text" class="form-control" id="email" placeholder="ilove@smilemeup.com">
+              <label for="email"> <%= t 'contact_page.form.label5' %> </label>
+              <input name="email" type="text" class="form-control" id="email" placeholder="<%= t 'contact_page.form.placeholder2' %> ">
             </div>
           </div>
           <div class="col-sm-12">
             <div class="form-group">
-              <label for="subject">Subject</label>
-              <input name="subject" type="text" class="form-control" id="subject" placeholder="I have a question">
+              <label for="subject"><%= t 'contact_page.form.label6' %> </label>
+              <input name="subject" type="text" class="form-control" id="subject" placeholder="<%= t 'contact_page.form.placeholder3' %>">
             </div>
           </div>
           <div class="col-sm-12">
             <div class="form-group">
-              <label for="body">Message</label>
+              <label for="body"><%= t 'contact_page.form.label7' %> </label>
               <textarea name="body" class="form-control" rows="8" id="body"></textarea>
             </div>
           </div>
         </div>
         <div class="submit">
-          <button type="submit" class="btn btn-green btn-large">Send Now</button>
+          <button type="submit" class="btn btn-green btn-large"><%= t 'contact_page.form.submit' %> </button>
         </div>
       </form>
     </div>

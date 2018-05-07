@@ -67,11 +67,33 @@ en:
     desc5: 'evaluation of your teeth, a warm-hearted service and best product quality.'
     desc6: 'Be the next perfectly smiling happy customer!'
   contact_page:
-    title: ''
+    title: 'WE ARE HAPPY TO'
     desc1: 'Do you have questions regarding Smile'
     desc2: 'Me Up in general or one of our products?'
     desc3: 'Do you have any specific wishes?'
     help: 'HELP'
+    methods:
+      method1:
+        part1: 'Call'
+        part2: 'Us'
+      method2:
+        part1: 'whatsapp'
+        part2: 'Number'
+      method3:
+        part1: 'Say'
+        part2: 'Hello'
+    form:
+      label1: 'Have a'
+      label2: 'Question?'
+      label3: 'Do you have questions regarding Smile Me Up in general or one of our products?'
+      label4: 'Full name'
+      label5: 'Your email'
+      label6: 'Subject'
+      label7: 'Message'
+      submit: 'Send Now'
+      placeholder1: 'John Doe'
+      placeholder2: 'ilove@smilemeup.com'
+      placeholder3: ' I have a question'
   faq:
     faq: 'FAQ'
     our: 'OUR'
