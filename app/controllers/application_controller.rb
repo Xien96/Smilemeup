@@ -18,15 +18,15 @@ class ApplicationController < ActionController::Base
   private
 
   def set_lang
-    @lang ||= (params[:lang] || current_user.try(:locale) || "en")
+    @lang = (params[:lang] || current_user.try(:locale) || "en")
     I18n.locale = @lang
     current_user.update_column(:locale, @lang) if @lang.present? and current_user.present?
     session[:cart] ||= []
   end
 
   def set_currency_country
-    @currency ||= (params[:currency] || current_user.try(:currency) || "usd")
-    @country ||= (params[:country] || current_user.try(:country) || "uk")
+    @currency = (params[:currency] || current_user.try(:currency) || "usd")
+    @country = (params[:country] || current_user.try(:country) || "uk")
     if current_user.present?
       if @currency.present?
         current_user.update_column(:currency, @currency)

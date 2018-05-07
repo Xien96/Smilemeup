@@ -30,8 +30,8 @@
             <li class="<%= @active == 'about' ? 'nav-active' : '' %>"><a href="/about" title=""><%= I18n.t 'main_page.about_us' %></a></li>
             <li class="<%= @active == 'blog' ? 'nav-active' : '' %>"><a href="/blog" title=""><%= I18n.t 'main_page.blog' %></a></li>
             <li class="<%= @active == 'contact' ? 'nav-active' : '' %>"><a href="/contact" title=""><%= I18n.t 'main_page.contact_us' %></a></li>
-            <li class="nav-icons seperator"><a href="#" title="" class="settingsen settings"><div><%= t "#{current_user.locale}" %></div></a></li>
-            <li class="nav-icons"><a href="#" title="" class="settingsusd settings"><div class="usd-auto"><%= t "#{current_user.currency}" %></div></a></li>
+            <li class="nav-icons seperator"><a href="#" title="" class="settingsen settings"><div><%= t "#{@lang || 'en'}" %></div></a></li>
+            <li class="nav-icons"><a href="#" title="" class="settingsusd settings"><div class="usd-auto"><%= t "#{@currency || 'usd' }" %></div></a></li>
             <!-- <li><a href="" title=""><%= image_tag('search.svg') %></a></li> -->
             <% if session[:cart].count > 0 %>
               <li class="nav-icons <%= @active == 'cart' ? 'nav-active' : '' %>"><a href="/cart" title="" class="car-shop"><%= image_tag('cart-full.svg') %></a></li>

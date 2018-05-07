@@ -2,8 +2,6 @@ class CartController < ApplicationController
     before_action :authenticate_user! , only: [:cart , :index]
   def index
     @cart = session[:cart]
-    puts "=============================="
-    puts @cart
     @total = 0
     @cart.each do |ci|
       price = Product.find_by(name: ci['product']).price

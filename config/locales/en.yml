@@ -257,7 +257,52 @@ en:
       placeholder5: '3'
       placeholder6: 'Jack Smith'
       submit: 'Submit'
-
-
   why: 'Why'
-
+  user:
+    edit:
+      submit: 'Update Your Profile'
+    new:
+      submit: 'SIGN UP'
+      login: 'Sign in'
+      signup: 'Sign Up'
+    form:
+      email: 'Email'
+      name: 'Name'
+      country: 'Country'
+      city: 'City'
+      phone: 'Phone'
+      current_password: 'Current Password'
+      password: 'Password'
+      password_confirmation: 'Password Confirmation'
+      have_account: 'Have an account? '
+      donot_have_account: "Don't have an account? "
+      create_your: 'Create Your '
+      account: 'account'
+      welcome_back: 'Welcome Back'
+      welcome_desc1: 'Great to have you back again.'
+      welcome_desc2: 'Log in to see what`s new.'
+      forget_password: 'Forgot your password?'
+    placeholders:
+      name: 'John Doe'
+      country: 'Germany'
+      city: 'Berlin'
+      password: '**********'
+    help_text:
+      current_password: 'required for any changes'
+      password: "leave blank if you won't change it"
+  password:
+    new:
+      title1: 'Forget'
+      title2: 'Your Password'
+      desc1: 'Love having you back,'
+      desc2: "log on your account and see what's new!"
+      submit: 'Send me reset password instructions'
+    edit:
+      title1: 'Change your password'
+      submit: 'Change my password'
+      new_password: 'New Password'
+  profile:
+    tabs:
+      profile: 'Profile'
+      orders: 'Orders'
+      messages: 'Messages'

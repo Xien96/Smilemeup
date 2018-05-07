@@ -22,6 +22,7 @@ class StaticController < ApplicationController
   def clearup
     @active = "products"
   end
+
   def snapup
     @active = "products"
   end
