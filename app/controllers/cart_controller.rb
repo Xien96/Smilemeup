@@ -32,12 +32,18 @@ class CartController < ApplicationController
   end
   
   def create_user_product
+    byebug
     products = session[:cart].map{|x| x["product"]}
-    products_id = Product.find_by(:name => products).id
+    products_id = Product.where(:name => products).collect { |p| "#{p[:id]}"}
+    # products_id = Product.find_by(:name => products).id
     styles = session[:cart].map{|x| x["style"]}
     styles_id = Style.where(:name => styles).collect { |p| "#{p[:id]}"}
-    styles_id.each do |y|
-          @transaction = UserProduct.create(:user_id => current_user.id , :product_id => products_id , :style_id => y)
+    if products_id.size > 1
+      products_id.zip(styles_id).each{|b| @transaction = UserProduct.create(:user_id => current_user.id , :product_id => b[0] , :style_id => b[1])}
+    else
+      styles_id.each do |y|
+            @transaction = UserProduct.create(:user_id => current_user.id , :product_id => products_id[0] , :style_id => y)
+      end
     end
     session[:cart] = nil
     redirect_to  products_path
