@@ -196,14 +196,14 @@ $(document).ready(function() {
   })
 
 
-  var swiper = new Swiper('.swiper-container', {
+  /*var swiper = new Swiper('.swiper-container', {
     slidesPerView: 3,
     spaceBetween: 20,
     freeMode: true,
     loop: true,
     pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
+    el: '.swiper-pagination',
+    clickable: true,
     },
   });
 })
@@ -417,5 +417,14 @@ var readyInterval = setInterval(function() {
 /*
 https://goo.gl/PLbrBK
 */
+
+/*delete item from cart*/
+function one(obj){
+    var item = $(obj).prev().andSelf().remove();    
+}
+
+
+
+
 
 </script>
