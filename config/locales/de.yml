@@ -68,11 +68,33 @@ de:
     desc5: 'Kundenbetreuung sowie die überzeugende Qualität unserer Produkte werden dich überzeugen.'
     desc6: 'Werde auch du einer unserer glücklich lächelnden Kunden!'
   contact_page:
-    title: ''
-    desc1: 'Hast du Fragen zu Smile Me Up'
-    desc2: 'oder zu einem unserer Produkte?'
-    desc3: 'Hast du besondere Wünsche?  '
-    help: 'garantieren'
+    title: 'WE ARE HAPPY TO'
+    desc1: 'Do you have questions regarding Smile'
+    desc2: 'Me Up in general or one of our products?'
+    desc3: 'Do you have any specific wishes?'
+    help: 'HELP'
+    methods:
+      method1:
+        part1: 'Call'
+        part2: 'Us'
+      method2:
+        part1: 'whatsapp'
+        part2: 'Number'
+      method3:
+        part1: 'Say'
+        part2: 'Hello'
+    form:
+      label1: 'Have a'
+      label2: 'Question?'
+      label3: 'Do you have questions regarding Smile Me Up in general or one of our products?'
+      label4: 'Full name'
+      label5: 'Your email'
+      label6: 'Subject'
+      label7: 'Message'
+      submit: 'Send Now'
+      placeholder1: 'John Doe'
+      placeholder2: 'ilove@smilemeup.com'
+      placeholder3: ' I have a question'
   faq:
     faq: 'FAQ'
     our: 'OUR'
@@ -122,6 +144,7 @@ de:
   lang:
     english: 'English'
     germany: 'Germany'
+    spanish: 'Spanish'
   currency:
     usd: 'USD'
     gbp: 'GBP'
@@ -237,3 +260,51 @@ de:
       placeholder6: 'Jack Smith'
       submit: 'Submit'
   why: 'Why'
+  user:
+    edit:
+      submit: 'Update Your Profile'
+    new:
+      submit: 'SIGN UP'
+      login: 'Sign in'
+      signup: 'Sign Up'
+    form:
+      email: 'Email'
+      name: 'Name'
+      country: 'Country'
+      city: 'City'
+      phone: 'Phone'
+      current_password: 'Current Password'
+      password: 'Password'
+      password_confirmation: 'Password Confirmation'
+      have_account: 'Have an account? '
+      donot_have_account: "Don't have an account? "
+      create_your: 'Create Your '
+      account: 'account'
+      welcome_back: 'Welcome Back'
+      welcome_desc1: 'Great to have you back again.'
+      welcome_desc2: 'Log in to see what`s new.'
+      forget_password: 'Forgot your password?'
+    placeholders:
+      name: 'John Doe'
+      country: 'Germany'
+      city: 'Berlin'
+      password: '**********'
+    help_text:
+      current_password: 'required for any changes'
+      password: "leave blank if you won't change it"
+  password:
+    new:
+      title1: 'Forget'
+      title2: 'Your Password'
+      desc1: 'Love having you back,'
+      desc2: "log on your account and see what's new!"
+      submit: 'Send me reset password instructions'
+    edit:
+      title1: 'Change your password'
+      submit: 'Change my password'
+      new_password: 'New Password'
+  profile:
+    tabs:
+      profile: 'Profile'
+      orders: 'Orders'
+      messages: 'Messages'
