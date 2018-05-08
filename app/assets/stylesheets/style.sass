@@ -669,7 +669,7 @@ footer
     margin-left: 1em !important
     font-weight: normal
     font-size: 16px
-    margin-top: 20px
+    margin-top: 0
   .pull-right img
     width: 40px
     height: 40px
@@ -1476,7 +1476,7 @@ h3
 
 /* cart-2*/
 
-.cart-items
+/*.cart-items
   margin-top: 3em
   .cart-item
     padding: 1em
@@ -1744,4 +1744,149 @@ input[type=range]
 .modal-po
   top: 353px
 
- 
+
+/*start cart form*/
+.cart-form
+  .modal
+    .modal-dialog
+      max-width: 555px
+      .modal-content
+        .modal-header
+          border-bottom: 1px solid #BDBDBD
+          .cart-close-form
+            border: 1px solid #BDBDBD
+            border-radius: 50%
+            width: 25px
+            height: 25px
+        width: 555px
+        height: 887px
+        .modal-footer
+          border-top: 1px solid #BDBDBD
+
+          text-align: center
+          .cart-sending-message
+            width: 322px
+            height: 52px
+        .modal-body
+          .form-group
+            .cart-country-dropdown
+              display: inline
+              width: 291px
+              height: 52px
+              .country-drop-button
+                height: 52px
+                background-color: #fff
+                color: red
+                .cart-drop-icon
+                  position: absolute
+                  border-top: 10px dashed
+                  border-right: 7px solid transparent
+                  border-left: 7px solid transparent
+                  right: 20px
+                  bottom: 0px
+                  color: #C4C4C4
+            .form-control
+              display: inline-block
+              width: 291px
+              height: 52px
+            .control-label
+              width: 129px
+              height: 41px
+            .form-control.additional-height
+              height: 160px
+            .additional-location
+              color: #C4C4C4
+            .name-image1,.name-image2
+              position: absolute
+              left: 210px
+              top: 75px
+            .name-image2
+              top: 153px
+            .additional-location
+              position: absolute
+              left: 210px
+              top: 480px
+
+/*start cart form for mobile*/
+@media(max-width: 767px)
+  .cart-form
+    .modal
+      .modal-dialog
+        max-width: 350px
+        .modal-content
+          width: 350px
+          height: 700px
+          .modal-body
+            .form-group
+              margin: 0
+              .control-label
+                width: 80px
+              .form-control
+                width: 150px
+              .cart-country-dropdown
+                .country-drop-button
+                  width: 150px
+              .name-image1,.name-image2
+                left: 150px
+                top: 55px
+              .additional-height
+                height: 80px !important
+              .name-image2
+                top: 127px
+              .additional-location
+                left: 150px
+                top: 490px
+
+
+/*End cart form*/ 
+
+
+/* new cart*/
+.panel-collapse
+  .panel-body
+    .cart-adress
+      .address-right
+        width: 450px !important
+        height: 220px !important
+        border: 2px solid #bdbdbd !important
+        float: right !important
+        
+        
+        border-radius: 20px !important
+        background-color: #dadada !important
+        &:hover
+          opacity: 0.5 !important
+        img
+          margin-left: 45% !important
+          margin-top: 19% !important
+      .address-left
+        width: 450px
+        height: 220px 
+        border: 2px solid #bdbdbd
+        float: left
+        
+        border-radius: 20px
+        background-color: #dadada
+        &:hover
+          opacity: 0.5
+
+        img
+          margin-left: 45%
+          margin-top: 19%
+.panel-group 
+  .panel+.panel
+    margin-top: 0
+.panel-header
+  background-color: #E0E0E0
+
+
+.panel-cart
+  .panel-header
+    .title-panel
+      padding: 10px
+      .pull-right-text
+        margin: 0 0 0 30px
+        margin-top: 10px
+
+
+      
