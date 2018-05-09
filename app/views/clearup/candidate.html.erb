@@ -4,22 +4,27 @@
   
   <div class="row">
     <div class="col-sm-4 col-sm-push-4">
-      <h3>Am I a <strong class="green">candidate?</strong></h3>
+      <h3> <%= t('products.am_candidate').html_safe%> </h3>
       <p>
-        At Smile Me Up we assess every candidate's separate case to make sure the chosen product will be usable by the user ,and will create effective results.
+        <%= t('products.am_candidate_desc')%>
       </p>
-      <h5><strong>This will take less than 30 seconds!</strong></h5>
+      <h5>
+        <strong>
+        <%= t('products.take_30_seconds')%>
+
+      </strong>
+      </h5>
     </div>
   </div>
   <div class="row">
     <div class="col-sm-6 col-sm-push-3">
-      <h3><strong>Please upload the following pictures</strong></h3>
+      <h3><strong><%= t 'products.upload_images' %> </strong></h3>
     </div>
   </div>
   <div class="row candidate-images">
     <div class="col-sm-2 col-sm-push-2">
       <%= image_tag('candidate/candidate-1.svg') %>
-      <p>Left side view</p>
+      <p><%= t 'products.left_side_view' %> </p>
       <%= form_tag("/products/clearup/candidate", method: :post, multipart: true, remote: true, authenticity_token: true, id: "uploader-form-1") do %>
       <%= file_field_tag :file1, accept: 'image/png,image/gif,image/jpeg' %>
       <button id="file1_trigger" class="btn btn-default">Upload</button>
@@ -27,7 +32,7 @@
     </div>
     <div class="col-sm-2 col-sm-push-2">
       <%= image_tag('candidate/candidate-2.svg') %>
-      <p>Right side view</p>
+      <p><%= t 'products.right_side_view' %> </p>
       <%= form_tag("/products/clearup/candidate", method: :post, multipart: true, remote: true, authenticity_token: true, id: "uploader-form-2") do %>
       <%= file_field_tag :file2, accept: 'image/png,image/gif,image/jpeg' %>
       <button id="file2_trigger" class="btn btn-default">Upload</button>
@@ -35,7 +40,7 @@
     </div>
     <div class="col-sm-2 col-sm-push-2">
       <%= image_tag('candidate/candidate-3.svg') %>
-      <p>Open mouth from above</p>
+      <p><%= t 'products.open_mouth_from_above' %> </p>
       <%= form_tag("/products/clearup/candidate", method: :post, multipart: true, remote: true, authenticity_token: true, id: "uploader-form-3") do %>
       <%= file_field_tag :file3, accept: 'image/png,image/gif,image/jpeg' %>
       <button id="file3_trigger" class="btn btn-default">Upload</button>
@@ -43,7 +48,7 @@
     </div>
     <div class="col-sm-2 col-sm-push-2">
       <%= image_tag('candidate/candidate-4.svg') %>
-      <p>Open mouth from below</p>
+      <p><%= t 'products.open_mouth_from_below' %> </p>
       <%= form_tag("/products/clearup/candidate", method: :post, multipart: true, remote: true, authenticity_token: true, id: "uploader-form-4") do %>
       <%= file_field_tag :file4, accept: 'image/png,image/gif,image/jpeg' %>
       <button id="file4_trigger" class="btn btn-default">Upload</button>
@@ -53,8 +58,8 @@
   </div>
   <div class="row">
     <div class="col-sm-4 col-sm-push-4 pagination">
-      <button type="" class="btn btn-green btn-large" disabled="">Back</button>
-      <a href class="btn btn-green btn-large" id="candidateSubmit">Next </a>
+      <button type="" class="btn btn-green btn-large" disabled=""><%= t 'back' %> </button>
+      <a href class="btn btn-green btn-large" id="candidateSubmit"><%= t 'next'%>  </a>
     </div>
   </div>
 </div>

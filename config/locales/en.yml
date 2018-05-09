@@ -259,6 +259,9 @@ en:
       placeholder6: 'Jack Smith'
       submit: 'Submit'
   why: 'Why'
+  upload: 'Upload'
+  next: 'Next'
+  back: 'Back'
   user:
     edit:
       submit: 'Update Your Profile'
@@ -328,6 +331,16 @@ en:
     veneers: 'Veneers'
     add_to_card: 'ADD TO CART '
     some_of_our: 'Some of our'
+    thanks: 'Thanks'
+    done_here: 'You Are Done Here '
+    am_candidate: 'Am I a <strong class="green">candidate?</strong>'
+    am_candidate_desc: "At Smile Me Up we assess every candidate's separate case to make sure the chosen product will be usable by the user ,and will create effective results.'"
+    take_30_seconds: 'This will take less than 30 seconds!'
+    upload_images: 'Please upload the following pictures'
+    left_side_view: 'Left Side View'
+    right_side_view: 'Right Side View'
+    open_mouth_from_above: 'Open Mouth From Above'
+    open_mouth_from_below: 'Open Mouth From Below'
     impression:
       shop: 'Shop'
       desc: 'You wish to straighten your teeth or close gaps? Without traditional braces? You prefer to pay less for a high-quality treatment? Then you should choose our invisible, discreet aligner "Clear Up" '
