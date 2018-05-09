@@ -1,11 +1,11 @@
 <div class="product-snapup jumbotron">
   <div class="container text-center">
     <div class="">
-      <h1 class="slogan-title snap-overview-head">Snap Up<br><strong>Product Overview</strong></h1>
+      <h1 class="slogan-title snap-overview-head">Snap Up<br><strong> <%= t 'products.product_overview' %></strong></h1>
       <div class="row">
         <div class="col-sm-6 col-sm-push-3">
           <p class="snap-overview-des">
-            Our removable instant veneers that snap easily on your teeth, they cover missing, crooked or discolored teeth. Snap Up Clips on your teeth without adhesives <br>nor any teeth modifications.
+            <%= t 'products.snap_up.desc' %>
           </p>
         </div>
       </div>
@@ -15,44 +15,45 @@
 
 <div class="home container">
   <div class="text-center over-new-smile">
-    <h3>What is <strong class="green">SNAPUP?</strong></h3>
-        <p class="text-midium snap-overview-padding">Innovative. removable, longlasting, natural-looking veneers -  it is the fastest way to your ideal smile <br>- Through our Snap up we have ultimately managed to revolutionarize the hollywood smiles or <br>removable veneers concept to give you the best instant smile on the market. <a>See More</a></p>
+    <h3> <%= t 'products.what_is' %> <strong class="green">SNAPUP?</strong></h3>
+        <p class="text-midium snap-overview-padding"> <%= t('products.what_desc').html_safe%>. <a><%= t 'products.see_more'%> </a></p>
   </div>
 
   <div class="row home-why text-center">
     <div class="col-md-3 col-sm-6 col-xs-12">
       <div class="home-why-item shadow our-new-smile">
         <%= image_tag('instant.svg') %>
-        <h4>Instant <strong>New Smile</strong></h4>
+        <h4><%= t('products.snap_up.title1').html_safe%></h4>
         <p>
-          Just clip it on your teeth and show your most beautiful smile -  for daily or <br>occasional use.
+          <%= t('products.snap_up.desc1').html_safe%>
         </p>
       </div>
     </div>
     <div class="col-md-3 col-sm-6 col-xs-12">
       <div class="home-why-item shadow our-new-smile">
         <%= image_tag('customized.svg') %>
-        <h4><strong>Customized</strong></h4>
+        <h4><strong><%= t('products.snap_up.title2').html_safe%></strong></h4>
         <p>
-          Simply select the teeth shade and design of your Snap Up. We produce your Snap Up tailored to your <br>teeth perfectly.
+          <%= t('products.snap_up.desc2').html_safe%>
         </p>
       </div>
     </div>
     <div class="col-md-3 col-sm-6 col-xs-12">
       <div class="home-why-item shadow our-new-smile">
         <%= image_tag('comfort.svg') %>
-        <h4>Longlasting<strong> comfort</strong></h4>
+        <h4><%= t('products.snap_up.title3').html_safe%></h4>
         <p>
-           We use highest quality german materials, some clients reported to use it over 4 and 5 years long.
+          <%= t('products.snap_up.desc3').html_safe%>
         </p>
       </div>
     </div>
      <div class="col-md-3 col-sm-6 col-xs-12">
       <div class="home-why-item shadow our-new-smile">
         <%= image_tag('affordable.svg') %>
-        <h4> <strong>Affordable</strong></h4>
+        <h4> <strong><%= t('products.snap_up.title4').html_safe%></strong></h4>
         <p>
-         Porcelain veneers for over 10,000€ or a Snap Up <br>for only 890€?
+          <%= t('products.snap_up.desc4').html_safe%>
+
         </p>
       </div>
     </div>
@@ -64,9 +65,10 @@
 
 <div class="home container">
   <div class="text-center button-over-view">
-    <h3> <strong>Order your SNAP UP now!</strong></h3>
+    <h3> <strong>          <%= t('products.snap_up.order_statement').html_safe%> </strong></h3>
     <p>
-      Not sure yet whether the Snap Up is the best choice  for<br> your concern, send us a request by clicking on the  button
+      <%= t('products.snap_up.order_statement_desc').html_safe%>
+
     </p>
     <a class="btn btn-default btn-lg btn-green" href="/products/snapup/customize" role="button">Order Now</a>
   </div>
@@ -75,7 +77,8 @@
 <div class="video-section">
   <div class="home container">
     <div class="text-center over-new-smile">
-      <h3>Some of our <strong class="green"><br>testimonials</strong></h3>
+      <h3><%= t('products.snap_up.testimonials').html_safe%> </h3>
+
           <p class="text-midium"></p>
     </div>
 
@@ -130,7 +133,7 @@
 
 
 <div class="home container text-center mile-slider">
-  <h3 class="green"><strong>Inspiration</strong></h3>
+  <h3 class="green"><strong><%= t 'products.inspireation' %></strong></h3>
   <p>Get inspired by some of our before and after pictures.</p>
 </div>
 
@@ -251,10 +254,12 @@
   <div class="row eq-height">
     <div class="col-md-3 col-xs-12 col-sm-push-1 steps-slogan steps-slogan-left">
       <div class="slogan-width">
-        <h3 class="">4 simple steps to<br><span class="green"><strong>your beautiful straight white teeth</strong></span></h3>        
+        <h3 class=""><%= t('products.steps_title1')%> <br><span class="green"><strong><%= t('products.steps_title2')%> </strong></span></h3>
       </div>
       <p class="slogan-des">
-        <a class="btn btn-default btn-lg btn-green" href="/products/snapup/customize" role="button">Order Now</a>
+        <a class="btn btn-default btn-lg btn-green" href="/products/snapup/customize" role="button">
+          <%= t('products.snap_up.order_now')%>
+        </a>
       </p>
     </div>
     <div class="col-md-6 col-xs-12 col-sm-push-2">
@@ -265,7 +270,7 @@
             <%= image_tag('choosedesign.svg') %>
           </div>
           <div class="col-sm-8 col-sm-8 product-text">
-            <h4 class="choose-heading">Choose your favorite smile design</h4>
+            <h4 class="choose-heading"><%= t('products.step1')%> </h4>
           </div>
           </div>
         </div>
@@ -275,7 +280,7 @@
             <%= image_tag('order-clearup.svg') %>
           </div>
           <div class="col-sm-8 col-sm-8 product-text">
-          <h4 class="choose-heading">Order and pay your<br><strong>Snap Up.</strong></h4>
+          <h4 class="choose-heading"><%= t('products.step2')%><br><strong>Snap Up.</strong></h4>
         </div>
           </div>
         </div>
@@ -285,7 +290,7 @@
             <%= image_tag('impressions.svg') %>
             </div>
             <div class="col-sm-8 col-sm-8 product-text">
-            <h4 class="choose-heading">Take your impressions with ourhome<strong><br> impression kit.</strong></h4>
+            <h4 class="choose-heading"><%= t('products.step3')%> <strong><br> impression kit.</strong></h4>
           </div>
           </div>
         </div>
@@ -295,7 +300,7 @@
             <%= image_tag('welcome.svg') %>
           </div>
           <div class="col-sm-8 col-sm-8 product-text">
-            <h4 class="choose-heading">Welcome <strong>New Smile</strong></h4>
+            <h4 class="choose-heading"><%= t('products.welcome')%> <strong><%= t('products.new_smile')%></strong></h4>
           </div>
           </div>
         </div>
