@@ -4,7 +4,7 @@ class CartController < ApplicationController
     @cart = session[:cart]
     @total = 0
     @cart.each do |ci|
-      price = Product.find_by(name: ci['product']).product_prices.find_by(:currency => user.currency).price
+      price = Product.find_by(name: ci['product']).product_prices.find_by(:currency => current_user.currency).price
       quantity = ci['quantity'].to_i
       @total += (price * quantity)
     end

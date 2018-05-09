@@ -25,7 +25,8 @@
                 <% if @up.nil?%>
                   No upper product available
                 <%else%>
-                  <%= number_to_currency(@up.product_prices.find_by(:currency => user.currency).price / 100) %>
+                <%byebug%>
+                  <%= number_to_currency(@up.product_prices.find_by(:currency => current_user.currency).price / 100) %>
                 <%end%></span>
             </p>
             <p class="teeth_selection teeth_selectionupper_lower">
@@ -34,7 +35,7 @@
                 <% if @down.nil?%>
                   No down product available
                 <%else%>
-                  <%=  number_to_currency(@down.product_prices.find_by(:currency => user.currency).price / 100) %>
+                  <%=  number_to_currency(@down.product_prices.find_by(:currency => current_user.currency).price / 100) %>
                 <%end%></span>
             </p>
             <p class="teeth_selection teeth_selectionupper_both">
@@ -43,7 +44,7 @@
                 <% if @both.nil?%>
                   No both product available
                 <%else%>
-                  <%=  number_to_currency(@both.product_prices.find_by(:currency => user.currency).price / 100) %>
+                  <%=  number_to_currency(@both.product_prices.find_by(:currency => current_user.currency).price / 100) %>
                 <%end%></span>
             </p>
             <div class="add-to-cart">
