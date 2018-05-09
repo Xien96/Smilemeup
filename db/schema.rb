@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180509110000) do
+ActiveRecord::Schema.define(version: 20180509145405) do
 
   create_table "pictures", force: :cascade do |t|
     t.string "pic_file_name"
@@ -21,19 +21,19 @@ ActiveRecord::Schema.define(version: 20180509110000) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "product_prices", force: :cascade do |t|
+    t.integer "product_id"
+    t.string "currency", default: "usd"
+    t.integer "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_product_prices_on_product_id"
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "products_prices", force: :cascade do |t|
-    t.integer "product_id"
-    t.integer "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "currency", default: "usd"
-    t.index ["product_id"], name: "index_products_prices_on_product_id"
   end
 
   create_table "styles", force: :cascade do |t|
