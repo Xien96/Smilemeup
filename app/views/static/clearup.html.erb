@@ -15,11 +15,12 @@
 
 <div class="home container">
   <div class="text-center">
-    <h3>What is <strong class="green">CLEAR UP?</strong></h3>
+    <h3><%= t 'products.what_is' %> <strong class="green">CLEAR UP?</strong></h3>
     <div class="row">
       <div class="col-sm-4 col-sm-push-4">
         <p class="text-center">
-          Custom-made invisible aligners that efficiently move teeth according to a professional digital plan.
+          <%= t 'products.clear_up.what_desc' %>
+
         </p>
       </div>
     </div>
@@ -28,19 +29,19 @@
     <div class="col-sm-4">
       <div class="home-why-item shadow">
         <%= image_tag('snapup-1.svg') %>
-        <h3>Simple <strong>and efficient.</strong></h3>
+        <h3><%= t('products.clear_up.title1').html_safe %> </h3>
         <p>
-          CLEAR UP aligners have never been simpler than this. CLEAR UP is extremely easy to use and can be removed
-          anytimes while functioning as efficient as traditional braces.
+          <%= t 'products.clear_up.desc1' %>
         </p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="home-why-item shadow">
         <%= image_tag('snapup-2.svg') %>
-        <h3>Appealing and <strong>CLEAR</strong></h3>
+
+        <h3><%= t('products.clear_up.title2').html_safe %> </h3>
         <p>
-          Aligners can now be glamorous! Our CLEAR UP is almost invisible!
+          <%= t 'products.clear_up.desc2' %>
           <br>&nbsp;<br>&nbsp;
         </p>
       </div>
@@ -48,9 +49,11 @@
     <div class="col-sm-4">
       <div class="home-why-item shadow">
         <%= image_tag('snapup-3.svg') %>
-        <h3><strong>Affordable</strong></h3>
+
+        <h3><strong><%= t 'products.clear_up.title3' %> </strong></h3>
         <p>
-          Straighten your teeth with the CLEAR UP aligners and pay 75% less than you would pay at your orthodontist.
+          <%= t 'products.clear_up.desc3' %>
+
           <br>&nbsp;
         </p>
       </div>
@@ -60,7 +63,9 @@
 
 <div class="home container">
   <div class="text-center">
-    <a class="btn btn-default btn-lg btn-green" href="/products/clearup/clearup_impression" role="button">Start now</a>
+    <a class="btn btn-default btn-lg btn-green" href="/products/clearup/clearup_impression" role="button">
+      <%= t 'products.clear_up.start_now' %>
+    </a>
   </div>
 </div>
 
@@ -68,7 +73,7 @@
 <div class="video-section">
   <div class="home container">
     <div class="text-center over-new-smile">
-      <h3>Some of our <strong class="green"><br>testimonials</strong></h3>
+      <h3><%= t('products.snap_up.testimonials').html_safe%></h3>
       <p class="text-midium"></p>
     </div>
 
@@ -120,8 +125,9 @@
 
 
 <div class="home container text-center">
-  <h3 class="green"><strong>Inspiration</strong></h3>
-  <p>Get inspired by some of our before and after pictures.</p>
+  <h3 class="green"><strong><%= t 'products.inspiration'%></strong></h3>
+
+  <p> <%= t 'products.inspiration_desc'%></p>
 </div>
 
 
@@ -274,11 +280,12 @@
   <div class="row eq-height">
     <div class="col-md-3 col-xs-12 col-sm-push-1 steps-slogan steps-slogan-left">
       <div class="slogan-width">
-        <h3 class="">5 simple steps to get<br><span class="green"><strong>an awesome smile !</strong></span></h3>
+        <h3 class=""> <%= t('products.clear_up.steps.title').html_safe%> </h3>
       </div>
       <p class="slogan-des">
-        <a class="btn btn-default btn-lg btn-green" href="/products/clearup/clearup_impression" role="button">Order
-          Now</a>
+        <a class="btn btn-default btn-lg btn-green" href="/products/clearup/clearup_impression" role="button">
+          <%= t('products.snap_up.order_now')%>
+        </a>
       </p>
     </div>
     <div class="col-md-6 col-xs-12 col-sm-push-2">
@@ -289,7 +296,9 @@
               <%= image_tag('order-clearup.svg') %>
             </div>
             <div class="col-md-8 col-sm-8 product-text">
-              <h4 class="choose-heading">Order your impression kit and take your impressions with our help at home.</h4>
+              <h4 class="choose-heading">
+                <%= t('products.clear_up.steps.step1') %>
+              </h4>
             </div>
           </div>
         </div>
@@ -299,7 +308,9 @@
               <%= image_tag('athome-clearup.svg') %>
             </div>
             <div class="col-md-8 col-sm-8 product-text">
-              <h4 class="choose-heading">Do your teeth impressions at home or at a doctor nearby.</h4>
+              <h4 class="choose-heading">
+                <%= t('products.clear_up.steps.step2') %>
+              </h4>
             </div>
           </div>
         </div>
@@ -311,8 +322,8 @@
             <div class="col-md-8 col-sm-8 product-text">
               <h4 class="choose-heading">
                 <strong>
-                  Get a professional 3d simulation, showing your treatment and final results.
-                  Should we find out that your case is too difficult for our system, we will refund you.
+                  <%= t('products.clear_up.steps.step3') %>
+
                 </strong>
               </h4>
             </div>
@@ -326,7 +337,8 @@
             <div class="col-sm-8 col-sm-8 product-text">
               <h4 class="choose-heading">
                 <strong>
-                  You will receive your aligner set within 2-3 weeks.
+                  <%= t('products.clear_up.steps.step4') %>
+
                 </strong>
               </h4>
             </div>
@@ -340,8 +352,8 @@
             <div class="col-sm-8 col-sm-8 product-text">
               <h4 class="choose-heading">
                 <strong>
-                  After you finish wearing all your aligners you will get a free retainer, which
-                  you should wear at least 6-12 months to keep your amazing smile.
+                  <%= t('products.clear_up.steps.step5') %>
+
                 </strong>
               </h4>
             </div>

@@ -2,11 +2,11 @@
  <div class="product-clearup jumbotron">
   <div class="container text-center">
     <div class="clearup-page">
-      <h1 class="clearup-title">CLEAR UP <br><strong>Shop</strong></h1>
+      <h1 class="clearup-title">CLEAR UP <br><strong><%= t 'products.impression.shop' %></strong></h1>
       <div class="row">
         <div class="col-sm-6 col-sm-push-3">
           <p>
-            You wish to straighten your teeth or close gaps? Without traditional braces? You prefer to pay less for a high-quality treatment? Then you should choose our invisible, discreet aligner "Clear Up" 
+            <%= t 'products.clear_up.desc' %>
           </p>
         </div>
       </div>
@@ -16,11 +16,11 @@
 
 <div class="home container">
   <div class="text-center">
-    <h3><strong style="color: #96bf3d">CLEAR UP</strong> <br>START YOUR JOURNEY</h3>
+    <h3><strong style="color: #96bf3d">CLEAR UP</strong> <br> <%= t 'products.impression.start_journey' %></h3>
     <div class="row">
       <div class="col-sm-4 col-sm-push-4">
         <p class="text-midium">
-          We are happy that you decided to proceed with yout CLEAR UP aligner treatment.        
+          <%= t 'products.impression.journey_desc' %>
         </p>
       </div>
     </div>
@@ -36,7 +36,7 @@
               <%= image_tag('clearupshop.svg')%>
             </div>        
             <p>
-              Place your order and be the next happy smiling customer!<br><br><br><br><br>
+              <%= t 'products.clear_up_shop.step1' %> <br><br><br><br><br>
               &nbsp;
             </p>
           </div>
@@ -54,8 +54,10 @@
         </div>
         <div class="text-center">
           <h3>CLEARUP</h3>
-          <h5>(The typical Hollywood smile)</h5><br>
-          <button type="button" class="btn btn-lg btn-green btn-hover" data-toggle="modal" data-target="">ADD TO CART</button>
+          <h5>( <%= t 'products.snap_up.styles.desc1'%> )</h5><br>
+          <button type="button" class="btn btn-lg btn-green btn-hover" data-toggle="modal" data-target="">
+            <%= t 'products.add_to_card'%>
+          </button>
         </div>        
            
         </div>
