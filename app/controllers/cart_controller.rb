@@ -53,7 +53,7 @@ class CartController < ApplicationController
     charge = Stripe::Charge.create(
       :customer    => customer,
       :amount      => @total_cost*100,
-      :currency    => 'usd'
+      :currency    => current_user.currency
     )
     if charge["paid"]
       create_user_product 
