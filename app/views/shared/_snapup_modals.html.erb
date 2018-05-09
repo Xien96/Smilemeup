@@ -25,7 +25,6 @@
                 <% if @up.nil?%>
                   No upper product available
                 <%else%>
-                <%byebug%>
                   <%= number_to_currency(@up.product_prices.find_by(:currency => current_user.currency).price / 100) %>
                 <%end%></span>
             </p>
