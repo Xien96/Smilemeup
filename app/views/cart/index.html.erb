@@ -30,8 +30,8 @@
                       <%= Style.find_by(name: ci['style']).tagline %>
                     </td>
                     <td><%= ci['quantity'].to_i %></td>
-                    <td><%= number_to_currency(Product.find_by(name: ci['product']).price / 100) %> </td>
-                    <td><%= number_to_currency(Product.find_by(name: ci['product']).price / 100 * ci['quantity'].to_i) %></td>
+                    <td><%= number_to_currency(Product.find_by(name: ci['product']).product_prices.find_by(:currency => user.currency).price / 100) %> </td>
+                    <td><%= number_to_currency(Product.find_by(name: ci['product']).product_prices.find_by(:currency => user.currency).price / 100 * ci['quantity'].to_i) %></td>
                   </tr>
                   <% end %>
                 </tbody>
