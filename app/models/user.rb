@@ -2,51 +2,51 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable     
+         :recoverable, :rememberable, :trackable, :validatable
 
   has_attached_file :candidate_1,
-    :path => ":rails_root/public/uploads/:id_candidate_1.jpeg",
-    :url => "https://smile.alybadawy.com/uploads/:id_candidate_1.jpeg",
-    :default_url => "/system/no_image.png"
+                    :path => ":rails_root/public/uploads/:id_candidate_1.jpeg",
+                    :url => "https://smile.alybadawy.com/uploads/:id_candidate_1.jpeg",
+                    :default_url => "/system/no_image.png"
 
   has_attached_file :candidate_2,
-    :path => ":rails_root/public/uploads/:id_candidate_2.jpeg",
-    :url => "https://smile.alybadawy.com/uploads/:id_candidate_2.jpeg",
-    :default_url => "/system/no_image.png"
+                    :path => ":rails_root/public/uploads/:id_candidate_2.jpeg",
+                    :url => "https://smile.alybadawy.com/uploads/:id_candidate_2.jpeg",
+                    :default_url => "/system/no_image.png"
 
   has_attached_file :candidate_3,
-    :path => ":rails_root/public/uploads/:id_candidate_3.jpeg",
-    :url => "https://smile.alybadawy.com/uploads/:id_candidate_3.jpeg",
-    :default_url => "/system/no_image.png"
+                    :path => ":rails_root/public/uploads/:id_candidate_3.jpeg",
+                    :url => "https://smile.alybadawy.com/uploads/:id_candidate_3.jpeg",
+                    :default_url => "/system/no_image.png"
 
   has_attached_file :candidate_4,
-    :path => ":rails_root/public/uploads/:id_candidate_4.jpeg",
-    :url => "https://smile.alybadawy.com/uploads/:id_candidate_4.jpeg",
-    :default_url => "/system/no_image.png"
+                    :path => ":rails_root/public/uploads/:id_candidate_4.jpeg",
+                    :url => "https://smile.alybadawy.com/uploads/:id_candidate_4.jpeg",
+                    :default_url => "/system/no_image.png"
 
   has_attached_file :avatar,
-    :path => ":rails_root/public/uploads/:id_avatar.jpeg",
-    :url => "https://smile.alybadawy.com/uploads/:id_avatar.jpeg",
-    :default_url => "/system/no_image.png"
+                    :path => ":rails_root/public/uploads/:id_avatar.jpeg",
+                    :url => "https://smile.alybadawy.com/uploads/:id_avatar.jpeg",
+                    :default_url => "/system/no_image.png"
 
   ## Validators
-  validates_attachment  :candidate_1,
-    content_type: { content_type: /\Aimage\/.*\Z/ },
-    size: { less_than: 5.megabyte }
+  validates_attachment :candidate_1,
+                       content_type: {content_type: /\Aimage\/.*\Z/},
+                       size: {less_than: 5.megabyte}
 
-  has_many  :user_products, dependent: :destroy
-  has_many  :products , through: :user_products
-  
-    after_create :create_stripe_user
+  has_many :user_products, dependent: :destroy
+  has_many :products, through: :user_products
 
-    def create_stripe_user
-      customer = Stripe::Customer.create(
-        :email => self.email,
-        :description => 'Rails Stripe customer'
+  after_create_commit :create_stripe_user
 
-      )
-      self.stripe_id = customer.id
-      save
-    end
+  def create_stripe_user
+    customer = Stripe::Customer.create(
+      :email => self.email,
+      :description => 'Rails Stripe customer'
+
+    )
+    self.stripe_id = customer.id
+    save
+  end
 
 end

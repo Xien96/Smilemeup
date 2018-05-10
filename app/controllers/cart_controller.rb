@@ -1,5 +1,10 @@
+require 'paypal-sdk-rest'
+include PayPal::SDK::REST
+include PayPal::SDK::Core::Logging
+
 class CartController < ApplicationController
     before_action :authenticate_user! , only: [:cart , :index]
+    skip_before_action :verify_authenticity_token
   def index
     @cart = session[:cart]
     @total = 0
@@ -10,6 +15,7 @@ class CartController < ApplicationController
     end
     @total /= 100
     @active = "cart"
+    @total = session[:total]
     @total
   end
 
@@ -47,7 +53,7 @@ class CartController < ApplicationController
   end
   
   def cart
-    @total_cost = index
+    @total_cost = session[:total]
     customer = Stripe::Customer.retrieve(current_user.stripe_id)
     customer.sources.create(source: params[:stripeToken])
     charge = Stripe::Charge.create(
@@ -64,6 +70,63 @@ class CartController < ApplicationController
       redirect_to  products_checkout_path
     end
 
+  end
+
+ def checkout
+  byebug
+    @total_cost = session[:total]
+    @payment = Payment.new({
+      :intent =>  "sale",
+
+      # ###Payer
+      # A resource representing a Payer that funds a payment
+      # Payment Method as 'paypal'
+      :payer =>  {
+        :payment_method =>  "paypal" },
+
+      # ###Redirect URLs
+      :redirect_urls => {
+        :return_url => "http://localhost:3000/execute",
+        :cancel_url => "http://localhost:3000/" },
+
+      # ###Transaction
+      # A transaction defines the contract of a
+      # payment - what is the payment for and who
+      # is fulfilling it.
+      :transactions =>  [{
+
+        # Item List
+        :item_list => {
+          :items => [{
+            :name => "item",
+            :sku => "item",
+            :price => "5",
+            :currency => "USD",
+            :quantity => 1 }]},
+
+        # ###Amount
+        # Let's you specify a payment amount.
+        :amount =>  {
+          :total =>  @total_cost ,
+          :currency =>  current_user.currency },
+        :description =>  "This is the payment transaction description." }]})
+
+    # Create Payment and return status
+    if @payment.create
+      render json: {success: true, paymentID: @payment.id}
+    else
+      render json: {success: false}
+    end
+  end
+
+  def execute
+    payment = PayPal::SDK::REST::Payment.find(params[:paymentId])
+
+    if payment.execute(payer_id: params[:PayerID]) 
+      render json: {msg: 'Payment Complete'}
+    else
+      render json: {msg: payment.error}
+    end
   end
 
 end

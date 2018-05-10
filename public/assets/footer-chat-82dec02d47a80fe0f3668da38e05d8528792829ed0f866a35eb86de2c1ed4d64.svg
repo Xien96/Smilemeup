@@ -1,0 +1,26 @@
+<svg width="60" height="60" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Massege</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-11309 -22219)">
+<g id="Massege">
+<g id="Group">
+<g id="Ellipse">
+<use xlink:href="#path0_fill" transform="translate(11309 22219)" fill="#96BF3D"/>
+</g>
+</g>
+<g id="Group 2">
+<g id="Rectangle">
+<use xlink:href="#path1_fill" transform="translate(11326 22239)" fill="#FFFFFF"/>
+</g>
+<g id="Rectangle 2">
+<use xlink:href="#path2_fill" transform="matrix(0.701989 -0.712188 0.701989 0.712188 11340.5 22256.5)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 60 30C 60 46.5685 46.5685 60 30 60C 13.4315 60 0 46.5685 0 30C 0 13.4315 13.4315 0 30 0C 46.5685 0 60 13.4315 60 30Z"/>
+<path id="path1_fill" d="M 0 5C 0 2.23858 2.23858 0 5 0L 22 0C 24.7614 0 27 2.23858 27 5L 27 13.2615C 27 16.0229 24.7614 18.2615 22 18.2615L 5 18.2615C 2.23858 18.2615 0 16.0229 0 13.2615L 0 5Z"/>
+<path id="path2_fill" d="M 0 1C 0 0.447715 0.447715 0 1 0L 3.88148 0C 4.43377 0 4.88148 0.447715 4.88148 1L 4.88148 3.88148C 4.88148 4.43377 4.43377 4.88148 3.88148 4.88148L 1 4.88148C 0.447715 4.88148 0 4.43377 0 3.88148L 0 1Z"/>
+</defs>
+</svg>

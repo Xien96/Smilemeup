@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   protected
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :phone])
-    devise_parameter_sanitizer.permit(:account_update, keys: [:name, :phone])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:name, :phone, :city, :country])
     @active = "account"
   end
 
@@ -32,7 +32,7 @@ class ApplicationController < ActionController::Base
         current_user.update_column(:currency, @currency)
       end
       if @country.present?
-        current_user.update_column(:currency, @currency)
+        current_user.update_column(:country, @country)
 
       end
     end

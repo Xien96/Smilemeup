@@ -1,11 +1,11 @@
 <div class="blog-jumbotron jumbotron">
   <div class="container">
     <div class="blog-page">
-      <h1 class="blog-title">Our <br><strong>BLOG</strong></h1>
+      <h1 class="blog-title"><%= t('blogs.title').html_safe %> </h1>
       <div class="row">
         <div class="col-sm-4">
           <p>
-            Everything related to teeth and beauty, <br>co-created by our partners.
+            <%= t('blogs.desc').html_safe %>
           </p>
         </div>
       </div>
@@ -18,7 +18,8 @@
     <div class="row">
       <div class="col-sm-6 col-sm-push-3">
         <h3>
-           Our top  <strong class="green">viewed blogs</strong>
+          <%= t('blogs.subitlte').html_safe %>
+
         </h3>
       </div>
     </div>
@@ -28,27 +29,39 @@
 <div class="blog-banner">
   <%= image_tag('blog-banner.png') %>
 </div>
-
+<!--
+<div class="container">
 <div class="shadow width-blog-ar">
-  <div class="Blog-artical_img">
-    <%= image_tag('P-Blog01.jpg', class: "P-Blog01") %>
+<div class="row">
+  
+    <div class="col-sm-4">
+    <div class="Blog-artical_img">
+      <%= image_tag('P-Blog01.jpg', class: "P-Blog01") %>
+    </div>
+    </div>
+    <div class="col-sm-8">
+    <div class="contact-blog01">
+      <a href="/blog/5-reasons-why-invest-your-money-in-invisible-teeth-straightening"><h1 class="green head-blog bold">5 reasons why invest your money in invisible teeth straightening?</h1></a>
+      <p class="Paragraph-blog">
+        Over the last 20 years clear invisible aligners have proven to be the best alternative to the fixed orthodontic brackets in so many cases that <br>today almost 80%
+      </p>  
+    </div> 
   </div>
-  <div class="contact-blog01">
-    <a href="/blog/5-reasons-why-invest-your-money-in-invisible-teeth-straightening"><h1 class="green head-blog bold">5 reasons why invest your money in invisible teeth straightening?</h1></a>
-    <p class="Paragraph-blog">
-      Over the last 20 years clear invisible aligners have proven to be the best alternative to the fixed orthodontic brackets in so many cases that <br>today almost 80%
-    </p>  
-  </div> 
-</div>
 
+</div>
+</div>
 <div class="shadow width-blog-ar">
   <div class="Blog-artical_img">
     <%= image_tag('P-Blog02.jpg', class: "P-Blog01") %>
   </div>
   <div class="contact-blog01">
-    <a href="blog/veneers-vswhite-bleaching"><h1 class="green head-blog bold">Veneers vs white bleaching</h1></a>
+    <a href="blog/veneers-vswhite-bleaching">
+      <h1 class="green head-blog bold">
+        <%= t 'blogs.blog2.title'%>
+      </h1>
+    </a>
     <p class="Paragraph-blog">
-      You wish to straighten your teeth or close gaps? Without traditional braces? You prefer to pay less for a high-quality treatment? Then you should choose our invisible, discreet aligner "Clear Up"
+      <%= t 'blogs.blog2.desc'%>
     </p>  
   </div> 
 </div>
@@ -58,9 +71,13 @@
     <%= image_tag('P-Blog03.jpg', class: "P-Blog01") %>
   </div>
   <div class="contact-blog01">
-    <a href="/blog/Clear-braces-VS-metal-braces"><h1 class="green head-blog bold">Clear braces VS metal braces </h1></a>
+    <a href="/blog/Clear-braces-VS-metal-braces">
+      <h1 class="green head-blog bold">
+        <%= t 'blogs.blog3.title'%>
+      </h1>
+    </a>
     <p class="Paragraph-blog">
-      You wish to straighten your teeth or close gaps? Without traditional braces? You prefer to pay less for a high-quality treatment? Then you should choose our invisible, discreet aligner "Clear Up"
+      <%= t 'blogs.blog3.desc'%>
     </p>  
   </div> 
 </div>
@@ -70,9 +87,57 @@
     <%= image_tag('P-Blog04.jpg', class: "P-Blog01") %>
   </div>
   <div class="contact-blog01">
-    <a href="/blog/What-to-eat-after-veneers"><h1 class="green head-blog bold">What to eat after veneers</h1></a>
+    <a href="/blog/What-to-eat-after-veneers">
+      <h1 class="green head-blog bold">
+        <%= t 'blogs.blog4.title'%>
+
+      </h1>
+    </a>
     <p class="Paragraph-blog">
-      You wish to straighten your teeth or close gaps? Without traditional braces? You prefer to pay less for a high-quality treatment? Then you should choose our invisible, discreet aligner "Clear Up"
+      <%= t 'blogs.blog4.desc'%>
     </p>  
   </div> 
 </div>
+
+</div>
+
+-->
+
+
+<!-- start Our Blog ost -->
+
+<div class="our-blog-posts">
+
+  <div class="container over-flow-hidden">
+    <div class="row">
+      <div class="all-blog">
+        
+        <div class="col-sm-6 col-xs-12">
+          <div class="post-image">
+          <%= image_tag('P-Blog01.jpg', class: "img-responsive post-image" ) %>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-xs-12">
+          <div class="post-content text-center">
+            <a href="/blog/5-reasons-why-invest-your-money-in-invisible-teeth-straightening" class="post-heading green">
+              <h2 class="">
+                5-reasons-why-invest-your-money-in-invisible-teeth-straightening
+              </h2>
+            </a>
+            
+            <p class="post-description">
+              Over the last 20 years clear invisible aligners have proven to be the best alternative to the fixed orthodontic brackets in so many cases that today almost 80%
+            </p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- End Our Blog post -->
+
+
