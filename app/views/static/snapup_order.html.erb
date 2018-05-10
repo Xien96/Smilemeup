@@ -3,14 +3,14 @@
   <div class="container text-center">
     <div class="">
       <h1 class="slogan-title snap-overview-head">
-        Snap Up <strong>Veneers</strong><br>
+        Snap Up <strong><%= t('products.veneers')%> Veneers</strong><br>
         Tailor your perfect smile.
       </h1>
 
       <div class="row">
         <div class="col-sm-6 col-sm-push-3">
           <p class="snap-overview-des">
-            The Snap Up is custom produced to your teeth upon the teeth impression you will make at home.
+            Snap Up <%= t('products.snap_up.order_desc')%>
           </p>
         </div>
       </div>
@@ -21,8 +21,12 @@
 <div class="container product">
   
     <div class="text-center">
-      <h3>Choose one only of <strong class="green">the<br> awesome options below</strong></h3>
-      <p class="text-midium snap-order-padding">Please note that the SNAP UP is always provided for both upper and lower teeth<br> together for a fixed price of 890€ to guarantee the best smile delivered from <br>Smile Me Up.</p>
+      <h3><%= t('products.snap_up.order.title1')%> <br>
+        <strong class="green"><%= t('products.snap_up.order.title2')%> </strong>
+      </h3>
+      <p class="text-midium snap-order-padding"> <%= t('products.snap_up.order.desc').html_safe %>
+
+      </p>
 
    
   </div>
@@ -46,27 +50,27 @@
   <div class="row text-center">
     <div class="col-sm-3 product-item">
       <%= image_tag('products/hollywood.png') %>
-      <h3 class="pro-item-heading">Hollywood smile</h3>
-      <p class="pro-item-des">(The typical Hollywood smile)</p>
-      <button type="button" class="btn btn-lg btn-green btn-hover" data-toggle="modal" data-target="#hollywoodModal">ADD TO CART</button>
+      <h3 class="pro-item-heading"><%= t('products.snap_up.styles.title1')%>  </h3>
+      <p class="pro-item-des">(<%= t('products.snap_up.styles.desc1')%>)</p>
+      <button type="button" class="btn btn-lg btn-green btn-hover" data-toggle="modal" data-target="#hollywoodModal"><%= t('products.add_to_card')%></button>
     </div>
     <div class="col-sm-3 product-item">
       <%= image_tag('products/natural.png') %>
-      <h3 class="pro-item-heading">Natural Shape</h3>
-      <p class="pro-item-des">(The current shape of your teeth)</p>
-      <button type="button" class="btn btn-lg btn-green btn-hover" data-toggle="modal" data-target="#naturalModal">ADD TO CART</button>
+      <h3 class="pro-item-heading"><%= t('products.snap_up.styles.title2')%> </h3>
+      <p class="pro-item-des">(<%= t('products.snap_up.styles.desc2')%> )</p>
+      <button type="button" class="btn btn-lg btn-green btn-hover" data-toggle="modal" data-target="#naturalModal"><%= t('products.add_to_card')%></button>
     </div>
     <div class="col-sm-3 product-item">
       <%= image_tag('products/sharp.png') %>
-      <h3 class="pro-item-heading">Sharp edges</h3>
-      <p class="pro-item-des">(recommended for male customers)</p>
-      <button type="button" class="btn btn-lg btn-green btn-hover" data-toggle="modal" data-target="#sharpModal">ADD TO CART</button>
+      <h3 class="pro-item-heading"><%= t('products.snap_up.styles.title3')%> </h3>
+      <p class="pro-item-des">(<%= t('products.snap_up.styles.desc3')%>)</p>
+      <button type="button" class="btn btn-lg btn-green btn-hover" data-toggle="modal" data-target="#sharpModal"><%= t('products.add_to_card')%></button>
     </div>
     <div class="col-sm-3 product-item">
       <%= image_tag('products/soft.png') %>
-      <h3 class="pro-item-heading">Soft edges</h3>
-      <p class="pro-item-des">(recommended for women)</p>
-      <button type="button" class="btn btn-lg btn-green btn-hover" data-toggle="modal" data-target="#softModal">ADD TO CART</button>
+      <h3 class="pro-item-heading"><%= t('products.snap_up.styles.title4')%> </h3>
+      <p class="pro-item-des">(<%= t('products.snap_up.styles.desc4')%>)</p>
+      <button type="button" class="btn btn-lg btn-green btn-hover" data-toggle="modal" data-target="#softModal"><%= t('products.add_to_card')%></button>
     </div>
   </div>
 

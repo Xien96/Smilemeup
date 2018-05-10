@@ -259,6 +259,9 @@ en:
       placeholder6: 'Jack Smith'
       submit: 'Submit'
   why: 'Why'
+  upload: 'Upload'
+  next: 'Next'
+  back: 'Back'
   user:
     edit:
       submit: 'Update Your Profile'
@@ -307,3 +310,156 @@ en:
       profile: 'Profile'
       orders: 'Orders'
       messages: 'Messages'
+  products:
+    our: 'Our'
+    product_overview: 'Product OverView'
+    products: 'Products'
+    select_your_smile: 'Select Your Smile'
+    smiling_solution: 'Smiling Solution'
+    what_is: 'What is '
+    welcome: 'Welcome'
+    new_smile: ' New Smile'
+    steps_title1: '4 simple steps to'
+    steps_title2: 'your beautiful straight white teeth'
+    step1: 'Choose your favorite smile design'
+    step2: ' Order and pay your'
+    step3: 'Take your impressions with our home'
+    see_more: 'See More'
+    what_desc: 'Innovative. removable, longlasting, natural-looking veneers -  it is the fastest way to your ideal smile <br>- Through our Snap up we have ultimately managed to revolutionarize the hollywood smiles or <br>removable veneers concept to give you the best instant smile on the market'
+    inspiration: 'Inspiration'
+    inspiration_desc: 'Get inspired by some of our before and after pictures.'
+    veneers: 'Veneers'
+    add_to_card: 'ADD TO CART '
+    some_of_our: 'Some of our'
+    thanks: 'Thanks'
+    done_here: 'You Are Done Here '
+    am_candidate: 'Am I a <strong class="green">candidate?</strong>'
+    am_candidate_desc: "At Smile Me Up we assess every candidate's separate case to make sure the chosen product will be usable by the user ,and will create effective results.'"
+    take_30_seconds: 'This will take less than 30 seconds!'
+    upload_images: 'Please upload the following pictures'
+    left_side_view: 'Left Side View'
+    right_side_view: 'Right Side View'
+    open_mouth_from_above: 'Open Mouth From Above'
+    open_mouth_from_below: 'Open Mouth From Below'
+    impression:
+      shop: 'Shop'
+      desc: 'You wish to straighten your teeth or close gaps? Without traditional braces? You prefer to pay less for a high-quality treatment? Then you should choose our invisible, discreet aligner "Clear Up" '
+      start_journey: 'Start Your Journey'
+      journey_desc: 'Before purchasing the CLEAR UP aligners, you should of course get to know how we can help you - our exeprts review every case!'
+      step1: 'Your journey starts by ordering an impression kit and taking the impressions at home. We will provide you with material and an instruction video.'
+      step2: 'After we have received your impressions back, our experts will analyse your case. There are some difficult displacements, which our system cannot treat. If your case is too difficult, we will return you the amount you paid. For all other cases, our experts will create a 3d simulation, which will present you, how your teeth will move during the treatment.'
+      step3: 'Order your home impression kit now and be the next happy smiling customer!'
+      title: 'IMRESSION kIT'
+      title_desc: 'The typical Hollywood smile'
+    clear_up:
+      desc: 'You wish to straighten your teeth or close gaps ? Without a traditional braces ? You prefer to pay less for a high-quality treatment ? Then you should choose our invisible, discreet aligners "CLEAR UP". Find out more by clicking on "start now".'
+      start_now: 'Start Now'
+      full_desc: 'You wish to straighten your teeth or close gaps? Without traditional braces? You prefer to pay less for a high-quality treatment? Then you should choose our invisible, discreet aligner "Clear Up"'
+      what_desc: 'Custom-made invisible aligners that efficiently move teeth according to a professional digital plan.'
+      title1: 'Simple <strong>and efficient.</strong>'
+      title2: 'Appealing and <strong>CLEAR</strong>'
+      title3: 'Affordable'
+      desc1: 'CLEAR UP aligners have never been simpler than this. CLEAR UP is extremely easy to use and can be removed anytimes while functioning as efficient as traditional braces.'
+      desc2: 'Aligners can now be glamorous! Our CLEAR UP is almost invisible!'
+      desc3: 'Straighten your teeth with the CLEAR UP aligners and pay 75% less than you would pay at your orthodontist.'
+      steps:
+        title: '5 simple steps to get<br><span class="green"><strong>an awesome smile !</strong></span>'
+        step1: 'Order your impression kit and take your impressions with our help at home.'
+        step2: 'Do your teeth impressions at home or at a doctor nearby.'
+        step3: 'Get a professional 3d simulation, showing your treatment and final results. Should we find out that your case is too difficult for our system, we will refund you.'
+        step4: 'You will receive your aligner set within 2-3 weeks.'
+        step5: 'After you finish wearing all your aligners you will get a free retainer, which you should wear at least 6-12 months to keep your amazing smile.'
+    clear_up_shop:
+      step1: 'Place your order and be the next happy smiling customer!'
+      step2: ''
+      step3: ''
+    snap_up:
+      testimonials: 'Some of our <strong class="green"><br>testimonials</strong>'
+      desc: 'Our removable instant veneers snap easily on your teeth, they cover missing, crooked or discolored teeth. SNAP UP clips on your teeth without any adhesives or any teeth modifications.'
+      order_now: 'Order Now'
+      order_statement: 'Order your SNAP UP now!'
+      order_statement_desc: 'Not sure yet whether the Snap Up is the best choice  for<br> your concern, send us a request by clicking on the  button'
+      title1: 'Instant New Smile'
+      title2: 'Customized'
+      title3: 'Longlasting <strong> Comfort</strong> '
+      title4: 'Affordable'
+      desc1: 'Just clip it on your teeth and show your most beautiful smile -  for daily or <br>occasional use.'
+      desc2: 'Simply select the teeth shade and design of your Snap Up. We produce your Snap Up tailored to your <br>teeth perfectly.'
+      desc3: 'We use highest quality german materials, some clients reported to use it over 4 and 5 years long.'
+      desc4: 'Porcelain veneers for over 10,000€ or a Snap Up <br>for only 890€?'
+      order_desc: 'is custom produced to your teeth upon the teeth impression you will make at home.'
+      order:
+        title1: 'Choose one only of '
+        title2: 'the awesome options below'
+        desc: ' Please note that the SNAP UP is always provided for both upper and lower teeth<br> together for a fixed price of 890€ to guarantee the best smile delivered from <br>Smile Me Up .'
+      styles:
+        title1: 'Hollywood smile'
+        title2: 'Natural Shape'
+        title3: 'Sharp edges'
+        title4: 'Soft edges'
+        desc1: 'The typical Hollywood smile'
+        desc2: 'The current shape of your teeth'
+        desc3: 'recommended for male customers'
+        desc4: 'recommended for women'
+  blogs:
+    title: 'Our <br><strong>BLOG</strong>'
+    desc: 'Everything related to teeth and beauty, <br>co-created by our partners.'
+    subitlte: 'Our top  <strong class="green">viewed blogs</strong>'
+    blog1:
+      title: '5 reasons why invest your money in invisible teeth straightening?'
+      desc: 'Over the last 20 years clear invisible aligners have proven to be the best alternative to the fixed orthodontic brackets in so many cases that <br>today almost 80%'
+      body:
+        sentence1: 'Over the last 20 years clear invisible aligners have proven to be the best alternative to the fixed
+                            orthodontic brackets in so many cases that today almost 80% of the teeth straightening problems could be
+                            solved by clear invisible aligners.
+                            The acceptance and demand of this treatment modality has been <br>increasing so fast throughout the years tot
+                            he extent that some practices provide exclusively only clear invisible aligners.'
+        sentence2: 'Unlike what most of your friends or family or even yourself who did fixed orthodontic brackets or braces in
+                            the past, you won’t have this irritating food clogging between the brackets and wire. You won’t have food
+                            sticking on the brackets.
+                            Clear aligners make it easy to clean your teeth and maintain a top oral hygiene.'
+        sentence3: 'Clear aligners are almost transparent and make living normally while having your teeth move a normal life
+                            style. Most people won’t even realise that you have something on your teeth.'
+        sentence4: 'Clear aligners are getting more affordable than ever before, who would have thought that straightening teeth
+                            could start from only 950€ ? We made many people’s dream come true and made it easier for everyone to have
+                            their amazing smile they always dreamt about.'
+        sentence5: ' In our open dynamic world aesthetics has been getting so close to our self esteem and confidence we relate
+                            mostly how we look to our levels of confidence. A straight smile is unbeatable.'
+        subtitle1: 'Effective'
+        subtitle2: 'Hygenic'
+        subtitle3: 'Aesthetic'
+        subtitle4: 'Affordable'
+        subtitle5: 'Confidence'
+    blog2:
+      title: 'Veneers vs white bleaching'
+      desc: 'You wish to straighten your teeth or close gaps? Without traditional braces? You prefer to pay less for a high-quality treatment? Then you should choose our invisible, discreet aligner "Clear Up"'
+      body:
+        sentence1: "tudies have confirmed that a white and evenly spaced set of teeth makes people seem more attractive, Because teeth are the human equivalent of a peacock’s tail - a sign of health and genetic quality designed to help choose a mate.
+                        And Let's face it ,everyone wants to have flawless white teeth with an impeccable smile and which better way to do so other than Veneers or white bleaching ; they are the most common , easy and accurate ways to whiten your teeth. Which lands a big question mark in the minds of our users “which one is better”? Bleaching takes very little time (55-65 minutes a session but is a little bit irritating to sensitive teeth , on the other hand veneers are more durable and are carefully customized to match each individuals needs. Now let's put an end to this ongoing debate and decide which is better for you."
+        sentence2: 'Here are the important factors to consider while choosing your own method'
+        sentence3: 'First off, white bleaching has the speed factor while taking about an hour only to complete, and can be tailored on the shade , degree or whitening you want to achieve. In some cases a one single treatment may be all that it takes to get the result you want.The downside of bleaching is that there are various limitations as Tooth whitening tends to be effective for people who have yellow shaded teeth, but less effective for people with brown or gray shades. Also, the treatment only works on natural teeth, but will not work on crowns, fillings, or bonding materials.'
+        sentence4: 'As we mentioned earlier Veneers can be fully customized to match each individuals teeth meaning that you can actually choose the shade and tone you want your teeth to eventually have. Tooth whitening using bleach does not give you this kind of flexibility also Dental veneers are very stain resistant, meaning that the foods and drinks that will cause your tooth whitening treatment to fade will not affect your dental veneers.
+                        As popular and widely spread veneers are , they do have a significant downside , which is the cost of dental veneers is relatively high ,and in the rare event ,where the veneers are damaged, repairing the damage<br>can further add to the cost.'
+    blog3:
+      title: 'Clear braces VS metal braces'
+      desc: 'You wish to straighten your teeth or close gaps? Without traditional braces? You prefer to pay less for a high-quality treatment? Then you should choose our invisible, discreet aligner "Clear Up"'
+      body:
+        subtitle1: 'Metal Braces'
+        subtitle2: 'Clear braces'
+        sentence1: 'We have all heard the term “braces” , and we certainly have a good idea about the metal wire that applies pressure to move the teeth <br>for a more symmetric smile but as dental seneice progresses so does our methods , braces done a couple of years ago are different from nowadays , for example metal braces are significantly more comfortable than before , also differences are beyond only confort nearly every aspect of our braces has improved here are the details.'
+        sentence2: 'Metal braces are getting a lot more comfortable than they used to be, which also makes them an excellent choice for not only teens but also for adults adults who are looking to straighten their teeth. One of the biggest advantages of getting metal braces is their cost compared to other common straightening treatments is relatively low. This makes them a popular alternative for those who are on a tight budget. It is also possible to start your orthodontics treatment using metal braces first to perform the complex tooth alignment and then switch to clear , white braces to bring the teeth into their final stage.'
+        sentence3: 'Clear Braces or Ceramic braces are probably the most successful and popular teeth straightening system available . The aligners are composed of clear plastic, which is not easy to see, also they are easy to remove while drinking, eating. But like traditional braces, they are used by various doctors to help align and straighten out the teeth.'
+    blog4:
+      title: 'What to eat after veneers'
+      desc: 'You wish to straighten your teeth or close gaps? Without traditional braces? You prefer to pay less for a high-quality treatment? Then you should choose our invisible, discreet aligner "Clear Up"'
+      body:
+        subtitle1: "Veneers are thin shells that are bonded to the front surface of your teeth to imitate natural teeth looks and improve the shape, color, or appearance of your teeth.
+                        Veneers can instantly transform your smile, but they do require a additional care as they cannot repair themselves like teeth do. 
+                        One of the most important adjustments to make is changing your eating habits. Don't get me wrong , veneers are not fragile they can even be as strong as your teeth but they still need special care , so let's discuss the eating habits you should avoid shell we?"
+        subtitle2: 'Avoid hard foods:'
+        subtitle3: 'peanuts, hard candy, chicken ribs, bones, etc (If you must eat hard food, chew with your back teeth)'
+        subtitle4: 'Avoid smoking'
+        subtitle5: 'Avoid Brushing your teeth with a hard toothbrushes'
+        subtitle6: 'Biting your fingernails'
+        subtitle7: 'Biting toothpicks or other hard items that can displace your veneers'
+        subtitle8: 'Following these previous tips will help you enjoy the long-lasting effects of dental veneers followed by a glamorous smile.'

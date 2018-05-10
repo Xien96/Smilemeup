@@ -3,7 +3,10 @@
     <div class="slogan slogan-padding">
       <div class="row">
         <div class="col-sm-3">
-          <h1 class="slogan-title aligns-product"><span class="aligns-span">Our</span> <br><strong><span>Products</span></span></strong></h1>  
+          <h1 class="slogan-title aligns-product">
+            <span class="aligns-span"> <%= t 'products.our'%></span>
+            <br><strong><span><%= t 'products.products'%></span></strong>
+          </h1>
         </div>
       </div>
     </div>
@@ -12,7 +15,7 @@
 
 <div class="home container padding" style="margin-bottom: 2em">
   <div class="text-center">
-    <h3>Select Your Ideal <strong class="green">Smiling Solution</strong></h3>
+    <h3><%= t 'products.select_your_smile'%> <strong class="green"><%= t 'products.smiling_solution'%></strong></h3>
   </div>
 </div>
 
@@ -24,11 +27,13 @@
         <div class="col-sm-4">
           <h1 class="extra-bold">CLEAR UP</h1>
           <p>
-           You wish to straighten your teeth or close gaps ? Without a traditional braces ? You prefer to pay less for a high-quality treatment ? Then you should choose our invisible, discreet aligners "CLEAR UP".     
-            Find out more by clicking on "start now".
+            <%= t 'products.clear_up.desc'%>
+
           </p>
           <p>
-            <a class="btn btn-default btn-lg" href="/products/clearup" role="button">Start Now</a>
+            <a class="btn btn-default btn-lg" href="/products/clearup" role="button">
+              <%= t 'products.clear_up.start_now'%>
+            </a>
           </p>
           </div>
         </div>
@@ -44,10 +49,11 @@
         <div class="col-sm-4">
           <h1 class="extra-bold">SNAP UP</h1>
           <p>
-            Our removable instant veneers snap easily on your teeth, they cover missing, crooked or discolored teeth. SNAP UP clips on your teeth without any adhesives or <br>any teeth modifications.
+            <%= t 'products.snap_up.desc'%>
+
           </p>
           <p>
-            <a class="btn btn-default btn-lg" href="/products/snapup" role="button">Order Now</a>
+            <a class="btn btn-default btn-lg" href="/products/snapup" role="button"><%= t 'products.snap_up.order_now'%></a>
           </p>
         </div>
       </div>
