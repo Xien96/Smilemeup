@@ -6,14 +6,14 @@
 #   movies = Movie.create!([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create!(name: 'Luke', movie: movies.first)
 
-Product.create!(price: 800, name: "snap_up")
-Product.create!(price: 900, name: "snap_down")
-Product.create!(price: 1000, name: "snap_both")
+Product.create!( name: "snap_up")
+Product.create!( name: "snap_down")
+Product.create!( name: "snap_both")
 
 
-Product.create!(price: 600, name: "clear_up")
-Product.create!(price: 700, name: "clear_down")
-Product.create!(price: 800, name: "clear_both")
+Product.create!( name: "clear_up")
+Product.create!( name: "clear_down")
+Product.create!( name: "clear_both")
 
 
 Style.create!(name: "hollywood", tagline: "(The typical Hollywood smile)")
