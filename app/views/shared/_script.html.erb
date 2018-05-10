@@ -2,9 +2,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" type="text/javascript" charset="utf-8" async defer></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-
 
 <script>
 $(document).ready(function() {
@@ -197,66 +196,46 @@ $(document).ready(function() {
 
 
   /*var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 3,
-    spaceBetween: 20,
-    freeMode: true,
-    loop: true,
-    pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-    },
-  });
-})
-
-
-/*From Zain*/ 
-
-
-
-
-
-/*
-load more
-*/
-
-$('.load-more').click(function(){
-  $('.hide-box').toggle();
-});
-
-$('.load-more-videos').click(function(){
-  $('.hide-box').toggle();
-});
-
-$(".navbar-toggle").click(function() {
-  $(this).children().toggleClass('open');
-});
-
-/*
-load more
-*/
-/* cart-2*/
-
-  $('.cart-item').click(function(e) {
-    console.log(e);
-    var target = e["currentTarget"]["id"]
-    
-    var obj = $("#".concat(target))
-    if (obj.hasClass('active')) {
-      obj.removeClass('')
-    } else {
-      obj.addClass('active')
-    }
+      slidesPerView: 3,
+      spaceBetween: 20,
+      freeMode: true,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
   })
-/* end cart-2*/
-/*show cridet card box*/
-$('.show-credit-box').click(function(){
-  $('.credit-card-box').toggle();
-});
-/*end show credit card box*/
-/*paymentform*/
+/*
+load more
+*/
 
-var $form = $('#payment-form');
-$form.on('submit', payWithStripe);
+  $('.load-more').click(function(){
+    $('.box-hidden').toggle();
+  });
+
+  $(".navbar-toggle").click(function() {
+    $(this).children().toggleClass('open');
+  });
+
+/*
+load more
+*/
+ $(function(){ 
+     var navMain = $("#nav-main");
+     navMain.on("click", "a", null, function () {
+         navMain.collapse('hide');
+     });
+ });
+
+ /*show cridet card box*/
+  $('.show-credit-box').click(function(){
+    $('.credit-card-box').toggle();
+  });
+/*end show credit card box*/
+
+  var $form = $('#payment-form');
+  $form.on('submit', payWithStripe);
 
 /* If you're using Stripe for payments */
 function payWithStripe(e) {
@@ -311,6 +290,7 @@ function payWithStripe(e) {
         }
     });
 }
+
 /* Fancy restrictive input formatting via jQuery.payment library*/
 
 $('input[name=cardNumber]').payment('formatCardNumber');
@@ -369,6 +349,7 @@ paymentFormReady = function() {
     }
 }
 
+/*before and after*/
 $form.find('[type=submit]').prop('disabled', true);
 var readyInterval = setInterval(function() {
     if (paymentFormReady()) {
@@ -412,16 +393,10 @@ var readyInterval = setInterval(function() {
       function moveDivisor1() { 
       divisor.style.width = slider.value+"%";
       }
-    
+/*before and after*/
 
-/*
-https://goo.gl/PLbrBK
-*/
+  
 
-/*delete item from cart*/
-function one(obj){
-    var item = $(obj).prev().andSelf().remove();    
-}
 
 
 
