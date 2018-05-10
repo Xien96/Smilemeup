@@ -1,11 +1,4 @@
 
-/*------------------------------------------------------------------------------------------------------------*/
-/*Our overflow html hidden*/
-html
-  overflow-x: hidden
-
-
-/*------------------------------------------------------------------------------------------------------------*/
 
 .shadow
   -webkit-box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.1), 0 2px 30px 0 rgba(0, 0, 0, 0.1)
@@ -1115,6 +1108,14 @@ hr
     .downloads
       .google-play-image
         margin-bottom: 20px
+@media(max-width: 767px)
+  .home-app
+    .app-info
+      margin-top: -100px
+    .phone-picture
+      height: 22em !important
+      top: -4em !important
+      left: 40px       
 
 /*27 april edit*/
 .center-div
@@ -1148,11 +1149,13 @@ hr
       .aligns-sign
         margin: 10px auto
         border: 1px solid #96bf3d
-        
+   
+                
 
 @media(max-width: 1199px)
   .over-flow-shadow
     overflow: hidden
+    margin-top: 20px
     .home-products-item
       text-align: center
       width: 375px
@@ -2058,43 +2061,38 @@ input[type=range]
 
 /*end cart02*/
 /*End Clear Up View page*/
-
-/*start cart form for mobile*/
+/*Start Privacy page*/
+.privacy-jumbotron
+  .slogan.slogan-privcy
+    p
+      margin-top: 4em
+      margin-left: -2em
+       
+@media(max-width: 991px)
+  .privacy-jumbotron
+    .slogan.slogan-privcy
+      p
+        font-size: 1em
 @media(max-width: 767px)
-  .cart-form
-    .modal
-      .modal-dialog
-        max-width: 350px
-        .modal-content
-          width: 350px
-          height: 700px
-          .modal-body
-            .form-group
-              margin: 0
-              .control-label
-                width: 78px
-              .form-control
-                width: 198px
-              .cart-country-dropdown
-                .country-drop-button
-                  width: 150px
-              .name-image1,.name-image2
-                left: 150px
-                top: 55px
-              .additional-height
-                height: 80px !important
-              .name-image2
-                top: 127px
-              .additional-location
-                left: 150px
-                top: 490px
+  .privacy-jumbotron
+    .slogan.slogan-privcy
+      padding-top: 4em
+      padding-left: 2em
+      .aligns-faq
+        font-size: 25px
+      p
+        margin-top: 2em
+        margin-left: -2em
+        width: 150px
+        font-size: .75em
 
-              
-
-                
-                
+/*End Privacy page*/
 
 
-/*End cart form for mobile*/
+/*------------------------------------------------------------------------------------------------------------*/
+/*Our overflow html hidden*/
+html
+  overflow-x: hidden
 
 
+/*------------------------------------------------------------------------------------------------------------*/
