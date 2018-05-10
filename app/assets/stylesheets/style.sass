@@ -1,11 +1,4 @@
 
-/*------------------------------------------------------------------------------------------------------------*/
-/*Our overflow html hidden*/
-html
-  overflow-x: hidden
-
-
-/*------------------------------------------------------------------------------------------------------------*/
 
 .shadow
   -webkit-box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.1), 0 2px 30px 0 rgba(0, 0, 0, 0.1)
@@ -1068,8 +1061,8 @@ hr
 /*Home Page Media query*/
 @media(min-width: 768px)
   .header-button
-    margin-right: 50px
-
+    margin-right: 70px
+  
 
 
 @media(max-width: 767px)
@@ -1095,6 +1088,8 @@ hr
           width: 140px
         .second
           margin-left: 0 !important
+  #home-mouse
+    display: none
 @media(min-width: 768px) and (max-width: 1170px)
   .min-height-shadow
     min-height: 620px
@@ -1113,6 +1108,14 @@ hr
     .downloads
       .google-play-image
         margin-bottom: 20px
+@media(max-width: 767px)
+  .home-app
+    .app-info
+      margin-top: -100px
+    .phone-picture
+      height: 22em !important
+      top: -4em !important
+      left: 40px       
 
 /*27 april edit*/
 .center-div
@@ -1146,11 +1149,13 @@ hr
       .aligns-sign
         margin: 10px auto
         border: 1px solid #96bf3d
-        
+   
+                
 
 @media(max-width: 1199px)
   .over-flow-shadow
     overflow: hidden
+    margin-top: 20px
     .home-products-item
       text-align: center
       width: 375px
@@ -1708,7 +1713,7 @@ input[type=range]
   -webkit-appearance: none
   -moz-appearance: none
   position: relative
-  top: -100px
+  top: -150px
   left: -7.5px
   background-color: transparent
   width: 105%
@@ -1727,9 +1732,9 @@ input[type=range]
   &::-webkit-slider-thumb
     -webkit-appearance: none
     width: 25px
-    height: 55px
-    background: #96bf3d
-    /*background-image: url(Hand.png)*/
+    height: 150px 
+    background-image: url('Hand.png')
+    cursor: pointer
     border-radius: 20px
   &::-moz-range-thumb
     -moz-appearance: none
@@ -1889,4 +1894,205 @@ input[type=range]
         margin-top: 10px
 
 
-      
+/*Start Our Bolg Style*/
+
+.our-blog-posts
+  margin-top: 50px
+  .all-blog
+    box-shadow: 0 0 0 0 rgba(0,0,0,.1), 0 2px 30px 0 rgba(0,0,0,.1)
+    height: 400px
+    overflow: hidden
+    .post-image
+      margin-left: -15px
+      height: 400px
+      .post-image
+        height: 100%
+
+@media(max-width: 767px)
+  .our-blog-posts
+    margin-top: 50px
+    .all-blog
+      height: 600px
+      overflow: hidden
+      .post-image
+        margin-left: 0
+        height: auto
+        .post-image
+          height: auto
+
+
+/*Start Our Bolg Style*/
+
+/*Start legal page*/
+.legal-jumbotron
+  .slogan.legal-slogan
+    p
+      margin-top: 4em
+      margin-left: -2em
+@media(max-width: 767px)
+  .legal-jumbotron
+    .slogan.legal-slogan
+      padding-top: 6em
+      padding-left: 3em
+      .aligns-faq
+        font-size: 25px
+      p
+        margin-top: 2em
+        margin-left: -2em 
+        width: 200px
+        font-size: 1em
+
+/*End legal page*/
+
+/*Start Our  distributors page*/
+@media(max-width: 767px)
+  .distributors-jumbotron
+    .slogan.distributors-slogan
+      padding-top: 0em
+      padding-left: 0em
+      .slogan-title
+        font-size: 25px
+      p
+        width: 200px
+        font-size: 1em
+/* start Most Our main style*/
+  .size-25px
+    font-size: 25px !important
+/* end Most Our main style*/
+/*End Our  distributors page*/
+
+/*Snap Up over view page*/
+
+@media(max-width: 991px)
+  .product
+    .snap-order-padding
+      font-size: 15px
+      padding: 10px 0
+
+@media(max-width: 767px)
+  .product-snapup
+    .slogan-title.snap-overview-head
+      font-size: 25px !important
+    .snap-overview-des
+      font-size: 15px !important
+  .product
+    .size-25px
+      font-size: 25px !important
+    .snap-order-padding
+      font-size: 15px
+      padding: 10px 0
+  .product-item
+    margin-bottom: 20px
+
+
+@media(max-width: 1199px)
+  .our-add-cart
+    .pro-item-des
+      font-size: 12px
+
+@media(max-width: 991px)
+  .our-add-cart
+    .product-item
+      .img-responsive
+        margin: auto
+      .pro-item-des
+        font-size: 9px
+      .pro-item-heading
+        font-size: 20px
+      .btn.btn-add-padding
+        padding: 10px 20px !important
+
+@media(max-width: 767px)
+  .our-add-cart
+  .product-item
+    .img-responsive
+      margin: auto
+
+/*start new Page of sign in */
+
+@media(max-width: 991px)
+  .devise
+    .devise-img
+      background-size: cover
+      height: 680px
+
+
+/*End new Page of sign in */
+
+/*start new Page of sign up */
+/*Mixed Class between sign in and sign up*/
+@media(max-width: 767px)
+  .devise
+    .info.info-sign
+      right: 0
+      left: 0
+
+
+/*End new Page of sign up */
+/*End new Page of sign up */
+
+/*Start Clear Up over view page*/
+@media(max-width: 767px)
+  .product-clearup
+    .clearup-page
+      p
+        padding-top: 0em
+        font-size: 15px
+      .clearup-title
+        font-size: 25px
+  .home 
+    .steps-slogan
+      h3,p
+        text-align: center
+
+/*cart02*/
+.cart1
+        font-family: Open Sans
+        font-style: normal
+        font-weight: bold
+        line-height: 41px
+        font-size: 25px
+        color: #828282
+        padding-left: 115px
+
+.animation
+        width: 150px
+        height: 150px
+
+/*end cart02*/
+/*End Clear Up View page*/
+/*Start Privacy page*/
+.privacy-jumbotron
+  .slogan.slogan-privcy
+    p
+      margin-top: 4em
+      margin-left: -2em
+       
+@media(max-width: 991px)
+  .privacy-jumbotron
+    .slogan.slogan-privcy
+      p
+        font-size: 1em
+@media(max-width: 767px)
+  .privacy-jumbotron
+    .slogan.slogan-privcy
+      padding-top: 4em
+      padding-left: 2em
+      .aligns-faq
+        font-size: 25px
+      p
+        margin-top: 2em
+        margin-left: -2em
+        width: 150px
+        font-size: .75em
+
+/*End Privacy page*/
+
+
+/*------------------------------------------------------------------------------------------------------------*/
+/*Our overflow html hidden*/
+html
+  overflow-x: hidden
+
+
+/*------------------------------------------------------------------------------------------------------------*/
