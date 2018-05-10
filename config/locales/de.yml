@@ -402,3 +402,66 @@ de:
         desc2: 'The current shape of your teeth'
         desc3: 'recommended for male customers'
         desc4: 'recommended for women'
+  blogs:
+    title: 'Our <br><strong>BLOG</strong>'
+    desc: 'Everything related to teeth and beauty, <br>co-created by our partners.'
+    subitlte: 'Our top  <strong class="green">viewed blogs</strong>'
+    blog1:
+      title: '5 reasons why invest your money in invisible teeth straightening?'
+      desc: 'Over the last 20 years clear invisible aligners have proven to be the best alternative to the fixed orthodontic brackets in so many cases that <br>today almost 80%'
+      body:
+        sentence1: 'Over the last 20 years clear invisible aligners have proven to be the best alternative to the fixed
+                            orthodontic brackets in so many cases that today almost 80% of the teeth straightening problems could be
+                            solved by clear invisible aligners.
+                            The acceptance and demand of this treatment modality has been <br>increasing so fast throughout the years tot
+                            he extent that some practices provide exclusively only clear invisible aligners.'
+        sentence2: 'Unlike what most of your friends or family or even yourself who did fixed orthodontic brackets or braces in
+                            the past, you won’t have this irritating food clogging between the brackets and wire. You won’t have food
+                            sticking on the brackets.
+                            Clear aligners make it easy to clean your teeth and maintain a top oral hygiene.'
+        sentence3: 'Clear aligners are almost transparent and make living normally while having your teeth move a normal life
+                            style. Most people won’t even realise that you have something on your teeth.'
+        sentence4: 'Clear aligners are getting more affordable than ever before, who would have thought that straightening teeth
+                            could start from only 950€ ? We made many people’s dream come true and made it easier for everyone to have
+                            their amazing smile they always dreamt about.'
+        sentence5: ' In our open dynamic world aesthetics has been getting so close to our self esteem and confidence we relate
+                            mostly how we look to our levels of confidence. A straight smile is unbeatable.'
+        subtitle1: 'Effective'
+        subtitle2: 'Hygenic'
+        subtitle3: 'Aesthetic'
+        subtitle4: 'Affordable'
+        subtitle5: 'Confidence'
+    blog2:
+      title: 'Veneers vs white bleaching'
+      desc: 'You wish to straighten your teeth or close gaps? Without traditional braces? You prefer to pay less for a high-quality treatment? Then you should choose our invisible, discreet aligner "Clear Up"'
+      body:
+        sentence1: "tudies have confirmed that a white and evenly spaced set of teeth makes people seem more attractive, Because teeth are the human equivalent of a peacock’s tail - a sign of health and genetic quality designed to help choose a mate.
+                        And Let's face it ,everyone wants to have flawless white teeth with an impeccable smile and which better way to do so other than Veneers or white bleaching ; they are the most common , easy and accurate ways to whiten your teeth. Which lands a big question mark in the minds of our users “which one is better”? Bleaching takes very little time (55-65 minutes a session but is a little bit irritating to sensitive teeth , on the other hand veneers are more durable and are carefully customized to match each individuals needs. Now let's put an end to this ongoing debate and decide which is better for you."
+        sentence2: 'Here are the important factors to consider while choosing your own method'
+        sentence3: 'First off, white bleaching has the speed factor while taking about an hour only to complete, and can be tailored on the shade , degree or whitening you want to achieve. In some cases a one single treatment may be all that it takes to get the result you want.The downside of bleaching is that there are various limitations as Tooth whitening tends to be effective for people who have yellow shaded teeth, but less effective for people with brown or gray shades. Also, the treatment only works on natural teeth, but will not work on crowns, fillings, or bonding materials.'
+        sentence4: 'As we mentioned earlier Veneers can be fully customized to match each individuals teeth meaning that you can actually choose the shade and tone you want your teeth to eventually have. Tooth whitening using bleach does not give you this kind of flexibility also Dental veneers are very stain resistant, meaning that the foods and drinks that will cause your tooth whitening treatment to fade will not affect your dental veneers.
+                        As popular and widely spread veneers are , they do have a significant downside , which is the cost of dental veneers is relatively high ,and in the rare event ,where the veneers are damaged, repairing the damage<br>can further add to the cost.'
+    blog3:
+      title: 'Clear braces VS metal braces'
+      desc: 'You wish to straighten your teeth or close gaps? Without traditional braces? You prefer to pay less for a high-quality treatment? Then you should choose our invisible, discreet aligner "Clear Up"'
+      body:
+        subtitle1: 'Metal Braces'
+        subtitle2: 'Clear braces'
+        sentence1: 'We have all heard the term “braces” , and we certainly have a good idea about the metal wire that applies pressure to move the teeth <br>for a more symmetric smile but as dental seneice progresses so does our methods , braces done a couple of years ago are different from nowadays , for example metal braces are significantly more comfortable than before , also differences are beyond only confort nearly every aspect of our braces has improved here are the details.'
+        sentence2: 'Metal braces are getting a lot more comfortable than they used to be, which also makes them an excellent choice for not only teens but also for adults adults who are looking to straighten their teeth. One of the biggest advantages of getting metal braces is their cost compared to other common straightening treatments is relatively low. This makes them a popular alternative for those who are on a tight budget. It is also possible to start your orthodontics treatment using metal braces first to perform the complex tooth alignment and then switch to clear , white braces to bring the teeth into their final stage.'
+        sentence3: 'Clear Braces or Ceramic braces are probably the most successful and popular teeth straightening system available . The aligners are composed of clear plastic, which is not easy to see, also they are easy to remove while drinking, eating. But like traditional braces, they are used by various doctors to help align and straighten out the teeth.'
+    blog4:
+      title: 'What to eat after veneers'
+      desc: 'You wish to straighten your teeth or close gaps? Without traditional braces? You prefer to pay less for a high-quality treatment? Then you should choose our invisible, discreet aligner "Clear Up"'
+      body:
+        subtitle1: "Veneers are thin shells that are bonded to the front surface of your teeth to imitate natural teeth looks and improve the shape, color, or appearance of your teeth.
+                        Veneers can instantly transform your smile, but they do require a additional care as they cannot repair themselves like teeth do. 
+                        One of the most important adjustments to make is changing your eating habits. Don't get me wrong , veneers are not fragile they can even be as strong as your teeth but they still need special care , so let's discuss the eating habits you should avoid shell we?"
+        subtitle2: 'Avoid hard foods:'
+        subtitle3: 'peanuts, hard candy, chicken ribs, bones, etc (If you must eat hard food, chew with your back teeth)'
+        subtitle4: 'Avoid smoking'
+        subtitle5: 'Avoid Brushing your teeth with a hard toothbrushes'
+        subtitle6: 'Biting your fingernails'
+        subtitle7: 'Biting toothpicks or other hard items that can displace your veneers'
+        subtitle8: 'Following these previous tips will help you enjoy the long-lasting effects of dental veneers followed by a glamorous smile.'
+
