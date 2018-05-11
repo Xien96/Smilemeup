@@ -37,7 +37,7 @@ class User < ApplicationRecord
   has_many :user_products, dependent: :destroy
   has_many :products, through: :user_products
 
-  after_create_commit :create_stripe_user
+  after_create :create_stripe_user
 
   def create_stripe_user
     customer = Stripe::Customer.create(

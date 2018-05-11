@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+</head>
+<body>
 <div class="nav-cover">
 </div>
 
@@ -135,8 +142,8 @@
                       <%= Style.find_by(name: ci['style']).tagline %>
                     </td>
                     <td><%= ci['quantity'].to_i %></td>
-                    <td><%= number_to_currency(Product.find_by(name: ci['product']).product_prices.find_by(:currency => current_user.currency).price / 100) %> </td>
-                    <td><%= number_to_currency(Product.find_by(name: ci['product']).product_prices.find_by(:currency => current_user.currency).price / 100 * ci['quantity'].to_i) %></td>
+                    <td><%= number_to_currency(Product.find_by(name: ci['product']).product_prices.find_by(:currency => @currency).price ) %> </td>
+                    <td><%= number_to_currency(Product.find_by(name: ci['product']).product_prices.find_by(:currency => @currency).price  * ci['quantity'].to_i) %></td>
                   </tr>
                   <% end %>
                 </tbody>
@@ -176,7 +183,52 @@
               </label>
               </div>
               <div class="col-md-8 col-sm-8 product-text">
-              <div class="choose-heading"><%= image_tag('paypal.svg') %></div>
+              <div class="choose-heading">
+                <div id="paypal-button-container"></div>
+
+              <script>
+                  paypal.Button.render({
+
+                      env: 'sandbox', // sandbox | production
+
+                      // Show the buyer a 'Pay Now' button in the checkout flow
+                      commit: true,
+
+                      // payment() is called when the button is clicked
+                      payment: function() {
+
+                          // Set up a url on your server to create the payment
+                          var CREATE_URL = "<%= checkout_path %>";
+
+                          // Make a call to your server to set up the payment
+                          return paypal.request.post(CREATE_URL)
+                              .then(function(res) {
+                                  return res.paymentID;
+                              });
+                      },
+
+                      // onAuthorize() is called when the buyer approves the payment
+                      onAuthorize: function(data, actions) {
+
+                          // Set up a url on your server to execute the payment
+                          var EXECUTE_URL = "<%= execute_path %>";
+
+                          // Set up the data you need to pass to your server
+                          var data = {
+                              paymentID: data.paymentID,
+                              payerID: data.payerID
+                          };
+
+                          // Make a call to your server to execute the payment
+                          return paypal.request.post(EXECUTE_URL, data)
+                              .then(function (res) {
+                                  window.alert('Payment Complete!');
+                              });
+                      }
+
+                  }, '#paypal-button-container');
+              </script>
+              </div>
               </div>
               </div>
             </div>
@@ -268,8 +320,6 @@
 
 
   <!-- If you're using Stripe for payments -->
-<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-  
-
 
 </div>
+</body>
