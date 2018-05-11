@@ -1,0 +1,40 @@
+<div class="nav-cover">
+</div>
+
+<div class="account container">
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link show active" href="/users/edit"><%= t 'profile.tabs.profile' %></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><%= t 'profile.tabs.orders' %> </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/inbox"><%= t 'profile.tabs.messages' %> </a>
+    </li>
+  </ul>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">orders</div>
+  <div class="tab-pane show active" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+    <div class="row">
+      <div class="col-xs-3">
+        <% Conversation.mine(current_user).map do |conv| %>
+          <%= link_to conv do %>
+            <%= conv.target.name %> :
+            <%= conv.messages.last.try(:body) %>
+          <% end %>
+          <hr>
+        <% end %>
+      </div>
+      <div class="col-xs-9">
+        <% @conv.messages.map do |message| %>
+          <%= message.body %> <br>
+        <% end %>
+        <%= render 'new' %>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+

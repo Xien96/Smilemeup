@@ -11,19 +11,19 @@ $(document).ready(function() {
   $('.add-to-cart .number .quantity').text(1);
   $('#scroll-up').click(function() {
     $('html, body').animate({ scrollTop: 0 }, 'slow');
-  })
+  });
 
   $('.faq-item').click(function(e) {
     console.log(e);
-    var target = e["currentTarget"]["id"]
+    var target = e["currentTarget"]["id"];
     
-    var obj = $("#".concat(target))
+    var obj = $("#".concat(target));
     if (obj.hasClass('active')) {
       obj.removeClass('active')
     } else {
       obj.addClass('active')
     }
-  })
+  });
 
   $('.add-to-cart .number .plus').click(function(e) {
     var el = e.currentTarget.id.split('-')[0] + '-quantity';
@@ -31,7 +31,8 @@ $(document).ready(function() {
     var q = Number(obj.textContent) + 1;
     $("#".concat(el)).text(q)
     $('.snap-form .quantity').val(q)
-  })
+  });
+
   $('.add-to-cart .number .minus').click(function(e) {
     var el = e.currentTarget.id.split('-')[0] + '-quantity';
     var obj = $("#".concat(el))[0]
@@ -41,7 +42,7 @@ $(document).ready(function() {
     }
     $("#".concat(el)).text(q)
     $('.snap-form .quantity').val(q)
-  })
+  });
   $('.teeth_selectionupper_upper').hide()
   $('.teeth_selectionupper_lower').hide()
   $('.selection-border button').click(function(e) {
@@ -285,7 +286,7 @@ function payWithStripe(e) {
 
 $('input[name=cardNumber]').payment('formatCardNumber');
 $('input[name=cardCVC]').payment('formatCardCVC');
-$('input[name=cardExpiry').payment('formatCardExpiry');
+$('input[name=cardExpiry]').payment('formatCardExpiry');
 
 /* Form validation using Stripe client-side validation helpers */
 jQuery.validator.addMethod("cardNumber", function(value, element) {

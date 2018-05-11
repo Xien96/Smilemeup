@@ -28,9 +28,12 @@ class StaticController < ApplicationController
   end
 
   def snapup_order
+    if current_user.nil?
+      @currency = 'usd'
+    else
+      @currency = current_user.currency
+    end
     @active = "products"
     @up = Product.find_by(name: 'snap_up')
-    @down = Product.find_by(name: 'snap_down')
-    @both = Product.find_by(name: 'snap_both')
   end
 end

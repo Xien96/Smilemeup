@@ -18,32 +18,14 @@
               <%= image_tag('products/grey-star') %>
               (10)
             </p>
-            <p>(The typical Hollywood smile)</p>
-            <p class="teeth_selection teeth_selectionupper_upper">
+            <p><%= Style.find_by(:name => model).tagline%></p>
+                <p class="teeth_selection teeth_selectionupper">
               <strong>Upper teeth</strong><br>
               <span class="price">
                 <% if @up.nil?%>
-                  No upper product available
-                <%else%>
-                  <%= number_to_currency(@up.product_prices.find_by(:currency => current_user.currency).price / 100) %>
-                <%end%></span>
-            </p>
-            <p class="teeth_selection teeth_selectionupper_lower">
-              <strong>Lower teeth</strong><br>
-              <span class="price">
-                <% if @down.nil?%>
-                  No down product available
-                <%else%>
-                  <%=  number_to_currency(@down.product_prices.find_by(:currency => current_user.currency).price / 100) %>
-                <%end%></span>
-            </p>
-            <p class="teeth_selection teeth_selectionupper_both">
-              <strong>Both upper & lower teeth</strong><br>
-              <span class="price">
-                <% if @both.nil?%>
                   No both product available
                 <%else%>
-                  <%=  number_to_currency(@both.product_prices.find_by(:currency => current_user.currency).price / 100) %>
+                  <%=  number_to_currency(@up.product_prices.find_by(:currency => @currency).price) %>
                 <%end%></span>
             </p>
             <div class="add-to-cart">
@@ -56,7 +38,7 @@
               <%= form_tag("/cart/add", method: :post, remote: true, authenticity_token: true, id: "#{model}-form", class: "snap-form") do %>
               <%= hidden_field_tag('style', model, class: "style") %>
               <%= hidden_field_tag('quantity', 1, class: "quantity") %>
-              <%= hidden_field_tag('product', "snap_both", class: "product") %>
+              <%= hidden_field_tag('product', "snap_up", class: "product") %>
               <% end %>
             </div>
             <div class="modal-footer-line">
