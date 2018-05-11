@@ -1,17 +1,17 @@
 test: &default
 
   # Credentials for REST APIs
-  client_id: EBWKjlELKMYqRNQ6sYvFo64FtaRLRR5BdHEESmha49TM
-  client_secret: EO422dn3gQLgDbuwqTjzrFgFtaRLRR5BdHEESmha49TM
+  client_id: AV1C-5svXx17IgLxRyEcBorGSGh5gVN0Q7G6zrbOijIaN1CfOjxgMh-_gFYVbN7O47vHB01AY4Vuc5v6
+  client_secret: EKA0FAhbnhZUnTnM_uFAvB9NDaEQoDkqOMjd6Sny5FYn2Tpnkb6h3dDRaZwYbxqcNi1eOPLbZ0fbxs_h
 
   # Mode can be 'live' or 'sandbox'
   mode: sandbox
 
   # Credentials for Classic APIs
   app_id: APP-80W284485P519543T
-  username: jb-us-seller_api1.paypal.com
-  password: WX4WTU3S8MY44S7F
-  signature: AFcWxV21C7fd0v3bYYYRCpSSRl31A7yDhhsPUU2XhtMoZXsWHFxu-RWy
+  username: eslammoh.ce_api1.gmail.com
+  password: 9MQ4XN94F7TKSTJ4
+  signature: AXC2.cDpT7P4Ppv6y6N9nhGDEMEKAnBdX-ZR8-stGklHrC2GSzKkPrL-
   # # With Certificate
   # cert_path: "config/cert_key.pem"
   sandbox_email_address: Platform.sdk.seller@gmail.com

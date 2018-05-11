@@ -19,7 +19,7 @@ class CartController < ApplicationController
       @total += (price * quantity)
     end
     @active = "cart"
-    @total = session[:total]
+    session[:total] = @total
     @total
   end
 
@@ -53,7 +53,8 @@ class CartController < ApplicationController
       end
     end
     session[:cart] = nil
-    redirect_to  products_path
+    session[:total] = nil
+    # redirect_to  products_path
   end
   
   def cart
@@ -66,7 +67,8 @@ class CartController < ApplicationController
       :currency    => current_user.currency
     )
     if charge["paid"]
-      create_user_product 
+      create_user_product
+      redirect_to  products_path 
       # flash[:notice] = 'Card charged successfully.'
     else
       # rescue Stripe::CardError => e
@@ -99,21 +101,20 @@ class CartController < ApplicationController
       :transactions =>  [{
 
         # Item List
-        :item_list => {
-          :items => [{
-            :name => "item",
-            :sku => "item",
-            :price => "5",
-            :currency => "USD",
-            :quantity => 1 }]},
+        # :item_list => {
+        #   :items => [{
+        #     :name => "item",
+        #     :sku => "item",
+        #     :price => "5",
+        #     :currency => "USD",
+        #     :quantity => 1 }]},
 
         # ###Amount
         # Let's you specify a payment amount.
         :amount =>  {
           :total =>  @total_cost ,
-          :currency =>  current_user.currency },
+          :currency =>  current_user.currency.upcase },
         :description =>  "This is the payment transaction description." }]})
-
     # Create Payment and return status
     if @payment.create
       render json: {success: true, paymentID: @payment.id}
@@ -123,10 +124,11 @@ class CartController < ApplicationController
   end
 
   def execute
-    payment = PayPal::SDK::REST::Payment.find(params[:paymentId])
-
-    if payment.execute(payer_id: params[:PayerID]) 
+    payment = PayPal::SDK::REST::Payment.find(params[:paymentID])
+    if payment.execute(payer_id: params[:payerID])
+      create_user_product
       render json: {msg: 'Payment Complete'}
+      # redirect_to  products_path(format: :json , msg: 'Payment Complete')
     else
       render json: {msg: payment.error}
     end
