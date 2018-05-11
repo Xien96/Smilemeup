@@ -6,14 +6,19 @@ class CartController < ApplicationController
     before_action :authenticate_user! , only: [:cart , :index]
     skip_before_action :verify_authenticity_token
   def index
+    byebug
+    if current_user.nil?
+      @currency = 'usd'
+    else
+      @currency = current_user.currency
+    end
     @cart = session[:cart]
     @total = 0
     @cart.each do |ci|
-      price = Product.find_by(name: ci['product']).product_prices.find_by(:currency => current_user.currency).price
+      price = Product.find_by(name: ci['product']).product_prices.find_by(:currency => @currency).price
       quantity = ci['quantity'].to_i
       @total += (price * quantity)
     end
-    @total /= 100
     @active = "cart"
     @total = session[:total]
     @total
@@ -73,7 +78,6 @@ class CartController < ApplicationController
   end
 
  def checkout
-  byebug
     @total_cost = session[:total]
     @payment = Payment.new({
       :intent =>  "sale",
