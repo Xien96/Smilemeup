@@ -1,6 +1,7 @@
     
 en:
   main_page:
+    use: 'Use'
     products: "Products"
     about_us: 'About US'
     blog: 'Blog'
