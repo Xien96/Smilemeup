@@ -1,0 +1,53 @@
+<svg width="36" height="26" viewBox="0 0 36 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Group 2</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-4209 -8357)">
+<g id="Group 2" style="mix-blend-mode:luminosity">
+<g id="XMLID 118" style="mix-blend-mode:luminosity">
+<use xlink:href="#path0_fill" transform="translate(4209 8357)" fill="#BDBDBD"/>
+</g>
+<g id="XMLID 117" style="mix-blend-mode:luminosity">
+<use xlink:href="#path1_fill" transform="translate(4230.1 8360.71)" fill="#E74C3D"/>
+</g>
+<g id="XMLID 116" style="mix-blend-mode:luminosity">
+<use xlink:href="#path2_fill" transform="translate(4234.45 8360.71)" fill="#F0C41B"/>
+</g>
+<g id="XMLID 113" style="mix-blend-mode:luminosity">
+<use xlink:href="#path3_fill" transform="translate(4211.48 8364.43)" fill="#E4D6B6"/>
+</g>
+<g id="XMLID 112" style="mix-blend-mode:luminosity">
+<use xlink:href="#path4_fill" transform="translate(4214.59 8364.43)" fill="#E4D6B6"/>
+</g>
+<g id="XMLID 111" style="mix-blend-mode:luminosity">
+<use xlink:href="#path3_fill" transform="translate(4218.31 8364.43)" fill="#E4D6B6"/>
+</g>
+<g id="XMLID 110" style="mix-blend-mode:luminosity">
+<use xlink:href="#path4_fill" transform="translate(4221.41 8364.43)" fill="#E4D6B6"/>
+</g>
+<g id="XMLID 109" style="mix-blend-mode:luminosity">
+<use xlink:href="#path5_fill" transform="translate(4225.14 8364.44)" fill="#E4D6B6"/>
+</g>
+<g id="XMLID 108" style="mix-blend-mode:luminosity">
+<use xlink:href="#path6_fill" transform="translate(4212.1 8374.95)" fill="#665248"/>
+</g>
+<g id="XMLID 107" style="mix-blend-mode:luminosity">
+<use xlink:href="#path6_fill" transform="translate(4220.17 8374.95)" fill="#665248"/>
+</g>
+<g id="XMLID 106" style="mix-blend-mode:luminosity">
+<use xlink:href="#path6_fill" transform="translate(4228.24 8374.95)" fill="#665248"/>
+</g>
+<g id="XMLID 105" style="mix-blend-mode:luminosity">
+<use xlink:href="#path6_fill" transform="translate(4236.31 8374.95)" fill="#665248"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 34.0032 26L 1.99676 26C 0.893793 26 0 25.1086 0 24.0085L 0 1.99148C 0 0.891429 0.893793 0 1.99676 0L 34.0032 0C 35.1062 0 36 0.891429 36 1.99148L 36 24.0085C 36 25.1086 35.1062 26 34.0032 26Z"/>
+<path id="path1_fill" d="M 7.44828 3.71429C 7.44828 5.76581 5.7811 7.42857 3.72414 7.42857C 1.66655 7.42857 0 5.76581 0 3.71429C 0 1.66276 1.66655 0 3.72414 0C 5.7811 0 7.44828 1.66276 7.44828 3.71429Z"/>
+<path id="path2_fill" d="M 7.44828 3.71429C 7.44828 5.76581 5.7811 7.42857 3.72414 7.42857C 1.66717 7.42857 0 5.76581 0 3.71429C 0 1.66276 1.66717 0 3.72414 0C 5.7811 0 7.44828 1.66276 7.44828 3.71429Z"/>
+<path id="path3_fill" d="M 1.24138 0L 0.62069 0C 0.277448 0 0 0.277333 0 0.619048C 0 0.960762 0.277448 1.2381 0.62069 1.2381L 1.24138 1.2381C 1.58462 1.2381 1.86207 0.960762 1.86207 0.619048C 1.86207 0.277333 1.58462 0 1.24138 0Z"/>
+<path id="path4_fill" d="M 1.86207 0L 0.62069 0C 0.277448 0 0 0.277333 0 0.619048C 0 0.960762 0.277448 1.2381 0.62069 1.2381L 1.86207 1.2381C 2.20531 1.2381 2.48276 0.960762 2.48276 0.619048C 2.48276 0.277333 2.20531 0 1.86207 0Z"/>
+<path id="path5_fill" d="M 0.186206 0.17102C 0.0676547 0.288639 0 0.443401 0 0.610543C 0 0.777686 0.0676557 0.932448 0.180001 1.05007C 0.297311 1.1615 0.45931 1.22959 0.62069 1.22959C 0.782069 1.22959 0.942827 1.1615 1.06138 1.05007C 1.1731 0.932448 1.24138 0.771496 1.24138 0.610543C 1.24138 0.449591 1.1731 0.288638 1.06138 0.17721C 0.831724 -0.0580284 0.409655 -0.0580274 0.186206 0.17102Z"/>
+<path id="path6_fill" d="M 5.58621 0L 0 0L 0 3.71429L 5.58621 3.71429L 5.58621 0Z"/>
+</defs>
+</svg>
