@@ -1,406 +1,408 @@
-<script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" type="text/javascript" charset="utf-8" async defer></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous" data-turbolinks-eval=false></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" type="text/javascript" charset="utf-8" async defer data-turbolinks-eval=false></script>
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous" data-turbolinks-eval=false></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js" data-turbolinks-eval=false></script>
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 
 <script>
-$(document).ready(function() {
-  $("[data-toggle=popover]").popover({html:true})
-  $('.add-to-cart .number .quantity').text(1);
-  $('#scroll-up').click(function() {
-    $('html, body').animate({ scrollTop: 0 }, 'slow');
-  });
+    $(document).on('turbolinks:load', function () {
+        $("[data-toggle=popover]").popover({html: true})
+        $('.add-to-cart .number .quantity').text(1);
+        $('#scroll-up').click(function () {
+            $('html, body').animate({scrollTop: 0}, 'slow');
+        });
 
-  $('.faq-item').click(function(e) {
-    console.log(e);
-    var target = e["currentTarget"]["id"];
-    
-    var obj = $("#".concat(target));
-    if (obj.hasClass('active')) {
-      obj.removeClass('active')
-    } else {
-      obj.addClass('active')
-    }
-  });
+        $('.faq-item').click(function (e) {
+            console.log(e);
+            var target = e["currentTarget"]["id"];
 
-  $('.add-to-cart .number .plus').click(function(e) {
-    var el = e.currentTarget.id.split('-')[0] + '-quantity';
-    var obj = $("#".concat(el))[0]
-    var q = Number(obj.textContent) + 1;
-    $("#".concat(el)).text(q)
-    $('.snap-form .quantity').val(q)
-  });
+            var obj = $("#".concat(target));
+            if (obj.hasClass('active')) {
+                obj.removeClass('active')
+            } else {
+                obj.addClass('active')
+            }
+        });
 
-  $('.add-to-cart .number .minus').click(function(e) {
-    var el = e.currentTarget.id.split('-')[0] + '-quantity';
-    var obj = $("#".concat(el))[0]
-    var q = Number(obj.textContent) - 1;
-    if (q < 0) {
-      q = 0;
-    }
-    $("#".concat(el)).text(q)
-    $('.snap-form .quantity').val(q)
-  });
-  $('.teeth_selectionupper_upper').hide()
-  $('.teeth_selectionupper_lower').hide()
-  $('.selection-border button').click(function(e) {
-    $('.selection-border button').addClass('btn-default')
-    $('.selection-border button').removeClass('active btn-green')
-    var el = e.currentTarget.id
-    var obj = $("#".concat(el))
-    obj.addClass('active btn-green')
-    obj.removeClass('btn-default')
-    if (el=="upper") {
-      $('.teeth_selectionupper_upper').show()
-      $('.teeth_selectionupper_lower').hide()
-      $('.teeth_selectionupper_both').hide()
-      $('.snap-form .product').val('snap_up')
-    }
-    if (el=="lower") {
-      $('.teeth_selectionupper_upper').hide()
-      $('.teeth_selectionupper_lower').show()
-      $('.teeth_selectionupper_both').hide()
-      $('.snap-form .product').val('snap_down')
-    }
-    if (el=="both") {
-      $('.teeth_selectionupper_upper').hide()
-      $('.teeth_selectionupper_lower').hide()
-      $('.teeth_selectionupper_both').show()
-      $('.snap-form .product').val('snap_both')
-    }
-  })
+        $('.add-to-cart .number .plus').click(function (e) {
+            var el = e.currentTarget.id.split('-')[0] + '-quantity';
+            var obj = $("#".concat(el))[0]
+            var q = Number(obj.textContent) + 1;
+            $("#".concat(el)).text(q)
+            $('.snap-form .quantity').val(q)
+        });
 
-  $('#products-overview-snapup').click(function(e) {
-    e.preventDefault();
-    $('.products').removeClass('product-snapup product-clearup').addClass('product-snapup product-snapup');
-    return false
-  })
-  $('#products-overview-clearup').click(function(e) {
-    e.preventDefault();
-    $('.products').removeClass('product-snapup product-clearup').addClass('product-snapup product-clearup');
-    return false
-  })
-  $('#footer-chat').click(function(e) {
-    if ($('#footer-chat').hasClass('active')) {
-      window.location.href='javascript:$zopim.livechat.window.show();'
-    } else {
-      $('#footer-call').css({ bottom: '160px' });
-      $('#footer-whatsapp').css({ bottom: '115px' });
-      $('#footer-chat').css({ bottom: '70px' });
-      $('#footer-chat').addClass('active')
-    }
-  })
-  $('#footer-close').click(function(e) {
-    $('#footer-call').css({ bottom: '25px' });
-    $('#footer-whatsapp').css({ bottom: '25px' });
-    $('#footer-chat').css({ bottom: '25px' });
-    $('#footer-chat').removeClass('active')
-  })
-  $('#home-mouse').click(function() {
-    $('html, body').animate({ scrollTop: 750 }, 'slow');
-  })
+        $('.add-to-cart .number .minus').click(function (e) {
+            var el = e.currentTarget.id.split('-')[0] + '-quantity';
+            var obj = $("#".concat(el))[0]
+            var q = Number(obj.textContent) - 1;
+            if (q < 0) {
+                q = 0;
+            }
+            $("#".concat(el)).text(q)
+            $('.snap-form .quantity').val(q)
+        });
+        $('.teeth_selectionupper_upper').hide()
+        $('.teeth_selectionupper_lower').hide()
+        $('.selection-border button').click(function (e) {
+            $('.selection-border button').addClass('btn-default')
+            $('.selection-border button').removeClass('active btn-green')
+            var el = e.currentTarget.id
+            var obj = $("#".concat(el))
+            obj.addClass('active btn-green')
+            obj.removeClass('btn-default')
+            if (el == "upper") {
+                $('.teeth_selectionupper_upper').show()
+                $('.teeth_selectionupper_lower').hide()
+                $('.teeth_selectionupper_both').hide()
+                $('.snap-form .product').val('snap_up')
+            }
+            if (el == "lower") {
+                $('.teeth_selectionupper_upper').hide()
+                $('.teeth_selectionupper_lower').show()
+                $('.teeth_selectionupper_both').hide()
+                $('.snap-form .product').val('snap_down')
+            }
+            if (el == "both") {
+                $('.teeth_selectionupper_upper').hide()
+                $('.teeth_selectionupper_lower').hide()
+                $('.teeth_selectionupper_both').show()
+                $('.snap-form .product').val('snap_both')
+            }
+        })
 
-  function checkFormReadyness() {
-    if ($('#file1_trigger').hasClass('done') && 
-      $('#file2_trigger').hasClass('done') &&
-      $('#file3_trigger').hasClass('done') &&
-      $('#file4_trigger').hasClass('done')) {
-      $('#candidateSubmit').removeAttr("disabled");
-    }
-  }
+        $('#products-overview-snapup').click(function (e) {
+            e.preventDefault();
+            $('.products').removeClass('product-snapup product-clearup').addClass('product-snapup product-snapup');
+            return false
+        })
+        $('#products-overview-clearup').click(function (e) {
+            e.preventDefault();
+            $('.products').removeClass('product-snapup product-clearup').addClass('product-snapup product-clearup');
+            return false
+        })
+        $('#footer-chat').click(function (e) {
+            if ($('#footer-chat').hasClass('active')) {
+                window.location.href = 'javascript:$zopim.livechat.window.show();'
+            } else {
+                $('#footer-call').css({bottom: '160px'});
+                $('#footer-whatsapp').css({bottom: '115px'});
+                $('#footer-chat').css({bottom: '70px'});
+                $('#footer-chat').addClass('active')
+            }
+        })
+        $('#footer-close').click(function (e) {
+            $('#footer-call').css({bottom: '25px'});
+            $('#footer-whatsapp').css({bottom: '25px'});
+            $('#footer-chat').css({bottom: '25px'});
+            $('#footer-chat').removeClass('active')
+        })
+        $('#home-mouse').click(function () {
+            $('html, body').animate({scrollTop: 750}, 'slow');
+        })
 
-  $("input[type=file]").hide();
-  $('#candidateSubmit').attr("disabled", "disabled");
-  $('#file1_trigger').click(function(e) {
-    e.preventDefault()
-    $("#file1").trigger("click");
-  })
-  $('#file2_trigger').click(function(e) {
-    e.preventDefault()
-    $("#file2").trigger("click");
-  })
-  $('#file3_trigger').click(function(e) {
-    e.preventDefault()
-    $("#file3").trigger("click");
-  })
-  $('#file4_trigger').click(function(e) {
-    e.preventDefault()
-    $("#file4").trigger("click");
-  })
-  $('#file1').change(function(e) {
-    e.preventDefault()
-    $('#uploader-form-1').ajaxSubmit({
-      success: function() {
-        $('#file1_trigger').text('Done!')
-        $('#file1_trigger').addClass('done')
-        checkFormReadyness()
-      },
-      uploadProgress: function(event, position, total, percentComplete) {
-        $('#file1_trigger').text(percentComplete + '% uploaded')
-      }
-    })
-  })
-  $('#file2').change(function(e) {
-    e.preventDefault()
-    $('#uploader-form-2').ajaxSubmit({
-      success: function() {
-        $('#file2_trigger').text('Done!')
-        $('#file2_trigger').addClass('done')
-        checkFormReadyness()
-      },
-      uploadProgress: function(event, position, total, percentComplete) {
-        $('#file2_trigger').text(percentComplete + '% uploaded')
-      }
-    })
-  })
-  $('#file3').change(function(e) {
-    e.preventDefault()
-    $('#uploader-form-3').ajaxSubmit({
-      success: function() {
-        $('#file3_trigger').text('Done!')
-        $('#file3_trigger').addClass('done')
-        checkFormReadyness()
-      },
-      uploadProgress: function(event, position, total, percentComplete) {
-        $('#file3_trigger').text(percentComplete + '% uploaded')
-      }
-    })
-  })
-  $('#file4').change(function(e) {
-    e.preventDefault()
-    $('#uploader-form-4').ajaxSubmit({
-      success: function() {
-        $('#file4_trigger').text('Done!')
-        $('#file4_trigger').addClass('done')
-        checkFormReadyness()
-      },
-      uploadProgress: function(event, position, total, percentComplete) {
-        $('#file4_trigger').text(percentComplete + '% uploaded')
-      }
-    })
-  })
+        function checkFormReadyness() {
+            if ($('#file1_trigger').hasClass('done') &&
+                $('#file2_trigger').hasClass('done') &&
+                $('#file3_trigger').hasClass('done') &&
+                $('#file4_trigger').hasClass('done')) {
+                $('#candidateSubmit').removeAttr("disabled");
+            }
+        }
 
-
-  $('.modal .snap-submit').click(function(e){
-    e.preventDefault()
-    el = e.currentTarget.id.split('-')[0] + '-form';
-    var obj = $("#".concat(el))
-    obj.ajaxSubmit({
-      success: function() {
-        $('.modal').modal('hide');
-        location.reload();
-      }
-    })
-  })
+        $("input[type=file]").hide();
+        $('#candidateSubmit').attr("disabled", "disabled");
+        $('#file1_trigger').click(function (e) {
+            e.preventDefault()
+            $("#file1").trigger("click");
+        })
+        $('#file2_trigger').click(function (e) {
+            e.preventDefault()
+            $("#file2").trigger("click");
+        })
+        $('#file3_trigger').click(function (e) {
+            e.preventDefault()
+            $("#file3").trigger("click");
+        })
+        $('#file4_trigger').click(function (e) {
+            e.preventDefault()
+            $("#file4").trigger("click");
+        })
+        $('#file1').change(function (e) {
+            e.preventDefault()
+            $('#uploader-form-1').ajaxSubmit({
+                success: function () {
+                    $('#file1_trigger').text('Done!')
+                    $('#file1_trigger').addClass('done')
+                    checkFormReadyness()
+                },
+                uploadProgress: function (event, position, total, percentComplete) {
+                    $('#file1_trigger').text(percentComplete + '% uploaded')
+                }
+            })
+        })
+        $('#file2').change(function (e) {
+            e.preventDefault()
+            $('#uploader-form-2').ajaxSubmit({
+                success: function () {
+                    $('#file2_trigger').text('Done!')
+                    $('#file2_trigger').addClass('done')
+                    checkFormReadyness()
+                },
+                uploadProgress: function (event, position, total, percentComplete) {
+                    $('#file2_trigger').text(percentComplete + '% uploaded')
+                }
+            })
+        })
+        $('#file3').change(function (e) {
+            e.preventDefault()
+            $('#uploader-form-3').ajaxSubmit({
+                success: function () {
+                    $('#file3_trigger').text('Done!')
+                    $('#file3_trigger').addClass('done')
+                    checkFormReadyness()
+                },
+                uploadProgress: function (event, position, total, percentComplete) {
+                    $('#file3_trigger').text(percentComplete + '% uploaded')
+                }
+            })
+        })
+        $('#file4').change(function (e) {
+            e.preventDefault()
+            $('#uploader-form-4').ajaxSubmit({
+                success: function () {
+                    $('#file4_trigger').text('Done!')
+                    $('#file4_trigger').addClass('done')
+                    checkFormReadyness()
+                },
+                uploadProgress: function (event, position, total, percentComplete) {
+                    $('#file4_trigger').text(percentComplete + '% uploaded')
+                }
+            })
+        })
 
 
+        $('.modal .snap-submit').click(function (e) {
+            e.preventDefault()
+            el = e.currentTarget.id.split('-')[0] + '-form';
+            var obj = $("#".concat(el))
+            obj.ajaxSubmit({
+                success: function () {
+                    $('.modal').modal('hide');
+                    location.reload();
+                }
+            })
+        })
 
-/*
-load more
-*/
 
-  $('.load-more').click(function(){
-    $('.box-hidden').toggle();
-  });
+        /* load more */
 
-  $(".navbar-toggle").click(function() {
-    $(this).children().toggleClass('open');
-  });
+        $('.load-more').click(function () {
+            $('.box-hidden').toggle();
+        });
 
-/*
-load more
-*/
- $(function(){ 
-     var navMain = $("#nav-main");
-     navMain.on("click", "a", null, function () {
-         navMain.collapse('hide');
-     });
- });
+        $(".navbar-toggle").click(function () {
+            $(this).children().toggleClass('open');
+        });
 
- /*show cridet card box*/
-  $('.show-credit-box').click(function(){
-    $('.credit-card-box').toggle();
-  });
-/*end show credit card box*/
+        /*
+        load more
+        */
+        $(function () {
+            var navMain = $("#nav-main");
+            navMain.on("click", "a", null, function () {
+                navMain.collapse('hide');
+            });
+        });
 
-  var $form = $('#payment-form');
-  $form.on('submit', payWithStripe);
+        /*show cridet card box*/
+        $('.show-credit-box').click(function () {
+            $('.credit-card-box').toggle();
+        });
+        /*end show credit card box*/
 
-/* If you're using Stripe for payments */
-function payWithStripe(e) {
-    e.preventDefault();
+        var $form = $('#payment-form');
+        $form.on('submit', payWithStripe);
 
-    /* Visual feedback */
-    $form.find('[type=submit]').html('Validating <i class="fa fa-spinner fa-pulse"></i>');
+        /* If you're using Stripe for payments */
+        function payWithStripe(e) {
+            e.preventDefault();
 
-    var PublishableKey = 'pk_test_b1qXXwATmiaA1VDJ1mOVVO1p'; // Replace with your API publishable key
-    Stripe.setPublishableKey(PublishableKey);
-    
-    /* Create token */
-    var expiry = $form.find('[name=cardExpiry]').payment('cardExpiryVal');
-    var ccData = {
-        number: $form.find('[name=cardNumber]').val().replace(/\s/g,''),
-        cvc: $form.find('[name=cardCVC]').val(),
-        exp_month: expiry.month, 
-        exp_year: expiry.year
-    };
-    
-    Stripe.card.createToken(ccData, function stripeResponseHandler(status, response) {
-        if (response.error) {
             /* Visual feedback */
-            $form.find('[type=submit]').html('Try again');
-            /* Show Stripe errors on the form */
-            $form.find('.payment-errors').text(response.error.message);
-            $form.find('.payment-errors').closest('.row').show();
-        } else {
-            /* Visual feedback */
-            $form.find('[type=submit]').html('Processing <i class="fa fa-spinner fa-pulse"></i>');
-            /* Hide Stripe errors on the form */
-            $form.find('.payment-errors').closest('.row').hide();
-            $form.find('.payment-errors').text("");
-            // response contains id and card, which contains additional card details            
-            console.log(response.id);
-            console.log(response.card);
-            var token = response.id;
-            // AJAX - you would send 'token' to your server here.
-            $.post('/account/stripe_card_token', {
-                    token: token
-                })
-                // Assign handlers immediately after making the request,
-                .done(function(data, textStatus, jqXHR) {
-                    $form.find('[type=submit]').html('Payment successful <i class="fa fa-check"></i>').prop('disabled', true);
-                })
-                .fail(function(jqXHR, textStatus, errorThrown) {
-                    $form.find('[type=submit]').html('There was a problem').removeClass('success').addClass('error');
+            $form.find('[type=submit]').html('Validating <i class="fa fa-spinner fa-pulse"></i>');
+
+            var PublishableKey = 'pk_test_b1qXXwATmiaA1VDJ1mOVVO1p'; // Replace with your API publishable key
+            Stripe.setPublishableKey(PublishableKey);
+
+            /* Create token */
+            var expiry = $form.find('[name=cardExpiry]').payment('cardExpiryVal');
+            var ccData = {
+                number: $form.find('[name=cardNumber]').val().replace(/\s/g, ''),
+                cvc: $form.find('[name=cardCVC]').val(),
+                exp_month: expiry.month,
+                exp_year: expiry.year
+            };
+
+            Stripe.card.createToken(ccData, function stripeResponseHandler(status, response) {
+                if (response.error) {
+                    /* Visual feedback */
+                    $form.find('[type=submit]').html('Try again');
                     /* Show Stripe errors on the form */
-                    $form.find('.payment-errors').text('Try refreshing the page and trying again.');
+                    $form.find('.payment-errors').text(response.error.message);
                     $form.find('.payment-errors').closest('.row').show();
-                });
+                } else {
+                    /* Visual feedback */
+                    $form.find('[type=submit]').html('Processing <i class="fa fa-spinner fa-pulse"></i>');
+                    /* Hide Stripe errors on the form */
+                    $form.find('.payment-errors').closest('.row').hide();
+                    $form.find('.payment-errors').text("");
+                    // response contains id and card, which contains additional card details
+                    console.log(response.id);
+                    console.log(response.card);
+                    var token = response.id;
+                    // AJAX - you would send 'token' to your server here.
+                    $.post('/account/stripe_card_token', {
+                        token: token
+                    })
+                    // Assign handlers immediately after making the request,
+                        .done(function (data, textStatus, jqXHR) {
+                            $form.find('[type=submit]').html('Payment successful <i class="fa fa-check"></i>').prop('disabled', true);
+                        })
+                        .fail(function (jqXHR, textStatus, errorThrown) {
+                            $form.find('[type=submit]').html('There was a problem').removeClass('success').addClass('error');
+                            /* Show Stripe errors on the form */
+                            $form.find('.payment-errors').text('Try refreshing the page and trying again.');
+                            $form.find('.payment-errors').closest('.row').show();
+                        });
+                }
+            });
         }
-    });
-}
 
-/* Fancy restrictive input formatting via jQuery.payment library*/
+        /* Fancy restrictive input formatting via jQuery.payment library*/
 
-$('input[name=cardNumber]').payment('formatCardNumber');
-$('input[name=cardCVC]').payment('formatCardCVC');
-$('input[name=cardExpiry]').payment('formatCardExpiry');
+        $('input[name=cardNumber]').payment('formatCardNumber');
+        $('input[name=cardCVC]').payment('formatCardCVC');
+        $('input[name=cardExpiry]').payment('formatCardExpiry');
 
-/* Form validation using Stripe client-side validation helpers */
-jQuery.validator.addMethod("cardNumber", function(value, element) {
-    return this.optional(element) || Stripe.card.validateCardNumber(value);
-}, "Please specify a valid credit card number.");
+        /* Form validation using Stripe client-side validation helpers */
+        jQuery.validator.addMethod("cardNumber", function (value, element) {
+            return this.optional(element) || Stripe.card.validateCardNumber(value);
+        }, "Please specify a valid credit card number.");
 
-jQuery.validator.addMethod("cardExpiry", function(value, element) {    
-    /* Parsing month/year uses jQuery.payment library */
+        jQuery.validator.addMethod("cardExpiry", function (value, element) {
+            /* Parsing month/year uses jQuery.payment library */
 
-    value = $.payment.cardExpiryVal(value);
-    return this.optional(element) || Stripe.card.validateExpiry(value.month, value.year);
-}, "Invalid expiration date.");
+            value = $.payment.cardExpiryVal(value);
+            return this.optional(element) || Stripe.card.validateExpiry(value.month, value.year);
+        }, "Invalid expiration date.");
 
-jQuery.validator.addMethod("cardCVC", function(value, element) {
-    return this.optional(element) || Stripe.card.validateCVC(value);
-}, "Invalid CVC.");
+        jQuery.validator.addMethod("cardCVC", function (value, element) {
+            return this.optional(element) || Stripe.card.validateCVC(value);
+        }, "Invalid CVC.");
 
-validator = $form.validate({
-    rules: {
-        cardNumber: {
-            required: true,
-            cardNumber: true            
-        },
-        cardExpiry: {
-            required: true,
-            cardExpiry: true
-        },
-        cardCVC: {
-            required: true,
-            cardCVC: true
+        validator = $form.validate({
+            rules: {
+                cardNumber: {
+                    required: true,
+                    cardNumber: true
+                },
+                cardExpiry: {
+                    required: true,
+                    cardExpiry: true
+                },
+                cardCVC: {
+                    required: true,
+                    cardCVC: true
+                }
+            },
+            highlight: function (element) {
+                $(element).closest('.form-control').removeClass('success').addClass('error');
+            },
+            unhighlight: function (element) {
+                $(element).closest('.form-control').removeClass('error').addClass('success');
+            },
+            errorPlacement: function (error, element) {
+                $(element).closest('.form-group').append(error);
+            }
+        });
+
+        paymentFormReady = function () {
+            if ($form.find('[name=cardNumber]').hasClass("success") &&
+                $form.find('[name=cardExpiry]').hasClass("success") &&
+                $form.find('[name=cardCVC]').val().length > 1) {
+                return true;
+            } else {
+                return false;
+            }
         }
-    },
-    highlight: function(element) {
-        $(element).closest('.form-control').removeClass('success').addClass('error');
-    },
-    unhighlight: function(element) {
-        $(element).closest('.form-control').removeClass('error').addClass('success');
-    },
-    errorPlacement: function(error, element) {
-        $(element).closest('.form-group').append(error);
-    }
-});
 
-paymentFormReady = function() {
-    if ($form.find('[name=cardNumber]').hasClass("success") &&
-        $form.find('[name=cardExpiry]').hasClass("success") &&
-        $form.find('[name=cardCVC]').val().length > 1) {
-        return true;
-    } else {
-        return false;
-    }
-}
+        /*before and after*/
+        $form.find('[type=submit]').prop('disabled', true);
+        var readyInterval = setInterval(function () {
+            if (paymentFormReady()) {
+                $form.find('[type=submit]').prop('disabled', false);
+                clearInterval(readyInterval);
+            }
+        }, 250)
 
-/*before and after*/
-$form.find('[type=submit]').prop('disabled', true);
-var readyInterval = setInterval(function() {
-    if (paymentFormReady()) {
-        $form.find('[type=submit]').prop('disabled', false);
-        clearInterval(readyInterval);
-    }
-}, 250)});
-
-  var divisor5 = document.getElementById("divisor5"),
-      slider5 = document.getElementById("slider5");
-      function moveDivisor6() { 
-      divisor5.style.width = slider5.value+"%";
-       }
-
-  var divisor4 = document.getElementById("divisor4"),
-      slider4 = document.getElementById("slider4");
-      function moveDivisor5() { 
-        divisor4.style.width = slider4.value+"%";
-      }
-
-  var divisor3 = document.getElementById("divisor3"),
-      slider3 = document.getElementById("slider3");
-      function moveDivisor4() { 
-      divisor3.style.width = slider3.value+"%";
-      }
-    
-  var divisor2 = document.getElementById("divisor2"),
-      slider2 = document.getElementById("slider2");
-      function moveDivisor3() { 
-      divisor2.style.width = slider2.value+"%";
-       }
-
-  var divisor1 = document.getElementById("divisor1"),
-      slider1 = document.getElementById("slider1");
-      function moveDivisor2() { 
-        divisor1.style.width = slider1.value+"%";
-      }
-
-  var divisor = document.getElementById("divisor"),
-      slider = document.getElementById("slider");
-      function moveDivisor1() { 
-      divisor.style.width = slider.value+"%";
-      }
-/*before and after*/
-
-  
-
-  var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 3,
-      spaceBetween: 20,
-      freeMode: true,
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
     });
 
+    var divisor5 = document.getElementById("divisor5"),
+        slider5 = document.getElementById("slider5");
+
+    function moveDivisor6() {
+        divisor5.style.width = slider5.value + "%";
+    }
+
+    var divisor4 = document.getElementById("divisor4"),
+        slider4 = document.getElementById("slider4");
+
+    function moveDivisor5() {
+        divisor4.style.width = slider4.value + "%";
+    }
+
+    var divisor3 = document.getElementById("divisor3"),
+        slider3 = document.getElementById("slider3");
+
+    function moveDivisor4() {
+        divisor3.style.width = slider3.value + "%";
+    }
+
+    var divisor2 = document.getElementById("divisor2"),
+        slider2 = document.getElementById("slider2");
+
+    function moveDivisor3() {
+        divisor2.style.width = slider2.value + "%";
+    }
+
+    var divisor1 = document.getElementById("divisor1"),
+        slider1 = document.getElementById("slider1");
+
+    function moveDivisor2() {
+        divisor1.style.width = slider1.value + "%";
+    }
+
+    var divisor = document.getElementById("divisor"),
+        slider = document.getElementById("slider");
+
+    function moveDivisor1() {
+        divisor.style.width = slider.value + "%";
+    }
+
+    /*before and after*/
 
 
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        freeMode: true,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
 
 
 </script>

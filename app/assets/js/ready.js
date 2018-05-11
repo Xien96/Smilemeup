@@ -3,11 +3,11 @@ $(function () {
 	$('[data-toggle="tooltip"]').tooltip()
 });
 
-jQuery(document).ready(function(){
+$( document ).on('turbolinks:load', function() {
     jQuery('.scrollbar-inner').scrollbar();
 });
 
-$(document).ready(function(){
+$( document ).on('turbolinks:load', function() {
 
 	var toggle_sidebar = false,
 	toggle_topbar = false,
