@@ -48,5 +48,7 @@ Rails.application.routes.draw do
 
   get 'products/clearup/clearup_impression'             => "static#clearup_impression"
 
-  get 'products/clearup/clearup_shop'                   => "static#clearup_shop"  
+  get 'products/clearup/clearup_shop'                   => "static#clearup_shop"
+  resources :conversations
+  get 'inbox' => 'conversations#inbox'
 end

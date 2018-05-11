@@ -1,0 +1,12 @@
+<%= form_for(build_conversation(@conv)) do |f| %>
+  <div class="<%= f.object.id ? 'hidden' : '' %>">
+    <%= f.collection_select(:target_id, User.all, :id, :name) %>
+  </div>
+  <%= f.fields_for :messages do |m|%>
+    <div class="<%= m.object.id ? 'hidden' : '' %>">
+      <%= m.text_field :body %>
+    </div>
+
+  <% end %>
+  <%= f.submit :send %>
+<% end %>

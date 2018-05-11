@@ -2,80 +2,91 @@
 </div>
 
 <div class="account container">
-  <ul class="nav nav-tabs">
-    <li class="active"><a href="#"><%= t 'profile.tabs.profile' %></a></li>
-    <li><a href="#"><%= t 'profile.tabs.orders' %> </a></li>
-    <li><a href="#"><%= t 'profile.tabs.messages' %> </a></li>
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><%= t 'profile.tabs.profile' %></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><%= t 'profile.tabs.orders' %> </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link"  href="/inbox" ><%= t 'profile.tabs.messages' %> </a>
+    </li>
   </ul>
-  <div class="row profile">
-    <div class="col-sm-4">
-      <%= image_tag('default-avatar.png') %>
+  <div class="tab-pane show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+    <div class="row profile">
+      <div class="col-sm-4">
+        <%= image_tag('default-avatar.png') %>
+      </div>
+      <div class="col-sm-8">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put}) do |f| %>
+          <%= devise_error_messages! %>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <%= f.label I18n.t('user.form.name') %> <br/>
+                <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "form-control", placeholder: I18n.t('user.placeholders.name') %>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <%= f.label I18n.t('user.form.email') %><br/>
+                <%= f.email_field :email, autocomplete: "email", class: "form-control", placeholder: "ilove@smilemeup.com" %>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <%= f.label I18n.t('user.form.country') %><br/>
+                <%= f.text_field :country, class: "form-control", placeholder: I18n.t('user.placeholders.country') %>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <%= f.label I18n.t('user.form.city') %><br/>
+                <%= f.text_field :city, class: "form-control", placeholder: I18n.t('user.placeholders.city') %>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <%= f.label I18n.t('user.form.phone') %><br/>
+                <%= f.text_field :phone, autofocus: true, autocomplete: "phone", class: "form-control", placeholder: "+9662620302303" %>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <%= f.label I18n.t('user.form.current_password') %>
+                <i>( <%= I18n.t('user.help_text.current_password') %>  )</i><br/>
+                <%= f.password_field :current_password, class: "form-control", placeholder: I18n.t('user.placeholders.password') %>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <%= f.label I18n.t('user.form.password') %> <i>( <%= I18n.t('user.help_text.password') %> )</i><br/>
+                <%= f.password_field :password, class: "form-control", placeholder: I18n.t('user.placeholders.password') %>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <%= f.label I18n.t('user.form.password_confirmation') %><br/>
+                <%= f.password_field :password_confirmation, class: "form-control", placeholder: I18n.t('user.placeholders.password') %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4 col-sm-push-8">
+              <div class="actions">
+                <%= f.submit I18n.t('user.edit.submit'), class: "btn btn-green form-control" %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
     </div>
-    <div class="col-sm-8">
-      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-        <%= devise_error_messages! %>
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="form-group">
-              <%= f.label I18n.t('user.form.name') %> <br />
-              <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "form-control", placeholder: I18n.t('user.placeholders.name') %>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="form-group">
-              <%= f.label I18n.t('user.form.email') %><br />
-              <%= f.email_field :email, autocomplete: "email", class: "form-control", placeholder: "ilove@smilemeup.com" %>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="form-group">
-              <%= f.label I18n.t('user.form.country') %><br />
-              <%= f.text_field :country, class: "form-control", placeholder: I18n.t('user.placeholders.country') %>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="form-group">
-              <%= f.label I18n.t('user.form.city') %><br />
-              <%= f.text_field :city, class: "form-control", placeholder: I18n.t('user.placeholders.city') %>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="form-group">
-              <%= f.label I18n.t('user.form.phone') %><br />
-              <%= f.text_field :phone, autofocus: true, autocomplete: "phone", class: "form-control", placeholder: "+9662620302303" %>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="form-group">
-              <%= f.label I18n.t('user.form.current_password') %> <i>( <%= I18n.t('user.help_text.current_password') %>  )</i><br />
-              <%= f.password_field :current_password, class: "form-control", placeholder: I18n.t('user.placeholders.password') %>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="form-group">
-              <%= f.label I18n.t('user.form.password')%> <i>( <%= I18n.t('user.help_text.password') %> )</i><br />
-              <%= f.password_field :password, class: "form-control", placeholder: I18n.t('user.placeholders.password') %>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="form-group">
-              <%= f.label I18n.t('user.form.password_confirmation')%><br />
-              <%= f.password_field :password_confirmation, class: "form-control", placeholder: I18n.t('user.placeholders.password') %>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-4 col-sm-push-8">
-            <div class="actions">
-            <%= f.submit I18n.t('user.edit.submit'), class: "btn btn-green form-control" %>
-          </div> 
-          </div>
-        </div>
-      <% end %>
-    </div>
-  </div>  
+  </div>
+  </div>
+
 </div>
 
 
-<!-- <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p> -->
+<!-- <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: {confirm: "Are you sure?"}, method: :delete %></p> -->
 
