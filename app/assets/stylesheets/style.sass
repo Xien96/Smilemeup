@@ -135,6 +135,7 @@ nav.navbar-default, nav.navbar-default .navbar-toggle
     opacity: 0.8
     background-color: darken($color-green, 20%)
     
+
   a.navbar-brand
     margin-top: -15px
     position: relative
@@ -185,6 +186,7 @@ nav.navbar-default, nav.navbar-default .navbar-toggle
     &.seperator
       padding-left: 3em
 
+      
 
 
 
@@ -294,12 +296,16 @@ nav.navbar-default, nav.navbar-default .navbar-toggle
   background-color: #f7d284
 .reason-blog-jumbotron
   background-image: url(P-Blog01.jpg)
+  background-size: auto 145%
 .veneers-blog-jumbtron
   background-image: url(P-Blog02.jpg)
+  background-size: auto 145%
 .clear-blog-jumbtron
   background-image: url(P-Blog03.jpg)
+  background-size: auto 145%
 .whattoeat-blog-jumbtron
-  background-image: url(P-Blog04.jpg)        
+  background-image: url(P-Blog04.jpg)
+  background-size: auto 120%        
 .home, .about 
   padding-top: 5em
   .home-why
@@ -1643,7 +1649,7 @@ h3
 
 
 .dropdown-content
-  margin-left: -25%
+  margin-left: -10px
   opacity: 1
   display: none
   position: absolute
@@ -1651,21 +1657,24 @@ h3
   min-width: 160px
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3)
   z-index: 1
-  border-radius: 20px
+  border-radius: 15px
   transition: display 1s ease-out
+  background-color: #525252!important
+  color: #525252
   a
     padding: 12px 16px
     text-decoration: none
     display: block
+    color: #525252 !important
     &:hover
-      color: white !important
+      color: #525252 !important 
 
 .dropdown:hover
   .dropdown-content
     display: block
 
   .dropbtn
-    background-color: transparent
+    background-color: transparent 
 
 
 
@@ -1733,13 +1742,13 @@ input[type=range]
   &::-webkit-slider-thumb
     -webkit-appearance: none
     width: 25px
-    height: 150px 
+    height: 160px 
     background-image: url('Hand.png')
     cursor: pointer
     border-radius: 20px
   &::-moz-range-thumb
     -moz-appearance: none
-    width: 20px
+    width: 50px
     height: 55px
     background: #96bf3d
     border-radius: 20px
@@ -1909,6 +1918,9 @@ input[type=range]
       height: 400px
       .post-image
         height: 100%
+    .post-content 
+      margin-top: 8em
+      margin-right: 2em    
 
 @media(max-width: 767px)
   .our-blog-posts
@@ -1921,7 +1933,19 @@ input[type=range]
         height: auto
         .post-image
           height: auto
+      .post-content
+        margin: 0
+@media(max-width: 991px)
+  .our-blog-posts
+    .all-blog
+      .post-content
+        margin: 0      
 
+.blog-bcontent
+  h3
+    margin-left: 1em
+  h4
+    margin-left: 1em  
 
 /*Start Our Bolg Style*/
 
@@ -2087,6 +2111,10 @@ input[type=range]
         font-size: .75em
 
 /*End Privacy page*/
+
+/*product dropdown*/
+  
+/*end dropdown*/
 
 
 /*------------------------------------------------------------------------------------------------------------*/

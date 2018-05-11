@@ -26,7 +26,13 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li class="<%= @active == 'products' ? 'nav-active' : '' %>"><a href="/products" title=""><%= I18n.t 'main_page.products' %></a></li>
+            <li class="dropdown <%= @active == 'products' ? 'nav-active' : '' %>">
+            <a href="/products" class="dropdown-toggle" data-toggle="" role="button" title=""><%= I18n.t 'main_page.products' %></a>
+              <ul class="dropdown-menu dropdown-content">
+                <li><a href="/products/snapup">SNAP UP</a></li>
+                <li><a href="/products/clearup">CLEAR UP</a></li>
+              </ul>
+            </li>
             <li class="<%= @active == 'about' ? 'nav-active' : '' %>"><a href="/about" title=""><%= I18n.t 'main_page.about_us' %></a></li>
             <li class="<%= @active == 'blog' ? 'nav-active' : '' %>"><a href="/blog" title=""><%= I18n.t 'main_page.blog' %></a></li>
             <li class="<%= @active == 'contact' ? 'nav-active' : '' %>"><a href="/contact" title=""><%= I18n.t 'main_page.contact_us' %></a></li>
