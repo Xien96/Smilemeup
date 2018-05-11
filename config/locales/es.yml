@@ -1,6 +1,7 @@
     
 es:
   main_page:
+    use: 'Use'
     products: "productula"
     about_us: 'About US'
     blog: 'Blog'
