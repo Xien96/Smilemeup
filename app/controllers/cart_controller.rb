@@ -6,7 +6,6 @@ class CartController < ApplicationController
     before_action :authenticate_user! , only: [:cart , :index]
     skip_before_action :verify_authenticity_token
   def index
-    byebug
     if current_user.nil?
       @currency = 'usd'
     else
