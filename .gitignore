@@ -24,3 +24,4 @@
 
 vendor/bundle 	
 .idea/*
+public/uploads/tmp/*
