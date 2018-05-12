@@ -1,0 +1,9 @@
+<% @conv.messages.map do |message| %>
+
+  <div class="<%= "#{message.creator == current_user ? 'right-side' : 'left-side'}" %>">
+    <span class="creator_name">
+       <%= message.creator.name %>
+    </span>
+    <%= message.body %>
+  </div>
+<% end %>

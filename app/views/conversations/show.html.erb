@@ -30,14 +30,7 @@
 
       </div>
       <div class="col-xs-9">
-        <% @conv.messages.map do |message| %>
-          <% if message.creator == current_user %>
-            my: <%= message.body %>
-            <% else %>
-            target: <%= message.body %>
-            <br>
-            <% end %>
-        <% end %>
+        <%= render 'conversations' %>
         <%= render 'new' %>
       </div>
 
