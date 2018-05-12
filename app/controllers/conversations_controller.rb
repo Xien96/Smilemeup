@@ -10,13 +10,22 @@ class ConversationsController < ApplicationController
   def create
     conv = Conversation.new(conversation_params)
     conv.creator = current_user
+    conv.messages.map do |m|
+      next if m.creator_id.present?
+      m.creator_id = current_user.id
+    end
     conv.save!
     redirect_to :inbox
   end
 
   def update
     @conv = Conversation.find(params[:id])
-    @conv.update_attributes(conversation_params)
+    @conv.assign_attributes(conversation_params)
+    @conv.messages.map do |m|
+      next if m.creator_id.present?
+      m.creator_id = current_user.id
+    end
+    @conv.save
     render :show
   end
 

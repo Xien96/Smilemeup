@@ -17,17 +17,26 @@
   <div class="tab-pane show active" id="contact" role="tabpanel" aria-labelledby="contact-tab">
     <div class="row">
       <div class="col-xs-3">
+        <ul class="list-group">
         <% Conversation.mine(current_user).map do |conv| %>
-          <%= link_to conv do %>
-            <%= conv.target.name %> :
-            <%= conv.messages.last.try(:body) %>
-          <% end %>
-          <hr>
+          <li class="list-group-item">
+            <%= link_to conv do %>
+              <%= conv.target.name %> :
+              <%= conv.messages.last.try(:body) %>
+            <% end %>
+          </li>
         <% end %>
+        </ul>
+
       </div>
       <div class="col-xs-9">
         <% @conv.messages.map do |message| %>
-          <%= message.body %> <br>
+          <% if message.creator == current_user %>
+            my: <%= message.body %>
+            <% else %>
+            target: <%= message.body %>
+            <br>
+            <% end %>
         <% end %>
         <%= render 'new' %>
       </div>
