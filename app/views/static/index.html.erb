@@ -3,20 +3,20 @@
     <div class="slogan align-in-mobile">
       <div class="row">
         <div class="col-sm-4">
-          <h1 class="slogan-title heading"><%= t 'main_page.welcome'%></h1>
+          <h1 class="slogan-title heading"><%= t 'main_page.welcome' %></h1>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-4">
-          <p class="slogan-description"><%= t 'main_page.offers'%></p>
+          <p class="slogan-description"><%= t 'main_page.offers' %></p>
         </div>
       </div>
-      <div class="row"> 
+      <div class="row">
         <div class="col-sm-6 col-xs-12 col-sm-2 header-button">
-          <a class="btn btn-default btn-lg second" href="/products/clearup" role="button"><%= t 'main_page.clear_up'%></a>
+          <a class="btn btn-default btn-lg second" href="/products/clearup" role="button"><%= t 'main_page.clear_up' %></a>
         </div>
         <div class="col-sm-6 col-xs-12 col-sm-2 header-button">
-          <a class="btn btn-default btn-lg" href="/products/snapup" role="button"><%= t 'main_page.snap_up'%></a>
+          <a class="btn btn-default btn-lg" href="/products/snapup" role="button"><%= t 'main_page.snap_up' %></a>
         </div>
       </div>
     </div>
@@ -40,8 +40,9 @@
   <div class="row home-why text-center">
     <div class="col-sm-3 home-why-item">
       <%# image_tag('home-1.svg') %>
-      <div id="doctor_anim" style="height: 300px; width: 100%;">
-
+      <div class="home-why-item-inner">
+        <div id="doctor_anim" style="height: 180px; width: 127px;">
+        </div>
       </div>
 
       <h4> <%= t 'main_page.smile' %> <strong><%= t 'main_page.experts' %> </strong></h4>
@@ -51,8 +52,9 @@
     </div>
     <div class="col-sm-3 home-why-item">
       <%# image_tag('home-2.svg') %>
-      <div id="rating_anim" style="height: 300px; width: 100%;">
-
+      <div class="home-why-item-inner">
+        <div id="rating_anim" style="height: 124px; width: 128px;">
+        </div>
       </div>
       <h4><strong><%= t 'main_page.credibility' %></strong></h4>
       <p>
@@ -61,8 +63,9 @@
     </div>
     <div class="col-sm-3 home-why-item">
       <%# image_tag('home-3.svg') %>
-      <div id="girl_anim" style="height: 300px; width: 100%;">
-
+      <div class="home-why-item-inner">
+        <div id="girl_anim" style="height: 186px; width: 126px;">
+        </div>
       </div>
       <h4><strong><%= t 'main_page.two_in_one' %> </strong></h4>
       <p>
@@ -70,10 +73,11 @@
       </p>
     </div>
     <div class="col-sm-3 home-why-item">
-      <div id="money_anim" style="height: 300px; ">
-
+      <div class="home-why-item-inner">
+        <div id="money_anim" style="height: 112px; width: 129px ">
+        </div>
       </div>
-      0<%# image_tag('home-4.svg') %>
+      <%# image_tag('home-4.svg') %>
       <h4> <%= t 'main_page.satisfaction' %> <strong> <%= t 'main_page.guarantee' %> </strong></h4>
       <p>
         <%= t 'main_page.why_desc4' %>
@@ -85,7 +89,8 @@
 
 <div class="home container">
   <div class="text-center">
-    <h3> <%= t 'main_page.select_idea' %><strong style="color: #96bf3d"> <%= t 'main_page.smiling_solutions' %></strong></h3>
+    <h3> <%= t 'main_page.select_idea' %><strong style="color: #96bf3d"> <%= t 'main_page.smiling_solutions' %></strong>
+    </h3>
   </div>
   <div class="row home-products">
     <div class="col-sm-6">
@@ -97,10 +102,13 @@
           <div class="col-sm-12">
             <a href="/products/clearup"><h1 class="green order-heading">CLEAR UP</h1></a>
             <p class="order-min-height">
-              You wish to straighten your teeth or close <br>gaps? Without traditional braces? <br>You prefer to pay less for a high-quality <br>treatment? Then you should choose our <br>invisible, discreet aligner "Clear Up"
+              You wish to straighten your teeth or close <br>gaps? Without traditional braces? <br>You prefer to pay
+              less for a high-quality <br>treatment? Then you should choose our <br>invisible, discreet aligner "Clear
+              Up"
             </p>
             <p>
-              <a class="btn btn-default btn-lg btn-green" href="/products/clearup/clearup_impression" role="button">Start Now</a>
+              <a class="btn btn-default btn-lg btn-green" href="/products/clearup/clearup_impression" role="button">Start
+                Now</a>
             </p>
           </div>
 
@@ -134,7 +142,7 @@
 
 <div class="home container">
   <div class="text-center">
-    <h3><%= t 'main_page.how'%> <strong style="color: #96bf3d "><%= t 'main_page.works'%></strong></h3>
+    <h3><%= t 'main_page.how' %> <strong style="color: #96bf3d "><%= t 'main_page.works' %></strong></h3>
   </div>
   <div class="row home-how">
     <div class="col-sm-4">
@@ -142,11 +150,11 @@
         <div class="home-how-number">1</div>
         <div class="text-center">
 
-          <%= image_tag('home-how-1.svg')%>
+          <%= image_tag('home-how-1.svg') %>
         </div>
-        <h4 class="green text-center"><%= t 'main_page.step_1_normal'%> <br><%= t 'main_page.step_1_bold'%></h4>
+        <h4 class="green text-center"><%= t 'main_page.step_1_normal' %> <br><%= t 'main_page.step_1_bold' %></h4>
         <p>
-          <%= t 'main_page.step_1_desc'%>
+          <%= t 'main_page.step_1_desc' %>
         </p>
       </div>
     </div>
@@ -154,23 +162,23 @@
       <div class="home-how-item shadow min-height-shadow">
         <div class="home-how-number">2</div>
         <div class="text-center">
-          <%= image_tag('home-how-2.svg')%>
+          <%= image_tag('home-how-2.svg') %>
         </div>
-        <h4 class="green text-center"><%= t 'main_page.step_2_normal'%> <br><%= t 'main_page.step_2_bold'%></h4>
+        <h4 class="green text-center"><%= t 'main_page.step_2_normal' %> <br><%= t 'main_page.step_2_bold' %></h4>
         <p>
           <%= t 'main_page.step_2_desc' %> <br><br><br>
         </p>
       </div>
     </div>
-    <div class="col-sm-4">  
+    <div class="col-sm-4">
       <div class="home-how-item shadow min-height-shadow">
         <div class="home-how-number">3</div>
         <div class="text-center">
-          <%= image_tag('home-how-3.svg')%>
+          <%= image_tag('home-how-3.svg') %>
         </div>
-        <h4 class="green text-center"><%= t 'main_page.step_3_normal'%><br><%= t 'main_page.step_3_bold'%></h4>
+        <h4 class="green text-center"><%= t 'main_page.step_3_normal' %><br><%= t 'main_page.step_3_bold' %></h4>
         <p>
-          <%= t 'main_page.step_3_desc'%> <br><br><br>
+          <%= t 'main_page.step_3_desc' %> <br><br><br>
           &nbsp;
         </p>
       </div>
@@ -186,11 +194,11 @@
       </div>
       <div class="col-sm-5 app-info" style="float: right;">
         <h3 class="app-heading">
-          <%= t 'main_page.check'%> <br>
-          <strong><%= t 'main_page.new_app'%></strong>
+          <%= t 'main_page.check' %> <br>
+          <strong><%= t 'main_page.new_app' %></strong>
         </h3>
         <p class="app-des">
-          <%= t 'main_page.new_app_desc'%>
+          <%= t 'main_page.new_app_desc' %>
         </p>
         <div class="row downloads">
           <div class="col-sm-5 col-xs-12 google-play-image">
@@ -198,8 +206,9 @@
           </div>
           <div class="col-sm-5 col-xs-12">
             <%= image_tag('app-download-ios.svg') %>
-          </div><br><br><br>
-          <h1 style="margin-left: 0.5em"><strong> <%= t 'main_page.comming_soon'%> </strong></h1>
+          </div>
+          <br><br><br>
+          <h1 style="margin-left: 0.5em"><strong> <%= t 'main_page.comming_soon' %> </strong></h1>
         </div>
       </div>
     </div>
