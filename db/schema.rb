@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180512091531) do
+ActiveRecord::Schema.define(version: 20180513105538) do
 
   create_table "conversations", force: :cascade do |t|
     t.integer "creator_id"
@@ -66,6 +66,8 @@ ActiveRecord::Schema.define(version: 20180512091531) do
     t.integer "style_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "quantity"
+    t.integer "subtotal"
     t.index ["product_id"], name: "index_user_products_on_product_id"
     t.index ["style_id"], name: "index_user_products_on_style_id"
     t.index ["user_id"], name: "index_user_products_on_user_id"
