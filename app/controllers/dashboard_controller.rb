@@ -7,6 +7,7 @@ class DashboardController < ApplicationController
   end
 
   def orders
+    @orders = current_user.user_products
   end
 
   def users
