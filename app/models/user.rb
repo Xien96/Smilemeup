@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  attr_accessor :email, :password, :remember_me, :avatar, :avatar_cache, :remove_avatar
+  # attr_accessor :remember_me, :avatar, :avatar_cache, :remove_avatar
 
   # has_attached_file :candidate_1,
   #                   :path => ":rails_root/public/uploads/:id_candidate_1.jpeg",

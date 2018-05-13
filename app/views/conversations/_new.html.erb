@@ -1,4 +1,5 @@
 <%= form_for(build_conversation(@conv)) do |f| %>
+  <p class="target_name"> <%= f.object.target.try(:name) %> </p>
   <div class="<%= f.object.id ? 'hidden' : '' %>">
     <%= f.collection_select(:target_id, User.all, :id, :name) %>
   </div>

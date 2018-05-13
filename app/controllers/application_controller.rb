@@ -7,9 +7,9 @@ class ApplicationController < ActionController::Base
   protected
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :phone])
-    # devise_parameter_sanitizer.permit(:account_update, keys: [:name, :phone, :city, :country, :avatar, :avatar_cache, :remove_avatar])
-    devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:name, :phone, :city, :country, :email, :password,
-                                                                      :password_confirmation, :current_password, :avatar, :avatar_cache, :remove_avatar) }
+    devise_parameter_sanitizer.permit(:account_update, keys: [:name, :phone, :city, :country, :avatar, :avatar_cache, :remove_avatar])
+    # devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:name, :phone, :city, :country, :email, :password,
+    #                                                                   :password_confirmation, :current_password, :avatar, :avatar_cache, :remove_avatar) }
     @active = "account"
   end
 

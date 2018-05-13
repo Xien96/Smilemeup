@@ -4,9 +4,51 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous" data-turbolinks-eval=false></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js" data-turbolinks-eval=false></script>
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.13.0/bodymovin.min.js" type="text/javascript"></script>
+
+
 
 <script>
     $(document).on('turbolinks:load', function () {
+        var footer = bodymovin.loadAnimation({
+            container: document.getElementById('call_us_anim'), // Required
+            path: 'call_us.json', // Required
+            renderer: 'svg/canvas/html', // Required
+            loop: true, // Optional
+            autoplay: true, // Optional
+        });
+        var girl = bodymovin.loadAnimation({
+            container: document.getElementById('girl_anim'), // Required
+            path: 'girl.json', // Required
+            renderer: 'svg/canvas/html', // Required
+            loop: true, // Optional
+            autoplay: true, // Optional
+        });
+        var money = bodymovin.loadAnimation({
+            container: document.getElementById('money_anim'), // Required
+            path: 'money.json', // Required
+            renderer: 'svg/canvas/html', // Required
+            loop: true, // Optional
+            autoplay: true, // Optional
+        });
+        var doctor = bodymovin.loadAnimation({
+            container: document.getElementById('doctor_anim'), // Required
+            path: 'doctor.json', // Required
+            renderer: 'svg/canvas/html', // Required
+            loop: true, // Optional
+            autoplay: true, // Optional
+        });
+
+        var rating = bodymovin.loadAnimation({
+            container: document.getElementById('rating_anim'), // Required
+            path: 'rating.json', // Required
+            renderer: 'svg/canvas/html', // Required
+            loop: true, // Optional
+            autoplay: true, // Optional
+        });
+        $("#call_us_anim").click(function(){
+            $("#footer-chat").click()
+        })
         $("[data-toggle=popover]").popover({html: true})
         $('.add-to-cart .number .quantity').text(1);
         $('#scroll-up').click(function () {
@@ -89,14 +131,16 @@
                 $('#footer-call').css({bottom: '160px'});
                 $('#footer-whatsapp').css({bottom: '115px'});
                 $('#footer-chat').css({bottom: '70px'});
-                $('#footer-chat').addClass('active')
+                $('#footer-chat').addClass('active');
+                $("#call_us_anim").addClass('hide').removeClass('show');
             }
         })
         $('#footer-close').click(function (e) {
             $('#footer-call').css({bottom: '25px'});
             $('#footer-whatsapp').css({bottom: '25px'});
             $('#footer-chat').css({bottom: '25px'});
-            $('#footer-chat').removeClass('active')
+            $('#footer-chat').removeClass('active');
+            $("#call_us_anim").addClass('show').removeClass('hide');
         })
         $('#home-mouse').click(function () {
             $('html, body').animate({scrollTop: 750}, 'slow');

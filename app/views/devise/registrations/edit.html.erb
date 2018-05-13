@@ -17,7 +17,6 @@
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put}) do |f| %>
       <div class="row profile">
         <%= f.file_field :avatar, class: 'show'%>
-        <%= f.hidden_field :avatar_cache, class: 'show'%>
         <div class="col-sm-4">
           <%= image_tag (f.object.avatar_url.blank? ? 'default-avatar.png' : f.object.avatar_url), width: 300%>
         </div>
