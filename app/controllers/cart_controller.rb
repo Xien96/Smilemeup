@@ -40,17 +40,13 @@ class CartController < ApplicationController
   end
   
   def create_user_product
-    products = session[:cart].map{|x| x["product"]}
-    products_id = Product.where(:name => products).collect { |p| "#{p[:id]}"}
-    # products_id = Product.find_by(:name => products).id
-    styles = session[:cart].map{|x| x["style"]}
-    styles_id = Style.where(:name => styles).collect { |p| "#{p[:id]}"}
-    if products_id.size > 1
-      products_id.zip(styles_id).each{|b| @transaction = UserProduct.create(:user_id => current_user.id , :product_id => b[0] , :style_id => b[1])}
+    if current_user.nil?
+      @currency = 'usd'
     else
-      styles_id.each do |y|
-            @transaction = UserProduct.create(:user_id => current_user.id , :product_id => products_id[0] , :style_id => y)
-      end
+      @currency = current_user.currency
+    end
+    session[:cart].each do |y|
+      @transaction = UserProduct.create(:user_id => current_user.id , :product_id => Product.find_by(:name => y["product"]).id , :style_id => Style.find_by(:name => y["style"]).id , :quantity => y["quantity"] , :subtotal => y["quantity"]*Product.find_by(:name => y["product"]).product_prices.find_by(:currency => @currency).price)
     end
     session[:cart] = nil
     session[:total] = nil
