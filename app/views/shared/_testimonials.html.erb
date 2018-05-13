@@ -1,6 +1,14 @@
 <div class="about container text-center">
   <h3> <%= t 'main_page.happy_customers'%> <strong class="green"><%= t 'main_page.say'%></strong></h3>
 </div>
+<br>
+<br>
+<div class="swipper-hand text-center">
+  <%= image_tag('swipper-hand.svg') %>
+  <div id="hand_2_anim" style="height: 0px; width: 8px; margin: 0px auto;">
+  </div>
+  <p class="green"> <%= t 'main_page.slide'%> </p>
+</div>
 
 <div class="azab-slider">
   <!-- Swiper -->
@@ -113,7 +121,9 @@
   </div>
 </div>
 <div class="swipper-hand text-center">
-  <%= image_tag('swipper-hand.svg') %> 
+  <%= image_tag('swipper-hand.svg') %>
+  <div id="hand_1_anim" style="height: 0px; width: 0px; margin: 0px auto;">
+  </div>
   <p class="green"> <%= t 'main_page.slide'%> </p>
 </div>
 

@@ -46,6 +46,21 @@
             loop: true, // Optional
             autoplay: true, // Optional
         });
+        var hand1 = bodymovin.loadAnimation({
+            container: document.getElementById('hand_1_anim'), // Required
+            path: 'hand.json', // Required
+            renderer: 'svg/canvas/html', // Required
+            loop: true, // Optional
+            autoplay: true, // Optional
+        });
+        var hand2 = bodymovin.loadAnimation({
+            container: document.getElementById('hand_2_anim'), // Required
+            path: 'hand.json', // Required
+            renderer: 'svg/canvas/html', // Required
+            loop: true, // Optional
+            autoplay: true, // Optional
+        });
+
         $("#call_us_anim").click(function(){
             $("#footer-chat").click()
         })
