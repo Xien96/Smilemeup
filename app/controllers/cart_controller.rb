@@ -134,4 +134,9 @@ class CartController < ApplicationController
     end
   end
 
+  def remove_item
+    session[:cart].delete_at(params[:index].to_i)
+    redirect_to products_checkout_path 
+  end
+
 end

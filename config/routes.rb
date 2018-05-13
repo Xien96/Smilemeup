@@ -40,7 +40,7 @@ Rails.application.routes.draw do
   get '/products/snapup'                                =>  "static#snapup"
   get '/products/snapup/customize'                      =>  "static#snapup_order"
   
-
+  delete '/products/item/:id'                          ,to: "cart#remove_item", as: 'delete_item'
   get '/products/clearup'                               =>  "static#clearup"
 
   get 'products/clearup/candidate'                      =>  "clearup#candidate"
