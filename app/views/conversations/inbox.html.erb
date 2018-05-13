@@ -13,15 +13,17 @@
       <a class="nav-link" id="contact-tab" data-toggle="tab" href="/inbox" role="tab" aria-controls="contact" aria-selected="false"><%= t 'profile.tabs.messages' %> </a>
     </li>
   </ul>
-    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">orders</div>
-    <div class="tab-pane show active" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-      <div class="row">
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">orders</div>
+  <div class="tab-pane show active" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+    <div class="messages">
+
+      <div class="row inbox">
         <div class="col-xs-3">
           <% Conversation.mine(current_user).map do |conv| %>
-            <%= link_to conv do  %>
-            <%= conv.target.name %> :
-            <%= conv.messages.last.try(:body) %>
-              <%end%>
+            <%= link_to conv do %>
+              <%= conv.target.name %> :
+              <%= conv.messages.last.try(:body) %>
+            <% end %>
             <hr>
           <% end %>
         </div>
@@ -32,6 +34,7 @@
       </div>
 
     </div>
+  </div>
 
 </div>
 
