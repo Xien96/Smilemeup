@@ -131,10 +131,11 @@
                     <th>Quantity</th>
                     <th>Unit Price</th>
                     <th>Subtotal</th>
+                    <th>Options</th>
                   </tr>
                 </thead> 
                 <tbody>
-                  <% session[:cart].each do |ci| %>
+                  <% session[:cart].each_with_index do |ci, index| %>
                   <tr class="cart-item">
                     <td class="img"><%= image_tag("products/#{ci['style']}.png")%></td>
                     <td>
@@ -144,6 +145,7 @@
                     <td><%= ci['quantity'].to_i %></td>
                     <td><%= number_to_currency(Product.find_by(name: ci['product']).product_prices.find_by(:currency => @currency).price ) %> </td>
                     <td><%= number_to_currency(Product.find_by(name: ci['product']).product_prices.find_by(:currency => @currency).price  * ci['quantity'].to_i) %></td>
+                    <td><%= link_to "Remove", delete_item_path(index) , method: :delete%></td>
                   </tr>
                   <% end %>
                 </tbody>
