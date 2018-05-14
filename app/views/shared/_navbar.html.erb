@@ -3,16 +3,16 @@
     <nav class="navbar navbar-default navbar-absolute">
       <div class="container-fluid">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed"  data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <div class="">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar one"></span>
               <span class="icon-bar second"></span>
               <span class="icon-bar third"></span>
-          </div>
+            </div>
           </button>
           <a class="navbar-brand" href="/">
-            <% if @active =="account" %>
+            <% if @active == "account" %>
               <%= image_tag('logo-color.png', id: "logo") %>
             <% else %>
               <%= image_tag('logo-white.png', id: "logo") %>
@@ -21,44 +21,89 @@
               <%= image_tag('back-to-home.svg', id: "back-to-home") %>
             <% end %>
           </a>
-          
+
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown <%= @active == 'products' ? 'nav-active' : '' %>">
-            <a href="/products" class="dropdown-toggle" data-toggle="" role="button" title=""><%= I18n.t 'main_page.products' %></a>
+              <a href="/products" class="dropdown-toggle" data-toggle="" role="button" title=""><%= I18n.t 'main_page.products' %></a>
               <ul class="dropdown-menu dropdown-content">
                 <li><a href="/products/snapup">SNAP UP</a></li>
                 <li><a href="/products/clearup">CLEAR UP</a></li>
               </ul>
             </li>
-            <li class="<%= @active == 'about' ? 'nav-active' : '' %>"><a href="/about" title=""><%= I18n.t 'main_page.about_us' %></a></li>
-            <li class="<%= @active == 'blog' ? 'nav-active' : '' %>"><a href="/blog" title=""><%= I18n.t 'main_page.blog' %></a></li>
-            <li class="<%= @active == 'contact' ? 'nav-active' : '' %>"><a href="/contact" title=""><%= I18n.t 'main_page.contact_us' %></a></li>
-            <li class="nav-icons seperator"><a href="#" title="" class="settingsen settings"><div><%= t "#{@lang || 'en'}" %></div></a></li>
-            <li class="nav-icons"><a href="#" title="" class="settingsusd settings"><div class="usd-auto"><%= t "#{@currency || 'usd' }" %></div></a></li>
+            <li class="<%= @active == 'about' ? 'nav-active' : '' %>">
+              <a href="/about" title=""><%= I18n.t 'main_page.about_us' %></a></li>
+            <li class="<%= @active == 'blog' ? 'nav-active' : '' %>">
+              <a href="/blog" title=""><%= I18n.t 'main_page.blog' %></a></li>
+            <li class="<%= @active == 'contact' ? 'nav-active' : '' %>">
+              <a href="/contact" title=""><%= I18n.t 'main_page.contact_us' %></a></li>
+
+            <li class="dropdown nav-icons seperator settingsusd settings">
+              <div class="text-center">
+                <a href="#" class="dropdown-toggle " data-toggle="" role="button" title="">
+                  <%= t "#{@lang || 'en' }" %>
+                </a>
+                <ul class="dropdown-menu dropdown-content languagues">
+                  <li>
+                    <%= link_to t("lang.english"), params.to_unsafe_hash.merge(:lang => "en"), class: "dropdown-item", style: 'display: block' %>
+                  </li>
+                  <li>
+                    <%= link_to t("lang.germany"), params.to_unsafe_hash.merge(:lang => "de"), class: "dropdown-item", style: 'display: block' %>
+                  </li>
+                  <li>
+                    <%= link_to t("lang.spanish"), params.to_unsafe_hash.merge(:lang => "es"), class: "dropdown-item", style: 'display: block' %>
+
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="dropdown nav-icons settingsusd settings">
+              <div class="usd-auto text-center">
+                <a href="#" title="" class="dropdown-toggle " data-toggle="" role="button" >
+                  <%= t "#{@currency || 'usd' }" %>
+                </a>
+                <ul class="dropdown-menu dropdown-content currencies">
+                  <li>
+                    <%= link_to t("currency.usd"), params.to_unsafe_hash.merge(:currency => "usd"), class: "dropdown-item", style: 'display: block' %>
+                  </li>
+                  <li>
+                    <%= link_to t("currency.gbp"), params.to_unsafe_hash.merge(:currency => "gbp"), class: "dropdown-item", style: 'display: block' %>
+                  </li>
+                  <li>
+                    <%= link_to t("currency.euro"), params.to_unsafe_hash.merge(:currency => "euro"), class: "dropdown-item", style: 'display: block' %>
+                  </li>
+                  <li>
+                    <%= link_to t("currency.aud"), params.to_unsafe_hash.merge(:currency => "aud"), class: "dropdown-item", style: 'display: block' %>
+                  </li>
+                </ul>
+              </div>
+            </li>
             <!-- <li><a href="" title=""><%= image_tag('search.svg') %></a></li> -->
             <% if session[:cart].count > 0 %>
-              <li class="nav-icons <%= @active == 'cart' ? 'nav-active' : '' %>"><a href="/cart" title="" class="car-shop"><%= image_tag('cart-full.svg') %></a></li>
+              <li class="nav-icons <%= @active == 'cart' ? 'nav-active' : '' %>">
+                <a href="/cart" title="" class="car-shop"><%= image_tag('cart-full.svg') %></a></li>
             <% else %>
-              <li class=" nav-icons <%= @active == 'cart' ? 'nav-active' : '' %>"><a href="/cart" title=""><%= image_tag('cart-empty.svg') %></a></li>
+              <li class=" nav-icons <%= @active == 'cart' ? 'nav-active' : '' %>">
+                <a href="/cart" title=""><%= image_tag('cart-empty.svg') %></a></li>
             <% end %>
             <li class="devider">&nbsp;</li>
             <% if warden.authenticated? %>
-            <li class="dropdown <%= @active == 'account' ? 'nav-active' : '' %>">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><strong><%= warden.user.name %></strong> <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><%= link_to(t('main_page.my_account'), edit_user_registration_path) %></li>
-                <li><a href="/dashboard/orders"><%= t "main_page.my_orders" %></a></li>
-                <li><a href="/inbox"><%= t "main_page.my_messages" %></a></li>
-                <li role="separator" class="divider"></li>
-                <li><%= link_to(t('main_page.logout'), destroy_user_session_path, :method => :delete) %></li>
-              </ul>
-            </li>
-            
+              <li class="dropdown <%= @active == 'account' ? 'nav-active' : '' %>">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><strong><%= warden.user.name %></strong>
+                  <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to(t('main_page.my_account'), edit_user_registration_path) %></li>
+                  <li><a href="/dashboard/orders"><%= t "main_page.my_orders" %></a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><%= link_to(t('main_page.logout'), destroy_user_session_path, :method => :delete) %></li>
+                </ul>
+              </li>
+
             <% else %>
-            <li><a class="btn btn-default aligns-sign" href="<%= new_user_session_path %>" role="button">SIGN IN</a></li>
+              <li><a class="btn btn-default aligns-sign" href="<%= new_user_session_path %>" role="button">SIGN IN</a>
+              </li>
             <% end %>
           </ul>
         </div>

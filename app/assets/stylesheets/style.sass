@@ -164,8 +164,8 @@ nav.navbar-default, nav.navbar-default .navbar-toggle
       width: 50px
 
   .settingsusd
-    margin-top: -6px !important   
-
+    margin-top: 10px !important
+    margin-left: 10px
 
   .settingsen
     div
@@ -693,6 +693,38 @@ footer
       color: #96BF3D !important
     a
       color: black !important
+    .dropdown
+      display: inline-block
+  .active_conversation
+    position: fixed
+    width: 350px
+    right: 150px
+    bottom: 25px
+    height: auto
+    background-color: white
+    .conversation_header
+      border: 1px solid #aeaeae
+      background-color: $color-green
+      color: white
+      padding: 6px 12px
+    .messages_container
+      border: 1px solid #aeaeae
+      padding: 5px 10px
+      &.show
+        min-height: 300px
+        max-height: 300px
+        input[type=text]
+          width: calc(100% + 0px)
+          border: 0px
+          border-top: 1px solid gray
+          margin-left: -10px
+          position: absolute
+          bottom: 0px
+          background: #f
+          padding: 6px 12px
+          &:focus
+            border: 0px
+            outline: 0px
 
 .cart
   h1
@@ -1689,8 +1721,13 @@ h3
     display: block
     color: #525252 !important
     &:hover
-      color: #525252 !important 
-
+      color: #525252 !important
+  &.languagues, &.currencies
+    //background-color: #597222 !important
+    width: auto
+    min-width: auto
+    a
+      padding: 2px
 .dropdown:hover
   .dropdown-content
     display: block

@@ -15,4 +15,10 @@ class Conversation < ApplicationRecord
     end
   end
 
+  def before_save
+    if self.target_id.blank?
+      self.target_id = User.first.id
+    end
+  end
+
 end

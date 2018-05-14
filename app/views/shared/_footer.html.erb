@@ -28,10 +28,16 @@
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <%= t 'main_page.language' %>
             </button>
-            <div class="dropdown-menu"  aria-labelledby="dropdownMenuButton">
-              <%= link_to t("lang.english"), params.to_unsafe_hash.merge(:lang => "en"), class: "dropdown-item", style: 'display: block' %>
-              <%= link_to t("lang.germany"), params.to_unsafe_hash.merge(:lang => "de"), class: "dropdown-item", style: 'display: block' %>
-              <%= link_to t("lang.spanish"), params.to_unsafe_hash.merge(:lang => "es"), class: "dropdown-item", style: 'display: block' %>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li class="dropdown-item">
+                <%= link_to t("lang.english"), params.to_unsafe_hash.merge(:lang => "en"), class: "dropdown-item", style: 'display: block' %>
+              </li>
+              <li class="dropdown-item">
+                <%= link_to t("lang.germany"), params.to_unsafe_hash.merge(:lang => "de"), class: "dropdown-item", style: 'display: block' %>
+              </li>
+              <li class="dropdown-item">
+                <%= link_to t("lang.spanish"), params.to_unsafe_hash.merge(:lang => "es"), class: "dropdown-item", style: 'display: block' %>
+              </li>
             </div>
           </div>
         </span>
@@ -42,10 +48,19 @@
               <%= t 'main_page.currency' %>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <%= link_to t("currency.usd"), params.to_unsafe_hash.merge(:currency => "usd"), class: "dropdown-item", style: 'display: block' %>
-              <%= link_to t("currency.gbp"), params.to_unsafe_hash.merge(:currency => "gbp"), class: "dropdown-item", style: 'display: block' %>
-              <%= link_to t("currency.euro"), params.to_unsafe_hash.merge(:currency => "euro"), class: "dropdown-item", style: 'display: block' %>
-              <%= link_to t("currency.aud"), params.to_unsafe_hash.merge(:currency => "aud"), class: "dropdown-item", style: 'display: block' %>
+              <li class="dropdown-item">
+                <%= link_to t("currency.usd"), params.to_unsafe_hash.merge(:currency => "usd"), class: "dropdown-item", style: 'display: block' %>
+              </li>
+              <li class="dropdown-item">
+                <%= link_to t("currency.gbp"), params.to_unsafe_hash.merge(:currency => "gbp"), class: "dropdown-item", style: 'display: block' %>
+              </li>
+              <li class="dropdown-item">
+                <%= link_to t("currency.euro"), params.to_unsafe_hash.merge(:currency => "euro"), class: "dropdown-item", style: 'display: block' %>
+              </li>
+              <li class="dropdown-item">
+                <%= link_to t("currency.aud"), params.to_unsafe_hash.merge(:currency => "aud"), class: "dropdown-item", style: 'display: block' %>
+              </li>
+
             </div>
           </div>
         </span>
@@ -56,9 +71,15 @@
               <%= t 'main_page.country' %>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li class="dropdown-item">
               <%= link_to t("country.uk"), params.to_unsafe_hash.merge(:country => "uk"), class: "dropdown-item", style: 'display: block' %>
-              <%= link_to t("country.Germany"), params.to_unsafe_hash.merge(:country => "Germany"), class: "dropdown-item", style: 'display: block' %>
-              <%= link_to t("country.Australia"), params.to_unsafe_hash.merge(:country => "Australia"), class: "dropdown-item", style: 'display: block' %>
+              </li>
+              <li class="dropdown-item">
+                <%= link_to t("country.Germany"), params.to_unsafe_hash.merge(:country => "Germany"), class: "dropdown-item", style: 'display: block' %>
+              </li>
+              <li class="dropdown-item">
+                <%= link_to t("country.Australia"), params.to_unsafe_hash.merge(:country => "Australia"), class: "dropdown-item", style: 'display: block' %>
+              </li>
             </div>
           </div>
         </span>
@@ -73,6 +94,43 @@
       <p>&copy; All rights reserved to Smile Me Up 2018&trade;</p>
     </div>
   </div>
+  <div class="active_conversation <%= current_user.present? ? 'show' : 'hide' %>">
+    <% conversation = Conversation.mine(current_user).first %>
+    <div class="conversation_header" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      <%= conversation.presence.try do |conv|
+        conv.target.name
+      end || t('main_page.new_conversation') %>
+    </div>
+    <div class="messages_container collapse" id="collapseExample">
+      <% if conversation %>
+        <% conversation.messages.map do |message| %>
+
+          <div class="<%= "#{message.creator == current_user ? 'right-side' : 'left-side'}" %>">
+              <span class="creator_name">
+                 <%= message.creator.name %>
+              </span>
+            <%= message.body %>
+          </div>
+        <% end %>
+      <% end %>
+      <%= form_for(build_conversation(conversation)) do |f| %>
+        <p class="target_name"> <%# f.object.target.try(:name) %> </p>
+        <div class="hidden <%# f.object.id ? 'hidden' : '' %>">
+          <%= f.collection_select(:target_id, User.all, :id, :name) %>
+        </div>
+        <%= f.fields_for :messages do |m| %>
+          <div class="<%= m.object.id ? 'hidden' : '' %>">
+            <%= m.text_field :body %>
+          </div>
+        <% end %>
+        <div class="hidden">
+
+          <%= f.submit :send %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
   <div class="footer-close" , id="footer-close">
     <%= image_tag('footer-close.svg') %>
   </div>

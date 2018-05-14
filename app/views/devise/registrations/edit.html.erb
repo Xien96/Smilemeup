@@ -9,9 +9,6 @@
     <li class="nav-item">
       <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><%= t 'profile.tabs.orders' %> </a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/inbox"><%= t 'profile.tabs.messages' %> </a>
-    </li>
   </ul>
   <div class="tab-pane show active" id="home" role="tabpanel" aria-labelledby="home-tab">
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put}) do |f| %>

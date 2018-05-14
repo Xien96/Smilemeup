@@ -1,6 +1,7 @@
     
 es:
   main_page:
+    new_conversation: 'New Message'
     use: 'Use'
     products: "productula"
     about_us: 'About US'

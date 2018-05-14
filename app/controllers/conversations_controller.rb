@@ -15,7 +15,7 @@ class ConversationsController < ApplicationController
       m.creator_id = current_user.id
     end
     conv.save!
-    redirect_to :inbox
+    redirect_back(fallback_location: '/')
   end
 
   def update
@@ -26,7 +26,8 @@ class ConversationsController < ApplicationController
       m.creator_id = current_user.id
     end
     @conv.save
-    render :show
+    redirect_back(fallback_location: '/')
+
   end
 
   def show
