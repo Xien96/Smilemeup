@@ -95,7 +95,7 @@
                   <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><%= link_to(t('main_page.my_account'), edit_user_registration_path) %></li>
-                  <li><a href="/dashboard/orders"><%= t "main_page.my_orders" %></a></li>
+                  <li><a href="/my_orders"><%= t "main_page.my_orders" %></a></li>
                   <li role="separator" class="divider"></li>
                   <li><%= link_to(t('main_page.logout'), destroy_user_session_path, :method => :delete) %></li>
                 </ul>
