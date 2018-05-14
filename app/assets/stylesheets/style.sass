@@ -762,7 +762,7 @@ footer
       color: white
       padding: 6px 12px
     .messages_container
-      border: 1px solid #aeaeae
+      border: none
       padding: 5px 10px
       &.show
         min-height: 300px
@@ -2229,6 +2229,23 @@ input[type=range]
   
 /*end dropdown*/
 
+/*chat button*/
+
+.active_conversation
+  .messages_container
+    border: none
+    .creator_name
+      float: left
+      margin-right: 70px
+    #conversation_messages_attributes_1_body
+    .sending-chat-message
+      position: absolute
+      bottom: 0px
+      right: 0
+      padding: 5px 30px
+      border-radius: 20px
+
+
 .footer-drop
   min-width: 135px !important 
   a
@@ -2378,8 +2395,28 @@ input[type=range]
     height: 580px
     overflow-y: scroll
 
+/*footer responsive */
 
+@media(max-width: 1199px)
+  footer
+    .settings
+      display: block !important
+      margin-bottom: 20px
+    .pullin-ipad-left
+      float: left !important
+    .green.underline
+      display: block
+      text-align: left
+    
 
+@media(max-width: 767px)
+  footer
+    .active_conversation
+      width: 215px
+@media(min-width: 991px) and (max-width: 1199px)
+  .our-time-line
+    .timeline-grid
+      margin-left: 213px
 /*------------------------------------------------------------------------------------------------------------*/
 /*Our overflow html hidden*/
 html
