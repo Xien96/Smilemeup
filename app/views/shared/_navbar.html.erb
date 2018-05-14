@@ -27,9 +27,10 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown <%= @active == 'products' ? 'nav-active' : '' %>">
-              <a href="/products" class="dropdown-toggle" data-toggle="dropdown" role="button" title=""><%= I18n.t 'main_page.products' %></a>
-              <ul class="dropdown-menu ">
+              <a href="/products" class="dropdown-toggle" data-toggle="" role="button" title=""><%= I18n.t 'main_page.products' %></a>
+              <ul class="dropdown-menu products-cat">
                 <li><a href="/products/snapup">SNAP UP</a></li>
+                <li role="separator" class="divider"></li>
                 <li><a href="/products/clearup">CLEAR UP</a></li>
               </ul>
             </li>
@@ -41,7 +42,7 @@
               <a href="/contact" title=""><%= I18n.t 'main_page.contact_us' %></a></li>
 
             <li class="dropdown nav-icons seperator settingsusd settings">
-              <div class="text-center">
+              <div class="usd-auto text-center">
                 <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" title="">
                   <%= t "#{@lang || 'en' }" %>
                 </a>

@@ -14,9 +14,9 @@
       <div class="pull-right">
         <ul class="nav nav-pills">
           <li role="presentation" style="padding-top: 10px"><%= t 'main_page.follow' %></li>
-          <li role="presentation"><%= image_tag('facebook.svg') %></li>
-          <li role="presentation"><%= image_tag('youtube.svg') %></li>
-          <li role="presentation"><%= image_tag('instagram.svg') %></li>
+          <li role="presentation"><a href="https://www.facebook.com/smilemeup/"><%= image_tag('facebook.svg') %></a></li>
+          <li role="presentation"><a href="https://www.youtube.com/channel/UCjNJ04YQXCfoH_4FsauOEmw"><%= image_tag('youtube.svg') %></a></li>
+          <li role="presentation"><a href="https://www.instagram.com/smilemeuponline/"><%= image_tag('instagram.svg') %></a></li>
         </ul>
       </div>
     </div>
@@ -28,7 +28,7 @@
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <%= t 'main_page.language' %>
             </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <div class="dropdown-menu footer-drop" aria-labelledby="dropdownMenuButton">
               <li class="dropdown-item">
                 <%= link_to t("lang.english"), params.to_unsafe_hash.merge(:lang => "en"), class: "dropdown-item", style: 'display: block' %>
               </li>
@@ -47,7 +47,7 @@
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <%= t 'main_page.currency' %>
             </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <div class="dropdown-menu footer-drop" aria-labelledby="dropdownMenuButton">
               <li class="dropdown-item">
                 <%= link_to t("currency.usd"), params.to_unsafe_hash.merge(:currency => "usd"), class: "dropdown-item", style: 'display: block' %>
               </li>
@@ -70,7 +70,7 @@
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <%= t 'main_page.country' %>
             </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <div class="dropdown-menu footer-drop" aria-labelledby="dropdownMenuButton">
               <li class="dropdown-item">
               <%= link_to t("country.uk"), params.to_unsafe_hash.merge(:country => "uk"), class: "dropdown-item", style: 'display: block' %>
               </li>
