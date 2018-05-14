@@ -47,9 +47,17 @@ class CartController < ApplicationController
     end
     session[:cart].each do |y|
       @transaction = UserProduct.create(:user_id => current_user.id , :product_id => Product.find_by(:name => y["product"]).id , :style_id => Style.find_by(:name => y["style"]).id , :quantity => y["quantity"] , :subtotal => y["quantity"]*Product.find_by(:name => y["product"]).product_prices.find_by(:currency => @currency).price)
+      @order = OrderDetail.create(:first_name => session[:first_name] , :last_name => session[:last_name] , :zip_code => session[:zip_code] , :city => session[:city], :country => session[:country] , :additional_information => session[:additional_information] , :phone_number => session[:phone_number] , :user_product_id => @transaction.id)
     end
     session[:cart] = nil
     session[:total] = nil
+    session[:first_name] = nil
+    session[:last_name] = nil
+    session[:zip_code] = nil
+    session[:city] = nil
+    session[:country] = nil
+    session[:additional_information] = nil
+    session[:phone_number] = nil
     # redirect_to  products_path
   end
   
@@ -134,5 +142,14 @@ class CartController < ApplicationController
     session[:cart].delete_at(params[:index].to_i)
     redirect_to products_checkout_path 
   end
-
+  def address
+    session[:first_name] = params[:first_name]
+    session[:last_name] = params[:last_name]
+    session[:zip_code] = params[:zip_code]
+    session[:city] = params[:city]
+    session[:country] = params[:country]
+    session[:additional_information] = params[:additional_information]
+    session[:phone_number] = params[:phone_number]
+    redirect_to products_checkout_path
+  end
 end

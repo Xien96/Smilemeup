@@ -42,7 +42,7 @@ Rails.application.routes.draw do
   
   delete '/products/item/:id'                          ,to: "cart#remove_item", as: 'delete_item'
   get '/products/clearup'                               =>  "static#clearup"
-
+  post '/products/address'                              => "cart#address"
   get 'products/clearup/candidate'                      =>  "clearup#candidate"
   post 'products/clearup/candidate'                      =>  "clearup#upload"
 
