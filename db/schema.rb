@@ -42,6 +42,10 @@ ActiveRecord::Schema.define(version: 20180514025922) do
   end
 
   create_table "pictures", force: :cascade do |t|
+    t.string "pic_file_name"
+    t.string "pic_content_type"
+    t.integer "pic_file_size"
+    t.datetime "pic_updated_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -101,6 +105,26 @@ ActiveRecord::Schema.define(version: 20180514025922) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string "unconfirmed_email"
+    t.string "candidate_1_file_name"
+    t.string "candidate_1_content_type"
+    t.integer "candidate_1_file_size"
+    t.datetime "candidate_1_updated_at"
+    t.string "candidate_2_file_name"
+    t.string "candidate_2_content_type"
+    t.integer "candidate_2_file_size"
+    t.datetime "candidate_2_updated_at"
+    t.string "candidate_3_file_name"
+    t.string "candidate_3_content_type"
+    t.integer "candidate_3_file_size"
+    t.datetime "candidate_3_updated_at"
+    t.string "candidate_4_file_name"
+    t.string "candidate_4_content_type"
+    t.integer "candidate_4_file_size"
+    t.datetime "candidate_4_updated_at"
+    t.string "avatar_file_name"
+    t.string "avatar_content_type"
+    t.integer "avatar_file_size"
+    t.datetime "avatar_updated_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "country", default: "UK"

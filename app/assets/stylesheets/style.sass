@@ -115,7 +115,7 @@ nav.navbar-default, nav.navbar-default .navbar-toggle
     width: 97px
     height: 50px !important
   a.btn:hover
-    background-color: white !important
+    /*background-color: white !important*/
     color: $color-green !important
     opacity: 1
   li.nav-active a
@@ -132,9 +132,46 @@ nav.navbar-default, nav.navbar-default .navbar-toggle
       border-radius: 32px
       margin-left: 2px
   .dropdown-menu
-    opacity: 0.8
-    background-color: darken($color-green, 20%)
-    
+    /*opacity: 0.8*/
+    background-color: #FFFFFF
+
+    .divider
+      height: 1px
+      width: 32.5px
+      margin: 9px 0
+      overflow: hidden
+      background-color: #e5e5e5
+      margin-left: 60px
+    li
+      a
+        background-color: #fff 
+        color: #525252 !important
+  .currencies
+    min-width: 50px !important
+    a
+      padding: 0
+      padding: 5px      
+    .divider
+      height: 1px
+      width: 32.5px
+      margin: 0
+      overflow: hidden
+      background-color: #e5e5e5
+      margin-left: 7.5px
+
+  .languagues
+    min-width: 50px !important
+    margin-right: -13px
+    a
+      padding: 0
+      padding: 5px      
+    .divider
+      height: 1px
+      width: 32.5px
+      margin: 0
+      overflow: hidden
+      background-color: #e5e5e5
+      margin-left: 20px
 
   a.navbar-brand
     margin-top: -15px

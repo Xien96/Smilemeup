@@ -27,8 +27,8 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown <%= @active == 'products' ? 'nav-active' : '' %>">
-              <a href="/products" class="dropdown-toggle" data-toggle="" role="button" title=""><%= I18n.t 'main_page.products' %></a>
-              <ul class="dropdown-menu dropdown-content">
+              <a href="/products" class="dropdown-toggle" data-toggle="dropdown" role="button" title=""><%= I18n.t 'main_page.products' %></a>
+              <ul class="dropdown-menu ">
                 <li><a href="/products/snapup">SNAP UP</a></li>
                 <li><a href="/products/clearup">CLEAR UP</a></li>
               </ul>
@@ -42,16 +42,18 @@
 
             <li class="dropdown nav-icons seperator settingsusd settings">
               <div class="text-center">
-                <a href="#" class="dropdown-toggle " data-toggle="" role="button" title="">
+                <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" title="">
                   <%= t "#{@lang || 'en' }" %>
                 </a>
-                <ul class="dropdown-menu dropdown-content languagues">
+                <ul class="dropdown-menu languagues">
                   <li>
                     <%= link_to t("lang.english"), params.to_unsafe_hash.merge(:lang => "en"), class: "dropdown-item", style: 'display: block' %>
                   </li>
+                  <li role="separator" class="divider"></li>
                   <li>
                     <%= link_to t("lang.germany"), params.to_unsafe_hash.merge(:lang => "de"), class: "dropdown-item", style: 'display: block' %>
                   </li>
+                  <li role="separator" class="divider"></li>
                   <li>
                     <%= link_to t("lang.spanish"), params.to_unsafe_hash.merge(:lang => "es"), class: "dropdown-item", style: 'display: block' %>
 
@@ -61,19 +63,22 @@
             </li>
             <li class="dropdown nav-icons settingsusd settings">
               <div class="usd-auto text-center">
-                <a href="#" title="" class="dropdown-toggle " data-toggle="" role="button" >
+                <a href="#" title="" class="dropdown-toggle " data-toggle="dropdown" role="button" >
                   <%= t "#{@currency || 'usd' }" %>
                 </a>
-                <ul class="dropdown-menu dropdown-content currencies">
+                <ul class="dropdown-menu currencies">
                   <li>
                     <%= link_to t("currency.usd"), params.to_unsafe_hash.merge(:currency => "usd"), class: "dropdown-item", style: 'display: block' %>
                   </li>
+                  <li role="separator" class="divider"></li>
                   <li>
                     <%= link_to t("currency.gbp"), params.to_unsafe_hash.merge(:currency => "gbp"), class: "dropdown-item", style: 'display: block' %>
                   </li>
+                  <li role="separator" class="divider"></li>
                   <li>
                     <%= link_to t("currency.euro"), params.to_unsafe_hash.merge(:currency => "euro"), class: "dropdown-item", style: 'display: block' %>
                   </li>
+                  <li role="separator" class="divider"></li>
                   <li>
                     <%= link_to t("currency.aud"), params.to_unsafe_hash.merge(:currency => "aud"), class: "dropdown-item", style: 'display: block' %>
                   </li>
@@ -95,6 +100,7 @@
                   <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><%= link_to(t('main_page.my_account'), edit_user_registration_path) %></li>
+                  <li role="separator" class="divider"></li>
                   <li><a href="/dashboard/orders"><%= t "main_page.my_orders" %></a></li>
                   <li role="separator" class="divider"></li>
                   <li><%= link_to(t('main_page.logout'), destroy_user_session_path, :method => :delete) %></li>
