@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180513105538) do
+ActiveRecord::Schema.define(version: 20180514025922) do
 
   create_table "conversations", force: :cascade do |t|
     t.integer "creator_id"
@@ -27,6 +27,18 @@ ActiveRecord::Schema.define(version: 20180513105538) do
     t.integer "creator_id"
     t.index ["conversation_id"], name: "index_messages_on_conversation_id"
     t.index ["creator_id"], name: "index_messages_on_creator_id"
+  end
+
+  create_table "order_details", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "zip_code"
+    t.string "city"
+    t.string "country"
+    t.string "additional_information"
+    t.string "phone_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "pictures", force: :cascade do |t|
@@ -68,6 +80,8 @@ ActiveRecord::Schema.define(version: 20180513105538) do
     t.datetime "updated_at", null: false
     t.integer "quantity"
     t.integer "subtotal"
+    t.integer "order_detail_id"
+    t.index ["order_detail_id"], name: "index_user_products_on_order_detail_id"
     t.index ["product_id"], name: "index_user_products_on_product_id"
     t.index ["style_id"], name: "index_user_products_on_style_id"
     t.index ["user_id"], name: "index_user_products_on_user_id"

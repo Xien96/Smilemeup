@@ -30,13 +30,22 @@
               <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                 <div class="panel-body">
                   <div class="cart-adress">
+                    <%if session[:first_name].nil?%>
                     <div data-toggle="modal" data-target="#exampleModal" class="address-right">
                       <a><%= image_tag('add-your-adress .svg') %></a>
                     </div>
                     <div data-toggle="modal" data-target="#exampleModal" class="address-left">
                       <a ><%= image_tag('add-your-adress .svg') %></a>
                     </div>
-
+                    <%else%>
+                        <h3>First Name :</h3> <%=session[:first_name]%>
+                        <h3>Last Name :</h3> <%=session[:last_name]%>
+                        <h3>Zip Code :</h3> <%=session[:zip_code]%>
+                        <h3>City :</h3> <%=session[:city]%>
+                        <h3>Country :</h3> <%=session[:country]%>
+                        <h3>Additional Information :</h3> <%=session[:additional_information]%>
+                        <h3>Phone Number :</h3> <%=session[:phone_number]%>
+                    <%end%>
                       <div class="cart-form">
                         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
                           <div class="modal-dialog" role="document">
@@ -46,56 +55,56 @@
                                 <h4 class="modal-title" id="exampleModalLabel">Add Your  New Address</h4>
                               </div>
                               <div class="modal-body">
-                                <form>                                
-                                  <div class="form-group">
+                                <%= form_tag products_address_path do %>
+                                <div class="form-group">
                                     <label for="message-text" class="control-label">First Name</label>
                                      <%= image_tag('name-image.svg', class: "name-image1") %>
-                                     <input type="text" class="form-control" id="recipient-name">
+                                     <%= text_field_tag :first_name, nil , class: 'form-control' ,id: "recipient-name"%>
                                     
                                   </div>
                                   <div class="form-group">
                                     <label for="message-text" class="control-label">Last Name</label>
-                                    <%= image_tag('name-image.svg', class: "name-image2") %>
-                                    <input type="text" class="form-control" id="recipient-name">
-                                     
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="message-text" class="control-label">Country</label>
-                                    <div class="dropdown cart-country-dropdown">
-                                    <button class="btn btn-default dropdown-toggle country-drop-button" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                        
-                                    <span class="caret cart-drop-icon"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                       
-                                      </ul>
-                                    </div>
+                                     <%= image_tag('name-image.svg', class: "name-image1") %>
+                                     <%= text_field_tag :last_name, nil , class: 'form-control' ,id: "recipient-name" %>
+                                    
                                   </div>
                                   <div class="form-group">
                                     <label for="message-text" class="control-label">Zip Code</label>
-                                     <input type="text" class="form-control" id="recipient-name">
+                                     <%= image_tag('name-image.svg', class: "name-image1") %>
+                                     <%= text_field_tag :zip_code, nil , class: 'form-control' ,id: "recipient-name"%>
+                                    
                                   </div>
                                   <div class="form-group">
                                     <label for="message-text" class="control-label">City</label>
-                                     <input type="text" class="form-control" id="recipient-name">
+                                     <%= image_tag('name-image.svg', class: "name-image1") %>
+                                     <%= text_field_tag :city, nil , class: 'form-control' ,id: "recipient-name" %>
+                                    
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="message-text" class="control-label">Country</label>
+                                     <%= image_tag('name-image.svg', class: "name-image1") %>
+                                     <%= text_field_tag :country, nil , class: 'form-control' ,id: "recipient-name" %>
+                                    
                                   </div>
                                   <div class="form-group">
                                     <label for="message-text" class="control-label">Additional Information</label>
-                                    <%= image_tag('location.svg', class: "additional-location") %>
-                                     <input type="text" class="form-control additional-height" id="recipient-name">
+                                     <%= image_tag('name-image.svg', class: "name-image1") %>
+                                     <%= text_field_tag :additional_information, nil , class: 'form-control additional-height' ,id: "recipient-name" %>
+                                    
                                   </div>
                                   <div class="form-group">
                                     <label for="message-text" class="control-label">Phone Number</label>
-                                     <input type="text" class="form-control" id="recipient-name">
+                                     <%= image_tag('name-image.svg', class: "name-image1") %>
+                                     <%= text_field_tag :phone_number, nil , class: 'form-control' ,id: "recipient-name" %>
+                                    
                                   </div>
-                                </form>
+                                  <%= submit_tag "Save" , class: "btn btn-primary cart-sending-message" %>
+                                <% end %>
+
                               </div>
-                              <div class="modal-footer">
+                              <!-- <div class="modal-footer">
                                 <button type="button" class="btn btn-primary cart-sending-message">Send message</button>
-                              </div>
+                              </div> -->
                             </div>
                           </div>
                         </div>
