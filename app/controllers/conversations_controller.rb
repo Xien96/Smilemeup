@@ -15,6 +15,7 @@ class ConversationsController < ApplicationController
       m.creator_id = current_user.id
     end
     conv.save!
+    session[:create_message] = true
     redirect_back(fallback_location: '/')
   end
 
@@ -26,6 +27,7 @@ class ConversationsController < ApplicationController
       m.creator_id = current_user.id
     end
     @conv.save
+    session[:create_message] = true
     redirect_back(fallback_location: '/')
 
   end

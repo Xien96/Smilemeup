@@ -26,7 +26,7 @@
           <!--<a class="btn btn-default" href="#" role="button">EN</a>-->
           <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= t 'main_page.language' %>
+              <%= t "#{@lang}" %>
             </button>
             <div class="dropdown-menu footer-drop" aria-labelledby="dropdownMenuButton">
               <li class="dropdown-item">
@@ -45,7 +45,7 @@
         <!--<a class="btn btn-default" href="#" role="button">USD</a>-->
           <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= t 'main_page.currency' %>
+              <%= t "#{@currency}" %>
             </button>
             <div class="dropdown-menu footer-drop" aria-labelledby="dropdownMenuButton">
               <li class="dropdown-item">
@@ -68,7 +68,7 @@
         <!--<a class="btn btn-default" href="#" role="button">UK</a>-->
           <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= t 'main_page.country' %>
+              <%= t "#{@country}" %>
             </button>
             <div class="dropdown-menu footer-drop" aria-labelledby="dropdownMenuButton">
               <li class="dropdown-item">
@@ -94,6 +94,7 @@
       <p>&copy; All rights reserved to Smile Me Up 2018&trade;</p>
     </div>
   </div>
+<<<<<<< HEAD
   
   <div class="hiddenss active_conversation <%= current_user.present? ? 'show' : 'hide' %>">
     
@@ -103,18 +104,25 @@
       <div class="image-close-icon">
       <%= image_tag('footer-close.svg',class: "close-image close-image2") %>
     </div>
+=======
+
+  <div id="active_conversation" class="hiddenss active_conversation hide">
+    <% conversation = Conversation.mine(current_user).first %>
+    <a id="closeMessage" class="pull-right btn btn-sm">X</a>
+    <div class="conversation_header" data-toggle="collapse" href="#collapseExample" aria-expanded="true" aria-controls="collapseExample">
+>>>>>>> 06eb857881ab29a43b7545480cfd1bd67fe3f32f
       <%= conversation.presence.try do |conv|
         conv.target.name
       end || t('main_page.new_conversation') %>
     </div>
-    <div class="messages_container collapse" id="collapseExample">
+    <div class="messages_container collapse <%= session[:create_message] ? 'show in' : '' %>" id="collapseExample">
       <% if conversation %>
         <% conversation.messages.map do |message| %>
 
           <div class="<%= "#{message.creator == current_user ? 'right-side' : 'left-side'}" %>">
-        
-              <span class="creator_name">
-                 <%= message.creator.name %>
+
+              <span class="creator_name ">
+                 <%= message.creator.name %>:
               </span>
             <%= message.body %>
           </div>
