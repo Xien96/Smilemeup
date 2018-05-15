@@ -61,7 +61,7 @@
             autoplay: true, // Optional
         });
 
-        $("#call_us_anim").click(function(){
+        $("#call_us_anim").click(function () {
             $("#footer-chat").click()
         })
         $("[data-toggle=popover]").popover({html: true})
@@ -69,11 +69,14 @@
         $('#scroll-up').click(function () {
             $('html, body').animate({scrollTop: 0}, 'slow');
         });
-        $('#footer-chat img').click(function(e){
-            e.stopPropagation();
-            $('#active_conversation').toggleClass('hide').toggleClass('show')
+        $('#footer-chat img').click(function (e) {
+            if ( <%= current_user.present? %>){
+
+                e.stopPropagation();
+                $('#active_conversation').toggleClass('hide').toggleClass('show')
+            }
         });
-        $("#closeMessage").click(function(e){
+        $("#closeMessage").click(function (e) {
             e.stopPropagation();
             $('#active_conversation').toggleClass('hide').toggleClass('show')
         })
@@ -472,43 +475,43 @@
     });
     paypal.Button.render({
 
-                          env: 'sandbox', // sandbox | production
+        env: 'sandbox', // sandbox | production
 
-                          // Show the buyer a 'Pay Now' button in the checkout flow
-                          commit: true,
+        // Show the buyer a 'Pay Now' button in the checkout flow
+        commit: true,
 
-                          // payment() is called when the button is clicked
-                          payment: function() {
+        // payment() is called when the button is clicked
+        payment: function () {
 
-                              // Set up a url on your server to create the payment
-                              var CREATE_URL = "<%= checkout_path %>";
+            // Set up a url on your server to create the payment
+            var CREATE_URL = "<%= checkout_path %>";
 
-                              // Make a call to your server to set up the payment
-                              return paypal.request.post(CREATE_URL)
-                                  .then(function(res) {
-                                      return res.paymentID;
-                                  });
-                          },
+            // Make a call to your server to set up the payment
+            return paypal.request.post(CREATE_URL)
+                .then(function (res) {
+                    return res.paymentID;
+                });
+        },
 
-                          // onAuthorize() is called when the buyer approves the payment
-                          onAuthorize: function(data, actions) {
+        // onAuthorize() is called when the buyer approves the payment
+        onAuthorize: function (data, actions) {
 
-                              // Set up a url on your server to execute the payment
-                              var EXECUTE_URL = "<%= execute_path %>";
+            // Set up a url on your server to execute the payment
+            var EXECUTE_URL = "<%= execute_path %>";
 
-                              // Set up the data you need to pass to your server
-                              var data = {
-                                  paymentID: data.paymentID,
-                                  payerID: data.payerID
-                              };
+            // Set up the data you need to pass to your server
+            var data = {
+                paymentID: data.paymentID,
+                payerID: data.payerID
+            };
 
-                              // Make a call to your server to execute the payment
-                              return paypal.request.post(EXECUTE_URL, data)
-                                  .then(function (res) {
-                                      window.alert('Payment Complete!');
-                                  });
-                          }
+            // Make a call to your server to execute the payment
+            return paypal.request.post(EXECUTE_URL, data)
+                .then(function (res) {
+                    window.alert('Payment Complete!');
+                });
+        }
 
-                      }, '#paypal-button-container');
+    }, '#paypal-button-container');
 
 </script>
