@@ -14,9 +14,9 @@
       <div class="pull-right pullin-ipad-left">
         <ul class="nav nav-pills">
           <li role="presentation" style="padding-top: 10px"><%= t 'main_page.follow' %></li>
-          <li role="presentation"><a href="https://www.facebook.com/smilemeup/" target="_blank"><%= image_tag('facebook.svg') %></a></li>
-          <li role="presentation"><a href="https://www.youtube.com/channel/UCjNJ04YQXCfoH_4FsauOEmw"target="_blank"><%= image_tag('youtube.svg') %></a></li>
-          <li role="presentation"><a href="https://www.instagram.com/smilemeuponline/"target="_blank"><%= image_tag('instagram.svg') %></a></li>
+          <li role="presentation"><a class="social-medi-foot" href="https://www.facebook.com/smilemeup/" target="_blank"><%= image_tag('facebook.svg') %></a></li>
+          <li role="presentation"><a class="social-medi-foot" href="https://www.youtube.com/channel/UCjNJ04YQXCfoH_4FsauOEmw"target="_blank"><%= image_tag('youtube.svg') %></a></li>
+          <li role="presentation"><a class="social-medi-foot" href="https://www.instagram.com/smilemeuponline/"target="_blank"><%= image_tag('instagram.svg') %></a></li>
         </ul>
       </div>
     </div>
@@ -72,7 +72,7 @@
             </button>
             <div class="dropdown-menu footer-drop" aria-labelledby="dropdownMenuButton">
               <li class="dropdown-item">
-              <%= link_to t("country.uk"), params.to_unsafe_hash.merge(:country => "uk"), class: "dropdown-item", style: 'display: block' %>
+              <%= link_to t("country.United Kingdom"), params.to_unsafe_hash.merge(:country => "uk"), class: "dropdown-item", style: 'display: block' %>
               </li>
               <li class="dropdown-item">
                 <%= link_to t("country.Germany"), params.to_unsafe_hash.merge(:country => "Germany"), class: "dropdown-item", style: 'display: block' %>
@@ -95,10 +95,12 @@
     </div>
   </div>
 
+
   <div id="active_conversation" class="hiddenss active_conversation hide">
     <% conversation = Conversation.mine(current_user).first %>
     <a id="closeMessage" class="pull-right btn btn-sm">X</a>
     <div class="conversation_header" data-toggle="collapse" href="#collapseExample" aria-expanded="true" aria-controls="collapseExample">
+
       <%= conversation.presence.try do |conv|
         conv.target.name
       end || t('main_page.new_conversation') %>
@@ -160,4 +162,3 @@
     <%= image_tag('scroll-up2.svg') %>
   </div>
 </footer>
-
