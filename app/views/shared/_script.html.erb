@@ -12,28 +12,28 @@
     $(document).on('turbolinks:load', function () {
         var footer = bodymovin.loadAnimation({
             container: document.getElementById('call_us_anim'), // Required
-            path: 'call_us.json', // Required
+            path: '<%= request.base_url%>/call_us.json', // Required
             renderer: 'svg/canvas/html', // Required
             loop: true, // Optional
             autoplay: true, // Optional
         });
         var girl = bodymovin.loadAnimation({
             container: document.getElementById('girl_anim'), // Required
-            path: 'girl.json', // Required
+            path: '<%= request.base_url%>/girl.json', // Required
             renderer: 'svg/canvas/html', // Required
             loop: true, // Optional
             autoplay: true, // Optional
         });
         var money = bodymovin.loadAnimation({
             container: document.getElementById('money_anim'), // Required
-            path: 'money.json', // Required
+            path: '<%= request.base_url%>/money.json', // Required
             renderer: 'svg/canvas/html', // Required
             loop: true, // Optional
             autoplay: true, // Optional
         });
         var doctor = bodymovin.loadAnimation({
             container: document.getElementById('doctor_anim'), // Required
-            path: 'doctor.json', // Required
+            path: '<%= request.base_url%>/doctor.json', // Required
             renderer: 'svg/canvas/html', // Required
             loop: true, // Optional
             autoplay: true, // Optional
@@ -41,21 +41,21 @@
 
         var rating = bodymovin.loadAnimation({
             container: document.getElementById('rating_anim'), // Required
-            path: 'rating.json', // Required
+            path: '<%= request.base_url%>/rating.json', // Required
             renderer: 'svg/canvas/html', // Required
             loop: true, // Optional
             autoplay: true, // Optional
         });
         var hand1 = bodymovin.loadAnimation({
             container: document.getElementById('hand_1_anim'), // Required
-            path: 'hand.json', // Required
+            path: '<%= request.base_url%>/hand.json', // Required
             renderer: 'svg/canvas/html', // Required
             loop: true, // Optional
             autoplay: true, // Optional
         });
         var hand2 = bodymovin.loadAnimation({
             container: document.getElementById('hand_2_anim'), // Required
-            path: 'hand1.json', // Required
+            path: '<%= request.base_url%>/hand1.json', // Required
             renderer: 'svg/canvas/html', // Required
             loop: true, // Optional
             autoplay: true, // Optional
@@ -70,7 +70,7 @@
             $('html, body').animate({scrollTop: 0}, 'slow');
         });
         $('#footer-chat img').click(function (e) {
-            if ( <%= current_user.present? %>){
+            if (<%= current_user.present? %>){
 
                 e.stopPropagation();
                 $('#active_conversation').toggleClass('hide').toggleClass('show')
