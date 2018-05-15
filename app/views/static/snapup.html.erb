@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-sm-6 col-sm-push-3">
           <p class="snap-overview-des">
-            <%= t 'products.snap_up.desc' %>
+            <%= t('products.snap_up.desc').html_safe %>
           </p>
         </div>
       </div>
@@ -319,7 +319,7 @@
             <%= image_tag('impressions.svg') %>
             </div>
             <div class="col-sm-8 col-sm-8 product-text">
-            <h4 class="choose-heading"><%= t('products.step3')%> <strong><br> impression kit.</strong></h4>
+            <h4 class="choose-heading"><%= t('products.step3')%> <strong> <%= t 'products.step4' %> </strong></h4>
           </div>
           </div>
         </div>
