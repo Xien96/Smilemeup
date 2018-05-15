@@ -23,7 +23,7 @@
     <div class="row">
       <div class="col-sm-6 col-sm-push-3">
         <h1>
-          <%= t 'terms.page.subtitles.title1' %>   <strong class="green"> <%= t 'terms.page.subtitles.title2' %> </strong>
+          <%= t 'terms.page.subtitles.title1' %>   <strong class="green"> <%= t('terms.page.subtitles.title2').html_safe %> </strong>
         </h1>
         <p class="text-muted">
           <%= t 'terms.page.desc' %>
@@ -34,7 +34,7 @@
       <div class="col-sm-10 col-sm-push-1">
         <h3><strong> <%= t 'terms.title1' %></strong></h3>
         <p>
-          <%= t 'terms.desc1' %>
+          <%= t('terms.desc1').html_safe %>
         </p> 
         <h3><strong><%= t 'terms.title2' %></strong></h3>
         <p>
@@ -50,7 +50,7 @@
         </p>  
         <h3><strong> <%= t 'terms.title5' %> </strong></h3>
         <p>
-          <%= t 'terms.desc5' %>
+          <%= t('terms.desc5').html_safe %>
         </p>
         <h3><strong> <%= t 'terms.title6' %> </strong></h3>
         <p>
