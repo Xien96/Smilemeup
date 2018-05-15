@@ -14,9 +14,9 @@
       <div class="pull-right pullin-ipad-left">
         <ul class="nav nav-pills">
           <li role="presentation" style="padding-top: 10px"><%= t 'main_page.follow' %></li>
-          <li role="presentation"><a href="https://www.facebook.com/smilemeup/"><%= image_tag('facebook.svg') %></a></li>
-          <li role="presentation"><a href="https://www.youtube.com/channel/UCjNJ04YQXCfoH_4FsauOEmw"><%= image_tag('youtube.svg') %></a></li>
-          <li role="presentation"><a href="https://www.instagram.com/smilemeuponline/"><%= image_tag('instagram.svg') %></a></li>
+          <li role="presentation"><a href="https://www.facebook.com/smilemeup/" target="_blank"><%= image_tag('facebook.svg') %></a></li>
+          <li role="presentation"><a href="https://www.youtube.com/channel/UCjNJ04YQXCfoH_4FsauOEmw"target="_blank"><%= image_tag('youtube.svg') %></a></li>
+          <li role="presentation"><a href="https://www.instagram.com/smilemeuponline/"target="_blank"><%= image_tag('instagram.svg') %></a></li>
         </ul>
       </div>
     </div>
@@ -94,7 +94,8 @@
       <p>&copy; All rights reserved to Smile Me Up 2018&trade;</p>
     </div>
   </div>
-  <div class="active_conversation <%= current_user.present? ? 'show' : 'hide' %>">
+  
+  <div class="hiddenss active_conversation <%= current_user.present? ? 'show' : 'hide' %>">
     <% conversation = Conversation.mine(current_user).first %>
     <div class="conversation_header" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
       <%= conversation.presence.try do |conv|
@@ -106,6 +107,7 @@
         <% conversation.messages.map do |message| %>
 
           <div class="<%= "#{message.creator == current_user ? 'right-side' : 'left-side'}" %>">
+        
               <span class="creator_name">
                  <%= message.creator.name %>
               </span>
@@ -135,7 +137,7 @@
   <div class="footer-close" , id="footer-close">
     <%= image_tag('footer-close.svg') %>
   </div>
-  <div id="call_us_anim" class='footer-call' style="z-index: 1000">
+  <div id="call_us_anim" class='footer-call' style="z-index: 80">
   </div>
   <div class="footer-call" id="footer-call">
     <a href="tel:+49015258197119" title="">
@@ -149,7 +151,7 @@
   </div>
   <div class="footer-chat" id="footer-chat">
     <div>
-      <%= image_tag('footer-chat.svg') %>
+      <%= image_tag('footer-chat.svg' , class: "chatting" ) %>
     </div>
   </div>
 
