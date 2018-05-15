@@ -26,7 +26,7 @@
           <!--<a class="btn btn-default" href="#" role="button">EN</a>-->
           <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= t 'main_page.language' %>
+              <%= t "#{@lang}" %>
             </button>
             <div class="dropdown-menu footer-drop" aria-labelledby="dropdownMenuButton">
               <li class="dropdown-item">
@@ -45,7 +45,7 @@
         <!--<a class="btn btn-default" href="#" role="button">USD</a>-->
           <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= t 'main_page.currency' %>
+              <%= t "#{@currency}" %>
             </button>
             <div class="dropdown-menu footer-drop" aria-labelledby="dropdownMenuButton">
               <li class="dropdown-item">
@@ -68,7 +68,7 @@
         <!--<a class="btn btn-default" href="#" role="button">UK</a>-->
           <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= t 'main_page.country' %>
+              <%= t "#{@country}" %>
             </button>
             <div class="dropdown-menu footer-drop" aria-labelledby="dropdownMenuButton">
               <li class="dropdown-item">
