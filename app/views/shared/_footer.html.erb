@@ -72,7 +72,7 @@
             </button>
             <div class="dropdown-menu footer-drop" aria-labelledby="dropdownMenuButton">
               <li class="dropdown-item">
-              <%= link_to t("country.uk"), params.to_unsafe_hash.merge(:country => "uk"), class: "dropdown-item", style: 'display: block' %>
+              <%= link_to t("country.United Kingdom"), params.to_unsafe_hash.merge(:country => "uk"), class: "dropdown-item", style: 'display: block' %>
               </li>
               <li class="dropdown-item">
                 <%= link_to t("country.Germany"), params.to_unsafe_hash.merge(:country => "Germany"), class: "dropdown-item", style: 'display: block' %>
@@ -94,23 +94,13 @@
       <p>&copy; All rights reserved to Smile Me Up 2018&trade;</p>
     </div>
   </div>
-<<<<<<< HEAD
-  
-  <div class="hiddenss active_conversation <%= current_user.present? ? 'show' : 'hide' %>">
-    
 
-    <% conversation = Conversation.mine(current_user).first %>
-    <div class="conversation_header" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-      <div class="image-close-icon">
-      <%= image_tag('footer-close.svg',class: "close-image close-image2") %>
-    </div>
-=======
 
   <div id="active_conversation" class="hiddenss active_conversation hide">
     <% conversation = Conversation.mine(current_user).first %>
     <a id="closeMessage" class="pull-right btn btn-sm">X</a>
     <div class="conversation_header" data-toggle="collapse" href="#collapseExample" aria-expanded="true" aria-controls="collapseExample">
->>>>>>> 06eb857881ab29a43b7545480cfd1bd67fe3f32f
+
       <%= conversation.presence.try do |conv|
         conv.target.name
       end || t('main_page.new_conversation') %>
@@ -172,4 +162,3 @@
     <%= image_tag('scroll-up2.svg') %>
   </div>
 </footer>
-

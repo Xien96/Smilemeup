@@ -16,41 +16,32 @@
 
 
 
-$(".footer-chat .chatting").click(function() {
-
-    $("footer .active_conversation").toggleClass("hiddenss")
-
-
-})
-
-
-
 
 
         var footer = bodymovin.loadAnimation({
             container: document.getElementById('call_us_anim'), // Required
-            path: '<%= request.base_url%>/call_us.json', // Required
+            path: 'call_us.json', // Required
             renderer: 'svg/canvas/html', // Required
             loop: true, // Optional
             autoplay: true, // Optional
         });
         var girl = bodymovin.loadAnimation({
             container: document.getElementById('girl_anim'), // Required
-            path: '<%= request.base_url%>/girl.json', // Required
+            path: 'girl.json', // Required
             renderer: 'svg/canvas/html', // Required
             loop: true, // Optional
             autoplay: true, // Optional
         });
         var money = bodymovin.loadAnimation({
             container: document.getElementById('money_anim'), // Required
-            path: '<%= request.base_url%>/money.json', // Required
+            path: 'money.json', // Required
             renderer: 'svg/canvas/html', // Required
             loop: true, // Optional
             autoplay: true, // Optional
         });
         var doctor = bodymovin.loadAnimation({
             container: document.getElementById('doctor_anim'), // Required
-            path: '<%= request.base_url%>/doctor.json', // Required
+            path: 'doctor.json', // Required
             renderer: 'svg/canvas/html', // Required
             loop: true, // Optional
             autoplay: true, // Optional
@@ -58,45 +49,34 @@ $(".footer-chat .chatting").click(function() {
 
         var rating = bodymovin.loadAnimation({
             container: document.getElementById('rating_anim'), // Required
-            path: '<%= request.base_url%>/rating.json', // Required
+            path: 'rating.json', // Required
             renderer: 'svg/canvas/html', // Required
             loop: true, // Optional
             autoplay: true, // Optional
         });
         var hand1 = bodymovin.loadAnimation({
             container: document.getElementById('hand_1_anim'), // Required
-            path: '<%= request.base_url%>/hand.json', // Required
+            path: 'hand.json', // Required
             renderer: 'svg/canvas/html', // Required
             loop: true, // Optional
             autoplay: true, // Optional
         });
         var hand2 = bodymovin.loadAnimation({
             container: document.getElementById('hand_2_anim'), // Required
-            path: '<%= request.base_url%>/hand1.json', // Required
+            path: 'hand1.json', // Required
             renderer: 'svg/canvas/html', // Required
             loop: true, // Optional
             autoplay: true, // Optional
         });
 
-        $("#call_us_anim").click(function () {
+        $("#call_us_anim").click(function(){
             $("#footer-chat").click()
-        });
+        })
         $("[data-toggle=popover]").popover({html: true})
         $('.add-to-cart .number .quantity').text(1);
         $('#scroll-up').click(function () {
             $('html, body').animate({scrollTop: 0}, 'slow');
         });
-        $('#footer-chat img').click(function (e) {
-            if (<%= current_user.present? %>){
-
-                e.stopPropagation();
-                $('#active_conversation').toggleClass('hide').toggleClass('show')
-            }
-        });
-        $("#closeMessage").click(function (e) {
-            e.stopPropagation();
-            $('#active_conversation').toggleClass('hide').toggleClass('show')
-        })
 
         $('.faq-item').click(function (e) {
             console.log(e);
@@ -365,12 +345,7 @@ $(".footer-chat .chatting").click(function() {
                 }
             });
         }
-        /*---------------closing menue cansel icon and image*/
-        $("footer .conversation_header").click(function(){
 
-            $("footer .conversation_header .image-close-icon .close-image").toggleClass("close-image2")
-        })
-        /*----------------closing menue cansel icon and image*/
         /* Fancy restrictive input formatting via jQuery.payment library*/
 
         $('input[name=cardNumber]').payment('formatCardNumber');
@@ -497,45 +472,45 @@ $(".footer-chat .chatting").click(function() {
     });
     paypal.Button.render({
 
-        env: 'sandbox', // sandbox | production
+                          env: 'sandbox', // sandbox | production
 
-        // Show the buyer a 'Pay Now' button in the checkout flow
-        commit: true,
+                          // Show the buyer a 'Pay Now' button in the checkout flow
+                          commit: true,
 
-        // payment() is called when the button is clicked
-        payment: function () {
+                          // payment() is called when the button is clicked
+                          payment: function() {
 
-            // Set up a url on your server to create the payment
-            var CREATE_URL = "<%= checkout_path %>";
+                              // Set up a url on your server to create the payment
+                              var CREATE_URL = "<%= checkout_path %>";
 
-            // Make a call to your server to set up the payment
-            return paypal.request.post(CREATE_URL)
-                .then(function (res) {
-                    return res.paymentID;
-                });
-        },
+                              // Make a call to your server to set up the payment
+                              return paypal.request.post(CREATE_URL)
+                                  .then(function(res) {
+                                      return res.paymentID;
+                                  });
+                          },
 
-        // onAuthorize() is called when the buyer approves the payment
-        onAuthorize: function (data, actions) {
+                          // onAuthorize() is called when the buyer approves the payment
+                          onAuthorize: function(data, actions) {
 
-            // Set up a url on your server to execute the payment
-            var EXECUTE_URL = "<%= execute_path %>";
+                              // Set up a url on your server to execute the payment
+                              var EXECUTE_URL = "<%= execute_path %>";
 
-            // Set up the data you need to pass to your server
-            var data = {
-                paymentID: data.paymentID,
-                payerID: data.payerID
-            };
+                              // Set up the data you need to pass to your server
+                              var data = {
+                                  paymentID: data.paymentID,
+                                  payerID: data.payerID
+                              };
 
-            // Make a call to your server to execute the payment
-            return paypal.request.post(EXECUTE_URL, data)
-                .then(function (res) {
-                    window.alert('Payment Complete!');
-                });
-        }
+                              // Make a call to your server to execute the payment
+                              return paypal.request.post(EXECUTE_URL, data)
+                                  .then(function (res) {
+                                      window.alert('Payment Complete!');
+                                  });
+                          }
 
-    }, '#paypal-button-container');
-
+                      }, '#paypal-button-container');
+  
 
 
 
