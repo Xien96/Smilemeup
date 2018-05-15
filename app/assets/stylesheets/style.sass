@@ -280,7 +280,7 @@ nav.navbar-default, nav.navbar-default .navbar-toggle
     font-size: 34px
   .slogan-description
     width: 360px
-    height: 82px
+    height: 105px
     left: 249px
     top: 364px
     font-family: Open Sans
@@ -430,7 +430,7 @@ nav.navbar-default, nav.navbar-default .navbar-toggle
     margin-top: 10em
     background-color: #AEDE47
     position: relative
-    min-height: 43em
+    min-height: 45em
     color: white
     // overflow-x: hidden
     img.phone-picture
@@ -737,7 +737,7 @@ footer
     border: 1px solid #858585
     color: #858585
   span.settings
-    padding: 0 1.5em
+    padding: 0 .5em
   p
     margin-top: 1.5em
   .footer-links
@@ -1225,7 +1225,7 @@ hr
 @media(max-width: 767px)
   .home-app
     .app-info
-      margin-top: -100px
+      margin-top: -85px
     .phone-picture
       height: 22em !important
       top: -4em !important
@@ -2404,10 +2404,14 @@ input[type=range]
       margin-bottom: 20px
     .pullin-ipad-left
       float: left !important
-    .green.underline
-      display: block
-      text-align: left
-    
+
+      
+@media(max-width: 767px)
+  footer
+    .pullin-ipad-left
+      .nav-pills
+        .social-medi-foot
+          padding: 5px 5px
 
 @media(max-width: 767px)
   footer
@@ -2448,6 +2452,9 @@ input[type=range]
   .navigation
     .navbar
       .burgur-icons
+        position: fixed
+        right: 0
+        overflow-y: hidden
         .one,.second,.third
           background-color: #333
   nav.navbar-default
@@ -2484,6 +2491,33 @@ footer
   .hiddenss
     display: none !important
 /*End Nav Bar 1in mobile*/
+
+
+/* start Zein animation*/
+@media(max-width: 767px)
+  .home, .about 
+    .home-why
+      .home-why-item
+        .home-why-item-inner
+          margin: auto 30%
+  .scrolling-y-hidden
+    overflow: hidden
+
+
+
+footer
+  .active_conversation
+    .conversation_header
+      .image-close-icon
+        position: relative
+        .close-image
+          position: absolute
+          right: 0
+          height: 30px
+          width: 30px
+          bottom: -25px
+        .close-image2
+          display: none
 
 /**/
 /*------------------------------------------------------------------------------------------------------------*/

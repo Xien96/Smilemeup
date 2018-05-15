@@ -14,9 +14,9 @@
       <div class="pull-right pullin-ipad-left">
         <ul class="nav nav-pills">
           <li role="presentation" style="padding-top: 10px"><%= t 'main_page.follow' %></li>
-          <li role="presentation"><a href="https://www.facebook.com/smilemeup/" target="_blank"><%= image_tag('facebook.svg') %></a></li>
-          <li role="presentation"><a href="https://www.youtube.com/channel/UCjNJ04YQXCfoH_4FsauOEmw"target="_blank"><%= image_tag('youtube.svg') %></a></li>
-          <li role="presentation"><a href="https://www.instagram.com/smilemeuponline/"target="_blank"><%= image_tag('instagram.svg') %></a></li>
+          <li role="presentation"><a class="social-medi-foot" href="https://www.facebook.com/smilemeup/" target="_blank"><%= image_tag('facebook.svg') %></a></li>
+          <li role="presentation"><a class="social-medi-foot" href="https://www.youtube.com/channel/UCjNJ04YQXCfoH_4FsauOEmw"target="_blank"><%= image_tag('youtube.svg') %></a></li>
+          <li role="presentation"><a class="social-medi-foot" href="https://www.instagram.com/smilemeuponline/"target="_blank"><%= image_tag('instagram.svg') %></a></li>
         </ul>
       </div>
     </div>
@@ -96,8 +96,13 @@
   </div>
   
   <div class="hiddenss active_conversation <%= current_user.present? ? 'show' : 'hide' %>">
+    
+
     <% conversation = Conversation.mine(current_user).first %>
     <div class="conversation_header" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      <div class="image-close-icon">
+      <%= image_tag('footer-close.svg',class: "close-image close-image2") %>
+    </div>
       <%= conversation.presence.try do |conv|
         conv.target.name
       end || t('main_page.new_conversation') %>
