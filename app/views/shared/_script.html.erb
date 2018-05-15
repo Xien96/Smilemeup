@@ -69,6 +69,14 @@
         $('#scroll-up').click(function () {
             $('html, body').animate({scrollTop: 0}, 'slow');
         });
+        $('#footer-chat img').click(function(e){
+            e.stopPropagation();
+            $('#active_conversation').toggleClass('hide').toggleClass('show')
+        });
+        $("#closeMessage").click(function(e){
+            e.stopPropagation();
+            $('#active_conversation').toggleClass('hide').toggleClass('show')
+        })
 
         $('.faq-item').click(function (e) {
             console.log(e);

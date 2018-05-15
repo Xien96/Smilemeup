@@ -94,14 +94,15 @@
       <p>&copy; All rights reserved to Smile Me Up 2018&trade;</p>
     </div>
   </div>
-  <div class="active_conversation <%= current_user.present? ? 'show' : 'hide' %>">
+  <div id="active_conversation" class="active_conversation hide">
     <% conversation = Conversation.mine(current_user).first %>
-    <div class="conversation_header" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    <a id="closeMessage" class="pull-right btn btn-sm">X</a>
+    <div class="conversation_header" data-toggle="collapse" href="#collapseExample" aria-expanded="true" aria-controls="collapseExample">
       <%= conversation.presence.try do |conv|
         conv.target.name
       end || t('main_page.new_conversation') %>
     </div>
-    <div class="messages_container collapse" id="collapseExample">
+    <div class="messages_container collapse <%= session[:create_message] ? 'show in' : '' %>" id="collapseExample">
       <% if conversation %>
         <% conversation.messages.map do |message| %>
 

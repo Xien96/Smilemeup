@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  before_action :set_lang, :set_currency_country
+  before_action :set_lang, :set_currency_country, :set_create_message
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   protected
@@ -38,8 +38,12 @@ class ApplicationController < ActionController::Base
       end
       if @country.present?
         current_user.update_column(:country, @country)
-
       end
     end
+  end
+
+  def set_create_message
+    # debugger
+    session[:create_message] = false
   end
 end
