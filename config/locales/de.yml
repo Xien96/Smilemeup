@@ -2,7 +2,7 @@
 de:
   main_page:
     new_conversation: 'New Message'
-    use: 'Use'
+    use: ''
     products: "Produkte"
     about_us: 'Über uns'
     blog: 'Blog'
@@ -24,8 +24,8 @@ de:
     join: 'Vertiebspartner Gesucht'
     follow: 'Folge uns'
     welcome: 'WELCOME NEW SMILE' #same as in English
-    offers: 'Mit Smile Me Up hast du die Wahl zwischen unterschiedlichen Methoden, um dein Wunschlächeln zum fairsten Preis zu erhalten.'
-    clear_up: 'Clear up' #same as in English
+    offers: 'Mit Smile Me Up hast du die Wahl zwischen unterschiedlichen Methoden, um dein Wunschlächeln zu einem fairen preis zu erhalten.'
+    clear_up: 'CLEAR UP' #same as in English
     snap_up: 'SNAP UP' #same as in English
     how: 'So ' 
     works: 'funktioniert es'
@@ -45,13 +45,13 @@ de:
     say: 'finden....'
     happy_customers: 'Unsere glücklichen Kunden '
     slide: 'Wische nach links oder rechts, um mehr Bewertungen zu sehen!'
-    share_your_smile: 'Nutze unseren #Hashtag !'
+    share_your_smile: 'Nutze unseren #hashtag !'
     why_desc: 'Bewährte Behandlungsmethoden für ein mehr als nur zufriedenstellendes Ergebnis'
     experts: 'Experts' #same as English 
     smile: 'Smile' #same as English 
     why_desc1: 'Um die besten Ergebnisse zu gewährleisten, arbeiten wir ausschließlich mit erfahrenen medizinischen Experten, Kieferorthopäden und Zahnärzten.'
-    why_desc2: 'Unsere Produkte unterstehen höchsten Qualitätsansprüchen und werden von Experten hergestellt, die mehr als 10 Jahre Erfahrung vorweisen können. '
-    why_desc3: 'Du hast die Wahl: Korrigiere deine Zahnfehlstellung mit unseren Zahnschienen oder zeige sofort dein schönstes Lächeln mit unseren maßgefertigeten Snap Up-Veneers.'
+    why_desc2: 'Unsere Produkte unterstehen höchsten Qualitätsansprüchen und werden hergestellt von Experten mit Über 12 <br>jahren Erfahrung. '
+    why_desc3: 'Du hast die Wahl: Korrigiere deine Zahnfehlstellung mit unseren Zahnschienen oder zeige sofort dein schönstes Lächeln mit unseren maßgefertigeten <br>SNAP UP-Veneers.'
     why_desc4: 'Mehr Informationen über unsere freiwillige Geld-zurück-Garantie stehen in unseren AGB.'
     credibility: 'Hohe Kundenzufriedenheit'
     two_in_one: ' Dein Traumlächeln '
@@ -61,7 +61,7 @@ de:
     select_idea: 'Wähle deinen Weg'
 
   about:
-    title: 'Über uns'
+    title: 'Smile  Me Up'
     about: '' # just two words in German so I leave it empty
     desc1: 'Wir bieten unseren Kunden hochwertige Produkte für ihr schönstes Lächeln'
     desc2: 'an - hochmoderne und einzigartige Produkte zum fairen Preis.'
@@ -77,10 +77,10 @@ de:
     help: 'gerne!'
     methods:
       method1:
-        part1: 'Ruf'
+        part1: 'telefon'
         part2: 'uns an'
       method2:
-        part1: 'Whatsapp'
+        part1: 'WhatsApp'
         part2: ''
       method3:
         part1: 'E-Mail'
@@ -88,7 +88,7 @@ de:
     form:
       label1: 'Hast du'
       label2: 'Fragen?'
-      label3: 'Falls du Fragen haben solltest, sind wir gerne für dich da.'
+      label3: 'Wir helfen dir gerne weiter'
       label4: 'Vor- und Nachname'
       label5: 'E-Mail-Adresse'
       label6: 'Betreff'
@@ -327,7 +327,7 @@ de:
     step1: 'Wähle dein bevorzugtes Snap Up-Design'
     step2: ' Bestelle und bezahle deine'
     step3: 'Nehme deine Zahnabdrücke zuhause mit unserem '
-    see_more: 'Mehr sehen'
+    see_more: ''
     what_desc: 'Innovative, herausnehmbare, natürliche Veneers! - Das SNAP UP ist eine echte <br>Revolution unter den Veneers und eine echte Alternative zu traditionellen <br>Verblendschalen, einer langen Zahnkorrektur oder Bleaching. Die schnellste <br>Lösung bei schiefen, verfärbten oder fehlenden Zähnen!'
     inspiration: 'ÜBERZEUGENDE ERGEBNISSE'
     inspiration_desc: 'ÜBERZEUGENDE ERGEBNISSE: Lass dich von den Vorher-Nachher-Fotos unserer Kunden überzeugen.'
