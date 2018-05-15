@@ -10,6 +10,22 @@
 
 <script>
     $(document).on('turbolinks:load', function () {
+
+
+/*hidden scrolling in mobile*/
+
+
+$(".footer-chat .chatting").click(function() {
+
+    $("footer .active_conversation").toggleClass("hiddenss")
+
+
+})
+
+
+
+
+
         var footer = bodymovin.loadAnimation({
             container: document.getElementById('call_us_anim'), // Required
             path: '<%= request.base_url%>/call_us.json', // Required
@@ -513,5 +529,8 @@
         }
 
     }, '#paypal-button-container');
+
+
+
 
 </script>

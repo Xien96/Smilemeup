@@ -6,7 +6,7 @@
           <li role="presentation"><a href="/faq" title=""><%= t 'main_page.faq' %></a></li>
           <li role="presentation"><a href="/terms-and-conditions" title=""><%= t 'main_page.terms' %></a></li>
           <li role="presentation"><a href="/privacy" title=""><%= t 'main_page.privacy' %></a></li>
-          <li role="presentation"><a href="/legal-statement" title=""><%= t 'main_page.legal_statement' %></a></li>
+          <li role="presentation"><a href="/legal-statement" title=""> <%= t 'main_page.legal_statement' %> </a></li>
           <li role="presentation" class="green underline"><a href="/distributors" title=""><%= t 'main_page.join' %></a>
           </li>
         </ul>
@@ -14,9 +14,9 @@
       <div class="pull-right pullin-ipad-left">
         <ul class="nav nav-pills">
           <li role="presentation" style="padding-top: 10px"><%= t 'main_page.follow' %></li>
-          <li role="presentation"><a href="https://www.facebook.com/smilemeup/"><%= image_tag('facebook.svg') %></a></li>
-          <li role="presentation"><a href="https://www.youtube.com/channel/UCjNJ04YQXCfoH_4FsauOEmw"><%= image_tag('youtube.svg') %></a></li>
-          <li role="presentation"><a href="https://www.instagram.com/smilemeuponline/"><%= image_tag('instagram.svg') %></a></li>
+          <li role="presentation"><a href="https://www.facebook.com/smilemeup/" target="_blank"><%= image_tag('facebook.svg') %></a></li>
+          <li role="presentation"><a href="https://www.youtube.com/channel/UCjNJ04YQXCfoH_4FsauOEmw"target="_blank"><%= image_tag('youtube.svg') %></a></li>
+          <li role="presentation"><a href="https://www.instagram.com/smilemeuponline/"target="_blank"><%= image_tag('instagram.svg') %></a></li>
         </ul>
       </div>
     </div>
@@ -94,7 +94,8 @@
       <p>&copy; All rights reserved to Smile Me Up 2018&trade;</p>
     </div>
   </div>
-  <div id="active_conversation" class="active_conversation hide">
+
+  <div id="active_conversation" class="hiddenss active_conversation hide">
     <% conversation = Conversation.mine(current_user).first %>
     <a id="closeMessage" class="pull-right btn btn-sm">X</a>
     <div class="conversation_header" data-toggle="collapse" href="#collapseExample" aria-expanded="true" aria-controls="collapseExample">
@@ -107,6 +108,7 @@
         <% conversation.messages.map do |message| %>
 
           <div class="<%= "#{message.creator == current_user ? 'right-side' : 'left-side'}" %>">
+
               <span class="creator_name ">
                  <%= message.creator.name %>:
               </span>
@@ -136,7 +138,7 @@
   <div class="footer-close" , id="footer-close">
     <%= image_tag('footer-close.svg') %>
   </div>
-  <div id="call_us_anim" class='footer-call' style="z-index: 1000">
+  <div id="call_us_anim" class='footer-call' style="z-index: 80">
   </div>
   <div class="footer-call" id="footer-call">
     <a href="tel:+49015258197119" title="">
@@ -150,7 +152,7 @@
   </div>
   <div class="footer-chat" id="footer-chat">
     <div>
-      <%= image_tag('footer-chat.svg') %>
+      <%= image_tag('footer-chat.svg' , class: "chatting" ) %>
     </div>
   </div>
 
