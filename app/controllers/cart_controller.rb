@@ -47,7 +47,12 @@ class CartController < ApplicationController
     end
     @order = OrderDetail.create(:first_name => session[:first_name] , :last_name => session[:last_name] , :zip_code => session[:zip_code] , :city => session[:city], :country => session[:country] , :additional_information => session[:additional_information] , :phone_number => session[:phone_number])
     session[:cart].each do |y|
-      @transaction = UserProduct.create(:user_id => current_user.id , :product_id => Product.find_by(:name => y["product"]).id , :style_id => Style.find_by(:name => y["style"]).id , :quantity => y["quantity"] , :subtotal => y["quantity"]*Product.find_by(:name => y["product"]).product_prices.find_by(:currency => @currency).price , :order_detail_id => @order.id)
+      @transaction = UserProduct.create(
+        :user_id => current_user.id,
+        :product_id => Product.find_by(:name => y["product"]).id ,
+        :style_id => Style.find_by(:name => y["style"]).id,
+        :quantity => y["quantity"],
+        :subtotal => y["quantity"]*Product.find_by(:name => y["product"]).product_prices.find_by(:currency => @currency).price , :order_detail_id => @order.id)
     end
     session[:cart] = nil
     session[:total] = nil
@@ -95,8 +100,8 @@ class CartController < ApplicationController
 
       # ###Redirect URLs
       :redirect_urls => {
-        :return_url => "http://localhost:3000/execute",
-        :cancel_url => "http://localhost:3000/" },
+        :return_url => "#{request.base_url}/execute",
+        :cancel_url => "#{request.base_url}/" },
 
       # ###Transaction
       # A transaction defines the contract of a

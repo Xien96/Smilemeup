@@ -16,76 +16,78 @@
   <div class="tab-pane show active" id="contact" role="tabpanel" aria-labelledby="contact-tab">
     <div class="orders">
 
-   
 
     </div>
   </div>
 
   <!--start our Orders -->
-<div class="our-time-line">
-  <div class="container">
-   
+  <div class="our-time-line">
+    <div class="container">
 
-    <div class="time-line-shadow">
-      <h1 class=""></h1>
-      <div class="row">
-          <div class="col-sm-12">
-          <div class="col-lg-6 col-sm-12 media-order">
-              <div class="col-lg-2 col-sm-12">
-                <div class="order-number">
-                  <h2>#1</h2>
+
+      <div class="time-line-shadow">
+        <h1 class=""></h1>
+        <% @orders.each_with_index do |order, index| %>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="col-lg-6 col-sm-12 media-order">
+                <div class="col-lg-2 col-sm-12">
+                  <div class="order-number">
+                    <h2># <%= index + 1%></h2>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                  <div class="our-order-image">
+
+                    <%= image_tag('Hollywood-oder.svg', class: "Hollywood-oder") %>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                  <div class="order-content">
+                    <h2>Hollywood Smile</h2>
+                    <p>(The typical Hollywood smile)</p>
+                    <p>Order placed on: 31 jun 2018</p>
+                    <p>Order ID: #4042505326209</p>
+                    <p>Payment method: Credit card</p>
+                  </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-sm-12">
-                <div class="our-order-image">
 
-                  <%= image_tag('Hollywood-oder.svg', class: "Hollywood-oder") %>
+              <div class="col-lg-5 col-sm-12">
+                <div class="col-sm-12 timeline-grid">
+                  <nav class="timeline-order">
+                    <ol>
+                      <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                      </ul>
+                    </ol>
+                  </nav>
                 </div>
-            </div>
-            <div class="col-lg-6 col-sm-12">
-              <div class="order-content">
-                <h2>Hollywood Smile</h2>
-                <p>(The typical Hollywood smile)</p>
-                <p>Order placed on: 31 jun 2018</p>
-                <p>Order ID: #4042505326209</p>
-                <p>Payment method: Credit card</p>
+
+                <div class="col-sm-12 cal-total">
+                  <div class="our-calc">
+                    <p>subtotal: <span>900 USD</span></p>
+                    <hr>
+                    <p>subtotal: <span>900 USD</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-1 hidden-md hidden-sm hidden-xs image-hidden-pus">
+                <div class="image-pus">
+                  <%= image_tag('Polygon-pus.svg', class: "Polygon-pus") %>
+                </div>
               </div>
             </div>
           </div>
+        <% end %>
 
-          <div class="col-lg-5 col-sm-12">
-            <div class="col-sm-12 timeline-grid">
-             <nav class="timeline-order">
-              <ol>
-                <ul>
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                </ul>
-              </ol>
-            </nav>
-          </div>
-
-          <div class="col-sm-12 cal-total">
-            <div class="our-calc">
-              <p>subtotal: <span>900 USD</span></p>
-              <hr>
-              <p>subtotal: <span>900 USD</span></p>
-            </div>
-          </div>
-          </div>
-          <div class="col-lg-1 hidden-md hidden-sm hidden-xs image-hidden-pus">
-            <div class="image-pus">
-              <%= image_tag('Polygon-pus.svg', class: "Polygon-pus") %>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
-</div>
 
-<!--End our Orders -->
+  <!--End our Orders -->
 
 </div>
 
