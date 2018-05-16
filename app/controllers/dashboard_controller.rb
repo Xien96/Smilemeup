@@ -1,9 +1,11 @@
 class DashboardController < ApplicationController
   layout "dashboard"
   def index
+
   end
 
   def inbox
+    @conversations  = Conversation.all
   end
 
   def orders
@@ -11,6 +13,7 @@ class DashboardController < ApplicationController
   end
 
   def users
+    @users = User.all
   end
 
   def settings

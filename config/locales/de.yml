@@ -159,6 +159,10 @@ de:
     english: 'English'
     germany: 'Germany'
     spanish: 'Spanish'
+  country:
+    germany: 'Germany'
+    australia: 'Australia'
+    united_kingdom: 'United Kingdom'
   currency:
     usd: 'USD'
     gbp: 'GBP'
