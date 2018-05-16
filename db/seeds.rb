@@ -1,7 +1,7 @@
 products = [
   {name: "snap_up", prices:
     [
-      {currency: "eur", price: 899},
+      {currency: "euro", price: 899},
       {currency: "gbp", price: 699},
       {currency: "aud", price: 1399},
       {currency: "usd", price: 999},
@@ -9,7 +9,7 @@ products = [
   },
   {name: 'clear_up', prices:
     [
-      {currency: "eur", price: 1499},
+      {currency: "euro", price: 1499},
       {currency: "gbp", price: 1299},
       {currency: "aud", price: 2399},
       {currency: "usd", price: 1599},
@@ -18,7 +18,7 @@ products = [
   {
     name: 'impression_kit',
     prices:[
-      {currency: "eur", price: 39},
+      {currency: "euro", price: 39},
       {currency: "gbp", price: 39},
       {currency: "aud", price: 39},
       {currency: "usd", price: 39}

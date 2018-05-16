@@ -577,6 +577,10 @@ de:
       orders: 'Orders'
       messages: 'Mitteilungen'
   products:
+    placed_on: 'Order placed on'
+    order_id: 'Order ID'
+    subtotal: 'SubTotal'
+    quantity: 'Quantity'
     our: 'Unsere'
     product_overview: 'Produktübersicht'
     products: 'Produkte'

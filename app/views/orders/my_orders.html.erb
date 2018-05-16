@@ -27,7 +27,7 @@
 
       <div class="time-line-shadow">
         <h1 class=""></h1>
-        <% @orders.each_with_index do |order, index| %>
+        <% @orders.each_with_index do |product, index| %>
           <div class="row">
             <div class="col-sm-12">
               <div class="col-lg-6 col-sm-12 media-order">
@@ -44,11 +44,11 @@
                 </div>
                 <div class="col-lg-6 col-sm-12">
                   <div class="order-content">
-                    <h2><%= t "#{order.style.name}" %> Hollywood Smile</h2>
-                    <p>(The typical Hollywood smile)</p>
-                    <p>Order placed on: 31 jun 2018</p>
-                    <p>Order ID: #4042505326209</p>
-                    <p>Payment method: Credit card</p>
+                    <h2><%= t "#{product.style.try(:name)}" %></h2>
+                    <p>(<%= t "#{product.style.try(:tagline)}" %>)</p>
+                    <p><%= t 'products.quantity' %>: <%= product.quantity %></p>
+                    <p><%= t 'products.placed_on' %>: <%= product.created_at.to_date.strftime %></p>
+                    <p><%= t 'products.order_id' %> : # <%= product.order_detail_id%></p>
                   </div>
                 </div>
               </div>
@@ -68,9 +68,9 @@
 
                 <div class="col-sm-12 cal-total">
                   <div class="our-calc">
-                    <p>subtotal: <span>900 USD</span></p>
+                    <p><%= t 'products.subtotal'%>: <span><%= product.price(@currency) %> <%= t "currency.#{@currency}"%></span></p>
                     <hr>
-                    <p>subtotal: <span>900 USD</span></p>
+                    <p><%= t 'products.subtotal'%>: <span>900 <%= t "currency.#{@currency}"%></span></p>
                   </div>
                 </div>
               </div>

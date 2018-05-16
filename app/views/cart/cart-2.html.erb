@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://www.paypalobjects.com/api/checkout.js"></script>
 </head>
 <body>
 <div class="nav-cover">
@@ -12,15 +13,16 @@
   <div class="row">
     <div class="col-sm-12 col-sm-push-1">
       <h1>CART</h1>
+       
           <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-            <div class="panel panel-default panel-cart"">
+            <div class="panel panel-default panel-cart">
               <div class="panel-header" role="tab" id="headingOne">
                 <h4 class="panel-title title-panel">
                   <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     <div class="clearfix">
                       <span class="cart-arrow pull-left">
-                       <h3 class="cart-title pull-right pull-right-text">1. Please Add Your Address</h3>           
-                          <%= image_tag('True.svg') %>
+                       <h3 class="cart-title pull-right pull-right-text">1. Please Add Your Address</h3>
+                        <%= image_tag('True.svg') %>
                       </span>
                     </div>
                   </a>
@@ -57,115 +59,118 @@
                                 <%= form_tag products_address_path do %>
                                 <div class="form-group">
                                     <label for="message-text" class="control-label">First Name</label>
-                                     <%= text_field_tag :first_name, nil , class: 'form-control' ,id: "recipient-name"%>
-                                    
+                                     <%=  text_field_tag :first_name, nil , class: 'form-control' ,id: "recipient-name"%>
+
                                   </div>
                                   <div class="form-group">
                                     <label for="message-text" class="control-label">Last Name</label>
+
                                      <%= text_field_tag :last_name, nil , class: 'form-control' ,id: "recipient-name" %>
-                                    
+
                                   </div>
                                   <div class="form-group">
                                     <label for="message-text" class="control-label">Zip Code</label>
-                                     <%= text_field_tag :zip_code, nil , class: 'form-control' ,id: "recipient-name"%>
-                                    
+                                     <%=  text_field_tag :zip_code, nil , class: 'form-control' ,id: "recipient-name"%>
+
                                   </div>
                                   <div class="form-group">
                                     <label for="message-text" class="control-label">City</label>
-                                     <%= text_field_tag :city, nil , class: 'form-control' ,id: "recipient-name" %>
-                                    
+                                     <%=  text_field_tag :city, nil , class: 'form-control' ,id: "recipient-name" %>
+
                                   </div>
                                   <div class="form-group">
                                     <label for="message-text" class="control-label">Country</label>
-                                     <%= text_field_tag :country, nil , class: 'form-control' ,id: "recipient-name" %>
-                                    
+                                     <%=  text_field_tag :country, nil , class: 'form-control' ,id: "recipient-name" %>
+
                                   </div>
                                   <div class="form-group">
                                     <label for="message-text" class="control-label">Additional Information</label>
+
                                      <%= text_field_tag :additional_information, nil , class: 'form-control additional-height' ,id: "recipient-name" %>
-                                    
+
                                   </div>
                                   <div class="form-group">
                                     <label for="message-text" class="control-label">Phone Number</label>
-                                     <%= text_field_tag :phone_number, nil , class: 'form-control' ,id: "recipient-name" %>
+                                     <%=  text_field_tag :phone_number, nil , class: 'form-control' ,id: "recipient-name" %>
                                     
                                   </div>
-
                                   <%= submit_tag "Save" , class: "btn btn-primary cart-sending-message" %>
                                 <% end %>
 
-                              </div>
-                              <!-- <div class="modal-footer">
-                                <button type="button" class="btn btn-primary cart-sending-message">Send message</button>
-                              </div> -->
-                            </div>
-                          </div>
                         </div>
+                        <!-- <div class="modal-footer">
+                          <button type="button" class="btn btn-primary cart-sending-message">Send message</button>
+                        </div> -->
+                      </div>
                     </div>
-
+                  </div>
                 </div>
+
               </div>
             </div>
-
-            <div class="panel panel-default panel-cart"">
-              <div class="panel-header" role="tab" id="headingTwo">
-                <h4 class="panel-title title-panel">
-                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    <div class="clearfix">
-          <span class="cart-arrow pull-left">
-           <h3 class="cart-title pull-right pull-right-text">2. ORDER SUMMARY</h3>           
-              <%= image_tag('True.svg') %>
-            </span>
           </div>
-                  </a>
-                </h4>
-              </div>
-              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                <div class="panel-body">
-                  
-              <div class="cart-adress">
+
+          <div class="panel panel-default panel-cart">
+            <div class="panel-header" role="tab" id="headingTwo">
+              <h4 class="panel-title title-panel">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <div class="clearfix">
+          <span class="cart-arrow pull-left">
+           <h3 class="cart-title pull-right pull-right-text">2. ORDER SUMMARY</h3>
+            <%= image_tag('True.svg') %>
+            </span>
+                  </div>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
               <div class="panel-body">
-                <table class="table">
-                <thead>
-                  <tr>
-                    <th>&nbsp;</th>
-                    <th>Item</th>
-                    <th>Quantity</th>
-                    <th>Unit Price</th>
-                    <th>Subtotal</th>
-                    <th>Options</th>
-                  </tr>
-                </thead> 
-                <tbody>
-                  <% session[:cart].each_with_index do |ci, index| %>
-                  <tr class="cart-item">
-                    <td class="img"><%= image_tag("products/#{ci['style']}.png")%></td>
-                    <td>
-                      <strong>The <%= ci['style'].titleize %> Smile</strong><br>
-                      <%= Style.find_by(name: ci['style']).tagline %>
-                    </td>
-                    <td><%= ci['quantity'].to_i %></td>
-                    <td><%= number_to_currency(Product.find_by(name: ci['product']).product_prices.find_by(:currency => @currency).price ) %> </td>
-                    <td><%= number_to_currency(Product.find_by(name: ci['product']).product_prices.find_by(:currency => @currency).price  * ci['quantity'].to_i) %></td>
-                    <td><%= link_to "Remove", delete_item_path(index) , method: :delete%></td>
-                  </tr>
-                  <% end %>
-                </tbody>
-              </table>
 
-              </div>
-            </div>
+                <div class="cart-adress">
+                  <div class="panel-body">
+                    <table class="table">
+                      <thead>
+                      <tr>
+                        <th>&nbsp;</th>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Unit Price</th>
+                        <th>Subtotal</th>
+                        <th>Options</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <% session[:cart].each_with_index do |ci, index| %>
+                        <tr class="cart-item">
+                          <td class="img">
+                            <%= ci['style'].present? ? image_tag("products/#{ci['style']}.png") : image_tag("products/#{ci['product']}.svg") %>
+                          </td>
+                          <td>
+                            <strong>The <%= ci['style'].try :titleize %> Smile</strong><br>
+                            <%= Style.find_by(name: ci['style']).try :tagline %>
+                          </td>
+                          <td><%= ci['quantity'].to_i %></td>
+                          <td><%= number_to_currency(Product.find_by(name: ci['product']).product_prices.find_by(:currency => @currency).price) %> </td>
+                          <td><%= number_to_currency(Product.find_by(name: ci['product']).product_prices.find_by(:currency => @currency).price * ci['quantity'].to_i) %></td>
+                          <td><%= link_to "Remove", delete_item_path(index), method: :delete %></td>
+                        </tr>
+                      <% end %>
+                      </tbody>
+                    </table>
 
+                  </div>
                 </div>
+
               </div>
             </div>
-            <div class="panel panel-default panel-cart">
-              <div class="panel-header" role="tab" id="headingThree">
-                <h4 class="panel-title  title-panel">
-                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    <div class="clearfix">
+          </div>
+          <div class="panel panel-default panel-cart">
+            <div class="panel-header" role="tab" id="headingThree">
+              <h4 class="panel-title  title-panel">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <div class="clearfix">
                       <span class="cart-arrow pull-left">
-                        <h3 class="cart-title pull-right pull-right-text">3. PAYMENT METHOD</h3>           
+                        <h3 class="cart-title pull-right pull-right-text">3. PAYMENT METHOD</h3>
                         <%= image_tag('True.svg') %>
                       </span>
                     </div>
@@ -201,8 +206,7 @@
               </label>
               </div>
               <div class="col-md-8 col-sm-8 product-text">
-              <div class="choose-heading"><%= image_tag('sofort.svg') %></div>
-                              <%= form_tag products_sofort_path do %>
+              <div class="choose-heading"><%= image_tag('sofort.svg') %></div><%= form_tag products_sofort_path do %>
                                 <div class="form-group">
                                     <label for="message-text" class="control-label">Name</label>
                                      <%= text_field_tag :name, nil %>
@@ -222,7 +226,8 @@
               <label class="container">Credit card
               <span class=""></span>
               </label>
-              <%= form_tag products_checkout_path do %>
+
+                    <%= form_tag products_checkout_path do %>
                       <article>
                         <% if flash[:error].present? %>
                           <div id="error_explanation">
@@ -239,32 +244,30 @@
                               data-description="SmileUp Payment"
                               data-amount= <% @total_cost %>
                               data-locale="auto"></script>
-                    <% end %>
+                    <% end %>                    
+                    </div>
+                    <divclass="col-md-8 col-sm-8 product-text">
+                    <div class="choose-heading"><%= image_tag('visaandmaster.svg') %></div>
               </div>
-              <div class="col-md-8 col-sm-8 product-text">
-              <div class="choose-heading"><%= image_tag('visaandmaster.svg') %></div>
-              </div>
-              </div>
-            </div>
+                    </div>            
+                    </div>
 
-            </div>
-
-            </div>
+                  </div>
 
                 </div>
+
               </div>
             </div>
           </div>
+        </div>
 
+      </div>
     </div>
+    <!-- payment form -->
+
+
+    <!-- If you're using Stripe for payments -->
+
   </div>
-  <!-- payment form -->
-    
-
-
-
-
-  <!-- If you're using Stripe for payments -->
-
 </div>
 </body>

@@ -280,7 +280,17 @@
                     location.reload();
                 }
             })
-        })
+        });
+        $('#order_impression_kit').click(function(){
+            $.post("<%= request.base_url%>/cart/add", {
+                product: 'impression_kit',
+                quantity: 1
+            }).success(function(){
+                location.url = "<%= request.base_url%>/cart"
+            }).error(function(){
+
+            })
+        });
 
 
         /* load more */
