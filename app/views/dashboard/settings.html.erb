@@ -1,92 +1,71 @@
-       
-<section>
-  
+<h4 class="page-title">Settings</h4>
+<p>We can add description here.</p>
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="profilepic">
+        <img src="assets/img/profile2.jpg">
 
-   
-    <div class="container">
-      <h2>Settings</h2> 
-      <p style="color: #BDBDBD">we can add description here.</p>
-      <div class="white">
-        <div class="row">
-            <form class="form-inline text-center">
-               
-                    <div class="col-xs-12">
-                         <div class="one">
-                    <div class="update-picture">
-                        <%= image_tag("dashboard/userpic.svg") %>
-                        <button class="btn btn-default" type="submit">Update profile picture</button>
-                    </div>
-                    </div>
-                </div>
-                
-                <div class="align">
-                <div class="col-md-6 col-xs-12">
-                    
-                  <div class="form-group">
-                    <p>Full Name</p>
-                    <input type="text" class="form-control" id="exampleInputEmail3">
-                      <i class="fa fa-pencil"></i>
-                  </div>
-                </div>
-                <div class="col-md-6 col-xs-12">
-                <div class="form-group">
-                    
-                        <p>Password</p>
-                        <input type="password" class="form-control" id="exampleInputPassword3">
-                        <i class="fa fa-pencil"></i>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xs-12">
-                <div class="form-group">
-                    
-                        <p>Email</p>
-                        <input type="email" class="form-control" id="exampleInputPassword3">
-                        <i class="fa fa-pencil"></i>
-                    </div>
-                </div>
-                 <div class="col-md-6 col-xs-12">
-                <div class="form-group">
-                    
-                        <p>Mobile Number</p>
-                        <input type="tel" class="form-control" id="exampleInputPassword3">
-                        <i class="fa fa-pencil"></i>
-                    </div>
-                </div>
-                     <div class="col-md-6 col-xs-12">
-                <div class="form-group">
-                        <div class="dropdown">
-                            <p>Country</p>
-                          <button  class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            Select Country
-                            <span class="caret"></span>
-                          </button>
-                            <i class="fa fa-pencil"></i>
-                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Another action</a></li>
-                          </ul>
-                        </div>
-                    </div>
-                </div>
-                 <div class="col-md-6 col-xs-12">
-                <div class="form-group">
-                    
-                        <p>City</p>
-                        <input type="text" class="form-control last" id="exampleInputPassword3">
-                        <i class="fa fa-pencil"></i>
-                    </div>
-                </div>
-                    <button class="save-button" type="submit" class="btn btn-default btn-lg">Save</button>
-                </div>
-            </form>
-        </div>
       </div>
-    </div>
-</section>
-     
+      <div class="updatepic text-center">
+        <button style="margin: auto; border-radius:30px; width: 255px" class="btn btn-default btn-round-lg btn-lg">
+          Update Profile Picture</button>
+      </div>
+      <div class="card-body" >
+        <div class="col-xs-6"style="float: left">
+          <div class="form-group">
+            <label for="pillInput">Fullname:</label>
+            <input type="text" class="form-control input-pill" id="pillInput" placeholder="">
+          </div>
+        </div>
+        <div class="col-xs-6" style="float: left">
+          <div class="form-group">
+            <label for="pillInput">Password:</label>
+            <input type="password" class="form-control input-pill" id="pillInput" placeholder="">
+          </div>
+        </div>
+        <div class="col-xs-6"style="float: left">
+          <div class="form-group">
+            <label for="pillInput">Email:</label>
+            <input type="email" class="form-control input-pill" id="pillInput" placeholder="">
+          </div>
+        </div>
+        <div class="col-xs-6" style="float: left">
+          <div class="form-group">
+            <label for="pillInput">Mobile Number:</label>
+            <input type="tel" class="form-control input-pill" id="pillInput" placeholder="">
+          </div>
+        </div>
+        <div class="col-xs-6"style="float: left">
+          <div class="form-group">
+            <label for="pillSelect">Country</label>
+            <select class="form-control input-pill" id="pillSelect">
+              <option>Select-</option>
+              <option>France</option>
+              <option>UK</option>
+              <option>Australia</option>
+              <option>Germany</option>
 
-        
-       
-        
- 
+            </select>
+          </div>
+        </div>
+        <div class="col-xs-6" style="float: left">
+          <div class="form-group">
+            <label for="pillInput">City:</label>
+            <input type="text" class="form-control input-pill" id="" placeholder=" ">
+          </div>
+        </div>
+
+
+
+      </div>
+      <div class="col-xs-6  col-centered">
+        <div class="save">
+          <button style="margin: auto" class="btn btn-default btn-round-lg btn-lg">Save</button></div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
