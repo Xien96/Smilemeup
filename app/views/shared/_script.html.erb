@@ -10,56 +10,73 @@
 
 <script>
     $(document).on('turbolinks:load', function () {
-        var footer = bodymovin.loadAnimation({
-            container: document.getElementById('call_us_anim'), // Required
-            path: 'call_us.json', // Required
-            renderer: 'svg/canvas/html', // Required
-            loop: true, // Optional
-            autoplay: true, // Optional
+        /*hidden scrolling in mobile*/
+        $(".footer-chat .chatting").click(function () {
+            $("footer .active_conversation").toggleClass("hiddenss")
         });
-        var girl = bodymovin.loadAnimation({
-            container: document.getElementById('girl_anim'), // Required
-            path: 'girl.json', // Required
-            renderer: 'svg/canvas/html', // Required
-            loop: true, // Optional
-            autoplay: true, // Optional
-        });
-        var money = bodymovin.loadAnimation({
-            container: document.getElementById('money_anim'), // Required
-            path: 'money.json', // Required
-            renderer: 'svg/canvas/html', // Required
-            loop: true, // Optional
-            autoplay: true, // Optional
-        });
-        var doctor = bodymovin.loadAnimation({
-            container: document.getElementById('doctor_anim'), // Required
-            path: 'doctor.json', // Required
-            renderer: 'svg/canvas/html', // Required
-            loop: true, // Optional
-            autoplay: true, // Optional
-        });
-
-        var rating = bodymovin.loadAnimation({
-            container: document.getElementById('rating_anim'), // Required
-            path: 'rating.json', // Required
-            renderer: 'svg/canvas/html', // Required
-            loop: true, // Optional
-            autoplay: true, // Optional
-        });
-        var hand1 = bodymovin.loadAnimation({
-            container: document.getElementById('hand_1_anim'), // Required
-            path: 'hand.json', // Required
-            renderer: 'svg/canvas/html', // Required
-            loop: true, // Optional
-            autoplay: true, // Optional
-        });
-        var hand2 = bodymovin.loadAnimation({
-            container: document.getElementById('hand_2_anim'), // Required
-            path: 'hand1.json', // Required
-            renderer: 'svg/canvas/html', // Required
-            loop: true, // Optional
-            autoplay: true, // Optional
-        });
+        if (document.getElementById('call_us_anim')) {
+            var footer = bodymovin.loadAnimation({
+                container: document.getElementById('call_us_anim'), // Required
+                path: '<%= request.base_url%>/call_us.json', // Required
+                renderer: 'svg/canvas/html', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            });
+        }
+        if (document.getElementById('girl_anim')) {
+            var girl = bodymovin.loadAnimation({
+                container: document.getElementById('girl_anim'), // Required
+                path: '<%= request.base_url%>/girl.json', // Required
+                renderer: 'svg/canvas/html', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            });
+        }
+        if (document.getElementById('money_anim')) {
+            var money = bodymovin.loadAnimation({
+                container: document.getElementById('money_anim'), // Required
+                path: '<%= request.base_url%>/money.json', // Required
+                renderer: 'svg/canvas/html', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            });
+        }
+        if (document.getElementById('doctor_anim')) {
+            var doctor = bodymovin.loadAnimation({
+                container: document.getElementById('doctor_anim'), // Required
+                path: '<%= request.base_url%>/doctor.json', // Required
+                renderer: 'svg/canvas/html', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            });
+        }
+        if (document.getElementById('rating_anim')) {
+            var rating = bodymovin.loadAnimation({
+                container: document.getElementById('rating_anim'), // Required
+                path: '<%= request.base_url%>/rating.json', // Required
+                renderer: 'svg/canvas/html', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            });
+        }
+        if (document.getElementById('hand_1_anim')) {
+            var hand1 = bodymovin.loadAnimation({
+                container: document.getElementById('hand_1_anim'), // Required
+                path: '<%= request.base_url%>/hand.json', // Required
+                renderer: 'svg/canvas/html', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            });
+        }
+        if (document.getElementById('hand_2_anim')) {
+            var hand2 = bodymovin.loadAnimation({
+                container: document.getElementById('hand_2_anim'), // Required
+                path: '<%= request.base_url%>/hand1.json', // Required
+                renderer: 'svg/canvas/html', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            });
+        }
 
         $("#call_us_anim").click(function(){
             $("#footer-chat").click()
@@ -69,6 +86,17 @@
         $('#scroll-up').click(function () {
             $('html, body').animate({scrollTop: 0}, 'slow');
         });
+        $('#footer-chat img').click(function (e) {
+            if (<%= current_user.present? %>) {
+
+                e.stopPropagation();
+                $('#active_conversation').toggleClass('hide').toggleClass('show')
+            }
+        });
+        $("#closeMessage").click(function (e) {
+            e.stopPropagation();
+            $('#active_conversation').toggleClass('hide').toggleClass('show')
+        })
 
         $('.faq-item').click(function (e) {
             console.log(e);
@@ -462,45 +490,49 @@
             clickable: true,
         },
     });
-    paypal.Button.render({
+    if (typeof(paypal) != 'undefined') {
+        paypal.Button.render({
 
-                          env: 'sandbox', // sandbox | production
+        env: 'sandbox', // sandbox | production
 
-                          // Show the buyer a 'Pay Now' button in the checkout flow
-                          commit: true,
+        // Show the buyer a 'Pay Now' button in the checkout flow
+        commit: true,
 
-                          // payment() is called when the button is clicked
-                          payment: function() {
+        // payment() is called when the button is clicked
+        payment: function () {
 
-                              // Set up a url on your server to create the payment
-                              var CREATE_URL = "<%= checkout_path %>";
+            // Set up a url on your server to create the payment
+            var CREATE_URL = "<%= checkout_path %>";
 
-                              // Make a call to your server to set up the payment
-                              return paypal.request.post(CREATE_URL)
-                                  .then(function(res) {
-                                      return res.paymentID;
-                                  });
-                          },
+            // Make a call to your server to set up the payment
+            return paypal.request.post(CREATE_URL)
+                .then(function (res) {
+                    return res.paymentID;
+                });
+        },
 
-                          // onAuthorize() is called when the buyer approves the payment
-                          onAuthorize: function(data, actions) {
+        // onAuthorize() is called when the buyer approves the payment
+        onAuthorize: function (data, actions) {
 
-                              // Set up a url on your server to execute the payment
-                              var EXECUTE_URL = "<%= execute_path %>";
+            // Set up a url on your server to execute the payment
+            var EXECUTE_URL = "<%= execute_path %>";
 
-                              // Set up the data you need to pass to your server
-                              var data = {
-                                  paymentID: data.paymentID,
-                                  payerID: data.payerID
-                              };
+            // Set up the data you need to pass to your server
+            var data = {
+                paymentID: data.paymentID,
+                payerID: data.payerID
+            };
 
-                              // Make a call to your server to execute the payment
-                              return paypal.request.post(EXECUTE_URL, data)
-                                  .then(function (res) {
-                                      window.alert('Payment Complete!');
-                                  });
-                          }
+            // Make a call to your server to execute the payment
+            return paypal.request.post(EXECUTE_URL, data)
+                .then(function (res) {
+                    window.alert('Payment Complete!');
+                });
+        }
 
-                      }, '#paypal-button-container');
+    }, '#paypal-button-container');
+
+}
+
 
 </script>

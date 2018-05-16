@@ -35,7 +35,7 @@
           <%= image_tag('impressions.svg')%>
         </div>        
         <p>
-          <%= t 'products.impression.step1'%> <br><br><br><br><br> <br>
+          <%= t('products.impression.step1').html_safe %>
         </p>
       </div>
     </div>
@@ -54,8 +54,7 @@
           <%= image_tag('vector.svg')%>
         </div>
         <p>
-          <%= t 'products.impression.step3'%> <br><br><br><br><br><br><br>
-          &nbsp;
+          <%= t('products.impression.step3').html_safe%>
         </p>
       </div>
     </div>
@@ -71,7 +70,7 @@
         <div class="text-center">
           <h3><%= t 'products.impression.title'%> </h3>
           <h5>(<%= t 'products.impression.title_desc'%>)</h5><br>
-          <button type="button" class="btn btn-lg btn-green btn-hover" data-toggle="modal" data-target="#hollywoodModal"><%= t 'products.add_to_cart '%></button>
+          <button type="button" class="btn btn-lg btn-green btn-hover" data-toggle="modal" data-target="#hollywoodModal"> <%= t 'products.impression.add_to_cart'%> </button>
         </div>                  
         </div>
       </div>      

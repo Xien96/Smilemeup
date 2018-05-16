@@ -99,8 +99,8 @@ class CartController < ApplicationController
 
       # ###Redirect URLs
       :redirect_urls => {
-        :return_url => "http://localhost:3000/execute",
-        :cancel_url => "http://localhost:3000/" },
+        :return_url => "#{request.base_url}/execute",
+        :cancel_url => "#{request.base_url}/" },
 
       # ###Transaction
       # A transaction defines the contract of a

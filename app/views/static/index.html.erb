@@ -44,7 +44,7 @@
         <div id="doctor_anim" style="height: 180px; width: 127px;">
         </div>
       </div>
-
+      
       <h4> <%= t 'main_page.smile' %> <strong><%= t 'main_page.experts' %> </strong></h4>
       <p>
         <%= t 'main_page.why_desc1' %>
@@ -102,12 +102,11 @@
           <div class="col-sm-12">
             <a href="/products/clearup"><h1 class="green order-heading">CLEAR UP</h1></a>
             <p class="order-min-height">
-              You wish to straighten your teeth or close <br>gaps? Without traditional braces? <br>You prefer to pay
-              less for a high-quality <br>treatment? Then you should choose our <br>invisible, discreet aligner CLEAR UP
+
+              <%= t('main_page.clear_up_desc').html_safe %>
             </p>
             <p>
-              <a class="btn btn-default btn-lg btn-green" href="/products/clearup/clearup_impression" role="button">Start
-                Now</a>
+              <a class="btn btn-default btn-lg btn-green" href="/products/clearup/clearup_impression" role="button"> <%= t 'main_page.start_now_btn' %> </a>
             </p>
           </div>
 
@@ -123,11 +122,11 @@
           <div class="col-sm-12">
             <a href="/products/snapup"><h1 class="green order-heading">SNAP UP</h1></a>
             <p class="order-min-height">
-              Our removable instant veneers snap <br>easily on your teeth and cover missing, <br>crooked or discolored
-              teeth - without any <br>adhesives or teeth modifications.<br><br>
+
+              <%= t('main_page.snap_up_desc').html_safe %>
             </p>
             <p>
-              <a class="btn btn-default btn-lg btn-green" href="/products/snapup/customize" role="button">Order Now</a>
+              <a class="btn btn-default btn-lg btn-green" href="/products/snapup/customize" role="button"> <%= t 'main_page.order_now_btn' %></a>
             </p>
           </div>
         </div>
@@ -164,7 +163,7 @@
         </div>
         <h4 class="green text-center"><%= t 'main_page.step_2_normal' %> <br><%= t 'main_page.step_2_bold' %></h4>
         <p>
-          <%= t 'main_page.step_2_desc' %> <br><br><br>
+          <%= t('main_page.step_2_desc').html_safe %> <br><br><br>
         </p>
       </div>
     </div>
@@ -176,7 +175,7 @@
         </div>
         <h4 class="green text-center"><%= t 'main_page.step_3_normal' %><br><%= t 'main_page.step_3_bold' %></h4>
         <p>
-          <%= t 'main_page.step_3_desc' %> <br><br><br>
+          <%= t('main_page.step_3_desc').html_safe %> <br><br><br>
           &nbsp;
         </p>
       </div>
@@ -191,6 +190,7 @@
         <%= image_tag('home-app.png', class: "phone-picture") %>
       </div>
       <div class="col-sm-5 app-info" style="float: right;">
+        <h1 ><strong> <%= t 'main_page.comming_soon' %> </strong></h1>
         <h3 class="app-heading">
           <%= t 'main_page.check' %> <br>
           <strong><%= t 'main_page.new_app' %></strong>
@@ -206,7 +206,7 @@
             <%= image_tag('app-download-ios.svg') %>
           </div>
           <br><br><br>
-          <h1 style="margin-left: 0.5em"><strong> <%= t 'main_page.comming_soon' %> </strong></h1>
+
         </div>
       </div>
     </div>

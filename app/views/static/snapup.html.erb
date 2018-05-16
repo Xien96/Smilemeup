@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-sm-6 col-sm-push-3">
           <p class="snap-overview-des">
-            <%= t 'products.snap_up.desc' %>
+            <%= t('products.snap_up.desc').html_safe %>
           </p>
         </div>
       </div>
@@ -25,7 +25,7 @@
         <%= image_tag('instant.svg') %>
         <h4><%= t('products.snap_up.title1').html_safe%></h4>
         <p>
-          <%= t('products.snap_up.desc1').html_safe%>
+          <%= t('products.snap_up.desc1').html_safe%> <br><br><br>
         </p>
       </div>
     </div>
@@ -34,7 +34,7 @@
         <%= image_tag('customized.svg') %>
         <h4><strong><%= t('products.snap_up.title2').html_safe%></strong></h4>
         <p>
-          <%= t('products.snap_up.desc2').html_safe%>
+          <%= t('products.snap_up.desc2').html_safe%> <br><br>
         </p>
       </div>
     </div>
@@ -52,7 +52,7 @@
         <%= image_tag('affordable.svg') %>
         <h4> <strong><%= t('products.snap_up.title4').html_safe%></strong></h4>
         <p>
-          <%= t('products.snap_up.desc4').html_safe%>
+          <%= t('products.snap_up.desc4').html_safe%> <br><br>
 
         </p>
       </div>
@@ -70,7 +70,7 @@
       <%= t('products.snap_up.order_statement_desc').html_safe%>
 
     </p>
-    <a class="btn btn-default btn-lg btn-green" href="/products/snapup/customize" role="button">Order Now</a>
+    <a class="btn btn-default btn-lg btn-green" href="/products/snapup/customize" role="button"> <%= t 'products.snap_up.order_now_btn' %></a>
   </div>
 </div>
 <!-- start Our Video style -->
@@ -155,9 +155,9 @@
 <!--End  Our Video style-->
 
 
-<div class="home container text-center mile-slider">
-  <h3 class="green"><strong><%= t 'products.Inspiration' %></strong></h3>
-  <p>Get inspired by some of our before and after pictures.</p>
+<div class="home container text-center ">
+  <h3 class="green"><strong> <%= t 'products.snap_up.Inspiration' %> </strong></h3>
+  <p> <%= t 'products.inspiration_desc' %></p>
 </div>
 
 
@@ -319,7 +319,7 @@
             <%= image_tag('impressions.svg') %>
             </div>
             <div class="col-sm-8 col-sm-8 product-text">
-            <h4 class="choose-heading"><%= t('products.step3')%> <strong><br> impression kit.</strong></h4>
+            <h4 class="choose-heading"><%= t('products.step3')%> <strong> <%= t 'products.step4' %> </strong></h4>
           </div>
           </div>
         </div>

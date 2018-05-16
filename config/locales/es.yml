@@ -1,5 +1,9 @@
     
 es:
+  hollywood: 'Hollywood Smile'
+  natural: 'Natural Shape'
+  sharp: 'Sharp Edges'
+  soft: 'Soft Edges'
   main_page:
     new_conversation: 'New Message'
     use: 'Use'
@@ -205,11 +209,24 @@ es:
     title1: 'Legal'
     title2: 'Statement'
     desc: 'Our website disclaimer below states the limitations of our liability for the use of your website and the information it contains.'
+    head0: 'Reconocimiento legal del oferente:'
     head1: 'Information to EU Online-Dispute Resolution '
     head2: 'Consumer dispute resolution '
     head3: 'Legal Disclaimer Liability for Contents '
     head4: 'Privacy policy for the use of Google Analytics '
     head5: ' Liability for Links '
+    body0:
+      part1: 'Smile Me Up GmbH'
+      part2: 'Representadas por el gerente Walid Dr. Fahmy'
+      part3: 'Arnheimerstr. 23'
+      part4: '40489 Düsseldorf'
+      part5: 'Alemania'
+      part6: 'Teléfono: +49 211 43632173'
+      part7: 'E-Mail: info@smilemeuponline.com'
+      part8: 'Identificación tributaria del impuesto a las ganancias: DE311238209'
+      part9: 'inscripto en el Registro Público de Comercio del Tribunal de Primera Instancia Düsseldorf Número HRB de Registro en el Registro Público de Comercio 79803'
+      part10: 'Plataforma de resolución de litigios en línea de la Comisión de la UE: https://ec.europa.eu/consumers/odr'
+      part11: 'No estamos obligados ni dispuestos a participar en un procedimiento de solución de controversias ante una junta de arbitraje de consumidores.'
     body1:
       part1: 'The European Commission provides a platform for online dispute resolution (OS):'
       part2: 'http://ec.europa.eu/consumers/odr '
