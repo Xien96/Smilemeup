@@ -58,46 +58,40 @@
                                 <%= form_tag products_address_path do %>
                                 <div class="form-group">
                                     <label for="message-text" class="control-label">First Name</label>
-                                     <%= image_tag('name-image.svg', class: "name-image1") %>
                                      <%= text_field_tag :first_name, nil , class: 'form-control' ,id: "recipient-name"%>
                                     
                                   </div>
                                   <div class="form-group">
                                     <label for="message-text" class="control-label">Last Name</label>
-                                     <%= image_tag('name-image.svg', class: "name-image1") %>
                                      <%= text_field_tag :last_name, nil , class: 'form-control' ,id: "recipient-name" %>
                                     
                                   </div>
                                   <div class="form-group">
                                     <label for="message-text" class="control-label">Zip Code</label>
-                                     <%= image_tag('name-image.svg', class: "name-image1") %>
                                      <%= text_field_tag :zip_code, nil , class: 'form-control' ,id: "recipient-name"%>
                                     
                                   </div>
                                   <div class="form-group">
                                     <label for="message-text" class="control-label">City</label>
-                                     <%= image_tag('name-image.svg', class: "name-image1") %>
                                      <%= text_field_tag :city, nil , class: 'form-control' ,id: "recipient-name" %>
                                     
                                   </div>
                                   <div class="form-group">
                                     <label for="message-text" class="control-label">Country</label>
-                                     <%= image_tag('name-image.svg', class: "name-image1") %>
                                      <%= text_field_tag :country, nil , class: 'form-control' ,id: "recipient-name" %>
                                     
                                   </div>
                                   <div class="form-group">
                                     <label for="message-text" class="control-label">Additional Information</label>
-                                     <%= image_tag('name-image.svg', class: "name-image1") %>
                                      <%= text_field_tag :additional_information, nil , class: 'form-control additional-height' ,id: "recipient-name" %>
                                     
                                   </div>
                                   <div class="form-group">
                                     <label for="message-text" class="control-label">Phone Number</label>
-                                     <%= image_tag('name-image.svg', class: "name-image1") %>
                                      <%= text_field_tag :phone_number, nil , class: 'form-control' ,id: "recipient-name" %>
                                     
                                   </div>
+
                                   <%= submit_tag "Save" , class: "btn btn-primary cart-sending-message" %>
                                 <% end %>
 
@@ -189,7 +183,6 @@
               <div class="cell choose-product" style="height: 100px">
               <div class="col-md-4 col-sm-4" style="margin: 0">
               <label class="container">Paypal
-              <input type="radio" name="pay-method" value="paypal">
               <span class="checkmark"></span>
               </label>
               </div>
@@ -205,12 +198,19 @@
               <div class="cell choose-product" style="height: 100px">
               <div class="col-md-4 col-sm-4" style="margin: 0">
               <label class="container">Bank transfer
-              <input type="radio" name="pay-method" value="bank-transfer">
               <span class="checkmark"></span>
               </label>
               </div>
               <div class="col-md-8 col-sm-8 product-text">
               <div class="choose-heading"><%= image_tag('sofort.svg') %></div>
+                              <%= form_tag products_sofort_path do %>
+                                <div class="form-group">
+                                    <label for="message-text" class="control-label">Name</label>
+                                     <%= text_field_tag :name, nil %>
+                                    
+                                  </div>
+                                  <%= submit_tag "Submit" %>
+                                <% end %>
               </div>
               </div>
             </div>
@@ -219,34 +219,9 @@
               <div class="cell choose-product" style="height: 100px">
               <div class="col-md-4 col-sm-4" style="margin: 0">
               <label class="container">Credit card
-              <input class="show-credit-box" type="radio" name="pay-method" value="credit-cart">
               <span class=""></span>
               </label>
-              </div>
-              <div class="col-md-8 col-sm-8 product-text">
-              <div class="choose-heading"><%= image_tag('visaandmaster.svg') %></div>
-              </div>
-              </div>
-            </div>
-
-              <div class="cridet-card-item">
-                    <!-- You can make it whatever width you want. I'm making it full width
-                    on <= small devices and 4/12 page width on >= medium devices -->
-                    <div class="col-xs-12 col-md-12">
-
-
-                    <!-- CREDIT CARD FORM STARTS HERE -->
-                    <div class="panel panel-default credit-card-box">
-                    <div class="panel-heading display-table" >
-                    <div class="row display-tr" >
-                    <h3 class="panel-title display-td" >Payment Details</h3>
-                    <div class="display-td" >                            
-                    <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
-                    </div>
-                    </div>                    
-                    </div>
-                    <div class="panel-body">
-                    <%= form_tag products_checkout_path do %>
+              <%= form_tag products_checkout_path do %>
                       <article>
                         <% if flash[:error].present? %>
                           <div id="error_explanation">
@@ -263,12 +238,13 @@
                               data-description="SmileUp Payment"
                               data-amount= <% @total_cost %>
                               data-locale="auto"></script>
-                    <% end %>                    
-                    </div>
-                    </div>            
-                    <!-- CREDIT CARD FORM ENDS HERE -->
-                    </div>            
-                    </div>
+                    <% end %>
+              </div>
+              <div class="col-md-8 col-sm-8 product-text">
+              <div class="choose-heading"><%= image_tag('visaandmaster.svg') %></div>
+              </div>
+              </div>
+            </div>
 
             </div>
 

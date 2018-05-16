@@ -10,79 +10,84 @@
 
 <script>
     $(document).on('turbolinks:load', function () {
-
-
-/*hidden scrolling in mobile*/
-
-
-
-
-
-
-
-
-
-        var footer = bodymovin.loadAnimation({
-            container: document.getElementById('call_us_anim'), // Required
-            path: '<%= request.base_url%>/call_us.json', // Required
-            renderer: 'svg/canvas/html', // Required
-            loop: true, // Optional
-            autoplay: true, // Optional
+        /*hidden scrolling in mobile*/
+        $(".footer-chat .chatting").click(function () {
+            $("footer .active_conversation").toggleClass("hiddenss")
         });
-        var girl = bodymovin.loadAnimation({
-            container: document.getElementById('girl_anim'), // Required
-            path: '<%= request.base_url%>/girl.json', // Required
-            renderer: 'svg/canvas/html', // Required
-            loop: true, // Optional
-            autoplay: true, // Optional
-        });
-        var money = bodymovin.loadAnimation({
-            container: document.getElementById('money_anim'), // Required
-            path: '<%= request.base_url%>/money.json', // Required
-            renderer: 'svg/canvas/html', // Required
-            loop: true, // Optional
-            autoplay: true, // Optional
-        });
-        var doctor = bodymovin.loadAnimation({
-            container: document.getElementById('doctor_anim'), // Required
-            path: '<%= request.base_url%>/doctor.json', // Required
-            renderer: 'svg/canvas/html', // Required
-            loop: true, // Optional
-            autoplay: true, // Optional
-        });
+        if (document.getElementById('call_us_anim')) {
+            var footer = bodymovin.loadAnimation({
+                container: document.getElementById('call_us_anim'), // Required
+                path: '<%= request.base_url%>/call_us.json', // Required
+                renderer: 'svg/canvas/html', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            });
+        }
+        if (document.getElementById('girl_anim')) {
+            var girl = bodymovin.loadAnimation({
+                container: document.getElementById('girl_anim'), // Required
+                path: '<%= request.base_url%>/girl.json', // Required
+                renderer: 'svg/canvas/html', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            });
+        }
+        if (document.getElementById('money_anim')) {
+            var money = bodymovin.loadAnimation({
+                container: document.getElementById('money_anim'), // Required
+                path: '<%= request.base_url%>/money.json', // Required
+                renderer: 'svg/canvas/html', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            });
+        }
+        if (document.getElementById('doctor_anim')) {
+            var doctor = bodymovin.loadAnimation({
+                container: document.getElementById('doctor_anim'), // Required
+                path: '<%= request.base_url%>/doctor.json', // Required
+                renderer: 'svg/canvas/html', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            });
+        }
+        if (document.getElementById('rating_anim')) {
+            var rating = bodymovin.loadAnimation({
+                container: document.getElementById('rating_anim'), // Required
+                path: '<%= request.base_url%>/rating.json', // Required
+                renderer: 'svg/canvas/html', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            });
+        }
+        if (document.getElementById('hand_1_anim')) {
+            var hand1 = bodymovin.loadAnimation({
+                container: document.getElementById('hand_1_anim'), // Required
+                path: '<%= request.base_url%>/hand.json', // Required
+                renderer: 'svg/canvas/html', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            });
+        }
+        if (document.getElementById('hand_2_anim')) {
+            var hand2 = bodymovin.loadAnimation({
+                container: document.getElementById('hand_2_anim'), // Required
+                path: '<%= request.base_url%>/hand1.json', // Required
+                renderer: 'svg/canvas/html', // Required
+                loop: true, // Optional
+                autoplay: true, // Optional
+            });
+        }
 
-        var rating = bodymovin.loadAnimation({
-            container: document.getElementById('rating_anim'), // Required
-            path: '<%= request.base_url%>/rating.json', // Required
-            renderer: 'svg/canvas/html', // Required
-            loop: true, // Optional
-            autoplay: true, // Optional
-        });
-        var hand1 = bodymovin.loadAnimation({
-            container: document.getElementById('hand_1_anim'), // Required
-            path: '<%= request.base_url%>/hand.json', // Required
-            renderer: 'svg/canvas/html', // Required
-            loop: true, // Optional
-            autoplay: true, // Optional
-        });
-        var hand2 = bodymovin.loadAnimation({
-            container: document.getElementById('hand_2_anim'), // Required
-            path: '<%= request.base_url%>/hand1.json', // Required
-            renderer: 'svg/canvas/html', // Required
-            loop: true, // Optional
-            autoplay: true, // Optional
-        });
-
-        $("#call_us_anim").click(function () {
+        $("#call_us_anim").click(function(){
             $("#footer-chat").click()
-        });
+        })
         $("[data-toggle=popover]").popover({html: true})
         $('.add-to-cart .number .quantity').text(1);
         $('#scroll-up').click(function () {
             $('html, body').animate({scrollTop: 0}, 'slow');
         });
         $('#footer-chat img').click(function (e) {
-            if (<%= current_user.present? %>){
+            if (<%= current_user.present? %>) {
 
                 e.stopPropagation();
                 $('#active_conversation').toggleClass('hide').toggleClass('show')
@@ -360,12 +365,7 @@
                 }
             });
         }
-        /*---------------closing menue cansel icon and image*/
-        $("footer .conversation_header").click(function(){
 
-            $("footer .conversation_header .image-close-icon .close-image").toggleClass("close-image2")
-        })
-        /*----------------closing menue cansel icon and image*/
         /* Fancy restrictive input formatting via jQuery.payment library*/
 
         $('input[name=cardNumber]').payment('formatCardNumber');
@@ -490,7 +490,8 @@
             clickable: true,
         },
     });
-    paypal.Button.render({
+    if (typeof(paypal) != 'undefined') {
+        paypal.Button.render({
 
         env: 'sandbox', // sandbox | production
 
@@ -531,7 +532,7 @@
 
     }, '#paypal-button-container');
 
-
+}
 
 
 </script>

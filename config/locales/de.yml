@@ -1,5 +1,9 @@
 
 de:
+  hollywood: 'Hollywood Smile'
+  natural: 'Natural Shape'
+  sharp: 'Sharp Edges'
+  soft: 'Soft Edges'
   main_page:
     new_conversation: 'New Message'
     use: ''

@@ -47,12 +47,11 @@ class CartController < ApplicationController
     end
     @order = OrderDetail.create(:first_name => session[:first_name] , :last_name => session[:last_name] , :zip_code => session[:zip_code] , :city => session[:city], :country => session[:country] , :additional_information => session[:additional_information] , :phone_number => session[:phone_number])
     session[:cart].each do |y|
-      @transaction = UserProduct.create(
-        :user_id => current_user.id,
-        :product_id => Product.find_by(:name => y["product"]).id ,
-        :style_id => Style.find_by(:name => y["style"]).id,
-        :quantity => y["quantity"],
-        :subtotal => y["quantity"]*Product.find_by(:name => y["product"]).product_prices.find_by(:currency => @currency).price , :order_detail_id => @order.id)
+      if y["style"].nil?
+          @transaction = UserProduct.create(:user_id => current_user.id , :product_id => Product.find_by(:name => y["product"]).id , :quantity => y["quantity"] , :subtotal => y["quantity"]*Product.find_by(:name => y["product"]).product_prices.find_by(:currency => @currency).price , :order_detail_id => @order.id)
+      else
+          @transaction = UserProduct.create(:user_id => current_user.id , :product_id => Product.find_by(:name => y["product"]).id , :style_id => Style.find_by(:name => y["style"]).id , :quantity => y["quantity"] , :subtotal => y["quantity"]*Product.find_by(:name => y["product"]).product_prices.find_by(:currency => @currency).price , :order_detail_id => @order.id)
+      end
     end
     session[:cart] = nil
     session[:total] = nil
@@ -156,5 +155,24 @@ class CartController < ApplicationController
     session[:additional_information] = params[:additional_information]
     session[:phone_number] = params[:phone_number]
     redirect_to products_checkout_path
+  end
+  def sofort_pay
+    @total_cost = session[:total]
+    client = Sofort::Client.new
+    payment = client.pay(@total_cost, params[:name] , { success_url: "http://localhost:3000/sofort_check" , abort_url: 'https://google.com' , language_code: current_user.locale})
+    session[:payment] = payment["transaction"]
+    redirect_to payment["payment_url"]
+  end
+  def sofort_check
+    client = Sofort::Client.new
+    transaction = client.details(session[:payment])
+    if transaction["transaction"].nil?
+      render json: {msg: 'Payment Failed'}
+    else
+      create_user_product
+      flash[:notice] = 'Payment Complete'
+      redirect_to products_path
+    end
+    
   end
 end
