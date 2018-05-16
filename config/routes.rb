@@ -43,6 +43,8 @@ Rails.application.routes.draw do
   delete '/products/item/:id'                          ,to: "cart#remove_item", as: 'delete_item'
   get '/products/clearup'                               =>  "static#clearup"
   post '/products/address'                              => "cart#address"
+  post '/products/sofort'                               => "cart#sofort_pay"
+  get '/sofort_check'                                   => "cart#sofort_check"
   get 'products/clearup/candidate'                      =>  "clearup#candidate"
   post 'products/clearup/candidate'                      =>  "clearup#upload"
 
