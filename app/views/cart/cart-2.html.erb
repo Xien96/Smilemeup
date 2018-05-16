@@ -12,7 +12,6 @@
   <div class="row">
     <div class="col-sm-12 col-sm-push-1">
       <h1>CART</h1>
-       
           <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
             <div class="panel panel-default panel-cart"">
               <div class="panel-header" role="tab" id="headingOne">
@@ -207,7 +206,9 @@
                                 <div class="form-group">
                                     <label for="message-text" class="control-label">Name</label>
                                      <%= text_field_tag :name, nil %>
-                                    
+                                          <% if notice %>
+                                            <p><%= notice %></p>
+                                          <% end %>
                                   </div>
                                   <%= submit_tag "Submit" %>
                                 <% end %>

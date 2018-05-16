@@ -158,10 +158,14 @@ class CartController < ApplicationController
   end
   def sofort_pay
     @total_cost = session[:total]
-    client = Sofort::Client.new
-    payment = client.pay(@total_cost, params[:name] , { success_url: "http://localhost:3000/sofort_check" , abort_url: 'https://google.com' , language_code: current_user.locale})
-    session[:payment] = payment["transaction"]
-    redirect_to payment["payment_url"]
+    if current_user.currency.upcase == "EUR"
+      client = Sofort::Client.new
+      payment = client.pay(@total_cost, params[:name] , { success_url: "http://localhost:3000/sofort_check" , abort_url: 'https://google.com' , language_code: current_user.locale , currency_code: current_user.currency.upcase , country_code: current_user.country.upcase})
+      session[:payment] = payment["transaction"]
+      redirect_to payment["payment_url"]
+    else
+      flash[:notice] =  'Please choose currency to be Euro , Sofort accepts only Euro'
+    end
   end
   def sofort_check
     client = Sofort::Client.new
