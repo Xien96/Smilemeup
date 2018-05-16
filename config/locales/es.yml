@@ -442,6 +442,10 @@ es:
       orders: 'Orders'
       messages: 'Messages'
   products:
+    placed_on: 'Order placed on'
+    order_id: 'Order ID'
+    subtotal: 'SubTotal'
+    quantity: 'Quantity'
     our: 'Our'
     product_overview: 'Product OverView'
     products: 'Products'
