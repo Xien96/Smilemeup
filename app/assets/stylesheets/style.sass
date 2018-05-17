@@ -811,6 +811,37 @@ footer
     vertical-align: middle !important
   td.img
     text-align: left !important
+// phones
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)
+  table
+    border-collapse: collapse
+    th
+      display: none
+  .cart
+    h1
+      color: #828282
+      font-size: 1.25em
+      margin-top: 0.5em
+    .panel
+      .panel-body
+        padding: 0.5em
+      .subtotal
+        padding-top: 0.25em
+        border-top: 1px solid #828282
+      .cart-item
+        border-bottom-width: 15px !important
+        border-top-width: 5px !important
+        td
+          text-align: center !important
+          display: block !important
+          width: 100%
+          padding-top: .5em
+          padding-bottom: .5em
+          img
+            height: 2.5em
+            margin: 0.01em
+            border-radius: 4px
+
 
 .account
   padding-top: 3em
