@@ -1,2 +1,60 @@
-<h1>Dashboard#users</h1>
-<p>Find me in app/views/dashboard/users.html.erb</p>
+<h1><%= t 'dashboard.users.title' %></h1>
+<p><%= t 'dashboard.users.desc' %></p>
+<div id="user_table_filters">
+  <span><%= t 'dashboard.users.location' %></span>
+  <select name="country" id="">
+    <option value="germany"><%= t 'country.germany' %></option>
+    <option value="united_kingdom"><%= t 'country.united_kingdom' %></option>
+    <option value="australia"><%= t 'country.australia' %></option>
+  </select>
+  from <input type="date" name="from" />
+  to <input type="date" name="to" />
+  <select name="product" id="">
+    <option value="snap_up">SNAP UP</option>
+    <option value="clear_up">CLEAR UP</option>
+    <option value="impression_kit">IMPRESSION KIT</option>
+  </select>
+    <a href="">filter</a>
+    <a href="#">X</a>
+</div>
+<table class="table table-striped">
+  <tr>
+    <th><%= t 'dashboard.users.full_name' %></th>
+    <th><%= t 'dashboard.users.order_details' %></th>
+    <th><%= t 'dashboard.users.registration_date' %></th>
+    <th><%= t 'dashboard.users.product_price' %></th>
+    <th><%= t 'dashboard.users.location' %></th>
+    <th><%= t 'dashboard.users.actions' %></th>
+  </tr>
+  <% @users.map do |user| %>
+    <tr>
+      <td>
+        <%= user.name %>
+      </td>
+      <td>
+        <%= user.order_details.last %>
+      </td>
+      <td>
+        <%= user.created_at.to_date.strftime %>
+      </td>
+      <td>
+        product price
+      </td>
+      <td>
+        <%= t "country.#{current_user.country}" %>
+      </td>
+      <td>
+        <ul>
+          <li>
+            <a href="#">chat</a>
+            <a href="#">edit</a>
+            <a href="#">delete</a>
+          </li>
+        </ul>
+      </td>
+
+    </tr>
+  <% end %>
+
+
+</table>

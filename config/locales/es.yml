@@ -150,6 +150,10 @@ es:
     english: 'English'
     germany: 'Germany'
     spanish: 'Spanish'
+  country:
+    germany: 'Germany'
+    australia: 'Australia'
+    united_kingdom: 'United Kingdom'
   currency:
     usd: 'USD'
     gbp: 'GBP'
@@ -464,7 +468,7 @@ es:
     inspiration: 'Inspiration'
     inspiration_desc: 'Get inspired by some of our before and after pictures.'
     veneers: 'Veneers'
-    add_to_card: 'ADD TO CART '
+    add_to_cart: 'ADD TO CART '
     some_of_our: 'Some of our'
     thanks: 'Thanks'
     done_here: 'You Are Done Here '
@@ -598,3 +602,17 @@ es:
         subtitle6: 'Biting your fingernails'
         subtitle7: 'Biting toothpicks or other hard items that can displace your veneers'
         subtitle8: 'Following these previous tips will help you enjoy the long-lasting effects of dental veneers followed by a glamorous smile.'
+  dashboard:
+    users:
+      title: 'Users'
+      desc: 'User desc should go here'
+      location: 'location'
+      gender: 'gender'
+      age: 'age'
+      full_name: 'full_name'
+      last_order: 'last_order'
+      registration_date: 'registration_date'
+      chat: 'chat'
+      edit: 'edit'
+      delete: 'delete'
+      actions: 'Actions'

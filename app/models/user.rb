@@ -39,6 +39,7 @@ class User < ApplicationRecord
   #                      size: {less_than: 5.megabyte}
 
   has_many :user_products, dependent: :destroy
+  has_many :order_details, through: :user_products
   has_many :products, through: :user_products
 
   after_create :create_stripe_user

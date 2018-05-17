@@ -70,10 +70,59 @@
         <div class="text-center">
           <h3><%= t 'products.impression.title'%> </h3>
           <h5>(<%= t 'products.impression.title_desc'%>)</h5><br>
-          <button id="order_impression_kit" class="btn btn-lg btn-green btn-hover" > <%= t 'products.impression.add_to_cart'%> </button>
+          <button class="btn btn-lg btn-green btn-hover" data-toggle="modal" data-target="#impression-kitModal">
+            <%= t 'products.impression.add_to_cart'%>
+          </button>
         </div>                  
         </div>
       </div>      
+  </div>
+</div>
+<div class="modal fade product" id="impression-kitModal" tabindex="-1" role="dialog" aria-labelledby="hollywoodModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-7 product-image">
+            <%= image_tag("products/impression_kit.svg") %>
+          </div>
+          <div class="col-sm-5 product-detail text-center">
+            <h4><strong>impression-kit</strong></h4>
+            <p class="rate">
+              <% 4.times do |i| %>
+                <%= image_tag('products/green-star') %>
+              <% end %>
+              <%= image_tag('products/grey-star') %>
+              (10)
+            </p>
+            <p class="teeth_selection teeth_selectionupper">
+              <strong>Upper teeth</strong><br>
+              <span class="price">
+                <% if @up.nil?%>
+                  No both product available
+                <%else%>
+                  <%=  number_to_currency(@up.product_prices.find_by(:currency => @currency).price) %>
+                <%end%></span>
+            </p>
+            <div class="add-to-cart">
+              <span class="number">
+                <span id="impression-kit-minus" class="minus">-</span>
+                <span id="impression-quantity" class="quantity"> 1 </span>
+                <span id="impression-kit-plus" class="plus">+</span>
+              </span>
+              <button type="button" class="btn btn-green snap-submit" id="impression-kit-submit"><%= t 'products.add_to_cart'%></button>
+              <%= form_tag("/cart/add", method: :post, remote: true, authenticity_token: true, id: "impression-kit-form", class: "snap-form") do %>
+                <%= hidden_field_tag('quantity', 1, class: "quantity") %>
+                <%= hidden_field_tag('product', "impression_kit", class: "product") %>
+              <% end %>
+            </div>
+            <div class="modal-footer-line">
+              <%= image_tag('products/modal-footer.svg') %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 <div style="margin-top: -80px;">

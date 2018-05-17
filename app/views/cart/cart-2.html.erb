@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -13,89 +12,87 @@
   <div class="row">
     <div class="col-sm-12 col-sm-push-1">
       <h1>CART</h1>
-       
-          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-            <div class="panel panel-default panel-cart">
-              <div class="panel-header" role="tab" id="headingOne">
-                <h4 class="panel-title title-panel">
-                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <div class="clearfix">
+
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default panel-cart">
+          <div class="panel-header" role="tab" id="headingOne">
+            <h4 class="panel-title title-panel">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <div class="clearfix">
                       <span class="cart-arrow pull-left">
-                       <h3 class="cart-title pull-right pull-right-text">1. Please Add Your Address</h3>
                         <%= image_tag('True.svg') %>
+                       <h3 class="cart-title pull-right pull-right-text">1. Please Add Your Address</h3>
                       </span>
-                    </div>
-                  </a>
-                </h4>
-              </div>
-              <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                <div class="panel-body">
-                  <div class="cart-adress">
-                    <%if session[:first_name].nil?%>
-                    <div data-toggle="modal" data-target="#exampleModal" class="address-right">
-                      <a><%= image_tag('add-your-adress .svg') %></a>
-                    </div>
-                    <div data-toggle="modal" data-target="#exampleModal" class="address-left">
-                      <a ><%= image_tag('add-your-adress .svg') %></a>
-                    </div>
-                    <%else%>
-                        <h3>First Name :</h3> <%=session[:first_name]%>
-                        <h3>Last Name :</h3> <%=session[:last_name]%>
-                        <h3>Zip Code :</h3> <%=session[:zip_code]%>
-                        <h3>City :</h3> <%=session[:city]%>
-                        <h3>Country :</h3> <%=session[:country]%>
-                        <h3>Additional Information :</h3> <%=session[:additional_information]%>
-                        <h3>Phone Number :</h3> <%=session[:phone_number]%>
-                    <%end%>
-                      <div class="cart-form">
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-                          <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <button type="button" class="close cart-close-form" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="exampleModalLabel">Add Your  New Address</h4>
-                              </div>
-                              <div class="modal-body">
-                                <%= form_tag products_address_path do %>
-                                <div class="form-group">
-                                    <label for="message-text" class="control-label">First Name</label>
-                                     <%=  text_field_tag :first_name, nil , class: 'form-control' ,id: "recipient-name"%>
+                </div>
+              </a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+              <div class="cart-adress">
+                <% if session[:first_name].blank? %>
+                  <div data-toggle="modal" data-target="#exampleModal" class="address-right">
+                    <a><%= image_tag('add-your-adress .svg') %></a>
+                  </div>
+                <% else %>
+                  <h3>First Name :</h3> <%= session[:first_name] %>
+                  <h3>Last Name :</h3> <%= session[:last_name] %>
+                  <h3>Zip Code :</h3> <%= session[:zip_code] %>
+                  <h3>City :</h3> <%= session[:city] %>
+                  <h3>Country :</h3> <%= session[:country] %>
+                  <h3>Additional Information :</h3> <%= session[:additional_information] %>
+                  <h3>Phone Number :</h3> <%= session[:phone_number] %>
+                <% end %>
+                <div class="cart-form">
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close cart-close-form" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                          <h4 class="modal-title" id="exampleModalLabel">Add Your New Address</h4>
+                        </div>
+                        <div class="modal-body">
+                          <%= form_tag products_address_path do %>
+                            <div class="form-group">
+                              <label for="message-text" class="control-label">First Name</label>
+                              <%= text_field_tag :first_name, nil, class: 'form-control', id: "recipient-name" %>
 
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="message-text" class="control-label">Last Name</label>
+                            </div>
+                            <div class="form-group">
+                              <label for="message-text" class="control-label">Last Name</label>
 
-                                     <%= text_field_tag :last_name, nil , class: 'form-control' ,id: "recipient-name" %>
+                              <%= text_field_tag :last_name, nil, class: 'form-control', id: "recipient-name" %>
 
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="message-text" class="control-label">Zip Code</label>
-                                     <%=  text_field_tag :zip_code, nil , class: 'form-control' ,id: "recipient-name"%>
+                            </div>
+                            <div class="form-group">
+                              <label for="message-text" class="control-label">Zip Code</label>
+                              <%= text_field_tag :zip_code, nil, class: 'form-control', id: "recipient-name" %>
 
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="message-text" class="control-label">City</label>
-                                     <%=  text_field_tag :city, nil , class: 'form-control' ,id: "recipient-name" %>
+                            </div>
+                            <div class="form-group">
+                              <label for="message-text" class="control-label">City</label>
+                              <%= text_field_tag :city, nil, class: 'form-control', id: "recipient-name" %>
 
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="message-text" class="control-label">Country</label>
-                                     <%=  text_field_tag :country, nil , class: 'form-control' ,id: "recipient-name" %>
+                            </div>
+                            <div class="form-group">
+                              <label for="message-text" class="control-label">Country</label>
+                              <%= text_field_tag :country, nil, class: 'form-control', id: "recipient-name" %>
 
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="message-text" class="control-label">Additional Information</label>
+                            </div>
+                            <div class="form-group">
+                              <label for="message-text" class="control-label">Additional Information</label>
 
-                                     <%= text_field_tag :additional_information, nil , class: 'form-control additional-height' ,id: "recipient-name" %>
+                              <%= text_field_tag :additional_information, nil, class: 'form-control additional-height', id: "recipient-name" %>
 
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="message-text" class="control-label">Phone Number</label>
-                                     <%=  text_field_tag :phone_number, nil , class: 'form-control' ,id: "recipient-name" %>
-                                    
-                                  </div>
-                                  <%= submit_tag "Save" , class: "btn btn-primary cart-sending-message" %>
-                                <% end %>
+                            </div>
+                            <div class="form-group">
+                              <label for="message-text" class="control-label">Phone Number</label>
+                              <%= text_field_tag :phone_number, nil, class: 'form-control', id: "recipient-name" %>
+
+                            </div>
+                            <%= submit_tag "Save", class: "btn btn-primary cart-sending-message" %>
+                          <% end %>
 
                         </div>
                         <!-- <div class="modal-footer">
@@ -173,101 +170,104 @@
                         <h3 class="cart-title pull-right pull-right-text">3. PAYMENT METHOD</h3>
                         <%= image_tag('True.svg') %>
                       </span>
-                    </div>
-                  </a>
-                </h4>
-              </div>
-              <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                <div class="panel-body">
-                  
-                    <div class="cart-adress">
-              
-            <div class="col-md-8 col-xs-12 col-sm-push-2 payment-items">
-            <div class="col-md-12 col-sm-8 col-xs-12 shadow product-steps-item steps-slogan-left" style="margin-bottom: 1em">
-              <div class="cell choose-product" style="height: 100px">
-              <div class="col-md-4 col-sm-4" style="margin: 0">
-              <label class="container">Paypal
-              <span class="checkmark"></span>
-              </label>
-              </div>
-              <div class="col-md-8 col-sm-8 product-text">
-              <div class="choose-heading">
-                <div id="paypal-button-container"></div>
-              </div>
-              </div>
-              </div>
+                  </div>
+                </a>
+              </h4>
             </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+              <div class="panel-body">
 
-            <div class="col-md-12 col-sm-8 col-xs-12 shadow product-steps-item steps-slogan-left" style="margin-bottom: 1em">
-              <div class="cell choose-product" style="height: 100px">
-              <div class="col-md-4 col-sm-4" style="margin: 0">
-              <label class="container">Bank transfer
-              <span class="checkmark"></span>
-              </label>
-              </div>
-              <div class="col-md-8 col-sm-8 product-text">
-              <div class="choose-heading"><%= image_tag('sofort.svg') %></div><%= form_tag products_sofort_path do %>
-                                <div class="form-group">
-                                    <label for="message-text" class="control-label">Name</label>
-                                     <%= text_field_tag :name, nil %>
-                                          <% if notice %>
-                                            <p><%= notice %></p>
-                                          <% end %>
-                                  </div>
-                                  <%= submit_tag "Submit" %>
-                                <% end %>
-              </div>
-              </div>
-            </div>
+                <div class="cart-adress">
 
-            <div class="col-md-12 col-sm-8 col-xs-12 shadow product-steps-item steps-slogan-left" style="margin-bottom: 1em">
-              <div class="cell choose-product" style="height: 100px">
-              <div class="col-md-4 col-sm-4" style="margin: 0">
-              <label class="container">Credit card
-              <span class=""></span>
-              </label>
-
-                    <%= form_tag products_checkout_path do %>
-                      <article>
-                        <% if flash[:error].present? %>
-                          <div id="error_explanation">
-                            <p><%= flash[:error] %></p>
+                  <div class="col-md-8 col-xs-12 col-sm-push-2 payment-items">
+                    <div class="col-md-12 col-sm-8 col-xs-12 shadow product-steps-item steps-slogan-left" style="margin-bottom: 1em">
+                      <div class="cell choose-product" style="height: 100px">
+                        <div class="col-md-4 col-sm-4" style="margin: 0">
+                          <label class="container">Paypal
+                            <span class="checkmark"></span>
+                          </label>
+                        </div>
+                        <div class="col-md-8 col-sm-8 product-text">
+                          <div class="choose-heading">
+                            <div id="paypal-button-container"></div>
                           </div>
-                        <% end %>
-                        <label class="amount">
-                          <!-- <span>Amount: <% number_to_currency(@total_cost)%></span> -->
-                        </label>
-                      </article>
-
-                      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                              data-description="SmileUp Payment"
-                              data-amount= <% @total_cost %>
-                              data-locale="auto"></script>
-                    <% end %>                    
-                    </div>
-                    <divclass="col-md-8 col-sm-8 product-text">
-                    <div class="choose-heading"><%= image_tag('visaandmaster.svg') %></div>
-              </div>
-                    </div>            
+                        </div>
+                      </div>
                     </div>
 
+                    <div class="col-md-12 col-sm-8 col-xs-12 shadow product-steps-item steps-slogan-left" style="margin-bottom: 1em">
+                      <div class="cell choose-product" style="height: 100px">
+                        <div class="col-md-4 col-sm-4" style="margin: 0">
+                          <label class="container">Bank transfer
+                            <span class="checkmark"></span>
+                          </label>
+                        </div>
+                        <div class="col-md-8 col-sm-8 product-text">
+                          <div class="choose-heading"><%= image_tag('sofort.svg') %></div><%= form_tag products_sofort_path do %>
+                            <div class="form-group">
+                              <label for="message-text" class="control-label">Name</label>
+                              <%= text_field_tag :name, nil %>
+                              <% if notice %>
+                                <p><%= notice %></p>
+                              <% end %>
+                            </div>
+                            <%= submit_tag "Submit" %>
+                          <% end %>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-12 col-sm-8 col-xs-12 shadow product-steps-item steps-slogan-left" style="margin-bottom: 1em">
+                      <div class="cell choose-product" style="height: 100px">
+                        <div class="col-md-4 col-sm-4" style="margin: 0">
+                          <label class="container">Credit card
+                            <span class=""></span>
+                          </label>
+
+                          <%= form_tag products_checkout_path do %>
+                            <article>
+                              <% if flash[:error].present? %>
+                                <div id="error_explanation">
+                                  <p><%= flash[:error] %></p>
+                                </div>
+                              <% end %>
+                              <label class="amount">
+                                <!-- <span>Amount:
+                                <% number_to_currency(@total_cost) %></span> -->
+                              </label>
+                            </article>
+
+                            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                                    data-description="SmileUp Payment"
+                                    data-amount=
+                                      <% @total_cost %>
+                                        data-locale="auto"></script>
+                          <% end %>
+                        </div>
+                        <divclass
+                        ="col-md-8 col-sm-8 product-text">
+                        <div class="choose-heading"><%= image_tag('visaandmaster.svg') %></div>
+                      </div>
+                    </div>
                   </div>
 
                 </div>
 
               </div>
+
             </div>
           </div>
         </div>
-
       </div>
+
     </div>
-    <!-- payment form -->
-
-
-    <!-- If you're using Stripe for payments -->
-
   </div>
+  <!-- payment form -->
+
+
+  <!-- If you're using Stripe for payments -->
+
+</div>
 </div>
 </body>

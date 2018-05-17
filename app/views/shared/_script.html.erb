@@ -281,6 +281,15 @@
                 }
             })
         });
+        $("#impression-kit-submit").click(function(e){
+            e.preventDefault();
+            $("#impression-kit-form").ajaxSubmit({
+                success: function () {
+                    $('.modal').modal('hide');
+                    location.reload();
+                }
+            })
+        })
         $('#order_impression_kit').click(function(){
             $.post("<%= request.base_url%>/cart/add", {
                 product: 'impression_kit',
