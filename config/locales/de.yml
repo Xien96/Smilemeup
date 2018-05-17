@@ -33,13 +33,10 @@ de:
     snap_up: 'SNAP UP' #same as in English
     clear_up_desc: 'Du möchtest deine Zahnfehlstellung <br>diskret, effektiv und zu einem fairen Preis <br>beheben? Ohne feste Zahnspange? Genau <br>das kannst du mit den transparenten <br>Zahnschienen "CLEAR UP"!'
     snap_up_desc: 'Unsere herausnehmbaren Veneers sind <br>perfekt für dich, falls du schiefe, verfärbte <br>oder ein paar fehlende Zähne hast. Das <br>Produkt hält stabil und ohne Kleber auf <br>deinen eigenen Zähnen.<br>'
-<<<<<<< HEAD
-    start_now_btn: "los geht's"
-    order_now_btn: 'Kostenpflichtig'
-=======
+
     start_now_btn: 'Los gehts'
     order_now_btn: 'Jetzt bestellen'
->>>>>>> origin/master
+
     how: 'So '
     works: 'funktioniert es'
     step_1_normal: 'Wähle dein'
