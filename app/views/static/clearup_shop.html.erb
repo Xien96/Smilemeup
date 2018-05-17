@@ -55,7 +55,7 @@
         <div class="text-center">
           <h3>CLEAR UP</h3>
           <h5>( <%= t 'products.snap_up.styles.desc1'%> )</h5><br>
-          <button type="button" class="btn btn-lg btn-green btn-hover" data-toggle="modal" data-target="">
+          <button type="button" class="btn btn-lg btn-green btn-hover" data-toggle="modal" data-target="#clearupModal">
             <%= t 'products.add_to_card'%>
           </button>
         </div>        
@@ -67,6 +67,54 @@
 
 
 </div>
+
+ <div class="modal fade product" id="clearupModal" tabindex="-1" role="dialog" aria-labelledby="hollywoodModal">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-body">
+         <div class="row">
+           <div class="col-sm-7 product-image">
+             <%= image_tag("products/clearupkit.svg") %>
+           </div>
+           <div class="col-sm-5 product-detail text-center">
+             <h4><strong>clearup</strong></h4>
+             <p class="rate">
+               <% 4.times do |i| %>
+                 <%= image_tag('products/green-star') %>
+               <% end %>
+               <%= image_tag('products/grey-star') %>
+               (10)
+             </p>
+             <p class="teeth_selection teeth_selectionupper">
+               <strong>Upper teeth</strong><br>
+               <span class="price">
+                <% if @up.nil?%>
+                  No both product available
+                <%else%>
+                  <%=  number_to_currency(@up.product_prices.find_by(:currency => @currency).price) %>
+                <%end%></span>
+             </p>
+             <div class="add-to-cart">
+              <span class="number">
+                <span id="clearup-minus" class="minus">-</span>
+                <span id="clearup-quantity" class="quantity"> 1 </span>
+                <span id="clearup-plus" class="plus">+</span>
+              </span>
+               <button type="button" class="btn btn-green snap-submit" id="clearup-submit"><%= t 'products.add_to_cart'%></button>
+               <%= form_tag("/cart/add", method: :post, remote: true, authenticity_token: true, id: "clearup-form", class: "snap-form") do %>
+                 <%= hidden_field_tag('quantity', 1, class: "quantity") %>
+                 <%= hidden_field_tag('product', "clear_up", class: "product") %>
+               <% end %>
+             </div>
+             <div class="modal-footer-line">
+               <%= image_tag('products/modal-footer.svg') %>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
 
 <%= render 'shared/share' %>
 

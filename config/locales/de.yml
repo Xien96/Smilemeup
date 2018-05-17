@@ -604,7 +604,7 @@ de:
     inspiration: 'ÜBERZEUGENDE ERGEBNISSE'
     inspiration_desc: 'Lass dich von den Vorher-Nachher-Fotos unserer Kunden überzeugen.'
     veneers: 'Veneers'
-    add_to_card: 'Jetzt einkaufen'
+    add_to_cart: 'Jetzt einkaufen'
     some_of_our: 'Einige Erfahrungsberichte '
     thanks: 'Vielen Dank'
     done_here: 'Du bist hier fertig '
@@ -741,4 +741,18 @@ de:
         subtitle6: 'Biting your fingernails'
         subtitle7: 'Biting toothpicks or other hard items that can displace your veneers'
         subtitle8: 'Following these previous tips will help you enjoy the long-lasting effects of dental veneers followed by a glamorous smile.'
+  dashboard:
+    users:
+      title: 'Users'
+      desc: 'User desc should go here'
+      location: 'location'
+      gender: 'gender'
+      age: 'age'
+      full_name: 'full_name'
+      last_order: 'last_order'
+      registration_date: 'registration_date'
+      chat: 'chat'
+      edit: 'edit'
+      delete: 'delete'
+      actions: 'Actions'
 
