@@ -33,8 +33,13 @@ de:
     snap_up: 'SNAP UP' #same as in English
     clear_up_desc: 'Du möchtest deine Zahnfehlstellung <br>diskret, effektiv und zu einem fairen Preis <br>beheben? Ohne feste Zahnspange? Genau <br>das kannst du mit den transparenten <br>Zahnschienen "CLEAR UP"!'
     snap_up_desc: 'Unsere herausnehmbaren Veneers sind <br>perfekt für dich, falls du schiefe, verfärbte <br>oder ein paar fehlende Zähne hast. Das <br>Produkt hält stabil und ohne Kleber auf <br>deinen eigenen Zähnen.<br>'
+<<<<<<< HEAD
     start_now_btn: "los geht's"
     order_now_btn: 'Kostenpflichtig'
+=======
+    start_now_btn: 'Los gehts'
+    order_now_btn: 'Jetzt bestellen'
+>>>>>>> origin/master
     how: 'So '
     works: 'funktioniert es'
     step_1_normal: 'Wähle dein'
@@ -71,9 +76,9 @@ de:
   about:
     title: 'Smile  Me Up'
     about: 'Über' # just two words in German so I leave it empty
-    desc1: 'Wir bieten unseren Kunden hochwertige Produkte für ihr schönstes Lächeln'
-    desc2: 'an - hochmoderne und einzigartige Produkte zum fairen Preis.'
-    desc3: 'Dabei arbeitet Smile Me Up mit langjährigen Experten aus der Zahnmedizin'
+    desc1: 'Wir verhelfen un saren kunden zu ihrem traumlacheln-mit '
+    desc2: 'innovativen und individuellen dentalbrodukten zu einem fairen Preis.'
+    desc3: 'Smile Me Up arbeitet mit erfahrenen Experten aus der Zahnmedizin'
     desc4: 'und Kieferorthopädie zusammen. Die großartigen Ergebnisse, unsere professionelle'
     desc5: 'Kundenbetreuung sowie die überzeugende Qualität unserer Produkte werden dich '
     desc6: 'überzeugen. Werde auch du einer unserer glücklich lächelnden Kunden!'

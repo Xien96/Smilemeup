@@ -448,7 +448,9 @@ nav.navbar-default, nav.navbar-default .navbar-toggle
     .downloads
       img
         width: 100
-
+  @media(max-width: 767px)
+    &.home-app
+      margin-top: 0
 
   .about-share
     margin-bottom: 5em
@@ -779,6 +781,11 @@ footer
           &:focus
             border: 0px
             outline: 0px
+@media(max-width: 767px)
+  footer
+    margin-top: 0
+    .pull-left li
+      margin-right: 4em !important
 
 .cart
   h1
@@ -1317,6 +1324,8 @@ hr
         margin-left: 0
       .order-min-height
         /*min-height: 170px*/
+      .btn-green
+        margin-top: -15px
 @media(max-width: 991px)
   .navbar-collapse
     .navbar-right
@@ -2019,7 +2028,7 @@ input[type=range]
         height: 220px !important
         border: 2px solid #bdbdbd !important
         float: right !important
-        
+        display: none
         
         border-radius: 20px !important
         background-color: #dadada !important
@@ -2567,7 +2576,21 @@ input[type=range]
           h4
             text-align: center
 
+/*home page style in large media*/
 
+@media(min-width:1200px)
+  .home-products
+    .over-flow-shadow
+      .home-products-item
+        .order-min-height
+          padding: 0 65px
+
+footer
+  .pullin-ipad-left
+    .nav-pills
+      li
+        .social-medi-foot
+          padding: 0
 
 /**/
 /*------------------------------------------------------------------------------------------------------------*/
